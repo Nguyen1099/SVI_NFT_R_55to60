@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENC.IO.Device.Melsec</name>
+    </assembly>
+    <members>
+        <member name="T:ENC.IO.Device.Melsec.ECCLink">
+            <summary>
+            CC-Link 보드의 채널 번호 정의
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLink.Slot1">
+            <summary>
+            1번 슬롯 (81)
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLink.Slot2">
+            <summary>
+            2번 슬롯 (82)
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLink.Slot3">
+            <summary>
+            3번 슬롯 (83)
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLink.Slot4">
+            <summary>
+            4번 슬롯 (84)
+            </summary>
+        </member>
+        <member name="T:ENC.IO.Device.Melsec.ECCLinkIeControlNetwork">
+            <summary>
+            CC-Link IE Controller Network 보드의 채널 번호 정의
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkIeControlNetwork.Ch151">
+            <summary>
+            채널 151번
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkIeControlNetwork.Ch152">
+            <summary>
+            채널 152번
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkIeControlNetwork.Ch153">
+            <summary>
+            채널 153번
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkIeControlNetwork.Ch154">
+            <summary>
+            채널 154번
+            </summary>
+        </member>
+        <member name="T:ENC.IO.Device.Melsec.ECCLinkIeFieldNetwork">
+            <summary>
+            CC-Link IE Field Network 보드의 채널 번호 정의
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkIeFieldNetwork.Ch181">
+            <summary>
+            채널 181
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkIeFieldNetwork.Ch182">
+            <summary>
+            채널 182
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkIeFieldNetwork.Ch183">
+            <summary>
+            채널 183
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkIeFieldNetwork.Ch184">
+            <summary>
+            채널 184
+            </summary>
+        </member>
+        <member name="T:ENC.IO.Device.Melsec.ECCLinkVer">
+            <summary>
+            CC-Link의 버전 정의
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkVer.Ver1_1">
+            <summary>
+            CC-Link V1.1
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.ECCLinkVer.Ver2">
+            <summary>
+            CC-Link V2
+            </summary>
+        </member>
+        <member name="T:ENC.IO.Device.Melsec.EMelsecNetH">
+            <summary>
+            Melsec Net H 보드의 채널 번호 정의
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.EMelsecNetH.Slot1">
+            <summary>
+            슬롯 1번 (51)
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.EMelsecNetH.Slot2">
+            <summary>
+            슬롯 2번 (52)
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.EMelsecNetH.Slot3">
+            <summary>
+            슬롯 3번 (53)
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Device.Melsec.EMelsecNetH.Slot4">
+            <summary>
+            슬롯 4번 (54)
+            </summary>
+        </member>
+        <member name="T:ENC.IO.Device.Melsec.ExtensionMethods">
+            <summary>
+            CC-Link 디바이스 추가 기능이 정의된 클래스
+            </summary>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkIeControlNetworkDevB(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLinkIeControlNetwork)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link IE Controller Network 보드에 DevB 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link IE Controller Network 보드에 채널 번호</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkIeControlNetworkDevW(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLinkIeControlNetwork)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link IE Controller Network 보드에 DevW 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link IE Controller Network 보드에 채널 번호</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkIeControlNetworkDevX(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLinkIeControlNetwork)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link IE Controller Network 보드에 DevX 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link IE Controller Network 보드에 채널 번호</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkIeControlNetworkDevY(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLinkIeControlNetwork)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link IE Controller Network 보드에 DevY 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link IE Controller Network 보드에 채널 번호</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkIeFieldNetworkDevX(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLinkIeFieldNetwork)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link IE Field Network 보드에 DevX 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link IE Field Network 보드에 채널 번호</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkIeFieldNetworkDevY(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLinkIeFieldNetwork)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link IE Field Network 보드에 DevY 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link IE Field Network 보드에 채널 번호</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkIeFieldNetworkDevWw(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLinkIeFieldNetwork)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link IE Field Network 보드에 DevWw 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link IE Field Network 보드에 채널 번호</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkIeFieldNetworkDevWr(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLinkIeFieldNetwork)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link IE Field Network 보드에 DevWr 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link IE Field Network 보드에 채널 번호</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkDevX(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLink,ENC.IO.Device.Melsec.ECCLinkVer)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link 보드에 DevX 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link 보드에 채널 번호</param>
+            <param name="version">CC-Link 버전</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkDevY(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLink,ENC.IO.Device.Melsec.ECCLinkVer)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link 보드에 DevY 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link 보드에 채널 번호</param>
+            <param name="version">CC-Link 버전</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkDevWw(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLink,ENC.IO.Device.Melsec.ECCLinkVer)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link 보드에 DevWw 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link 보드에 채널 번호</param>
+            <param name="version">CC-Link 버전</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Melsec.ExtensionMethods.AddDeviceCCLinkDevWr(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Device.Melsec.ECCLink,ENC.IO.Device.Melsec.ECCLinkVer)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 CC-Link 보드에 DevWr 영역에대한 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="channelIndex">CC-Link 보드에 채널 번호</param>
+            <param name="version">CC-Link 버전</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENC_Log</name>
+    </assembly>
+    <members>
+        <member name="F:ENC.LogDLL.FileDeleteManager._nDate">
+            <summary>
+            날자가 변경됐는지 확인하기 위한 변수
+            </summary>
+        </member>
+        <member name="F:ENC.LogDLL.FileDeleteManager._nDeleteDay">
+            <summary>
+            삭제일 변수 값
+            </summary>
+        </member>
+        <member name="M:ENC.LogDLL.FileDeleteManager.#ctor">
+            <summary>
+             생성자(삭제일 기본 30일 설정)
+            </summary>
+        </member>
+        <member name="M:ENC.LogDLL.FileDeleteManager.DeleteFolder">
+            <summary>
+            폴더를 삭제 해 주는 기능.
+            </summary>
+        </member>
+        <member name="F:ENC.LogDLL.FileWriteManager._strLogType">
+            <summary>
+            생성할 로그이름 값
+            </summary>
+        </member>
+        <member name="F:ENC.LogDLL.FileWriteManager._strFolderPath">
+            <summary>
+            기본 로그파일 생성 위치
+            </summary>
+        </member>
+        <member name="F:ENC.LogDLL.FileWriteManager._strFullPath">
+            <summary>
+            로그 파일 파일 경로 값
+            </summary>
+        </member>
+        <member name="F:ENC.LogDLL.FileWriteManager._strDatePath">
+            <summary>
+            내부에서 사용필요한 데이터들
+            </summary>
+        </member>
+        <member name="M:ENC.LogDLL.FileWriteManager.#ctor">
+            <summary>
+             생성자
+            </summary>
+        </member>
+        <member name="M:ENC.LogDLL.FileWriteManager.OpenFile">
+            <summary>
+            Log File을 Open 한다. Open한 파일에 대해서 점유권을 가지고 있으며, FileShare에 관한 권한은 ReadWrite를 부여한다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENC.LogDLL.FileWriteManager.CloseFile">
+            <summary>
+            Log File을 Close 한다. 이미 Open한 파일에 대해서만 Close 한다.
+            Msg Queue에 쌓여 있는 msg는 File에 정상적으로 Wrtie 후에 종료한다.
+            </summary>
+        </member>
+        <member name="M:ENC.LogDLL.FileWriteManager.WriteLog(System.String)">
+            <summary>
+            Log File에 내용을 Writing 한다.
+            외부에서 CloseFile이 불리는 순간 더이상 Msg가 Queue에 누적되지 않는다.
+            </summary>
+            <param name="strMsg"></param>
+        </member>
+        <member name="M:ENC.LogDLL.FileWriteManager.CheckDirectory">
+            <summary>
+            Directory 생성 기능.
+            Directory가 없을 시 자동 생성해 준다.
+            "yyyy-MM-dd" 형식의 Directory가 생성 된다.
+            </summary>
+        </member>
+        <member name="T:ENC.LogDLL.LogManager">
+            <summary>
+            로그 매니져
+            </summary>
+            <example>
+            <code>
+            LogManager LM = new LogManager();
+            LM.Initialize("CIM", "C:\\Log") // 예시
+            LM.WriteLog("CIM", "TEST MESSAGE") // 예시
+            LM.DeInitialize();   
+            </code>
+            </example>
+        </member>
+        <member name="M:ENC.LogDLL.LogManager.#ctor">
+            <summary>
+            기본 생성자
+            </summary>
+        </member>
+        <member name="M:ENC.LogDLL.LogManager.GetVersion(System.Boolean)">
+            <summary>
+            라이브러리 버전을 반환함
+            </summary>
+            <param name="bReflesh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENC.LogDLL.LogManager.Initialize(System.String,System.String,System.Boolean)">
+            <summary>
+            로그 파일 생성 정보 초기화 및 파일 점유권 획득 기능
+            </summary>
+            <param name="strLogName">생성할 로그 파일 이름</param>
+            <param name="strFolderPath">로그 파일 저장 경로</param>
+            <param name="bUsedHeader">해더 유무</param>
+        </member>
+        <member name="M:ENC.LogDLL.LogManager.DeInitialize">
+            <summary>
+            로그 파일 점유권 해제 기능
+            </summary>
+        </member>
+        <member name="M:ENC.LogDLL.LogManager.SetLogDeleteDays(System.Int32)">
+            <summary>
+            로그 삭제일 셋팅 기능(기본 값 30일 설정)
+            </summary>
+            <param name="nDeleteDays"></param>
+        </member>
+        <member name="M:ENC.LogDLL.LogManager.WriteLog(System.String,System.String)">
+            <summary>
+            로그를 파일에 적는 기능
+            "yyyy-MM-dd HH:mm.ss.fff MSG" 형식으로 로그작성
+            </summary>
+            <param name="strLogName">생성할 로그 파일 이름</param>
+            <param name="strMsg">로그 메시지</param>
+        </member>
+        <member name="M:ENC.LogDLL.LogManager.GetFileVersion">
+            <summary>
+            DLL의 버전을 가져옴
+            </summary>
+            <returns>DLL 버전 정보</returns>
+        </member>
+        <member name="M:ENC.LogDLL.LogManager.SetHeader(System.String,System.String)">
+            <summary>
+            로그에 해더를 정의함
+            </summary>
+            <param name="strLogName">로그 이름</param>
+            <param name="strHeader">헤더</param>
+        </member>
+    </members>
+</doc>

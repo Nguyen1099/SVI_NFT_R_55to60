@@ -1,0 +1,441 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HLDeviceTemperatureNEOSHSD</name>
+    </assembly>
+    <members>
+        <member name="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD">
+            <summary>
+            지에스솔루션 NEOS-HSD 열연기감지기 디바이스의 기능을 구현한 클래스
+            http://gssol.co.kr/
+            </summary>
+            <remarks>
+            📌 자체 프로토콜을 사용하는 디바이스
+            </remarks>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.MessageFrame.TrySetFromBytes(System.Byte[])">
+            <summary>
+            수신 받은 바이트 배열에서 데이터를 파싱함
+            </summary>
+            <param name="rawdata">수신 받은 바이트 배열(STX ~ ETX + @)</param>
+            <returns>true=성공, false=실패</returns>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.MessageFrame.GetBytes">
+            <summary>
+            DataSize ~ Data 까지 바이트 배열 반환
+            </summary>
+            <returns>DataSize ~ Data 까지 바이트 배열 반환(DataSize (2byte) + Command (4byte) + Data (nbyte))</returns>
+        </member>
+        <member name="P:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.Category">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.Vendor">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.Model">
+            <inheritdoc/>
+        </member>
+        <member name="E:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.OnSent">
+            <inheritdoc/>
+        </member>
+        <member name="E:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.OnReceived">
+            <inheritdoc/>
+        </member>
+        <member name="E:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.OnErrorMessage">
+            <inheritdoc/>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.GetVersion(System.Boolean)">
+            <summary>
+            DLL 버전을 반환하는 함수
+            </summary>
+            <returns>DLL 버전을 "n.n.n.n" 형식으로 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            var device = new CDeviceTemperatureNEOSHSD();
+            // DLL 버전 정보 읽기
+            string version = comm.GetVersion();
+            Console.WriteLine($"DLL 버전: {version}");
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            DLL 버전: 1.0.0.0
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.HLInitialize(HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter)">
+            <summary>
+            라이브러리를 초기화하는 함수
+            </summary>
+            <remarks>
+            <br>📌 입력된 초기화 파라미터로 라이브러리 내부에 코어를 초기화하고, 통신 자동 접속 스레드를 시작함</br>
+            </remarks>
+            <param name="objInitializeParameter">초기화 파라미터 객체</param>
+            <returns>초기화 성공시 true를 실패시 false를 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceTemperatureNEOSHSDDefine.CInitializeParameter()
+            {
+                eType = Common.CDeviceCommunicationAbstract.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM21",
+                iSerialPortBaudrate = 115200,
+                iSerialPortDataBits = 8,
+                eStopBits = Common.CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_TWO,
+                eParity = Common.CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceTemperatureNEOSHSD();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.HLDeInitialize">
+            <summary>
+            라이브러리를 정리하는 함수<br/>
+            <br/>
+            📌 통신 자동 접속 스레드를 중지시키고, 코어에 접속을 강제로 해제함
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.HLIsConnected">
+            <summary>
+            통신 준비 상태를 반환하는 함수
+            </summary>
+            <returns>true: 통신이 준비된 상태<br/>false: 통신 준비가 안된 상태</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceTemperatureNEOSHSDDefine.CInitializeParameter()
+            {
+                eType = Common.CDeviceCommunicationAbstract.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM21",
+                iSerialPortBaudrate = 115200,
+                iSerialPortDataBits = 8,
+                eStopBits = Common.CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_TWO,
+                eParity = Common.CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceTemperatureNEOSHSD();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 통신 준비 상태 확인
+            bool bIsConnected = device.HLIsConnected();
+            Console.WriteLine($"통신 준비 상태: {bIsConnected}");
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            통신 준비 상태: True
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.HLGetErrorCode">
+            <summary>
+            마지막에 발생한 <see cref="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CNeoshsdError"/> 객체를 반환하는 함수
+            </summary>
+            <returns>마지막에 발생한 <see cref="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CNeoshsdError"/> 객체</returns>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD.HLReadTemp(System.Byte,System.Double@)">
+            <summary>
+            ID에 해당하는 디바이스의 온도 값을 읽는 함수
+            </summary>
+            <param name="byteID">ID</param>
+            <param name="dTempData">온도 값(double형 데이터)</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="byteID"/>의 ID의 범위: 0 ~ 15 , Byte<br/>
+            📌 매개변수 <paramref name="dTempData"/> 온도 : 2 Byte, Decimel 값 / 100.0
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceTemperatureNEOSHSDDefine.CInitializeParameter()
+            {
+                eType = Common.CDeviceCommunicationAbstract.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM21",
+                iSerialPortBaudrate = 115200,
+                iSerialPortDataBits = 8,
+                eStopBits = Common.CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_TWO,
+                eParity = Common.CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceTemperatureNEOSHSD();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 닉네임 읽기
+            // !!! NEOS-HSD 모델은 SlaveID가 0부터 시작한다
+            // !!! NEOS-HSD200 모델은 SlaveID가 1부터 시작한다
+            byte index = (byte)1;
+            double readValue;
+            
+            if(device.HLReadTemp(index, out readValue) == false)
+            {
+                // 읽기 실패
+                // 에러 코드
+                // 0x01 온도 센서 에러           
+                // 0x02 EEPROM 에러
+                // 0x03 Checksum 에러
+                // 0x04 LCD 에러
+                // 0x05 485 에러
+                return;
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: ex) 272, 333
+            </code>
+        </member>
+        <member name="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine">
+            <summary>
+            <see cref="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD"/>에서 사용되는 데이터 클래스를 가지고 있는 클래스
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter">
+            <summary>
+            <see cref="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD"/> 객체의 초기화 파라미터를 가진 데이터 클래스
+            </summary>
+            <remarks>
+            <br> <see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.eType"/> 설정 값에 따라 사용되는 파라미터</br>
+            <list type="bullet">
+                <item>
+                    <see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SOCKET"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.strSocketIPAddress"/></item>
+                        <item><see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.iSocketPortNumber"/></item>
+                    </list>
+                </item>
+                <item>
+                    <see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.strSerialPortName"/></item>
+                        <item><see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.iSerialPortBaudrate"/></item>
+                        <item><see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.iSerialPortDataBits"/></item>
+                        <item><see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.eParity"/></item>
+                        <item><see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.eStopBits"/></item>
+                    </list>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType">
+            <summary>
+            통신 타입을 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SOCKET">
+            <summary>
+            TCP/IP 통신
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT">
+            <summary>
+            시리얼 통신
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_FINAL">
+            <summary>
+            통신 타입의 개수
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortParity">
+            <summary>
+            패리티 비트를 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE">
+            <summary>
+            패리티 검사를 수행하지 않습니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortParity.PARITY_ODD">
+            <summary>
+            비트 집합의 비트 합계가 홀수가 되도록 패리티 비트를 설정합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortParity.PARITY_EVEN">
+            <summary>
+            비트 집합의 비트 합계가 짝수가 되도록 패리티 비트를 설정합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortParity.PARITY_MARK">
+            <summary>
+            패리티 비트를 1로 설정된 상태로 유지합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortParity.PARITY_SPACE">
+            <summary>
+            패리티 비트를 0으로 설정된 상태로 유지합니다.
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortStopBits">
+            <summary>
+            정지 비티의 수를 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_NONE">
+            <summary>
+            정지 비트를 사용하지 않습니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE">
+            <summary>
+            1비트의 정지 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_TWO">
+            <summary>
+            2비트의 정지 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE_POINT_FIVE">
+            <summary>
+            1.5비트의 정지 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.eType">
+            <summary>
+            통신 타입
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.strSocketIPAddress">
+            <summary>
+            IP 주소<br/>
+            데이터 형식: "{nnn}.{nnn}.{nnn}.{nnn}"
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SOCKET"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.iSocketPortNumber">
+            <summary>
+            포트 번호<br/>
+            데이터 범위: 0x0000 ~ 0xFFFF
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SOCKET"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.strSerialPortName">
+            <summary>
+            시리얼 포트 포트 번호<br/>
+            데이터 형식: "COM{n}"
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.iSerialPortBaudrate">
+            <summary>
+            시리얼 포트 Baudrate
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.iSerialPortDataBits">
+            <summary>
+            시리얼 포트 Data Bits
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.eParity">
+            <summary>
+            시리얼 포트 Parity
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.eStopBits">
+            <summary>
+            시리얼 포트 Stop Bits
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CInitializeParameter"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CReceiveData">
+            <summary>
+            통신으로 수신한 데이터를 담고있는 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CReceiveData.strData">
+            <summary>
+            수신한 문자열 데이터
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CReceiveData.byteReceiveData">
+            <summary>
+            수신한 바이트 데이터
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CReceiveData.iByteLength">
+            <summary>
+            수신한 바이트 길이
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CReceiveData.Clear">
+            <summary>
+            데이터를 클리어하는 함수
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CReceiveData.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CReceiveData"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CNeoshsdError">
+            <summary>
+            <see cref="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSD"/>에서 사용되는 에러 정보를 가진 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CNeoshsdError.strEventTime">
+            <summary>
+            에러가 발생한 시간을 나타내는 프로퍼티
+            </summary>
+            <remarks>데이터 형식: "yyyy/MM/dd hh:mm:ss"</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CNeoshsdError.strFunctionName">
+            <summary>
+            에러가 발생한 함수를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CNeoshsdError.iReturnCode">
+            <summary>
+            함수에서 반환한 결과 코드를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CNeoshsdError.strMessage">
+            <summary>
+            발생한 에러에대한 메시지를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CNeoshsdError.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.Temperature.NEOSHSD.CDeviceTemperatureNEOSHSDDefine.CNeoshsdError"/> 객체</returns>
+        </member>
+    </members>
+</doc>

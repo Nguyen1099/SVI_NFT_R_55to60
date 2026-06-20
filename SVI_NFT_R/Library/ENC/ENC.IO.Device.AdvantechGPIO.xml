@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENC.IO.Device.AdvantechGPIO</name>
+    </assembly>
+    <members>
+        <member name="T:ENC.IO.Device.AdvantechGPIO.ExtensionMethods">
+            <summary>
+            Advantech GPIO 디바이스 추가 기능이 정의된 클래스
+            </summary>
+        </member>
+        <member name="M:ENC.IO.Device.AdvantechGPIO.ExtensionMethods.AddDeviceAdvantechGpioDI8(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32,System.Int32@)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Advantech GPIO DI8 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="basePointIndex">DI 디바이스의 시작 접점 인덱스</param>
+            <param name="nextBasePointIndex">다음 DI 디바이스의 시작 접점 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.AdvantechGPIO.ExtensionMethods.AddDeviceAdvantechGpioDI16(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32,System.Int32@)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Advantech GPIO DI16 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="basePointIndex">DI 디바이스의 시작 접점 인덱스</param>
+            <param name="nextBasePointIndex">다음 DI 디바이스의 시작 접점 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.AdvantechGPIO.ExtensionMethods.AddDeviceAdvantechGpioDI32(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32,System.Int32@)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Advantech GPIO DI32 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="basePointIndex">DI 디바이스의 시작 접점 인덱스</param>
+            <param name="nextBasePointIndex">다음 DI 디바이스의 시작 접점 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.AdvantechGPIO.ExtensionMethods.AddDeviceAdvantechGpioDO8(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32,System.Int32@)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Advantech GPIO DO8 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="basePointIndex">DO 디바이스의 시작 접점 인덱스</param>
+            <param name="nextBasePointIndex">다음 DO 디바이스의 시작 접점 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.AdvantechGPIO.ExtensionMethods.AddDeviceAdvantechGpioDO16(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32,System.Int32@)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Advantech GPIO DO16 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="basePointIndex">DO 디바이스의 시작 접점 인덱스</param>
+            <param name="nextBasePointIndex">다음 DO 디바이스의 시작 접점 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.AdvantechGPIO.ExtensionMethods.AddDeviceAdvantechGpioDO32(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32,System.Int32@)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Advantech GPIO DO32 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="basePointIndex">DO 디바이스의 시작 접점 인덱스</param>
+            <param name="nextBasePointIndex">다음 DO 디바이스의 시작 접점 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+    </members>
+</doc>

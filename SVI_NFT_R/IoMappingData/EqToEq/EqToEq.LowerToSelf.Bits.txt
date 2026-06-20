@@ -1,0 +1,13 @@
+﻿ID,ByteIndex,BitIndex,HandlingDataTypeString,HandlingDataSize,ArrayLength,DecimalPoint,Label,Description,Comment
+Heartbeat,0,0,bool,,,,B0000,,
+ReceiveAble,0,1,bool,,,,B0001,,
+ReceiveStart,0,2,bool,,,,B0002,,
+ReceiveComplete,0,3,bool,,,,B0003,,
+ReceiveVacuumOnP1,0,4,bool,,,,B0004,,
+ReceiveVacuumOnP2,0,5,bool,,,,B0005,,
+ReceiveCellP1,0,6,bool,,,,B0006,,
+ReceiveCellP2,0,7,bool,,,,B0007,,
+EmsSafe,1,5,bool,,,,B000D,,
+InterlockDoorClosed,1,6,bool,,,,B000E,,
+InterlockSafe,1,7,bool,,,,B000F,,
+Reserved,3,7,bool,,,,B001F,,

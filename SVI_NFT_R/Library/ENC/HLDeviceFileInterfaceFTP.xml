@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HLDeviceFileInterfaceFTP</name>
+    </assembly>
+    <members>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP">
+            <summary>
+            FTP 클라이언트 클래스
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLDownLoadCompleted">
+            <summary>
+            다운로드 완료 이벤트에 사용되는 대리자
+            </summary>
+            <param name="bComplete">다운로드 성공 여부</param>
+        </member>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLDownLoadProgressPercentage">
+            <summary>
+            다운로드 진행중 이벤트에 사용되는 대리자
+            </summary>
+            <param name="iProgressPercentage">다운로드 진행률</param>
+            <remarks>
+            📌 매개변수 <paramref name="iProgressPercentage"/>의 범위: 0 ~ 100<br/>
+            </remarks>
+        </member>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLUpLoadCompleted">
+            <summary>
+            업로드 완료 이벤트에 사용되는 대리자
+            </summary>
+            <param name="bComplete">업로드 성공 여부</param>
+        </member>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLUpLoadProgressPercentage">
+            <summary>
+            업로드 진행중 이벤트에 사용되는 대리자
+            </summary>
+            <param name="iProgressPercentage">업로드 진행률</param>
+            /// <remarks>
+            📌 매개변수 <paramref name="iProgressPercentage"/>의 범위: 0 ~ 100<br/>
+            </remarks>
+        </member>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLUploadFileListChanged">
+            <summary>
+            업로드 파일 목록 변경 이벤트에 사용되는 대리자
+            </summary>
+            <param name="uploadTotalCount">총 업로드 파일 수</param>
+            <param name="uploadCount">현재 업로드된 파일 수</param>
+            <param name="uploadFileName">업로드된 파일 이름</param>
+            <param name="uploadPath">업로드된 파일 경로</param>
+        </member>
+        <member name="E:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLEventDownLoadCompleted">
+            <summary>
+            다운로드 완료 이벤트
+            </summary>
+        </member>
+        <member name="E:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLEventDownLoadProgressPercentage">
+            <summary>
+            다운로드 진행중 이벤트
+            </summary>
+        </member>
+        <member name="E:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLEventUpLoadCompleted">
+            <summary>
+            업로드 완료 이벤트
+            </summary>
+        </member>
+        <member name="E:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLEventUpLoadProgressPercentage">
+            <summary>
+            업로드 진행중 이벤트
+            </summary>
+        </member>
+        <member name="E:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLEventUploadFileListChanged">
+            <summary>
+            업로드 파일 목록 변경 이벤트
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLInitialize(HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter)">
+            <summary>
+            라이브러리를 초기화하는 함수
+            </summary>
+            <param name="initializeParameterOrNull">초기화 파라미터 객체</param>
+            <returns>초기화 성공시 true를 실패시 false를 반환함</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLDeInitialize">
+            <summary>
+            라이브러리를 정리하는 함수
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.GetVersion(System.Boolean)">
+            <summary>
+            DLL 버전을 가져옵니다.
+            </summary>
+            <param name="bReflesh">버전 갱신 여부</param>
+            <returns>DLL 버전</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLSetConnectInformation(HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.structureConnectInformation)">
+            <summary>
+            FTP 접속 정보를 설정합니다.
+            </summary>
+            <param name="objConnectInformation">접속 정보</param>
+            <returns>설정 성공 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLUploadFile(System.String,System.String)">
+            <summary>
+            파일을 업로드합니다.
+            </summary>
+            <param name="localFilePathName">로컬 파일 경로</param>
+            <param name="uploadFilePathName">업로드 파일 경로</param>
+            <returns>업로드 성공 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLUploadFiles(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            여러 파일을 업로드합니다.
+            </summary>
+            <param name="localDirectoryPath">로컬 디렉토리 경로</param>
+            <param name="uploadDirectoryPath">업로드 디렉토리 경로</param>
+            <param name="uploadFileNames">업로드 파일 이름 목록</param>
+            <returns>업로드 성공 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLDownloadFile(System.String,System.String)">
+            <summary>
+            파일을 다운로드합니다.
+            </summary>
+            <param name="localFilePath">로컬 파일 경로</param>
+            <param name="downloadFilePath">다운로드 파일 경로</param>
+            <returns>다운로드 성공 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLRenameFile(System.String,System.String)">
+            <summary>
+            파일 이름을 변경합니다.
+            </summary>
+            <param name="hostFilePath">호스트 파일 경로</param>
+            <param name="rename">새 파일 이름</param>
+            <returns>이름 변경 성공 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLDeleteFile(System.String)">
+            <summary>
+            파일을 삭제합니다.
+            </summary>
+            <param name="hostFilePath">호스트 파일 경로</param>
+            <returns>삭제 성공 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLDirectoryExists(System.String)">
+            <summary>
+            디렉토리가 존재하는지 확인합니다.
+            </summary>
+            <param name="hostDirectoryPath">호스트 디렉토리 경로</param>
+            <returns>존재 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLCreateDirectory(System.String)">
+            <summary>
+            디렉토리를 생성합니다.
+            </summary>
+            <param name="hostDirectoryPath">호스트 디렉토리 경로</param>
+            <returns>생성 성공 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLDeleteDirectory(System.String)">
+            <summary>
+            디렉토리를 삭제합니다.
+            </summary>
+            <param name="hostDirectoryPath">호스트 디렉토리 경로</param>
+            <returns>삭제 성공 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLGetAllFiles(System.String)">
+            <summary>
+            디렉토리 내 모든 파일을 가져옵니다.
+            </summary>
+            <param name="hostDirectoryPath">호스트 디렉토리 경로</param>
+            <returns>파일 목록</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLGetFileSize(System.String)">
+            <summary>
+            파일 크기를 가져옵니다.
+            </summary>
+            <param name="hostFilePath">호스트 파일 경로</param>
+            <returns>파일 크기</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.HLGetErrorCode">
+            <summary>
+            에러 코드를 가져옵니다.
+            </summary>
+            <returns>에러 코드</returns>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP.MakeErrorMessage(System.String,System.Int32,System.String)">
+            <summary>
+            에러 메시지를 생성합니다.
+            </summary>
+            <param name="strFunctionName">함수 이름</param>
+            <param name="iReturnCode">반환 코드</param>
+            <param name="strMessage">에러 메시지</param>
+            <returns>에러 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine">
+            <summary>
+            <see cref="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP"/>에서 사용되는 데이터 클래스를 가지고 있는 클래스
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter">
+            <summary>
+            <see cref="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP"/> 객체의 초기화 파라미터를 가진 데이터 클래스
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.structureConnectInformation">
+            <summary>
+            <see cref="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTP"/> 객체의 FTP 접속 정보를 담고 있는 구조체
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.structureConnectInformation.strHostName">
+            <summary>
+            FTP 호스트 이름
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.structureConnectInformation.strHostPort">
+            <summary>
+            FTP 호스트 PORT
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.structureConnectInformation.strUserName">
+            <summary>
+            유져 이름 (a.k.a ID)
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.structureConnectInformation.strUserPassword">
+            <summary>
+            유져 비밀번호
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.structureConnectInformation.#ctor(HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.structureConnectInformation)">
+            <summary>
+            입력된 <see cref="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.structureConnectInformation"/> 객체를 복제하는 생성자
+            </summary>
+            <param name="objConnectInformation">FTP 접속 정보</param>
+        </member>
+        <member name="F:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.objConnectInformation">
+            <summary>
+            FTP 접속 정보
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CInitializeParameter"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CFTPError">
+            <summary>
+            <see cref="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine"/>에서 사용되는 에러 정보를 가진 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CFTPError.strEventTime">
+            <summary>
+            에러가 발생한 시간을 나타내는 프로퍼티
+            </summary>
+            <remarks>데이터 형식: "yyyy/MM/dd hh:mm:ss"</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CFTPError.strFunctionName">
+            <summary>
+            에러가 발생한 함수를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CFTPError.iReturnCode">
+            <summary>
+            함수에서 반환한 결과 코드를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CFTPError.strMessage">
+            <summary>
+            발생한 에러에대한 메시지를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CFTPError.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.FileInterface.FTP.CDeviceFileInterfaceFTPDefine.CFTPError"/> 객체</returns>
+        </member>
+    </members>
+</doc>

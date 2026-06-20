@@ -1,0 +1,1055 @@
+﻿IDX	,	ID	,	FORM_NAME	,	TEXT_KOREA	,	TEXT_CHINA	,	TEXT_ENGLISH	,	TEXT_VIETNAM
+0	,	BtnCellOutRetest	,	CDialogCellOutCode	,	Retest	,	Retest	,	Retest	,	Retest
+1	,	BtnCellOutManualTrackout	,	CDialogCellOutCode	,	Manual Trackout	,	Manual Trackout	,	Manual Trackout	,	Manual Trackout
+2	,	BtnCellOutNG	,	CDialogCellOutCode	,	NG	,	NG	,	NG	,	NG
+3	,	BtnCellOutGood	,	CDialogCellOutCode	,	Good	,	Good	,	Good	,	Good
+4	,	BtnCancel	,	CDialogCellOutCode	,	Cancel	,	Cancel	,	Cancel	,	Cancel
+5	,	LblTitleTop	,	CDialogDoor	,	조작 금지	,	조작 금지	,	조작 금지	,	NGHIÊM CẤM
+6	,	LblTitleRight1	,	CDialogDoor	,	설비 조작 금지	,	설비 조작 금지	,	설비 조작 금지	,	CẤM THAO TÁC
+7	,	LblTitleRight2	,	CDialogDoor	,	내부 작업 中	,	내부 작업 中	,	내부 작업 中	,	TRONG KHI THIẾT BỊ ĐANG SỬA CHỮA
+8	,	BtnTitleDoorControl	,	CDialogDoor	,	도어 제어	,	DOOR CONTROL	,	DOOR CONTROL	,	DOOR CONTROL
+9	,	BtnTitleInterlockMap	,	CDialogDoor	,	인터락 맵	,	INTERLOCK MAP	,	INTERLOCK MAP	,	INTERLOCK MAP
+10	,	BtnTitleFfuMap	,	CDialogDoor	,	FFU 맵	,	FFU MAP	,	FFU MAP	,	FFU MAP
+11	,	UcDoorControlSlideFront	,	CDialogDoor	,	[SLIDE-TYPE] 정면	,	[SLIDE-TYPE] FRONT	,	[SLIDE-TYPE] FRONT	,	[SLIDE-TYPE] FRONT
+12	,	UcDoorControlSlideRear	,	CDialogDoor	,	[SLIDE-TYPE] 후면	,	[SLIDE-TYPE] REAR	,	[SLIDE-TYPE] REAR	,	[SLIDE-TYPE] REAR
+13	,	BtnDoorLock	,	CDialogDoor	,	문 잠금	,	LOCK DOOR	,	LOCK DOOR	,	LOCK DOOR
+14	,	BtnDoorOpen	,	CDialogDoor	,	문 잠금 해제	,	UNLOCK DOOR	,	UNLOCK DOOR	,	UNLOCK DOOR
+15	,	BtnLockAllDoors	,	CDialogDoor	,	모든 문 잠금	,	LOCK ALL DOORS	,	LOCK ALL DOORS	,	LOCK ALL DOORS
+16	,	BtnUnlockAllDoors	,	CDialogDoor	,	모든 문 잠금 해제	,	UNLOCK ALL DOORS	,	UNLOCK ALL DOORS	,	UNLOCK ALL DOORS
+17	,	BtnClose	,	CDialogDoor	,	닫기	,	CLOSE	,	CLOSE	,	CLOSE
+18	,	m_strMessageKeyNoOwn	,	CDialogDoor	,	안전 도어가 열렸습니다	,	THE SAFETY DOOR IS UNLOCKED	,	THE SAFETY DOOR IS UNLOCKED	,	Đã mở cửa an toàn
+19	,	m_strMessageInnerOperatorCheck	,	CDialogDoor	,	내부에 작업자가 있는지 확인 하십시오	,	MAKE SURE YOU HAVE AN INSIDE WORKER	,	MAKE SURE YOU HAVE AN INSIDE WORKER	,	Hãy kiểm tra xem bên trong có người lao động hay không 
+20	,	m_strMessageDoorLock	,	CDialogDoor	,	안전 도어가 잠겼습니다	,	THE SAFETY DOOR IS LOCKED	,	THE SAFETY DOOR IS LOCKED	,	Đã khóa cửa an toàn 
+21	,	m_strMessageDoorOpen	,	CDialogDoor	,	안전 도어가 열렸습니다	,	THE SAFETY DOOR IS UNLOCKED	,	THE SAFETY DOOR IS UNLOCKED	,	Đã mở cửa an toàn
+22	,	BtnTitleCheck	,	CDialogDoor	,	점검	,	CHECK	,	CHECK	,	CHECK
+23	,	BtnSubTitleCheckGroupName	,	CDialogDoor	,	점검 그룹	,	CHECK GROUP	,	CHECK GROUP	,	CHECK GROUP
+24	,	BtnBuzzerOff	,	CDialogDoor	,	버저 끔	,	BUZZER OFF	,	BUZZER OFF	,	BUZZER OFF
+25	,	UcUpperDoorCheck	,	CDialogDoor	,	상류 설비 도어 닫힘	,	UPPER DOOR CLOSE	,	UPPER DOOR CLOSE	,	UPPER DOOR CLOSE
+26	,	UcLowerDoorCheck	,	CDialogDoor	,	하류 설비 도어 닫힘	,	LOWER DOOR CLOSE	,	LOWER DOOR CLOSE	,	LOWER DOOR CLOSE
+27	,	UcEnableSwitchCheck	,	CDialogDoor	,	ENABLE SWITCH 잡힘	,	ENABLE SWITCH GRIP	,	ENABLE SWITCH GRIP	,	ENABLE SWITCH GRIP
+28	,	BtnClose	,	CDialogNoOperation	,	닫기	,	CLOSE	,	CLOSE	,	CLOSE
+29	,	BtnBuzzerOff	,	CDialogNoOperation	,	부저 끔	,	BUZZER OFF	,	BUZZER OFF	,	BUZZER OFF
+30	,	LblKeepCoverOpenTitle	,	CDialogNoOperation	,	정상 작동	,	NORMAL OPERATION	,	NORMAL OPERATION	,	TRONG KHI VẬN HÀNH
+31	,	LblKeepCoverOpenDescription1	,	CDialogNoOperation	,	덮개를 열어두세요	,	KEEP THE COVER OPEN	,	KEEP THE COVER OPEN	,	MỞ BÌNH THƯỜNG
+32	,	LblKeepCoverOpenDescription2	,	CDialogNoOperation	,	조작시 덮개를 닫아주세요	,	KEEP THE COVER CLOSED DURING OPERATION	,	KEEP THE COVER CLOSED DURING OPERATION	,	ĐÓNG KHI XỬ LÝ THIẾT BỊ
+33	,	LblDoNotOperateTitle	,	CDialogNoOperation	,	조작 금지	,	DO NOT OPERATE	,	DO NOT OPERATE	,	NGHIÊM CẤM
+34	,	LblDoNotOperateDescription1	,	CDialogNoOperation	,	설비 조작 금지	,	DO NOT OPERATE EQUIPMENT	,	DO NOT OPERATE EQUIPMENT	,	CẤM THAO TÁC
+35	,	LblDoNotOperateDescription2	,	CDialogNoOperation	,	내부 작업 中	,	DURING INTERNAL WORK	,	DURING INTERNAL WORK	,	TRONG KHI THIẾT BỊ ĐANG SỬA CHỮA
+36	,	BtnDescriptionCellTrackingOn	,	CDialogEQPFunctionList	,	Host Command Sand/Wait 사용	,	Host Command Sand/Wait Use	,	Host Command Sand/Wait Use	,	Sử dụng Host Command Sand/Wait 
+37	,	BtnDescriptionCellTrackingOff	,	CDialogEQPFunctionList	,	Host Command Sand/Wait 미사용	,	Host Command Sand/Wait Unuse	,	Host Command Sand/Wait Unuse	,	Không sử dụng Host Command Sand/Wait 
+38	,	BtnDescriptionCellTrackingNothing	,	CDialogEQPFunctionList	,	기능 없음	,	No Function	,	No Function	,	Không có khả năng hoạt động ( No Function )
+39	,	BtnDescriptionTrackingControlTKIN	,	CDialogEQPFunctionList	,	TKIN Event Send/Wait( S6F11 CEID 401/411 )	,	TKIN Event Send/Wait( S6F11 CEID 401/412 )	,	TKIN Event Send/Wait( S6F11 CEID 401/413 )	,	TKIN Event Send/Wait( S6F11 CEID 401/411 )
+40	,	BtnDescriptionTrackingControlTKOUT	,	CDialogEQPFunctionList	,	TKOUT Event Send/Wait( S6F11 CEID 406/412 )	,	TKOUT Event Send/Wait( S6F11 CEID 406/413 )	,	TKOUT Event Send/Wait( S6F11 CEID 406/414 )	,	TKOUT Event Send/Wait( S6F11 CEID 406/412 )
+41	,	BtnDescriptionTrackingControlBOTH	,	CDialogEQPFunctionList	,	TKIN/ TKOUT Event Send/Wait	,	TKIN/ TKOUT Event Send/Wait	,	TKIN/ TKOUT Event Send/Wait	,	TKIN/ TKOUT Event Send/Wait
+42	,	BtnDescriptionTrackingControlNothing	,	CDialogEQPFunctionList	,	기능 없음 또는 미사용	,	No Function or Unuse	,	No Function or Unuse	,	Không có khả năng hoạt động ( No Function ) hoặc không sử dụng 
+43	,	BtnDescriptionMaterialTrackingOn	,	CDialogEQPFunctionList	,	Host Command Send/Wait 사용 ( Kitting/ Cancel )	,	Host Command Send/Wait Use ( Kitting/ Cancel )	,	Host Command Send/Wait Use ( Kitting/ Cancel )	,	Sử dụng Host Command Send/Wait ( Kitting/ Cancel )
+44	,	BtnDescriptionMaterialTrackingOff	,	CDialogEQPFunctionList	,	Host Command Not Wait 미사용	,	Host Command Not Wait Unuse	,	Host Command Not Wait Unuse	,	Không sử dụng Host Command Not Wait 
+45	,	BtnDescriptionMaterialTrackingNothing	,	CDialogEQPFunctionList	,	기능 없음	,	No Function	,	No Function	,	Không có khả năng hoạt động ( No Function )
+46	,	BtnDescriptionCellMCRModeUse	,	CDialogEQPFunctionList	,	CELL ID READ ( CELL TRACKING 동기화 )	,	CELL ID READ ( CELL TRACKING Synchronization )	,	CELL ID READ ( CELL TRACKING Synchronization )	,	CELL ID READ ( Đồng bộ hóa CELL TRACKING  )
+47	,	BtnDescriptionCellMCRModeUnuse	,	CDialogEQPFunctionList	,	CELL ID NOT READ	,	CELL ID NOT READ	,	CELL ID NOT READ	,	CELL ID NOT READ
+48	,	BtnDescriptionCellMCRModeNothing	,	CDialogEQPFunctionList	,	기능 없음 또는 H/W	,	No Function or H/W	,	No Function or H/W	,	Không có khả năng hoạt động ( No Function ) hoặc  H/W
+49	,	BtnDescriptionMaterialMCRModeUse	,	CDialogEQPFunctionList	,	MATERIAL ID READ ( MATERIAL TRACKING 동기화 )	,	MATERIAL ID READ ( MATERIAL TRACKING Synchronization )	,	MATERIAL ID READ ( MATERIAL TRACKING Synchronization )	,	MATERIAL ID READ ( Đồng bộ hóa MATERIAL TRACKING  )
+50	,	BtnDescriptionMaterialMCRModeUnuse	,	CDialogEQPFunctionList	,	MATERIAL ID NOT READ	,	MATERIAL ID NOT READ	,	MATERIAL ID NOT READ	,	MATERIAL ID NOT READ
+51	,	BtnDescriptionMaterialMCRModeNothing	,	CDialogEQPFunctionList	,	기능 없음 또는 H/W	,	No Function or H/W	,	No Function or H/W	,	Không có khả năng hoạt động ( No Function ) hoặc  H/W
+52	,	BtnDescriptionLotAssignInfoAuto	,	CDialogEQPFunctionList	,	시스템 기준 정보 사용	,	System Reference Information Use	,	System Reference Information Use	,	Sử dụng thông tin hệ thống tiêu chuẩn 
+53	,	BtnDescriptionLotAssignInfoManual	,	CDialogEQPFunctionList	,	사용자 입력 정보 사용	,	User Input Information Use	,	User Input Information Use	,	Sử dụng thông tin người dùng đăng nhập 
+54	,	BtnDescriptionLotAssignInfoNothing	,	CDialogEQPFunctionList	,	기능 없음 또는 미사용	,	No Function or Unuse	,	No Function or Unuse	,	Không có khả năng hoạt động ( No Function ) hoặc không sử dụng 
+55	,	BtnDescriptionAGVAccessModeAuto	,	CDialogEQPFunctionList	,	물류 자동 반송 운용	,	Logistics automatic return operation	,	Logistics automatic return operation	,	Vận dụng chuyển lưu thông tự động 
+56	,	BtnDescriptionAGVAccessModeManual	,	CDialogEQPFunctionList	,	물류 수동 반송 운용	,	Logistics manual return operation	,	Logistics manual return operation	,	Vận dụng chuyển lưu thông bằng tay 
+57	,	BtnDescriptionAGVAccessModeNothing	,	CDialogEQPFunctionList	,	기능 없음 또는 미사용	,	No Function or Unuse	,	No Function or Unuse	,	Không có khả năng hoạt động ( No Function ) hoặc không sử dụng 
+58	,	BtnDescriptionAreaSensorModeUse	,	CDialogEQPFunctionList	,	AREA SENSOR 사용	,	AREA SENSOR Use	,	AREA SENSOR Use	,	Sử dụng AREA SENSOR 
+59	,	BtnDescriptionAreaSensorModeUnuse	,	CDialogEQPFunctionList	,	AREA SENSOR 미사용	,	AREA SENSOR UnUse	,	AREA SENSOR UnUse	,	Không sử dụng AREA SENSOR 
+60	,	BtnDescriptionAreaSensorModeNothing	,	CDialogEQPFunctionList	,	기능 없음 또는 H/W 없음	,	No Function or H/W	,	No Function or H/W	,	Không có khả năng hoạt động ( No Function ) hoặc  không có H/W 
+61	,	BtnDescriptionSortModeUse	,	CDialogEQPFunctionList	,	특정 조건의 SORT 기능 사용	,	Specific conditions SORT Function Use	,	Specific conditions SORT Function Use	,	Sử dụng tính năng SORT với các điều kiện nhất định
+62	,	BtnDescriptionSortModeUnuse	,	CDialogEQPFunctionList	,	특정 조건의 SORT 기능 미사용	,	Specific conditions SORT Function Unuse	,	Specific conditions SORT Function Unuse	,	Không sSử dụng tính năng SORT với các điều kiện nhất định
+63	,	BtnDescriptionSortModeNothing	,	CDialogEQPFunctionList	,	기능 없음	,	No Function	,	No Function	,	Không có khả năng hoạt động ( No Function )
+64	,	BtnDescriptionInterlockControlTransfer	,	CDialogEQPFunctionList	,	후 공정으로 반송 중지	,	Stop returning to the post-process	,	Stop returning to the post-process	,	Ngưng chuyển về công đoạn sau 
+65	,	BtnDescriptionInterlockControlLoading	,	CDialogEQPFunctionList	,	전 공정으로 부터 반송 중지	,	Stop returning from the previous process	,	Stop returning from the previous process	,	Ngưng bắt đầu chuyển về công đoạn trước 
+66	,	BtnDescriptionInterlockControlStep	,	CDialogEQPFunctionList	,	전 / 후 공정으로 반송 중지/ 현재 Step에서 정지	,	Stop returning to the post and previous process / Step Stop	,	Stop returning to the post and previous process / Step Stop	,	Ngưng chuyển về công đoạn sau / trước . Dừng lại ở bước hiện tại
+67	,	BtnDescriptionInterlockControlOwn	,	CDialogEQPFunctionList	,	설비 자체 판단으로 반송 중지 및 Step / Cycle 정지	,	Stop returning to Equipment judgment / step and cycle stop	,	Stop returning to Equipment judgment / step and cycle stop	,	Thiết bị tự phán đoán ngừng chuyển về hoặc ngừng Step / Cycle
+68	,	BtnDescriptionLoaderLoadPortMcr_ON	,	CDialogEQPFunctionList	,	Host Command or Information Send/Wait 사용	,	Use Host Command or Information Send/Wait	,	Use Host Command or Information Send/Wait	,	Use Host Command or Information Send/Wait
+69	,	BtnDescriptionLoaderLoadPortMcr_OFF	,	CDialogEQPFunctionList	,	Host Command or Information Send/Wait 미사용	,	Unuse Host Command or Information Send/Wait	,	Unuse Host Command or Information Send/Wait	,	Unuse Host Command or Information Send/Wait
+70	,	BtnDescriptionLoaderLoadPortMcr_Nothing	,	CDialogEQPFunctionList	,	기능 없음 또는 H/W 없음	,	No Function or H/W	,	No Function or H/W	,	No Function or H/W
+71	,	BtnDescriptionLoaderUsePortMcr_ON	,	CDialogEQPFunctionList	,	Host Command or Information Send/Wait 사용	,	Use Host Command or Information Send/Wait	,	Use Host Command or Information Send/Wait	,	Use Host Command or Information Send/Wait
+72	,	BtnDescriptionLoaderUsePortMcr_OFF	,	CDialogEQPFunctionList	,	Host Command or Information Send/Wait 미사용	,	Unuse Host Command or Information Send/Wait	,	Unuse Host Command or Information Send/Wait	,	Unuse Host Command or Information Send/Wait
+73	,	BtnDescriptionLoaderUsePortMcr_Nothing	,	CDialogEQPFunctionList	,	기능 없음 또는 H/W 없음	,	No Function or H/W	,	No Function or H/W	,	No Function or H/W
+74	,	BtnDescriptionUnLoaderUsePortMcr_ON	,	CDialogEQPFunctionList	,	Host Command or Information Send/Wait 사용	,	Use Host Command or Information Send/Wait	,	Use Host Command or Information Send/Wait	,	Use Host Command or Information Send/Wait
+75	,	BtnDescriptionUnLoaderUsePortMcr_OFF	,	CDialogEQPFunctionList	,	Host Command or Information Send/Wait 미사용	,	Unuse Host Command or Information Send/Wait	,	Unuse Host Command or Information Send/Wait	,	Unuse Host Command or Information Send/Wait
+76	,	BtnDescriptionUnLoaderUsePortMcr_Nothing	,	CDialogEQPFunctionList	,	기능 없음 또는 H/W 없음	,	No Function or H/W	,	No Function or H/W	,	No Function or H/W
+77	,	BtnDescriptionAPCMode_Auto	,	CDialogEQPFunctionList	,	System에 의한 Parameter Setting	,	Parameter Setting By System	,	Parameter Setting By System	,	Parameter Setting By System
+78	,	BtnDescriptionAPCMode_Manu	,	CDialogEQPFunctionList	,	Engineer에 의한 Parameter Setting	,	Parameter Setting By Engineer	,	Parameter Setting By Engineer	,	Parameter Setting By Engineer
+79	,	BtnDescriptionAPCMode_Nothing	,	CDialogEQPFunctionList	,	기능 없음 또는 H/W 없음	,	No Function or H/W	,	No Function or H/W	,	No Function or H/W
+80	,	BtnMultiPassModeDescription	,	CDialogEQPFunctionList	,	1) PASS(G) / PASS2(T) 구분 기능으로 EFST % 비율로\n    동작한다.\n2) 0~100 까지 10단위로 EFST 가능. 그 외 입력 불가\n3) 양품 대상으로 Cell 10매 단워로 비율을 계산한다.\n4) 양품 외 Cell은 비율 계산에서 제외한다.\n    JUDGE == L || O || R	,	1) PASS(G) / PASS2(T) 구분 기능으로 EFST % 비율로\n    동작한다.\n2) 0~100 까지 10단위로 EFST 가능. 그 외 입력 불가\n3) 양품 대상으로 Cell 10매 단워로 비율을 계산한다.\n4) 양품 외 Cell은 비율 계산에서 제외한다.\n    JUDGE == L || O || R	,	1) PASS(G) / PASS2(T) 구분 기능으로 EFST % 비율로\n    동작한다.\n2) 0~100 까지 10단위로 EFST 가능. 그 외 입력 불가\n3) 양품 대상으로 Cell 10매 단워로 비율을 계산한다.\n4) 양품 외 Cell은 비율 계산에서 제외한다.\n    JUDGE == L || O || R	,	1) PASS(G) / PASS2(T) 구분 기능으로 EFST % 비율로\n    동작한다.\n2) 0~100 까지 10단위로 EFST 가능. 그 외 입력 불가\n3) 양품 대상으로 Cell 10매 단워로 비율을 계산한다.\n4) 양품 외 Cell은 비율 계산에서 제외한다.\n    JUDGE == L || O || R
+81	,	BtnConfirm	,	CDialogEQPFunctionList	,	확인	,	CONFIRM	,	CONFIRM	,	Kiểm tra
+82	,	BtnExit	,	CDialogEQPFunctionList	,	종료	,	EXIT	,	EXIT	,	Thoát
+83	,	BtnConfirm	,	CDialogInterlockMessage	,	확인	,	CONFIRM	,	CONFIRM	,	CONFIRM
+84	,	BtnBuzzerOff	,	CDialogInterlockMessage	,	버저 끔	,	Buzzer Off	,	Buzzer Off	,	Buzzer Off
+85	,	BtnTitleLogin	,	CDialogLogin	,	로그인	,	LOGIN	,	LOGIN	,	LOGIN
+86	,	BtnTitleID	,	CDialogLogin	,	아이디	,	ID	,	ID	,	ID
+87	,	BtnTitlePassword	,	CDialogLogin	,	암호	,	PASSWORD	,	PASSWORD	,	PASSWORD
+88	,	BtnLogin	,	CDialogLogin	,	로그인	,	LOGIN	,	LOGIN	,	LOGIN
+89	,	BtnLogout	,	CDialogLogin	,	로그아웃	,	LOGOUT	,	LOGOUT	,	LOGOUT
+90	,	BtnCancel	,	CDialogLogin	,	취소	,	CANCEL	,	CANCEL	,	CANCEL
+91	,	BtnBuzzerOff	,	CDialogLogin	,	버저 끔	,	BUZZER OFF	,	BUZZER OFF	,	BUZZER OFF
+92	,	BtnTitleUserCheck	,	CDialogLogin	,	사용자 확인	,	USER CHECK	,	USER CHECK	,	USER CHECK
+93	,	BtnCheck	,	CDialogLogin	,	확인	,	CHECK	,	CHECK	,	CHECK
+94	,	lblSubTitleSelectUserLevel	,	CDialogLogin	,	사용자 권한 선택	,	USER LEVEL SELECT	,	USER LEVEL SELECT	,	USER LEVEL SELECT
+95	,	btnSelectOperator	,	CDialogLogin	,	오퍼레이터	,	OPERATOR	,	OPERATOR	,	OPERATOR
+96	,	btnSelectEngineer	,	CDialogLogin	,	엔지니어	,	ENGINEER	,	ENGINEER	,	ENGINEER
+97	,	btnSelectMaster	,	CDialogLogin	,	관리자	,	ADMIN	,	ADMIN	,	ADMIN
+98	,	LblTitlePasswordModeSelect	,	CDialogLogin	,	비밀번호 모드 선택	,	PASSWORD MODE SELECT	,	PASSWORD MODE SELECT	,	PASSWORD MODE SELECT
+99	,	BtnTitleConfirm	,	CDialogPassword	,	확인	,	CONFIRM	,	CONFIRM	,	CONFIRM
+100	,	BtnTitlePassword	,	CDialogPassword	,	암호	,	PASSWORD	,	PASSWORD	,	PASSWORD
+101	,	BtnOk	,	CDialogPassword	,	확인	,	OK	,	OK	,	OK
+102	,	BtnCancel	,	CDialogPassword	,	취소	,	CANCEL	,	CANCEL	,	CANCEL
+103	,	BtnTitleEqpState	,	CDialogLossCode	,	EQP STATE	,	EQP STATE	,	EQP STATE	,	EQP STATE
+104	,	BtnTitleTPIndex	,	CDialogLossCode	,	TP INDEX	,	TP INDEX	,	TP INDEX	,	TP INDEX
+105	,	BtnTitleDescription	,	CDialogLossCode	,	DESCRIPTION	,	DESCRIPTION	,	DESCRIPTION	,	DESCRIPTION
+106	,	BtnTitleCode	,	CDialogLossCode	,	CODE	,	CODE	,	CODE	,	CODE
+107	,	BtnTPIndexBM	,	CDialogLossCode	,	BM	,	BM	,	BM	,	BM
+108	,	BtnTPIndexPM	,	CDialogLossCode	,	PM	,	PM	,	PM	,	PM
+109	,	BtnTPIndexCM	,	CDialogLossCode	,	CM	,	CM	,	CM	,	CM
+110	,	BtnTPIndexModelChange	,	CDialogLossCode	,	기종변경	,	CHANGE_MODEL	,	CHANGE_MODEL	,	Thay đổi loại mẫu ( CHANGE_MODEL )
+111	,	BtnTPIndexMaterial	,	CDialogLossCode	,	자재	,	MATERIAL	,	MATERIAL	,	NVL ( MATERIAL )
+112	,	BtnDescriptionBreakDownManual	,	CDialogLossCode	,	고장_수동	,	BREAKDOWN_MANUAL	,	BREAKDOWN_MANUAL	,	Lỗi bằng tay ( BREAKDOWN_MANUAL )
+113	,	BtnDescriptionRegularPM	,	CDialogLossCode	,	정기_PM	,	REGULAR_PM	,	REGULAR_PM	,	Định kỳ_PM ( REGULAR_PM )
+114	,	BtnDescriptionIrregularPM	,	CDialogLossCode	,	비정기_PM	,	IRREGULAR_PM	,	IRREGULAR_PM	,	Không định kỳ_PM ( IRREGULAR_PM )
+115	,	BtnDescriptionIrregularPMCheckEquipment	,	CDialogLossCode	,	설비점검	,	CHECK_EQUIPMENT	,	CHECK_EQUIPMENT	,	Kiểm tra thiết bị ( CHECK_EQUIPMENT )
+116	,	BtnDescriptionIrregularPMCheckQuality	,	CDialogLossCode	,	품질점검	,	CHECK_QUALITY	,	CHECK_QUALITY	,	Kiểm tra chất lượng ( CHECK_QUALITY )
+117	,	BtnDescriptionImmproveEquipmentEE	,	CDialogLossCode	,	설비_개량_보전_EE	,	IMPROVE_EQUIPMENT_EE	,	IMPROVE_EQUIPMENT_EE	,	Thiết bị_Cải thiện_Bảo tu_EE ( IMPROVE_EQUIPMENT_EE )
+118	,	BtnDescriptionImproveProcessingEI	,	CDialogLossCode	,	공정_개량_보전_EI	,	IMPROVE_PROCESSING_EI	,	IMPROVE_PROCESSING_EI	,	Công đoạn_Cải thiện_Bảo tu_EI ( IMPROVE_PROCESSING_EI )
+119	,	BtnDescriptionSetupNewProduct	,	CDialogLossCode	,	신규제품_SET_UP	,	SETUP_NEW_PRODUCT	,	SETUP_NEW_PRODUCT	,	SET_UP sản phẩm mới ( SETUP_NEW_PRODUCT )
+120	,	BtnDescriptionChangeSameModel	,	CDialogLossCode	,	동품종_변경	,	CHANGE_SAME_MODEL	,	CHANGE_SAME_MODEL	,	Thay đổi loại hình sản phẩm giống nhau ( CHANGE_SAME_MODEL )
+121	,	BtnDescriptionChangeDifferentMode	,	CDialogLossCode	,	이품종_변경	,	CHANGE_DIFFERENT_MODEL	,	CHANGE_DIFFERENT_MODEL	,	Thay đổi loại hình sản phẩm khác nhau ( CHANGE_DIFFERENT_MODEL )
+122	,	BtnDescriptionChangeMaterial	,	CDialogLossCode	,	자재_교체	,	CHANGE_MATERIAL	,	CHANGE_MATERIAL	,	Thay đổi NVL ( CHANGE_MATERIAL )
+123	,	BtnDescriptionDownMaterial	,	CDialogLossCode	,	자재_DOWN	,	DOWN_MATERIAL	,	DOWN_MATERIAL	,	DOWN NVL ( DOWN_MATERIAL )
+124	,	BtnEqpState	,	CDialogLossCode	,	DOWN	,	DOWN	,	DOWN	,	DOWN
+125	,	BtnConfirm	,	CDialogLossCode	,	CONFIRM	,	CONFIRM	,	CONFIRM	,	CONFIRM
+126	,	BtnOK	,	CDialogMessage	,	확인	,	OK	,	OK	,	OK
+127	,	BtnYes	,	CDialogMessage	,	예	,	YES	,	YES	,	YES
+128	,	BtnNo	,	CDialogMessage	,	아니오	,	NO	,	NO	,	NO
+129	,	TextBoxTitleAlarmTypeInformation	,	CDialogMessage	,	INFORMATION	,	INFORMATION	,	INFORMATION	,	INFORMATION
+130	,	TextBoxTitleAlarmTypeWarning	,	CDialogMessage	,	WARNING	,	WARNING	,	WARNING	,	WARNING
+131	,	TextBoxTitleAlarmTypeAlarm	,	CDialogMessage	,	ALARM	,	ALARM	,	ALARM	,	ALARM
+132	,	TextBoxTitleAlarmTypeInterlock	,	CDialogMessage	,	INTERLOCK	,	INTERLOCK	,	INTERLOCK	,	INTERLOCK
+133	,	TextBoxTitleAlarmTypeQuestion	,	CDialogMessage	,	QUESTION	,	QUESTION	,	QUESTION	,	QUESTION
+134	,	TextBoxTitleAlarmTypeMotor	,	CDialogMessage	,	MOTOR	,	MOTOR	,	MOTOR	,	MOTOR
+135	,	TextBoxTitleAlarmTime	,	CDialogMessage	,	시간	,	TIME	,	TIME	,	Thời gian ( TIME )
+136	,	TextBoxTitleAlarmCode	,	CDialogMessage	,	코드	,	CODE	,	CODE	,	Mã ( CODE )
+137	,	TextBoxTitleAlarmObject	,	CDialogMessage	,	객체	,	OBJECT	,	OBJECT	,	Vật thể ( OBJECT )
+138	,	TextBoxTitleAlarmPosition	,	CDialogMessage	,	위치	,	POSITION	,	POSITION	,	Vị trí 
+139	,	BtnTitleAlarmDescription	,	CDialogMessage	,	메시지	,	MESSAGE	,	MESSAGE	,	MESSAGE
+140	,	BtnTitleAlarmTime	,	CFormAlarm	,	발생 시간	,	OCCURRED TIME	,	OCCURRED TIME	,	Thời gian phát sinh
+141	,	BtnTitleAlarmPart	,	CFormAlarm	,	위치	,	PART	,	PART	,	Vị trí 
+142	,	BtnTitleAlarmText	,	CFormAlarm	,	발생 이유	,	OCCURRED REASON	,	OCCURRED REASON	,	Lý do phát sinh
+143	,	BtnTitleAlarmDescription	,	CFormAlarm	,	해결책	,	SOLUTION	,	SOLUTION	,	Phương pháp xử lý
+144	,	BtnAlarmReset	,	CFormAlarm	,	알람 초기화	,	ALARM RESET	,	ALARM RESET	,	Khởi tạo ALARM
+145	,	BtnAlarmAllReset	,	CFormAlarm	,	알람 전체 초기화	,	ALARM ALL RESET	,	ALARM ALL RESET	,	Khởi tạo lại toàn bộ ALARM
+146	,	BtnBuzzerOff	,	CFormAlarm	,	버저 끔	,	BUZZER OFF	,	BUZZER OFF	,	BUZZER OFF
+147	,	BtnAlarmImage	,	CFormAlarm	,	위치 보기	,	VIEW LOCATION	,	VIEW LOCATION	,	VIEW LOCATION
+148	,	BtnAlarmSop	,	CFormAlarm	,	SOP 보기	,	VIEW SOP	,	VIEW SOP	,	VIEW SOP
+149	,	BtnConfigMenu[0]	,	CFormConfig	,	설정	,	OPTION	,	OPTION	,	Cài đặt
+150	,	BtnConfigMenu[1]	,	CFormConfig	,	레시피	,	RECIPE	,	RECIPE	,	RECIPE
+151	,	BtnConfigMenu[2]	,	CFormConfig	,	오프셋	,	OFFSET	,	OFFSET	,	OFFSET
+152	,	BtnConfigMenu[3]	,	CFormConfig	,	대기 시간	,	WAIT TIME	,	WAIT TIME	,	WAIT TIME
+153	,	BtnConfigMenu[4]	,	CFormConfig	,	시그널 타워	,	SIGNAL TOWER	,	SIGNAL TOWER	,	SIGNAL TOWER
+154	,	BtnConfigMenu[5]	,	CFormConfig	,	MCC 로그 설정	,	MCC LOG SETTING	,	MCC LOG SETTING	,	MCC LOG SETTING
+155	,	BtnTitleMCCLogView	,	CFormConfigMCCLog	,	MCC 로그 설정	,	MCC LOG SETTING	,	MCC LOG SETTING	,	MCC LOG SETTING
+156	,	BtnTitleFileServerIP	,	CFormConfigMCCLog	,	파일 서버 IP	,	FILE SERVER IP	,	FILE SERVER IP	,	FILE SERVER IP
+157	,	BtnTitleFileServerPort	,	CFormConfigMCCLog	,	파일 서버 PORT	,	FILE SERVER PORT	,	FILE SERVER PORT	,	FILE SERVER PORT
+158	,	BtnTitleBasicPath	,	CFormConfigMCCLog	,	기본 경로	,	BASIC PATH	,	BASIC PATH	,	BASIC PATH
+159	,	BtnTitleFileServerLoginID	,	CFormConfigMCCLog	,	로그인 ID	,	LOGIN ID	,	LOGIN ID	,	LOGIN ID
+160	,	BtnTitleFileServerLoginPassword	,	CFormConfigMCCLog	,	로그인 암호	,	LOGIN PASSWORD	,	LOGIN PASSWORD	,	LOGIN PASSWORD
+161	,	BtnTitleLoggingTime	,	CFormConfigMCCLog	,	로깅 시간	,	LOGGING TIME	,	LOGGING TIME	,	LOGGING TIME
+162	,	BtnTitleLogDeletePeriod	,	CFormConfigMCCLog	,	로그 보관 기간	,	LOG RETENTION PERIOD	,	LOG RETENTION PERIOD	,	LOG RETENTION PERIOD
+163	,	BtnTitleLogUploadTime	,	CFormConfigMCCLog	,	로그 업로드 시간	,	LOG UPLOAD TIME	,	LOG UPLOAD TIME	,	LOG UPLOAD TIME
+164	,	BtnUseMCC	,	CFormConfigMCCLog	,	MCC 사용	,	USE MCC	,	USE MCC	,	USE MCC
+165	,	BtnSave	,	CFormConfigMCCLog	,	저장	,	SAVE	,	SAVE	,	SAVE
+166	,	BtnLoad	,	CFormConfigMCCLog	,	불러오기	,	LOAD	,	LOAD	,	LOAD
+167	,	BtnTitleUploadStatus	,	CFormConfigMCCLog	,	업로드 상태	,	UPLOAD STATUS	,	UPLOAD STATUS	,	UPLOAD STATUS
+168	,	BtnTitleNextScheduleLessTime	,	CFormConfigMCCLog	,	다음 업로드까지 남은 시간	,	NEXT SCHEDULE LESS TIME	,	NEXT SCHEDULE LESS TIME	,	NEXT SCHEDULE LESS TIME
+169	,	BtnTitleUploadInformation	,	CFormConfigMCCLog	,	업로드 정보	,	UPLOAD INFORMATION	,	UPLOAD INFORMATION	,	UPLOAD INFORMATION
+170	,	BtnTitleUploadCompleted	,	CFormConfigMCCLog	,	업로드 완료	,	UPLOAD COMPLETED	,	UPLOAD COMPLETED	,	UPLOAD COMPLETED
+171	,	BtnTitleLastUploadSuccessed	,	CFormConfigMCCLog	,	마지막 업로드 성공 여부	,	LAST UPLOAD SUCCESSED	,	LAST UPLOAD SUCCESSED	,	LAST UPLOAD SUCCESSED
+172	,	BtnManualUpload	,	CFormConfigMCCLog	,	수동 업로드	,	MANUAL UPLOAD	,	MANUAL UPLOAD	,	MANUAL UPLOAD
+173	,	BtnTitleOptionView	,	CFormConfigOption	,	설정	,	OPTION	,	OPTION	,	OPTION
+174	,	BtnTitleRunMode	,	CFormConfigOption	,	설비 운영 모드	,	RUN MODE	,	RUN MODE	,	RUN MODE
+175	,	BtnTitleSystemConfig	,	CFormConfigOption	,	시스템 설정	,	SYSTEM CONFIG	,	SYSTEM CONFIG	,	SYSTEM CONFIG
+176	,	BtnRealRun	,	CFormConfigOption	,	실제 런	,	REAL RUN	,	REAL RUN	,	REAL RUN
+177	,	BtnUnlinkDryrun	,	CFormConfigOption	,	단동 드라이런	,	UNLINK DRYRUN	,	UNLINK DRYRUN	,	UNLINK DRYRUN
+178	,	BtnUseBuzzer	,	CFormConfigOption	,	버저 사용	,	USE BUZZER	,	USE BUZZER	,	USE BUZZER
+179	,	BtnUseCIM	,	CFormConfigOption	,	CIM 사용	,	USE CIM	,	USE CIM	,	USE CIM
+180	,	BtnUseBinPrime	,	CFormConfigOption	,	BINPRIME 사용	,	USE BINPRIME	,	USE BINPRIME	,	USE BINPRIME
+181	,	BtnUseMCR	,	CFormConfigOption	,	MCR 사용	,	USE MCR	,	USE MCR	,	USE MCR
+182	,	BtnFunctionList	,	CFormConfigOption	,	기능 목록	,	FUNCTION LIST	,	FUNCTION LIST	,	FUNCTION LIST
+183	,	BtnSave	,	CFormConfigOption	,	저장	,	SAVE	,	SAVE	,	SAVE
+184	,	BtnLoad	,	CFormConfigOption	,	불러오기	,	LOAD	,	LOAD	,	LOAD
+185	,	BtnTitleOperationOption	,	CFormConfigOption	,	운전 옵션	,	OPERATION CONFIG	,	OPERATION CONFIG	,	Tùy chọn vận hành ( OPERATION CONFIG ) 
+186	,	BtnTitleResultWaitAlarmCount	,	CFormConfigOption	,	외관 검사기 결과 대기 타임아웃 중알람 횟수	,	RESULT WAIT TIMEOUT ALARM COUNT	,	RESULT WAIT TIMEOUT ALARM COUNT	,	RESULT WAIT TIMEOUT ALARM COUNT
+187	,	BtnTitleCimConfig	,	CFormConfigOption	,	CIM 설정	,	CIM CONFIG	,	CIM CONFIG	,	CIM CONFIG
+188	,	BtnTitleFanAlarmTime	,	CFormConfigOption	,	팬 알람 지연 시간	,	FAN ALARM DELAY TIME	,	FAN ALARM DELAY TIME	,	Thời gian chậm chễ FAN ALARM ( FAN ALARM DELAY TIME )
+189	,	BtnTitlePasswordModeSelect	,	CFormConfigOption	,	비밀번호 모드 선택	,	PASSWORD MODE SELECT	,	PASSWORD MODE SELECT	,	PASSWORD MODE SELECT
+190	,	BtnTitleMaterialsManagement	,	CFormConfigOption	,	자재 관리	,	MATERIALS MANAGEMENT	,	MATERIALS MANAGEMENT	,	MATERIALS MANAGEMENT
+191	,	BtnUseMaterialsManagement	,	CFormConfigOption	,	사용	,	USE	,	USE	,	USE
+192	,	BtnTitleTrackInManualProductId	,	CFormConfigOption	,	트랙인 수동 PRODUCT ID	,	TRACK IN MANUAL PRODUCT ID	,	TRACK IN MANUAL PRODUCT ID	,	TRACK IN MANUAL PRODUCT ID
+193	,	BtnCellInputTimeClear	,	CFormConfigOption	,	자재 투입 시간 초기화	,	CELL INPUT TIME CLEAR	,	CELL INPUT TIME CLEAR	,	CELL INPUT TIME CLEAR
+194	,	BtnTitleConveyorOption	,	CFormConfigOption	,	컨베이어 옵션	,	CONVEYOR OPTION	,	CONVEYOR OPTION	,	CONVEYOR OPTION
+195	,	BtnUseOutConveyorInputCheck	,	CFormConfigOption	,	OUT컨베이어 투입 감지 사용	,	USE OUT CONVEYOR INPUT CHECK	,	USE OUT CONVEYOR INPUT CHECK	,	USE OUT CONVEYOR INPUT CHECK
+196	,	BtnUseOutConveyorOutputCheck	,	CFormConfigOption	,	OUT컨베이어 배출 감지 사용	,	USE OUT CONVEYOR OUTPUT CHECK	,	USE OUT CONVEYOR OUTPUT CHECK	,	USE OUT CONVEYOR OUTPUT CHECK
+197	,	BtnUseOutConveyorBlockedCheck	,	CFormConfigOption	,	OUT컨베이어 자재쌓임 감지 사용	,	USE OUT CONVEYOR BLOCKED CHECK	,	USE OUT CONVEYOR BLOCKED CHECK	,	USE OUT CONVEYOR BLOCKED CHECK
+198	,	BtnTitleLowEnergyMode	,	CFormConfigOption	,	저전력 모드	,	LOW ENERGY MODE	,	LOW ENERGY MODE	,	LOW ENERGY MODE
+199	,	BtnSubTitleLowEnergyModeFfuNormalRpm	,	CFormConfigOption	,	FFU 정상 RPM	,	FFU NORMAL RPM	,	FFU NORMAL RPM	,	FFU NORMAL RPM
+200	,	BtnSubTitleLowEnergyModeFfuSlowRpm	,	CFormConfigOption	,	FFU 저속 RPM	,	FFU SLOW RPM	,	FFU SLOW RPM	,	FFU SLOW RPM
+201	,	BtnUseLowEnergyMode	,	CFormConfigOption	,	사용	,	USE	,	USE	,	USE
+202	,	BtnTitleOutRobotTurnCylinderOption	,	CFormConfigOption	,	OUT로봇 배출 실린더 옵션	,	OUT ROBOT TURN CYLINDER OPTION	,	OUT ROBOT TURN CYLINDER OPTION	,	OUT ROBOT TURN CYLINDER OPTION
+203	,	BtnSubTitleOutRobotTurnCylinderOptionOk	,	CFormConfigOption	,	양품	,	OK	,	OK	,	OK
+204	,	BtnSubTitleOutRobotTurnCylinderOptionNg	,	CFormConfigOption	,	불량	,	NG	,	NG	,	NG
+205	,	BtnOutRobotTurnCylinderOptionOkTurn	,	CFormConfigOption	,	회전	,	TURN	,	TURN	,	TURN
+206	,	BtnOutRobotTurnCylinderOptionOkReturn	,	CFormConfigOption	,	복귀	,	RETURN	,	RETURN	,	RETURN
+207	,	BtnOutRobotTurnCylinderOptionNgTurn	,	CFormConfigOption	,	회전	,	TURN	,	TURN	,	TURN
+208	,	BtnOutRobotTurnCylinderOptionNgReturn	,	CFormConfigOption	,	복귀	,	RETURN	,	RETURN	,	RETURN
+209	,	BtnTitleStageVacuumOption	,	CFormConfigOption	,	스테이지 진공 옵션	,	STAGE VACUUM OPTION	,	STAGE VACUUM OPTION	,	STAGE VACUUM OPTION
+210	,	BtnInspStageVacuumMode1	,	CFormConfigOption	,	모드1	,	MODE1	,	MODE1	,	MODE1
+211	,	BtnInspStageVacuumMode2	,	CFormConfigOption	,	모드2	,	MODE2	,	MODE2	,	MODE2
+212	,	BtnInspStageVacuumMode3	,	CFormConfigOption	,	모드3	,	MODE3	,	MODE3	,	MODE3
+213	,	BtnTitleRecipeList	,	CFormConfigRecipe	,	레시피 목록	,	RECIPE LIST	,	RECIPE LIST	,	RECIPE LIST
+214	,	BtnTitleRecipeInfo	,	CFormConfigRecipe	,	레시피 정보	,	RECIPE INFORMATION	,	RECIPE INFORMATION	,	RECIPE INFORMATION
+215	,	BtnTitleSelectedPPID	,	CFormConfigRecipe	,	선택된 PPID	,	SELECTED PPID	,	SELECTED PPID	,	SELECTED PPID
+216	,	BtnSave	,	CFormConfigRecipe	,	저장	,	SAVE	,	SAVE	,	SAVE
+217	,	BtnLoad	,	CFormConfigRecipe	,	불러오기	,	LOAD	,	LOAD	,	LOAD
+218	,	BtnDelete	,	CFormConfigRecipe	,	삭제	,	DELETE	,	DELETE	,	DELETE
+219	,	BtnCreate	,	CFormConfigRecipe	,	생성	,	CREATE	,	CREATE	,	CREATE
+220	,	BtnTitleCreatePPID	,	CFormConfigRecipe	,	PPID	,	PPID	,	PPID	,	PPID
+221	,	BtnTitleCreatePpidNumber	,	CFormConfigRecipe	,	PPID 번호	,	PPID NUMBER	,	PPID NUMBER	,	PPID NUMBER
+222	,	BtnTitlePPID	,	CFormConfigRecipe	,	PPID	,	PPID	,	PPID	,	PPID
+223	,	BtnFirstPage	,	CFormConfigRecipe	,	처음으로	,	FIRST PAGE	,	FIRST PAGE	,	FIRST PAGE
+224	,	BtnPriviousPage	,	CFormConfigRecipe	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+225	,	BtnNextPage	,	CFormConfigRecipe	,	다음	,	NEXT	,	NEXT	,	NEXT
+226	,	BtnLastPage	,	CFormConfigRecipe	,	마지막으로	,	LAST PAGE	,	LAST PAGE	,	LAST PAGE
+227	,	mResourceCreateOffsetOptionTitle	,	CFormConfigRecipe	,	모델 생성 옵션 선택	,	SELECT CREATE MODEL OPTION	,	SELECT CREATE MODEL OPTION	,	SELECT CREATE MODEL OPTION
+228	,	mResourceCreateOffsetOption1	,	CFormConfigRecipe	,	N: 오프셋 값 초기화 후 생성	,	N: RESET OFFSET AND CREATE	,	N: RESET OFFSET AND CREATE	,	N: RESET OFFSET AND CREATE
+229	,	mResourceCreateOffsetOption2	,	CFormConfigRecipe	,	O: 기존 오프셋 값 참조 후 생성	,	O: LOAD OFFSET AND CREATE	,	O: LOAD OFFSET AND CREATE	,	O: LOAD OFFSET AND CREATE
+230	,	mResourceDeleteOffsetOptionTitle	,	CFormConfigRecipe	,	모델 삭제 옵션 선택	,	SELECT DELETE MODEL OPTION	,	SELECT DELETE MODEL OPTION	,	SELECT DELETE MODEL OPTION
+231	,	mResourceDeleteOffsetOption1	,	CFormConfigRecipe	,	D: 오프셋 값 초기화 후 삭제	,	D: RESET OFFSET AND DELETE	,	D: RESET OFFSET AND DELETE	,	D: RESET OFFSET AND DELETE
+232	,	mResourceDeleteOffsetOption2	,	CFormConfigRecipe	,	G: 오프셋 값 유지 후 삭제	,	G: KEEP OFFSET AND DELETE	,	G: KEEP OFFSET AND DELETE	,	G: KEEP OFFSET AND DELETE
+233	,	mResourceCommonOffsetOptionCancel	,	CFormConfigRecipe	,	취소	,	CANCEL	,	CANCEL	,	CANCEL
+234	,	BtnTitleOffsetList	,	CFormConfigOffset	,	오프셋 값 목록	,	OFFSET LIST	,	OFFSET LIST	,	OFFSET LIST
+235	,	BtnTitleOffsetInfo	,	CFormConfigOffset	,	오프셋 값 정보	,	OFFSET INFORMATION	,	OFFSET INFORMATION	,	OFFSET INFORMATION
+236	,	BtnTitleSelectedPpidNumber	,	CFormConfigOffset	,	선택된 PPID 번호	,	SELECTED PPID NUMBER	,	SELECTED PPID NUMBER	,	SELECTED PPID NUMBER
+237	,	BtnSave	,	CFormConfigOffset	,	저장	,	SAVE	,	SAVE	,	SAVE
+238	,	BtnLoad	,	CFormConfigOffset	,	불러오기	,	LOAD	,	LOAD	,	LOAD
+239	,	BtnDelete	,	CFormConfigOffset	,	삭제	,	DELETE	,	DELETE	,	DELETE
+240	,	BtnCopy	,	CFormConfigOffset	,	현재 레시피로 복사	,	COPY TO CURRENT RECIPE	,	COPY TO CURRENT RECIPE	,	COPY TO CURRENT RECIPE
+241	,	BtnTitlePpidNumber	,	CFormConfigOffset	,	PPID 번호	,	PPID NUMBER	,	PPID NUMBER	,	PPID NUMBER
+242	,	BtnFirstPage	,	CFormConfigOffset	,	처음으로	,	FIRST PAGE	,	FIRST PAGE	,	FIRST PAGE
+243	,	BtnPriviousPage	,	CFormConfigOffset	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+244	,	BtnNextPage	,	CFormConfigOffset	,	다음	,	NEXT	,	NEXT	,	NEXT
+245	,	BtnLastPage	,	CFormConfigOffset	,	마지막으로	,	LAST PAGE	,	LAST PAGE	,	LAST PAGE
+246	,	BtnTitleLampSetting	,	CFormConfigSignalTower	,	램프 설정	,	LAMP SETTING	,	LAMP SETTING	,	LAMP SETTING
+247	,	BtnTitleInitialize	,	CFormConfigSignalTower	,	INITIALIZE	,	INITIALIZE	,	INITIALIZE	,	INITIALIZE
+248	,	BtnTitleRunning	,	CFormConfigSignalTower	,	RUNNING	,	RUNNING	,	RUNNING	,	RUNNING
+249	,	BtnTitleIdle	,	CFormConfigSignalTower	,	IDLE	,	IDLE	,	IDLE	,	IDLE
+250	,	BtnTitleStop	,	CFormConfigSignalTower	,	STOP	,	STOP	,	STOP	,	STOP
+251	,	BtnTitleRunDelay	,	CFormConfigSignalTower	,	RUN DELAY	,	RUN DELAY	,	RUN DELAY	,	RUN DELAY
+252	,	BtnTitleLightAlarm	,	CFormConfigSignalTower	,	LIGHT ALARM	,	LIGHT ALARM	,	LIGHT ALARM	,	LIGHT ALARM
+253	,	BtnTitleFault	,	CFormConfigSignalTower	,	FAULT	,	FAULT	,	FAULT	,	FAULT
+254	,	BtnTitlePM	,	CFormConfigSignalTower	,	PM	,	PM	,	PM	,	PM
+255	,	BtnTitleOpCall	,	CFormConfigSignalTower	,	OP CALL	,	OP CALL	,	OP CALL	,	OP CALL
+256	,	BtnTitleInterlock	,	CFormConfigSignalTower	,	INTERLOCK	,	INTERLOCK	,	INTERLOCK	,	INTERLOCK
+257	,	BtnTitleShutDown	,	CFormConfigSignalTower	,	SHUT DOWN	,	SHUT DOWN	,	SHUT DOWN	,	SHUT DOWN
+258	,	BtnTitleRed	,	CFormConfigSignalTower	,	RED	,	RED	,	RED	,	RED
+259	,	BtnTitleYellow	,	CFormConfigSignalTower	,	YELLOW	,	YELLOW	,	YELLOW	,	YELLOW
+260	,	BtnTitleGreen	,	CFormConfigSignalTower	,	GREEN	,	GREEN	,	GREEN	,	GREEN
+261	,	BtnTitleBuzzer	,	CFormConfigSignalTower	,	BUZZER	,	BUZZER	,	BUZZER	,	BUZZER
+262	,	BtnSave	,	CFormConfigSignalTower	,	저장	,	SAVE	,	SAVE	,	SAVE
+263	,	BtnLoad	,	CFormConfigSignalTower	,	불러오기	,	LOAD	,	LOAD	,	LOAD
+264	,	BtnTitle	,	CFormConfigWaitTime	,	대기 시간	,	WAIT TIME	,	WAIT TIME	,	WAIT TIME
+265	,	BtnTitleCategory	,	CFormConfigWaitTime	,	분류	,	CATEGORY	,	CATEGORY	,	CATEGORY
+266	,	BtnTitleWaitTimes	,	CFormConfigWaitTime	,	아이템	,	ITEMS	,	ITEMS	,	ITEMS
+267	,	BtnNaviWaitTimesFirst	,	CFormConfigWaitTime	,	처음으로	,	FIRST PAGE	,	FIRST PAGE	,	FIRST PAGE
+268	,	BtnNaviWaitTimesPrivious	,	CFormConfigWaitTime	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+269	,	BtnNaviWaitTimesNext	,	CFormConfigWaitTime	,	다음	,	NEXT	,	NEXT	,	NEXT
+270	,	BtnNaviWaitTimesLast	,	CFormConfigWaitTime	,	마지막으로	,	LAST PAGE	,	LAST PAGE	,	LAST PAGE
+271	,	Category>CommTimeout	,	CFormConfigWaitTime	,	통신 대기시간	,	COMMUNICATION TIMEOUT	,	COMMUNICATION TIMEOUT	,	COMMUNICATION TIMEOUT
+272	,	Category>Equipment	,	CFormConfigWaitTime	,	설비 인터페이스 시간	,	EQUIPMENT INTERFACE TIME	,	EQUIPMENT INTERFACE TIME	,	EQUIPMENT INTERFACE TIME
+273	,	Category>Etc	,	CFormConfigWaitTime	,	기타 시간	,	ETC TIME	,	ETC TIME	,	ETC TIME
+274	,	Item>CommTimeout>InspReplyTimeout	,	CFormConfigWaitTime	,	검사기 응답 대기 시간	,	INSPECTION REPLY TIMEOUT	,	INSPECTION REPLY TIMEOUT	,	INSPECTION REPLY TIMEOUT
+275	,	Item>CommTimeout>InspGrabEndReplyTimeout	,	CFormConfigWaitTime	,	검사기 촬상 종료 응답 대기 시간	,	INSPECTION GRAB END REPLY TIMEOUT	,	INSPECTION GRAB END REPLY TIMEOUT	,	INSPECTION GRAB END REPLY TIMEOUT
+276	,	Item>CommTimeout>InspResultTimeout	,	CFormConfigWaitTime	,	검사기 종합 결과 대기 시간	,	INSPECTION TOTAL RESULT TIMEOUT	,	INSPECTION TOTAL RESULT TIMEOUT	,	INSPECTION TOTAL RESULT TIMEOUT
+277	,	Item>CommTimeout>RobotTimeout	,	CFormConfigWaitTime	,	로봇 응답 대기 시간	,	ROBOT TIMEOUT	,	ROBOT TIMEOUT	,	ROBOT TIMEOUT
+278	,	Item>CommTimeout>AlignVisionTimeout	,	CFormConfigWaitTime	,	얼라인 응답 대기 시간	,	ALIGN VISION TIMEOUT	,	ALIGN VISION TIMEOUT	,	ALIGN VISION TIMEOUT
+279	,	Item>CommTimeout>CimTrackingTimeout	,	CFormConfigWaitTime	,	CIM 트래킹 응답 대기 시간	,	CIM TRACKING TIMEOUT	,	CIM TRACKING TIMEOUT	,	CIM TRACKING TIMEOUT
+280	,	Item>CommTimeout>CimLoginTimeout	,	CFormConfigWaitTime	,	CIM 로그인 응답 대기 시간	,	CIM LOGIN TIMEOUT	,	CIM LOGIN TIMEOUT	,	CIM LOGIN TIMEOUT
+281	,	Item>Equipment>HeartbeatInterval	,	CFormConfigWaitTime	,	HEARTBEAT 신호 주기	,	HEARTBEAT SIGNAL INTERVAL	,	HEARTBEAT SIGNAL INTERVAL	,	HEARTBEAT SIGNAL INTERVAL
+282	,	Item>Equipment>HeartbeatTimeout	,	CFormConfigWaitTime	,	HEARTBEAT 신호 응답 대기 시간	,	HEARTBEAT SIGNAL TIMEOUT	,	HEARTBEAT SIGNAL TIMEOUT	,	HEARTBEAT SIGNAL TIMEOUT
+283	,	Item>Equipment>LoadInterfaceDelayTime	,	CFormConfigWaitTime	,	투입 인터페이스 손실 시간 확인 대기 시간	,	LOAD INTERFACE CHECK LOSS DELAY TIME	,	LOAD INTERFACE CHECK LOSS DELAY TIME	,	LOAD INTERFACE CHECK LOSS DELAY TIME
+284	,	Item>Equipment>UnloadInterfaceDelayTime	,	CFormConfigWaitTime	,	배출 인터페이스 손실 시간 확인 대기 시간	,	UNLOAD INTERFACE CHECK LOSS DELAY TIME	,	UNLOAD INTERFACE CHECK LOSS DELAY TIME	,	UNLOAD INTERFACE CHECK LOSS DELAY TIME
+285	,	Item>Equipment>UnloadInterfacePendingTime	,	CFormConfigWaitTime	,	배출 인터페이스 지연 경알람 발생 대기시간	,	UNLOAD INTERFACE CHECK PENDING TIME	,	UNLOAD INTERFACE CHECK PENDING TIME	,	UNLOAD INTERFACE CHECK PENDING TIME
+286	,	Item>Etc>AutoLogout	,	CFormConfigWaitTime	,	자동 로그 아웃 시간	,	AUTO LOGOUT TIME	,	AUTO LOGOUT TIME	,	AUTO LOGOUT TIME
+287	,	Item>Etc>SilentStopTimeout	,	CFormConfigWaitTime	,	무언 정지 알람 대기 시간	,	SILENT STOP ALARM TIMEOUT	,	SILENT STOP ALARM TIMEOUT	,	SILENT STOP ALARM TIMEOUT
+288	,	Item>Etc>NoOperationDisplayDelay	,	CFormConfigWaitTime	,	작업 없음 다이얼로그 출력 대기 시간	,	DISPLAY NO OPERATION DIALOG DELAY TIME	,	DISPLAY NO OPERATION DIALOG DELAY TIME	,	DISPLAY NO OPERATION DIALOG DELAY TIME
+289	,	Item>Etc>CellDetectSensorSensingTimeout	,	CFormConfigWaitTime	,	셀 감지 센서 감지 대기 시간	,	CELL DETECT SENSOR SENSING WAIT TIME	,	CELL DETECT SENSOR SENSING WAIT TIME	,	CELL DETECT SENSOR SENSING WAIT TIME
+290	,	Item>Etc>LowEnergyModeChangeDelay	,	CFormConfigWaitTime	,	저전력 모드 전환 대기 시간	,	LOW ENERGY MODE TRANSITION WAITING TIME	,	LOW ENERGY MODE TRANSITION WAITING TIME	,	LOW ENERGY MODE TRANSITION WAITING TIME
+291	,	BtnMainMenu[0]	,	CFormMain	,	전체 흐름	,	整个流程	,	FLOW	,	Dòng chảy toàn bộ
+292	,	BtnMainMenu[1]	,	CFormMain	,	CIM	,	CIM	,	CIM	,	CIM
+293	,	BtnTitle	,	CFormMainCIM	,	PARAMETER 목록	,	PARAMETER LIST	,	PARAMETER LIST	,	PARAMETER LIST
+294	,	BtnTitleCIMTestMessage	,	CFormMainCIM	,	CIM 테스트 메시지	,	CIM TEST MESSAGE	,	CIM TEST MESSAGE	,	CIM TEST MESSAGE
+295	,	BtnTitleParameterEditView	,	CFormMainCIM	,	PARAMETER 수정 화면	,	PARAMETER EDIT VIEW	,	PARAMETER EDIT VIEW	,	PARAMETER EDIT VIEW
+296	,	BtnCimSystemMenu[0]	,	CFormMainCIM	,	FDC	,	FDC	,	FDC	,	FDC
+297	,	BtnCimSystemMenu[1]	,	CFormMainCIM	,	EC	,	EC	,	EC	,	EC
+298	,	BtnFirst	,	CFormMainCIM	,	처음으로	,	FIRST PAGE	,	FIRST PAGE	,	FIRST PAGE
+299	,	BtnLast	,	CFormMainCIM	,	마지막으로	,	LAST PAGE	,	LAST PAGE	,	LAST PAGE
+300	,	BtnNext	,	CFormMainCIM	,	다음	,	NEXT	,	NEXT	,	NEXT
+301	,	BtnPrivious	,	CFormMainCIM	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+302	,	BtnStart	,	CFormMainFlow	,	시작	,	START	,	START	,	START
+303	,	BtnStop	,	CFormMainFlow	,	정지	,	STOP	,	STOP	,	STOP
+304	,	BtnCycleStop	,	CFormMainFlow	,	사이클 정지	,	CYCLE STOP	,	CYCLE STOP	,	CYCLE STOP
+305	,	BtnManual	,	CFormMainFlow	,	수동 	,	MANUAL	,	MANUAL	,	MANUAL
+306	,	BtnAuto	,	CFormMainFlow	,	자동	,	AUTO	,	AUTO	,	AUTO
+307	,	BtnTitleSafetyKey	,	CFormMainFlow	,	세이프티 키	,	SAFETY KEY	,	SAFETY KEY	,	SAFETY KEY
+308	,	BtnLotEnd	,	CFormMainFlow	,	LOT 끝내고 정지	,	LOT END	,	LOT END	,	LOT END
+309	,	BtnEquipmentBase	,	CFormMainFlow	,	설비	,	EQUIPMENT	,	EQUIPMENT	,	EQUIPMENT
+310	,	BtnTitleRunMode	,	CFormMainFlow	,	동작 상태	,	RUN STATUS	,	RUN STATUS	,	RUN STATUS
+311	,	BtnTitleRunModeType	,	CFormMainFlow	,	동작 모드	,	RUN MODE	,	RUN MODE	,	RUN MODE
+312	,	BtnTitleTrayModel	,	CFormMainFlow	,	트레이 모델 ID	,	TRAY MODEL ID	,	TRAY MODEL ID	,	TRAY MODEL ID
+313	,	BtnTitleOut	,	CFormMainFlow	,	언로드	,	OUT	,	OUT	,	OUT
+314	,	BtnTitleWork	,	CFormMainFlow	,	작업중	,	WORK	,	WORK	,	WORK
+315	,	BtnTitleIn	,	CFormMainFlow	,	로드	,	IN	,	IN	,	IN
+316	,	BtnCellOut	,	CFormMainFlow	,	셀 아웃 ( 스크랩 )	,	CELL OUT ( SCRAP )	,	CELL OUT ( SCRAP )	,	CELL OUT ( SCRAP )
+317	,	BtnTitleLoadSafety	,	CFormMainFlow	,	투입 인터페이스 신호 (안전)	,	LOAD I/F SIGNAL (SAFETY)	,	LOAD I/F SIGNAL (SAFETY)	,	LOAD I/F SIGNAL (SAFETY)
+318	,	BtnTitleLoadHandshake	,	CFormMainFlow	,	투입 인터페이스 신호 (물류)	,	LOAD I/F SIGNAL (FLOW)	,	LOAD I/F SIGNAL (FLOW)	,	LOAD I/F SIGNAL (FLOW)
+319	,	BtnLoadPending	,	CFormMainFlow	,	투입 인터페이스 정체중	,	LOAD I/F PENDING	,	LOAD I/F PENDING	,	LOAD I/F PENDING
+320	,	BtnLoadHandshaking	,	CFormMainFlow	,	투입 인터페이스 진행중	,	LOAD I/F HANDSHAKING	,	LOAD I/F HANDSHAKING	,	LOAD I/F HANDSHAKING
+321	,	BtnTitleUnloadHandshake	,	CFormMainFlow	,	배출 인터페이스 신호 (물류)	,	UNLOAD I/F SIGNAL (FLOW)	,	UNLOAD I/F SIGNAL (FLOW)	,	UNLOAD I/F SIGNAL (FLOW)
+322	,	BtnMain	,	CFormMenu	,	메인	,	MAIN	,	MAIN	,	MAIN
+323	,	BtnStatistics	,	CFormMenu	,	통계	,	STATISTICS	,	STATISTICS	,	STATISTICS
+324	,	BtnConfig	,	CFormMenu	,	설정	,	CONFIG	,	CONFIG	,	CONFIG
+325	,	BtnTeach	,	CFormMenu	,	티칭	,	TEACH	,	TEACH	,	TEACH
+326	,	BtnAlarm	,	CFormMenu	,	알람	,	ALARM	,	ALARM	,	ALARM
+327	,	BtnSetup	,	CFormMenu	,	셋업	,	SETUP	,	SETUP	,	SETUP
+328	,	BtnExit	,	CFormMenu	,	종료	,	EXIT	,	EXIT	,	EXIT
+329	,	BtnDoor	,	CFormPM	,	도어	,	DOOR	,	DOOR	,	DOOR
+330	,	BtnSetupMenu[0]	,	CFormSetup	,	초기화	,	INITIALIZE	,	INITIALIZE	,	INITIALIZE
+331	,	BtnSetupMenu[1]	,	CFormSetup	,	IO	,	IO	,	IO	,	IO
+332	,	BtnSetupMenu[2]	,	CFormSetup	,	모션	,	MOTION	,	MOTION	,	MOTION
+333	,	BtnSetupMenu[3]	,	CFormSetup	,	로봇 IO	,	ROBOT IO	,	ROBOT IO	,	ROBOT IO
+334	,	BtnSetupMenu[4]	,	CFormSetup	,	로봇 오프셋	,	ROBOT OFFSET	,	ROBOT OFFSET	,	ROBOT OFFSET
+335	,	BtnSetupMenu[5]	,	CFormSetup	,	데이터베이스	,	DB	,	DB	,	DB
+336	,	BtnSetupMenu[6]	,	CFormSetup	,	검사 비전	,	INSEPCTION VISION	,	INSEPCTION VISION	,	INSEPCTION VISION
+337	,	BtnSetupMenu[7]	,	CFormSetup	,	얼라인 비전	,	ALIGN VISION	,	ALIGN VISION	,	ALIGN VISION
+338	,	BtnSetupMenu[8]	,	CFormSetup	,	설비 간 인터페이스	,	EQ TO EQ INTERFACE	,	EQ TO EQ INTERFACE	,	EQ TO EQ INTERFACE
+339	,	BtnSetupMenu[9]	,	CFormSetup	,	디바이스	,	DEVICE	,	DEVICE	,	DEVICE
+340	,	BtnSetupMenu[10]	,	CFormSetup	,	모니터	,	MONITOR	,	MONITOR	,	MONITOR
+341	,	BtnTitle	,	CFormSetupAlignVision	,	얼라인 비전	,	ALIGN VISION	,	ALIGN VISION	,	ALIGN VISION
+342	,	BtnTitle[PreAlign]	,	CFormSetupAlignVision	,	얼라인 비전 (IN셔틀)	,	ALIGN VISION (IN-SHUTTLE)	,	ALIGN VISION (IN-SHUTTLE)	,	ALIGN VISION (IN-SHUTTLE)
+343	,	BtnSelectModeUseVision	,	CFormSetupAlignVision	,	얼라인 사용	,	USE ALIGN	,	USE ALIGN	,	USE ALIGN
+344	,	BtnSubTitleInterlockX	,	CFormSetupAlignVision	,	인터락 X	,	INTERLOCK X	,	INTERLOCK X	,	INTERLOCK X
+345	,	BtnSubTitleInterlockY	,	CFormSetupAlignVision	,	인터락 Y	,	INTERLOCK Y	,	INTERLOCK Y	,	INTERLOCK Y
+346	,	BtnSubTitleInterlockT	,	CFormSetupAlignVision	,	인터락 T	,	INTERLOCK T	,	INTERLOCK T	,	INTERLOCK T
+347	,	BtnSubTitleInterlockScore	,	CFormSetupAlignVision	,	인터락 점수	,	INTERLOCK SCORE	,	INTERLOCK SCORE	,	INTERLOCK SCORE
+348	,	BtnSubTitleRetryCount	,	CFormSetupAlignVision	,	재시도 횟수 (0=SKIP)	,	RETRY COUNT (0=SKIP)	,	RETRY COUNT (0=SKIP)	,	RETRY COUNT (0=SKIP)
+349	,	BtnSubTitleToleranceX	,	CFormSetupAlignVision	,	허용 공차 X	,	TOLERANCE X	,	TOLERANCE X	,	TOLERANCE X
+350	,	BtnSubTitleToleranceY	,	CFormSetupAlignVision	,	허용 공차 Y	,	TOLERANCE Y	,	TOLERANCE Y	,	TOLERANCE Y
+351	,	BtnSubTitleToleranceT	,	CFormSetupAlignVision	,	허용 공차 T	,	TOLERANCE T	,	TOLERANCE T	,	TOLERANCE T
+352	,	BtnSave	,	CFormSetupAlignVision	,	저장	,	SAVE	,	SAVE	,	SAVE
+353	,	BtnSetupDB[0]	,	CFormSetupDB	,	알람	,	ALARM	,	ALARM	,	ALARM
+354	,	BtnSetupDB[1]	,	CFormSetupDB	,	UI 텍스트	,	UI TEXT	,	UI TEXT	,	UI TEXT
+355	,	BtnSetupDB[2]	,	CFormSetupDB	,	유저 메시지	,	USER MESSAGE	,	USER MESSAGE	,	USER MESSAGE
+356	,	BtnSetupDB[3]	,	CFormSetupDB	,	유저	,	USER	,	USER	,	USER
+357	,	BtnInsert	,	CFormSetupDB	,	삽입	,	INSERT	,	INSERT	,	INSERT
+358	,	BtnUpdate	,	CFormSetupDB	,	수정	,	UPDATE	,	UPDATE	,	UPDATE
+359	,	BtnDelete	,	CFormSetupDB	,	삭제	,	DELETE	,	DELETE	,	DELETE
+360	,	BtnSaveToTxt	,	CFormSetupDB	,	TXT로 저장	,	SAVE TO TXT	,	SAVE TO TXT	,	SAVE TO TXT
+361	,	BtnCommit	,	CFormSetupDB	,	완료	,	COMMIT	,	COMMIT	,	COMMIT
+362	,	BtnRollback	,	CFormSetupDB	,	복구	,	ROLLBACK	,	ROLLBACK	,	Phục hồi. khắc phục
+363	,	BtnInputPosition	,	CFormSetupDB	,	이미지 위치 입력	,	INPUT POSITION	,	INPUT POSITION	,	INPUT POSITION
+364	,	BtnOutputLock	,	CFormSetupEqToEq	,	출력 잠금	,	OUTPUT LOCK	,	OUTPUT LOCK	,	OUTPUT LOCK
+365	,	BtnTitleSelectGroup	,	CFormSetupEqToEq	,	그룹 선택	,	SELECT GROUP	,	SELECT GROUP	,	SELECT GROUP
+366	,	BtnTitleLeft[Load]	,	CFormSetupEqToEq	,	상류	,	UPPER	,	UPPER	,	UPPER
+367	,	BtnTitleLeft[Unload]	,	CFormSetupEqToEq	,	상류 (본설비)	,	UPPER (SELF)	,	UPPER (SELF)	,	UPPER (SELF)
+368	,	BtnTitleRight[Load]	,	CFormSetupEqToEq	,	하류 (본설비)	,	LOWER (SELF)	,	LOWER (SELF)	,	LOWER (SELF)
+369	,	BtnTitleRight[Unload]	,	CFormSetupEqToEq	,	하류	,	LOWER	,	LOWER	,	LOWER
+370	,	BtnSelectGroupBase[Load]	,	CFormSetupEqToEq	,	투입 인터페이스	,	LOAD INTERFACE	,	LOAD INTERFACE	,	LOAD INTERFACE
+371	,	BtnSelectGroupBase[Unload]	,	CFormSetupEqToEq	,	배출 인터페이스	,	UNLOAD INTERFACE	,	UNLOAD INTERFACE	,	UNLOAD INTERFACE
+372	,	BtnTitleInitializeLog	,	CFormSetupInitialize	,	초기화 로그	,	INITIALIZE LOG	,	INITIALIZE LOG	,	INITIALIZE LOG
+373	,	BtnInitialize	,	CFormSetupInitialize	,	초기화	,	INITIALIZE	,	INITIALIZE	,	INITIALIZE
+374	,	BtnStop	,	CFormSetupInitialize	,	취소	,	STOP	,	STOP	,	STOP
+375	,	BtnTitleCheck	,	CFormSetupInitialize	,	점검	,	CHECK	,	CHECK	,	CHECK
+376	,	BtnTitleProcess	,	CFormSetupInitialize	,	프로세스	,	PROCESS	,	PROCESS	,	PROCESS
+377	,	mResourceProcessStateComplete	,	CFormSetupInitialize	,	완료	,	COMPLETE	,	COMPLETE	,	COMPLETE
+378	,	mResourceProcessStateInitializing	,	CFormSetupInitialize	,	초기화 진행	,	INITIALIZING	,	INITIALIZING	,	INITIALIZING
+379	,	mResourceProcessStateWaiting	,	CFormSetupInitialize	,	대기	,	WAIT	,	WAIT	,	WAIT
+380	,	mResourceProcessStateError	,	CFormSetupInitialize	,	에러	,	ERROR	,	ERROR	,	ERROR
+381	,	BtnSubTitleCheckGroupName	,	CFormSetupInitialize	,	점검 그룹	,	CHECK GROUP	,	CHECK GROUP	,	CHECK GROUP
+382	,	CheckGroup[AirAndVacuumSupply]	,	EquipmentInspection	,	공압과 진공 공급 상태	,	AIR AND VACUUM SUPPLY	,	AIR AND VACUUM SUPPLY	,	AIR AND VACUUM SUPPLY
+383	,	CheckGroup[ElectricitySupply]	,	EquipmentInspection	,	전기 공급 상태	,	ELECTRICITY SUPPLY	,	ELECTRICITY SUPPLY	,	ELECTRICITY SUPPLY
+384	,	CheckGroup[Fan]	,	EquipmentInspection	,	팬 상태	,	FAN	,	FAN	,	FAN
+385	,	CheckGroup[EMS]	,	EquipmentInspection	,	EMS	,	EMS	,	EMS	,	EMS
+386	,	CheckGroup[Door]	,	EquipmentInspection	,	도어 상태	,	DOOR	,	DOOR	,	DOOR
+387	,	CheckGroup[MaintKey]	,	EquipmentInspection	,	다인수 키 상태	,	MAINT KEY	,	MAINT KEY	,	MAINT KEY
+388	,	CheckGroup[HeatAndSmokeDetector]	,	EquipmentInspection	,	열연 감지기 상태	,	HEAT AND SMOKE DETECTOR	,	HEAT AND SMOKE DETECTOR	,	HEAT AND SMOKE DETECTOR
+389	,	CheckGroup[Sensor]	,	EquipmentInspection	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+390	,	CheckGroup[Etc]	,	EquipmentInspection	,	기타	,	ETC.	,	ETC.	,	ETC.
+391	,	X_MAIN_CDA_PRESSURE_SENSOR 	,	EquipmentInspection	,	메인 공압 공급	,	MAIN AIR SUPPLY	,	MAIN AIR SUPPLY	,	MAIN AIR SUPPLY
+392	,	X_MAIN_VACUUM_PRESSURE_SENSOR	,	EquipmentInspection	,	메인 진공 공급	,	MAIN VACUUM SUPPLY	,	MAIN VACUUM SUPPLY	,	MAIN VACUUM SUPPLY
+393	,	X_INSP_STAGE_VAC_PRESSURE_SENSOR	,	EquipmentInspection	,	검사스테이지 메인 진공 공급	,	INSPECTION-STAGE MAIN VACUUM SUPPLY	,	INSPECTION-STAGE MAIN VACUUM SUPPLY	,	INSPECTION-STAGE MAIN VACUUM SUPPLY
+394	,	X_MAGNET_CONTACT_ON	,	EquipmentInspection	,	구동 전원 (MC)	,	MAGNET CONTACT (MC)	,	MAGNET CONTACT (MC)	,	MAGNET CONTACT (MC)
+395	,	X_ELECTRONIC_BOX_FAN_1_NORMAL	,	EquipmentInspection	,	전장 박스 팬1	,	ELECTRONIC BOX FAN1	,	ELECTRONIC BOX FAN1	,	ELECTRONIC BOX FAN1
+396	,	X_ELECTRONIC_BOX_FAN_2_NORMAL	,	EquipmentInspection	,	전장 박스 팬2	,	ELECTRONIC BOX FAN2	,	ELECTRONIC BOX FAN2	,	ELECTRONIC BOX FAN2
+397	,	X_FRONT_EMERGENCY_SWITCH_PUSH	,	EquipmentInspection	,	비상 정지 스위치 (정면)	,	EMERGENCY SWITCH (FRONT)	,	EMERGENCY SWITCH (FRONT)	,	EMERGENCY SWITCH (FRONT)
+398	,	X_REAR_EMERGENCY_SWITCH_PUSH	,	EquipmentInspection	,	비상 정지 스위치 (후면)	,	EMERGENCY SWITCH (REAR)	,	EMERGENCY SWITCH (REAR)	,	EMERGENCY SWITCH (REAR)
+399	,	X_FRONT_SAFETY_DOOR_1_OPEN	,	EquipmentInspection	,	정면 도어1 닫힘	,	FRONT DOOR1 CLOSE	,	FRONT DOOR1 CLOSE	,	FRONT DOOR1 CLOSE
+400	,	X_FRONT_SAFETY_DOOR_2_OPEN	,	EquipmentInspection	,	정면 도어2 닫힘	,	FRONT DOOR2 CLOSE	,	FRONT DOOR2 CLOSE	,	FRONT DOOR2 CLOSE
+401	,	X_FRONT_SAFETY_DOOR_3_OPEN	,	EquipmentInspection	,	정면 도어3 닫힘	,	FRONT DOOR3 CLOSE	,	FRONT DOOR3 CLOSE	,	FRONT DOOR3 CLOSE
+402	,	X_FRONT_SAFETY_DOOR_4_OPEN	,	EquipmentInspection	,	정면 도어4 닫힘	,	FRONT DOOR4 CLOSE	,	FRONT DOOR4 CLOSE	,	FRONT DOOR4 CLOSE
+403	,	X_REAR_SAFETY_DOOR_1_OPEN	,	EquipmentInspection	,	후면 도어1 닫힘	,	REAR DOOR1 CLOSE	,	REAR DOOR1 CLOSE	,	REAR DOOR1 CLOSE
+404	,	X_REAR_SAFETY_DOOR_2_OPEN	,	EquipmentInspection	,	후면 도어2 닫힘	,	REAR DOOR2 CLOSE	,	REAR DOOR2 CLOSE	,	REAR DOOR2 CLOSE
+405	,	X_REAR_SAFETY_DOOR_3_OPEN	,	EquipmentInspection	,	후면 도어3 닫힘	,	REAR DOOR3 CLOSE	,	REAR DOOR3 CLOSE	,	REAR DOOR3 CLOSE
+406	,	X_ELECTRONIC_BOX_OVER_TEMP_ALARM	,	EquipmentInspection	,	전장 박스 열연 감지기 온도 알람	,	ELECTRONIC BOX TEMPERATURE ALARM	,	ELECTRONIC BOX TEMPERATURE ALARM	,	ELECTRONIC BOX TEMPERATURE ALARM
+407	,	X_PC_RACK_OVER_TEMP_ALARM	,	EquipmentInspection	,	PC 랙 열연 감지기 온도 알람	,	PC RACK TEMPERATURE ALARM	,	PC RACK TEMPERATURE ALARM	,	PC RACK TEMPERATURE ALARM
+408	,	X_ELECTRONIC_BOX_SMOKE_ALARM	,	EquipmentInspection	,	전장 박스 열연 감지기 연기 알람	,	ELECTRONIC BOX SMOKE ALARM	,	ELECTRONIC BOX SMOKE ALARM	,	ELECTRONIC BOX SMOKE ALARM
+409	,	X_SAFETY_MODE_STATUS_SIGNAL_TEACH	,	EquipmentInspection	,	SAFETY PLC: 자동 모드	,	SAFETY PLC: AUTO MODE	,	SAFETY PLC: AUTO MODE	,	SAFETY PLC: AUTO MODE
+410	,	X_SAFETY_STATUS_DOOR_FORCE_OPEN_NORMAL	,	EquipmentInspection	,	SAFETY PLC: 도어락 강제 해제 상태	,	SAFETY PLC: DOOR LOCK FORCE RELEASE STATUS	,	SAFETY PLC: DOOR LOCK FORCE RELEASE STATUS	,	SAFETY PLC: DOOR LOCK FORCE RELEASE STATUS
+411	,	X_SAFETY_STATUS_EMS_NORMAL	,	EquipmentInspection	,	SAFETY PLC: EMS 상태	,	SAFETY PLC: EMS STATUS	,	SAFETY PLC: EMS STATUS	,	SAFETY PLC: EMS STATUS
+412	,	IN_ROBOT_CONTROLLER_EMS	,	EquipmentInspection	,	IN로봇 컨트롤러 비상 스위치	,	IN-ROBOT CONTROLLER EMS	,	IN-ROBOT CONTROLLER EMS	,	IN-ROBOT CONTROLLER EMS
+413	,	IN_ROBOT_PENDANT_EMS	,	EquipmentInspection	,	IN로봇 펜던트 비상 스위치	,	IN-ROBOT PENDANT EMS	,	IN-ROBOT PENDANT EMS	,	IN-ROBOT PENDANT EMS
+414	,	OUT_ROBOT_CONTROLLER_EMS	,	EquipmentInspection	,	OUT로봇 컨트롤러 비상 스위치	,	OUT-ROBOT CONTROLLER EMS	,	OUT-ROBOT CONTROLLER EMS	,	OUT-ROBOT CONTROLLER EMS
+415	,	OUT_ROBOT_PENDANT_EMS	,	EquipmentInspection	,	OUT로봇 펜던트 비상 스위치	,	OUT-ROBOT PENDANT EMS	,	OUT-ROBOT PENDANT EMS	,	OUT-ROBOT PENDANT EMS
+416	,	Alarm	,	EquipmentInspection	,	알람	,	ALARM	,	ALARM	,	ALARM
+417	,	Auto	,	EquipmentInspection	,	자동 모드	,	AUTO MODE	,	AUTO MODE	,	AUTO MODE
+418	,	CpOff	,	EquipmentInspection	,	꺼짐	,	OFF	,	OFF	,	OFF
+419	,	CpOn	,	EquipmentInspection	,	켜짐	,	ON	,	ON	,	ON
+420	,	DoorLock	,	EquipmentInspection	,	문 잠김	,	DOOR LOCK	,	DOOR LOCK	,	DOOR LOCK
+421	,	DoorOpen	,	EquipmentInspection	,	문 열림	,	DOOR OPEN	,	DOOR OPEN	,	DOOR OPEN
+422	,	DoorUnlock	,	EquipmentInspection	,	문 열림	,	DOOR UNLOCK	,	DOOR UNLOCK	,	DOOR UNLOCK
+423	,	DoorClose	,	EquipmentInspection	,	문 닫힘	,	DOOR CLOSE	,	DOOR CLOSE	,	DOOR CLOSE
+424	,	KeyDetect	,	EquipmentInspection	,	키 감지	,	DETECT KEY	,	DETECT KEY	,	DETECT KEY
+425	,	KeyMiss	,	EquipmentInspection	,	키 미감지	,	EMPTY	,	EMPTY	,	EMPTY
+426	,	Less	,	EquipmentInspection	,	부족	,	LESS	,	LESS	,	LESS
+427	,	LightOff	,	EquipmentInspection	,	조명 꺼짐	,	LIGHT OFF	,	LIGHT OFF	,	LIGHT OFF
+428	,	LightOn	,	EquipmentInspection	,	조명 켜짐	,	LIGHT ON	,	LIGHT ON	,	LIGHT ON
+429	,	Maint	,	EquipmentInspection	,	유지 보수	,	MAINTENANCE	,	MAINTENANCE	,	MAINTENANCE
+430	,	Normal	,	EquipmentInspection	,	정상	,	NORMAL	,	NORMAL	,	NORMAL
+431	,	OverTemp	,	EquipmentInspection	,	알람	,	ALARM	,	ALARM	,	ALARM
+432	,	Press	,	EquipmentInspection	,	누름	,	PRESS	,	PRESS	,	PRESS
+433	,	SmokeDetect	,	EquipmentInspection	,	알람	,	ALARM	,	ALARM	,	ALARM
+434	,	Stop	,	EquipmentInspection	,	정지	,	STOP	,	STOP	,	STOP
+435	,	Teach	,	EquipmentInspection	,	티치 모드	,	TEACH MODE	,	TEACH MODE	,	TEACH MODE
+436	,	Warning	,	EquipmentInspection	,	경고	,	WARNING	,	WARNING	,	WARNING
+437	,	HumanDetect	,	EquipmentInspection	,	인체 감지	,	HUMAN DETECT	,	HUMAN DETECT	,	HUMAN DETECT
+438	,	BtnTitleInputList	,	CFormSetupIO	,	입력 목록	,	INPUT LIST	,	INPUT LIST	,	INPUT LIST
+439	,	BtnTitleOutputList	,	CFormSetupIO	,	출력 목록	,	OUTPUT LIST	,	OUTPUT LIST	,	OUTPUT LIST
+440	,	BtnPreviousInput	,	CFormSetupIO	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+441	,	BtnNextInput	,	CFormSetupIO	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+442	,	BtnPreviousOutput	,	CFormSetupIO	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+443	,	BtnNextOutput	,	CFormSetupIO	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+444	,	BtnOutputLock	,	CFormSetupIO	,	출력 잠금	,	OUTPUT LOCK	,	OUTPUT LOCK	,	OUTPUT LOCK
+445	,	BtnTitleMotorInformation	,	CFormSetupMotion	,	모터 정보	,	MOTOR INFORMATION	,	MOTOR INFORMATION	,	Thoông tin MOTOR ( MOTOR INFORMATION )
+446	,	BtnTitlePositionInformation	,	CFormSetupMotion	,	위치 정보	,	POSITION INFORMATION	,	POSITION INFORMATION	,	Thoông tin vị trí 
+447	,	BtnTitleMotorSetting	,	CFormSetupMotion	,	모터 설정	,	MOTOR SETTING	,	MOTOR SETTING	,	MOTOR SETTING
+448	,	BtnTitleJogFast	,	CFormSetupMotion	,	빠른 조그	,	FAST JOG	,	FAST JOG	,	FAST JOG
+449	,	BtnTitleJogSlow	,	CFormSetupMotion	,	느린 조그	,	SLOW JOG	,	SLOW JOG	,	SLOW JOG
+450	,	BtnTitleAutoSpeed	,	CFormSetupMotion	,	자동 속도	,	AUTO VELOCITY	,	AUTO VELOCITY	,	Tốc độ tự động (AUTO VELOCITY)
+451	,	BtnTitleManualSpeed	,	CFormSetupMotion	,	수동 속도	,	MANUAL VELOCITY	,	MANUAL VELOCITY	,	Tốc độ bằng tay ( MANUAL VELOCITY )
+452	,	BtnTitleStandardAcceleration	,	CFormSetupMotion	,	표준 가속도	,	STANDARD ACC	,	STANDARD ACC	,	Tăng tốc tiêu chuẩn
+453	,	BtnTitleStandardDeceleration	,	CFormSetupMotion	,	표준 감속도	,	STANDARD DEC	,	STANDARD DEC	,	Giảm tốc tiêu chuẩn
+454	,	BtnTitleStandardTolerance	,	CFormSetupMotion	,	표준 허용오차	,	STANDARD TOLERANCE	,	STANDARD TOLERANCE	,	Dung sai tiêu chuẩn
+455	,	BtnTitleStandardTimeOut	,	CFormSetupMotion	,	표준 초과시간	,	STANDARD TIME OUT	,	STANDARD TIME OUT	,	Quá thời gian tiêu chuẩn
+456	,	BtnTitleOriginSpeed	,	CFormSetupMotion	,	원점 복귀 속도	,	ORIGIN SPEED	,	ORIGIN SPEED	,	Tốc độ trở về thời điểm nguồn ban đầu
+457	,	BtnTitleOriginOffset	,	CFormSetupMotion	,	원점 오프셋	,	ORIGIN OFFSET	,	ORIGIN OFFSET	,	ORIGIN OFFSET
+458	,	BtnTitleLimitPositionPlus	,	CFormSetupMotion	,	위치 제한 ( + )	,	LIMIT POSITION ( + )	,	LIMIT POSITION ( + )	,	Giới hạn vị trí (+)
+459	,	BtnTitleLimitPositionMinus	,	CFormSetupMotion	,	위치 제한 ( - )	,	LIMIT POSITION ( - )	,	LIMIT POSITION ( - )	,	Giới hạn vị trí (-)
+460	,	BtnTitleDelayAfterMoving	,	CFormSetupMotion	,	이동 후 딜레이	,	DELAY AFTER MOVING	,	DELAY AFTER MOVING	,	DELAY AFTER MOVING
+461	,	BtnTitleGearRatio	,	CFormSetupMotion	,	기어비	,	GEAR RATIO	,	GEAR RATIO	,	Tỷ lệ bánh răng ( GEAR RATIO )
+462	,	BtnTitleModuleNo	,	CFormSetupMotion	,	모듈 번호	,	MODULE NO	,	MODULE NO	,	Số MODULE 
+463	,	BtnTitleInnerNo	,	CFormSetupMotion	,	INNER 번호	,	INNER NO	,	INNER NO	,	Số INNER 
+464	,	BtnTitleUseMotor	,	CFormSetupMotion	,	모터 사용	,	USE MOTOR	,	USE MOTOR	,	USE MOTOR
+465	,	BtnTitleUseHome	,	CFormSetupMotion	,	호밍 사용	,	USE HOME	,	USE HOME	,	USE HOME
+466	,	BtnMotorInformationPrevious	,	CFormSetupMotion	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+467	,	BtnMotorInformationNext	,	CFormSetupMotion	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+468	,	BtnPositionInformationPrevious	,	CFormSetupMotion	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+469	,	BtnPositionInformationNext	,	CFormSetupMotion	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+470	,	BtnServoOn	,	CFormSetupMotion	,	서보 온	,	SERVO ON	,	SERVO ON	,	SERVO ON
+471	,	BtnServoOff	,	CFormSetupMotion	,	서보 오프	,	SERVO OFF	,	SERVO OFF	,	SERVO OFF
+472	,	BtnServoReset	,	CFormSetupMotion	,	서보 리셋	,	SERVO RESET	,	SERVO RESET	,	SERVO RESET
+473	,	BtnOrigin	,	CFormSetupMotion	,	원점 복귀	,	ORIGIN	,	ORIGIN	,	Trở về thời điểm nguồn ban đầu
+474	,	BtnTitleCurrentPosition	,	CFormSetupMotion	,	현재 위치	,	CURRENT POSITION	,	CURRENT POSITION	,	Vị trí hiện tại
+475	,	BtnTitleCommandPosition	,	CFormSetupMotion	,	커맨드 위치	,	COMMAND POSITION	,	COMMAND POSITION	,	Vị trí lệnh ( COMMAND POSITION )
+476	,	BtnTitleRelativePosition	,	CFormSetupMotion	,	상대 위치	,	RELATIVE POSITION	,	RELATIVE POSITION	,	Vị trí tương đối ( RELATIVE POSITION )
+477	,	BtnRelativeMovePlus	,	CFormSetupMotion	,	상대 이동 ( + )	,	RELATIVE MOVE ( + )	,	RELATIVE MOVE ( + )	,	Chuyển động tương đối (+)
+478	,	BtnRelativeMoveMinus	,	CFormSetupMotion	,	상대 이동 ( - )	,	RELATIVE MOVE ( - )	,	RELATIVE MOVE ( - )	,	Chuyển động tương đối (-)
+479	,	BtnPositionMove	,	CFormSetupMotion	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	Vị trí chuyển động
+480	,	BtnJogMovePlus	,	CFormSetupMotion	,	조그 이동 ( + )	,	JOG MOVE ( + )	,	JOG MOVE ( + )	,	JOG MOVE ( + )
+481	,	BtnJogMoveMinus	,	CFormSetupMotion	,	조그 이동 ( - )	,	JOG MOVE ( - )	,	JOG MOVE ( - )	,	JOG MOVE ( - )
+482	,	BtnPositionSave	,	CFormSetupMotion	,	위치 저장	,	POSITION SAVE	,	POSITION SAVE	,	Lưu vị trí 
+483	,	BtnStop	,	CFormSetupMotion	,	정지	,	STOP	,	STOP	,	STOP
+484	,	BtnSave	,	CFormSetupMotion	,	저장	,	SAVE	,	SAVE	,	SAVE
+485	,	BtnRepeatMove	,	CFormSetupMotion	,	반복 이동	,	REPEAT MOVE	,	REPEAT MOVE	,	SAVE
+486	,	mResourceTitleRepeatPositionCount	,	CFormSetupMotion	,	반복 위치 개수 설정	,	REPEAT POSITION COUNT	,	REPEAT POSITION COUNT	,	REPEAT POSITION COUNT
+487	,	mResourceTitleRepeatCount	,	CFormSetupMotion	,	반복 횟수 설정	,	INPUT REPEAT COUNT	,	INPUT REPEAT COUNT	,	INPUT REPEAT COUNT
+488	,	mResourceTitleRepeatPosition	,	CFormSetupMotion	,	번 위치 선택	,	 SELECT POSITION	,	 SELECT POSITION	,	 SELECT POSITION
+489	,	BtnPositionJog	,	CFormSetupMotion	,	위치 이동 (조그)	,	POSITION MOVE (JOG)	,	POSITION MOVE (JOG)	,	POSITION MOVE (JOG)
+490	,	BtnTitleNachiBit	,	CFormSetupNachi	,	로봇 IO 목록 ( BIT )	,	ROBOT IO LIST ( BIT )	,	ROBOT IO LIST ( BIT )	,	ROBOT IO LIST ( BIT )
+491	,	BtnTitleNachiWord	,	CFormSetupNachi	,	로봇 IO 목록 ( WORD )	,	ROBOT IO LIST ( WORD )	,	ROBOT IO LIST ( WORD )	,	ROBOT IO LIST ( WORD )
+492	,	BtnPreviousInputBit	,	CFormSetupNachi	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+493	,	BtnNextInputBit	,	CFormSetupNachi	,	다음	,	NEXT	,	NEXT	,	NEXT
+494	,	BtnPreviousOutputBit	,	CFormSetupNachi	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+495	,	BtnNextOutputBit	,	CFormSetupNachi	,	다음	,	NEXT	,	NEXT	,	NEXT
+496	,	BtnPreviousInputWord	,	CFormSetupNachi	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+497	,	BtnNextInputWord	,	CFormSetupNachi	,	다음	,	NEXT	,	NEXT	,	NEXT
+498	,	BtnPreviousOutputWord	,	CFormSetupNachi	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+499	,	BtnNextOutputWord	,	CFormSetupNachi	,	다음	,	NEXT	,	NEXT	,	NEXT
+500	,	BtnOutputLock	,	CFormSetupNachi	,	출력 잠금	,	OUTPUT LOCK	,	OUTPUT LOCK	,	OUTPUT LOCK
+501	,	BtnTitle	,	CFormSetupNachiOffsetData	,	로봇 오프셋	,	ROBOT OFFSET	,	ROBOT OFFSET	,	ROBOT OFFSET
+502	,	BtnSelectProcessTitle	,	CFormSetupNachiOffsetData	,	프로세스 선택	,	SELECT PROCESS	,	SELECT PROCESS	,	SELECT PROCESS
+503	,	mBtnRobotIndex_0	,	CFormSetupNachiOffsetData	,	IN로봇	,	IN-ROBOT	,	IN-ROBOT	,	IN-ROBOT
+504	,	mBtnRobotIndex_1	,	CFormSetupNachiOffsetData	,	OUT로봇	,	OUT-ROBOT	,	OUT-ROBOT	,	OUT-ROBOT
+505	,	mResourceOffsets[T1]	,	CFormSetupNachiOffsetData	,	툴 1	,	TOOL 1	,	TOOL 1	,	TOOL 1
+506	,	mResourceOffsets[T2]	,	CFormSetupNachiOffsetData	,	툴 2	,	TOOL 2	,	TOOL 2	,	TOOL 2
+507	,	mResourceOffsets[T3]	,	CFormSetupNachiOffsetData	,	툴 3	,	TOOL 3	,	TOOL 3	,	TOOL 3
+508	,	mResourceOffsets[T4]	,	CFormSetupNachiOffsetData	,	툴 4	,	TOOL 4	,	TOOL 4	,	TOOL 4
+509	,	mResourceOffsets[T12]	,	CFormSetupNachiOffsetData	,	툴 12	,	TOOL 12	,	TOOL 12	,	TOOL 12
+510	,	mResourceOffsets[T34]	,	CFormSetupNachiOffsetData	,	툴 34	,	TOOL 34	,	TOOL 34	,	TOOL 34
+511	,	mResourceOffsets[Crossing_T1_S2]	,	CFormSetupNachiOffsetData	,	툴 1 && 스테이지 2 (교차)	,	TOOL 1 && STAGE 2 (CROSSING)	,	TOOL 1 && STAGE 2 (CROSSING)	,	TOOL 1 && STAGE 2 (CROSSING)
+512	,	mResourceOffsets[Crossing_T2_S1]	,	CFormSetupNachiOffsetData	,	툴 2 && 스테이지 1  (교차)	,	TOOL 2 && STAGE 1 (CROSSING)	,	TOOL 2 && STAGE 1 (CROSSING)	,	TOOL 2 && STAGE 1 (CROSSING)
+513	,	mResourceOffsets[Crossing_T3_S4]	,	CFormSetupNachiOffsetData	,	툴 3 && 스테이지 4 (교차)	,	TOOL 3 && STAGE 4 (CROSSING)	,	TOOL 3 && STAGE 4 (CROSSING)	,	TOOL 3 && STAGE 4 (CROSSING)
+514	,	mResourceOffsets[Crossing_T4_S3]	,	CFormSetupNachiOffsetData	,	툴 4 && 스테이지 3 (교차)	,	TOOL 4 && STAGE 3 (CROSSING)	,	TOOL 4 && STAGE 3 (CROSSING)	,	TOOL 4 && STAGE 3 (CROSSING)
+515	,	mResourceOffsets[Crossing_T12_S34]	,	CFormSetupNachiOffsetData	,	툴 12 && 스테이지 34 (교차)	,	TOOL 12 && STAGE 34 (CROSSING)	,	TOOL 12 && STAGE 34 (CROSSING)	,	TOOL 12 && STAGE 34 (CROSSING)
+516	,	mResourceOffsets[Crossing_T34_S12]	,	CFormSetupNachiOffsetData	,	툴 34 && 스테이지 12 (교차)	,	TOOL 34 && STAGE 12 (CROSSING)	,	TOOL 34 && STAGE 12 (CROSSING)	,	TOOL 34 && STAGE 12 (CROSSING)
+517	,	BtnRecipeNoTitle	,	CFormSetupNachiOffsetData	,	레시피 번호	,	RECIPE NO	,	RECIPE NO	,	RECIPE NO
+518	,	BtnOverrideSpeedTitle	,	CFormSetupNachiOffsetData	,	오버라이드 속도	,	OVERRIDE SPEED	,	OVERRIDE SPEED	,	OVERRIDE SPEED
+519	,	BtnTitleCoordinateSystem	,	CFormSetupNachiOffsetData	,	로봇 좌표계	,	ROBOT COORDINATE SYSTEM	,	ROBOT COORDINATE SYSTEM	,	ROBOT COORDINATE SYSTEM
+520	,	BtnLoad	,	CFormSetupNachiOffsetData	,	불러오기	,	LOAD	,	LOAD	,	LOAD
+521	,	BtnSave	,	CFormSetupNachiOffsetData	,	저장	,	SAVE	,	SAVE	,	SAVE
+522	,	mResourceTitleSelectItem	,	CFormSetupNachiOffsetData	,	선택 아이템	,	SELECT ITEM	,	SELECT ITEM	,	SELECT ITEM
+523	,	mResourceProcessData[IN_ROBOT][P1]	,	CFormSetupNachiOffsetData	,	로드 (IN셔틀)	,	LOAD (IN-SHUTTLE)	,	LOAD (IN-SHUTTLE)	,	LOAD (IN-SHUTTLE)
+524	,	mResourceProcessData[IN_ROBOT][P3]	,	CFormSetupNachiOffsetData	,	MCR	,	MCR	,	MCR	,	MCR
+525	,	mResourceProcessData[IN_ROBOT][P4]	,	CFormSetupNachiOffsetData	,	언로드 (검사스테이지)	,	UNLOAD (INSPECTION-STAGE)	,	UNLOAD (INSPECTION-STAGE)	,	UNLOAD (INSPECTION-STAGE)
+526	,	mResourceProcessData[OUT_ROBOT][P1]	,	CFormSetupNachiOffsetData	,	로드 (검사스테이지)	,	LOAD (INSPECTION-STAGE)	,	LOAD (INSPECTION-STAGE)	,	LOAD (INSPECTION-STAGE)
+527	,	mResourceProcessData[OUT_ROBOT][P2]	,	CFormSetupNachiOffsetData	,	얼라인	,	ALIGN	,	ALIGN	,	ALIGN
+528	,	mResourceProcessData[OUT_ROBOT][P4]	,	CFormSetupNachiOffsetData	,	언로드 (하류설비)	,	UNLOAD (LOWER-EQUIPMENT)	,	UNLOAD (LOWER-EQUIPMENT)	,	UNLOAD (LOWER-EQUIPMENT)
+529	,	BtnToolPageFirst	,	CFormSetupNachiOffsetData	,	|◁	,	|◁	,	|◁	,	|◁
+530	,	BtnToolPagePrivious	,	CFormSetupNachiOffsetData	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+531	,	BtnToolPageNext	,	CFormSetupNachiOffsetData	,	다음	,	NEXT	,	NEXT	,	NEXT
+532	,	BtnToolPageLast	,	CFormSetupNachiOffsetData	,	▷|	,	▷|	,	▷|	,	▷|
+533	,	BtnTitle	,	CFormSetupVision	,	검사 비전	,	INSPECTION VISION	,	INSPECTION VISION	,	INSPECTION VISION
+534	,	BtnTitleVision	,	CFormSetupVision	,	검사 비전 (투입셔틀 + 검사스테이지)	,	INSPECTION VISION (IN-SHUTTLE + INSPECTION-STAGE)	,	INSPECTION VISION (IN-SHUTTLE + INSPECTION-STAGE)	,	INSPECTION VISION (IN-SHUTTLE + INSPECTION-STAGE)
+535	,	BtnTitleVisionParameter	,	CFormSetupVision	,	파라미터	,	PARAMETER	,	PARAMETER	,	PARAMETER
+536	,	BtnTitlePulseWidthTime	,	CFormSetupVision	,	트리거 펄스 폭	,	TRIGGER PULSE WIDTH	,	TRIGGER PULSE WIDTH	,	TRIGGER PULSE WIDTH
+537	,	BtnTitlePulsePeriodLength	,	CFormSetupVision	,	트리거 펄스 주기	,	TRIGGER PULSE PERIOD	,	TRIGGER PULSE PERIOD	,	TRIGGER PULSE PERIOD
+538	,	BtnTitleInspectionVelocity	,	CFormSetupVision	,	검사 속도	,	INSPECTION VELOCITY	,	INSPECTION VELOCITY	,	INSPECTION VELOCITY
+539	,	BtnTitleTriggerStartPosition	,	CFormSetupVision	,	트리거 구간 시작 위치	,	TRIGGER BLOCK START POSITION	,	TRIGGER BLOCK START POSITION	,	TRIGGER BLOCK START POSITION
+540	,	BtnTitleTriggerEndPosition	,	CFormSetupVision	,	트리거 구간 끝 위치	,	TRIGGER BLOCK END POSITION	,	TRIGGER BLOCK END POSITION	,	TRIGGER BLOCK END POSITION
+541	,	BtnTitleVisionVisionMode	,	CFormSetupVision	,	운영 모드	,	RUN MODE	,	RUN MODE	,	RUN MODE
+542	,	BtnVisionVisionNormalMode	,	CFormSetupVision	,	사용	,	USE MODE	,	USE MODE	,	USE MODE
+543	,	BtnVisionVisionBypassMode	,	CFormSetupVision	,	바이패스	,	BYPASS MODE	,	BYPASS MODE	,	BYPASS MODE
+544	,	BtnVisionVisionErrorSkipMode	,	CFormSetupVision	,	에러스킵	,	ERROR SKIP MODE	,	ERROR SKIP MODE	,	ERROR SKIP MODE
+545	,	BtnVisionVisionVirtualMode	,	CFormSetupVision	,	미사용	,	NOT USE MODE	,	NOT USE MODE	,	NOT USE MODE
+546	,	BtnSave	,	CFormSetupVision	,	저장	,	SAVE	,	SAVE	,	SAVE
+547	,	BtnStatisticsMenu[0]	,	CFormStatistics	,	생산	,	PRODUCTION	,	PRODUCTION	,	PRODUCTION
+548	,	BtnStatisticsMenu[1]	,	CFormStatistics	,	알람	,	ALARM	,	ALARM	,	ALARM
+549	,	BtnStatisticsMenu[2]	,	CFormStatistics	,	택타임	,	TACT TIME	,	TACT TIME	,	TACT TIME
+550	,	BtnStatisticsMenu[3]	,	CFormStatistics	,	CIM MESSAGE	,	CIM MESSAGE	,	CIM MESSAGE	,	CIM MESSAGE
+551	,	BtnStatisticsMenu[4]	,	CFormStatistics	,	CELL 로그	,	CELL LOG	,	CELL LOG	,	CELL LOG
+552	,	BtnStatisticsMenu[5]	,	CFormStatistics	,	장비 손실 시간	,	EQUIPMENT LOSS	,	EQUIPMENT LOSS	,	Mất thời gian thiết bị (EQUIPMENT LOSS )
+553	,	BtnStatisticsMenu[6]	,	CFormStatistics	,	인터페이스 손실 시간	,	EQ TO EQ LOSS	,	EQ TO EQ LOSS	,	Mất thời gian interface ( EQ TO EQ LOSS )
+554	,	BtnStatisticsMenu[7]	,	CFormStatistics	,	설비 운영 모니터링	,	EQP MONITORING	,	EQP MONITORING	,	Giám sát vận hành thiết bị 
+555	,	BtnStatisticsMenu[8]	,	CFormStatistics	,	CELL DB	,	CELL DB	,	CELL DB	,	CELL DB
+556	,	BtnStatisticsMenu[9]	,	CFormStatistics	,	프로세스 DB	,	PROCESS DB	,	PROCESS DB	,	PROCESS DB
+557	,	BtnStatisticsMenu[10]	,	CFormStatistics	,	이벤트 DB	,	EVENT DB	,	EVENT DB	,	EVENT DB
+558	,	BtnTitle	,	CDialogNotification	,	알림	,	Notification	,	Notification	,	Notification
+559	,	mResourceElapsed	,	CDialogNotification	,	경과시간: 	,	Elapsed: 	,	Elapsed: 	,	Elapsed: 
+560	,	BtnSaveToCsv	,	CFormStatisticsAlarm	,	CSV로 저장	,	SAVE TO CSV	,	SAVE TO CSV	,	SAVE TO CSV
+561	,	BtnSelectAsc	,	CFormStatisticsAlarm	,	검색 (오름차순)	,	SELECT (ASC)	,	SELECT (ASC)	,	Tìm kiếm (thứ tự tăng dần) ( SELECT (ASC) )
+562	,	BtnSelectDesc	,	CFormStatisticsAlarm	,	검색 (내림차순)	,	SELECT (DESC)	,	SELECT (DESC)	,	Tìm kiếm (thứ tự giảm dần) ( SELECT (DESC) )
+563	,	BtnOptionAllAlarm	,	CFormStatisticsAlarm	,	전체 알람	,	ALL ALARM	,	ALL ALARM	,	ALL ALARM
+564	,	BtnOptionHeavyAlarm	,	CFormStatisticsAlarm	,	중알람	,	HEAVY ALARM	,	HEAVY ALARM	,	HEAVY ALARM
+565	,	BtnOptionLightAlarm	,	CFormStatisticsAlarm	,	경알람	,	LIGHT ALARM	,	LIGHT ALARM	,	LIGHT ALARM
+566	,	BtnOptionSilenceAlarm	,	CFormStatisticsAlarm	,	무언정지 알람	,	SLIENCE ALARM	,	SLIENCE ALARM	,	SLIENCE ALARM
+567	,	BtnOptionViewRanking	,	CFormStatisticsAlarm	,	알람 랭킹 보기	,	VIEW ALARM RANKING	,	VIEW ALARM RANKING	,	Xem xếp hạng báo động ( VIEW ALARM RANKING )
+568	,	BtnOptionViewGrouping	,	CFormStatisticsAlarm	,	그룹화된 알람 보기	,	VIEW ALARM GROUPING	,	VIEW ALARM GROUPING	,	VIEW ALARM GROUPING
+569	,	BtnTitleCellLogItemList	,	CFormStatisticsCellLogItem	,	CELL 로그	,	CELL LOG	,	CELL LOG	,	CELL LOG
+570	,	BtnSaveToCsv	,	CFormStatisticsCellLogItem	,	CSV로 저장	,	SAVE TO CSV	,	SAVE TO CSV	,	SAVE TO CSV
+571	,	BtnSelectAsc	,	CFormStatisticsCellLogItem	,	검색 (오름차순)	,	SELECT (ASC)	,	SELECT (ASC)	,	Tìm kiếm (thứ tự tăng dần) ( SELECT (ASC) )
+572	,	BtnSelectDesc	,	CFormStatisticsCellLogItem	,	검색 (내림차순)	,	SELECT (DESC)	,	SELECT (DESC)	,	Tìm kiếm (thứ tự giảm dần) ( SELECT (DESC) )
+573	,	BtnStatisticsDBCell[0]	,	CFormStatisticsDBCell	,	INPUT	,	INPUT	,	INPUT	,	INPUT
+574	,	BtnStatisticsDBCell[1]	,	CFormStatisticsDBCell	,	OUTPUT	,	OUTPUT	,	OUTPUT	,	OUTPUT
+575	,	BtnStatisticsDBCell[2]	,	CFormStatisticsDBCell	,	TRACK IN	,	TRACK IN	,	TRACK IN	,	TRACK IN
+576	,	BtnStatisticsDBCell[3]	,	CFormStatisticsDBCell	,	TRACK OUT	,	TRACK OUT	,	TRACK OUT	,	TRACK OUT
+577	,	BtnStatisticsDBCell[4]	,	CFormStatisticsDBCell	,	MCR	,	MCR	,	MCR	,	MCR
+578	,	BtnStatisticsDBCell[5]	,	CFormStatisticsDBCell	,	RESULT	,	RESULT	,	RESULT	,	RESULT
+579	,	BtnSaveToCsv	,	CFormStatisticsDBCell	,	CSV로 저장	,	SAVE TO CSV	,	SAVE TO CSV	,	SAVE TO CSV
+580	,	BtnSelectAsc	,	CFormStatisticsDBCell	,	검색 (오름차순)	,	SELECT (ASC)	,	SELECT (ASC)	,	SELECT (ASC)
+581	,	BtnSelectDesc	,	CFormStatisticsDBCell	,	검색 (내림차순)	,	SELECT (DESC)	,	SELECT (DESC)	,	SELECT (DESC)
+582	,	BtnStatisticsDBEvent[0]	,	CFormStatisticsDBEvent	,	ALARM	,	ALARM	,	ALARM	,	ALARM
+583	,	BtnStatisticsDBEvent[1]	,	CFormStatisticsDBEvent	,	EQP STOP	,	EQP STOP	,	EQP STOP	,	EQP STOP
+584	,	BtnStatisticsDBEvent[2]	,	CFormStatisticsDBEvent	,	TP CODE	,	TP CODE	,	TP CODE	,	TP CODE
+585	,	BtnStatisticsDBEvent[3]	,	CFormStatisticsDBEvent	,	EQP UPPER LOSS TIME	,	EQP UPPER LOSS TIME	,	EQP UPPER LOSS TIME	,	EQP UPPER LOSS TIME
+586	,	BtnStatisticsDBEvent[4]	,	CFormStatisticsDBEvent	,	EQP LOWER LOSS TIME	,	EQP LOWER LOSS TIME	,	EQP LOWER LOSS TIME	,	EQP LOWER LOSS TIME
+587	,	BtnStatisticsDBEvent[5]	,	CFormStatisticsDBEvent	,	세이프티PLC 수정 이력	,	SAFETY PLC MODIFIED HISTORY	,	SAFETY PLC MODIFIED HISTORY	,	SAFETY PLC MODIFIED HISTORY
+588	,	BtnSaveToCsv	,	CFormStatisticsDBEvent	,	CSV로 저장	,	SAVE TO CSV	,	SAVE TO CSV	,	SAVE TO CSV
+589	,	BtnSelectAsc	,	CFormStatisticsDBEvent	,	검색 (오름차순)	,	SELECT (ASC)	,	SELECT (ASC)	,	Tìm kiếm (thứ tự tăng dần) ( SELECT (ASC) )
+590	,	BtnSelectDesc	,	CFormStatisticsDBEvent	,	검색 (내림차순)	,	SELECT (DESC)	,	SELECT (DESC)	,	Tìm kiếm (thứ tự giảm dần) ( SELECT (DESC) )
+591	,	BtnStatisticsDBMessage[0]	,	CFormStatisticsDBMessage	,	OP CALL	,	OP CALL	,	OP CALL	,	OP CALL
+592	,	BtnStatisticsDBMessage[1]	,	CFormStatisticsDBMessage	,	INTERLOCK CALL	,	INTERLOCK CALL	,	INTERLOCK CALL	,	INTERLOCK CALL
+593	,	BtnStatisticsDBMessage[2]	,	CFormStatisticsDBMessage	,	TERMINAL CALL	,	TERMINAL CALL	,	TERMINAL CALL	,	TERMINAL CALL
+594	,	BtnSaveToCsv	,	CFormStatisticsDBMessage	,	CSV로 저장	,	SAVE TO CSV	,	SAVE TO CSV	,	SAVE TO CSV
+595	,	BtnSelectAsc	,	CFormStatisticsDBMessage	,	검색 (오름차순)	,	SELECT (ASC)	,	SELECT (ASC)	,	Tìm kiếm (thứ tự tăng dần) ( SELECT (ASC) )
+596	,	BtnSelectDesc	,	CFormStatisticsDBMessage	,	검색 (내림차순)	,	SELECT (DESC)	,	SELECT (DESC)	,	Tìm kiếm (thứ tự giảm dần) ( SELECT (DESC) )
+597	,	BtnStatisticsDBProcessData[0]	,	CFormStatisticsDBProcessData	,	CELL	,	CELL	,	CELL	,	CELL
+598	,	BtnStatisticsDBProcessData[1]	,	CFormStatisticsDBProcessData	,	JUDGEMENT	,	JUDGEMENT	,	JUDGEMENT	,	JUDGEMENT
+599	,	BtnStatisticsDBProcessData[2]	,	CFormStatisticsDBProcessData	,	READER	,	READER	,	READER	,	READER
+600	,	BtnStatisticsDBProcessData[3]	,	CFormStatisticsDBProcessData	,	VISION RESULT	,	VISION RESULT	,	VISION RESULT	,	VISION RESULT
+601	,	BtnStatisticsDBProcessData[4]	,	CFormStatisticsDBProcessData	,	WORK ORDER	,	WORK ORDER	,	WORK ORDER	,	WORK ORDER
+602	,	BtnStatisticsDBProcessData[5]	,	CFormStatisticsDBProcessData	,	TACT TIME	,	TACT TIME	,	TACT TIME	,	TACT TIME
+603	,	BtnSaveToCsv	,	CFormStatisticsDBProcessData	,	CSV로 저장	,	SAVE TO CSV	,	SAVE TO CSV	,	SAVE TO CSV
+604	,	BtnSelectAsc	,	CFormStatisticsDBProcessData	,	검색 (오름차순)	,	SELECT (ASC)	,	SELECT (ASC)	,	Tìm kiếm (thứ tự tăng dần) ( SELECT (ASC) )
+605	,	BtnSelectDesc	,	CFormStatisticsDBProcessData	,	검색 (내림차순)	,	SELECT (DESC)	,	SELECT (DESC)	,	Tìm kiếm (thứ tự giảm dần) ( SELECT (DESC) )
+606	,	BtnTitleEQPLossList	,	CFormStatisticsEQPLoss	,	설비 손실 시간	,	EQUIPMENT LOSS	,	EQUIPMENT LOSS	,	Mất thời gian thiết bị (EQUIPMENT LOSS )
+607	,	BtnSaveToCsv	,	CFormStatisticsEQPLoss	,	CSV로 저장	,	SAVE TO CSV	,	SAVE TO CSV	,	SAVE TO CSV
+608	,	BtnSelectAsc	,	CFormStatisticsEQPLoss	,	검색 (오름차순)	,	SELECT (ASC)	,	SELECT (ASC)	,	Tìm kiếm (thứ tự tăng dần) ( SELECT (ASC) )
+609	,	BtnSelectDesc	,	CFormStatisticsEQPLoss	,	검색 (내림차순)	,	SELECT (DESC)	,	SELECT (DESC)	,	Tìm kiếm (thứ tự giảm dần) ( SELECT (DESC) )
+610	,	BtnTitleEQtoEQLossList	,	CFormStatisticsEQtoEQLoss	,	인터페이스 손실 시간	,	EQ TO EQ LOSS	,	EQ TO EQ LOSS	,	Mất thời gian interface ( EQ TO EQ LOSS )
+611	,	BtnSaveToCsv	,	CFormStatisticsEQtoEQLoss	,	CSV로 저장	,	SAVE TO CSV	,	SAVE TO CSV	,	SAVE TO CSV
+612	,	BtnSelectAsc	,	CFormStatisticsEQtoEQLoss	,	검색 (오름차순)	,	SELECT (ASC)	,	SELECT (ASC)	,	Tìm kiếm (thứ tự tăng dần) ( SELECT (ASC) )
+613	,	BtnSelectDesc	,	CFormStatisticsEQtoEQLoss	,	검색 (내림차순)	,	SELECT (DESC)	,	SELECT (DESC)	,	Tìm kiếm (thứ tự giảm dần) ( SELECT (DESC) )
+614	,	BtnTitleEquipmentOperationMonitoring	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 운영 모니터링	,	EQUIPMENT OPERATION MONITORING	,	EQUIPMENT OPERATION MONITORING	,	Giám sát vận hành thiết bị 
+615	,	BtnSelect	,	CFormStatisticsEquipmentOperationMonitoring	,	검색	,	SELECT	,	SELECT	,	SELECT
+616	,	BtnTitleProductionStatus	,	CFormStatisticsEquipmentOperationMonitoring	,	생산 현황	,	PRODUCTION LIST	,	PRODUCTION LIST	,	Tình hình sản xuất 
+617	,	BtnTitleOperationStatus	,	CFormStatisticsEquipmentOperationMonitoring	,	가동 현황	,	OPERATION STATUS	,	OPERATION STATUS	,	Tình hình hoạt động 
+618	,	BtnTitleNonOperationStatus	,	CFormStatisticsEquipmentOperationMonitoring	,	비가동 현황	,	NON OPERATION STATUS	,	NON OPERATION STATUS	,	Tình hình không hoạt động 
+619	,	BtnTitleMomentaryStop	,	CFormStatisticsEquipmentOperationMonitoring	,	순간 정지 현황	,	MOMENTARY STOP	,	MOMENTARY STOP	,	Tình hình ngừng tạm thời 
+620	,	BtnTitleTimeToRefair	,	CFormStatisticsEquipmentOperationMonitoring	,	장애 조치 시간	,	TIME TO REPAIR	,	TIME TO REPAIR	,	Thời gian cản trở xử lý 
+621	,	BtnTitleMCRStatus	,	CFormStatisticsEquipmentOperationMonitoring	,	MCR 현황	,	MCR STATUS	,	MCR STATUS	,	Tình trạng MCR 
+622	,	ProductionStatusKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	생산량	,	OUT COUNT	,	OUT COUNT	,	Số lượng tiến hành chạy 
+623	,	ProductionStatusKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	BIN1 수량	,	BIN1 COUNT	,	BIN1 COUNT	,	Số lượng BIN1 
+624	,	ProductionStatusKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	BIN2 수량	,	BIN2 COUNT	,	BIN2 COUNT	,	Số lượng BIN2 
+625	,	ProductionStatusKey[3]	,	CFormStatisticsEquipmentOperationMonitoring	,	BIN3 수량	,	BIN3 COUNT	,	BIN3 COUNT	,	Số lượng BIN3 
+626	,	ProductionStatusKey[4]	,	CFormStatisticsEquipmentOperationMonitoring	,	REJECT 수량	,	REJECT COUNT	,	REJECT COUNT	,	Số lượng REJECT 
+627	,	ProductionStatusToolTipKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	생산량: 선택한 기간 중에 배출한 셀의 개수	,	OUT COUNT: Number of cells output during the selected period	,	OUT COUNT: Number of cells output during the selected period	,	OUT COUNT: Number of cells output during the selected period
+628	,	ProductionStatusToolTipKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	BIN1 수량: 선택한 기간 중에 배출한 BIN1 판정의 셀의 개수	,	BIN1 COUNT: Number of cells in BIN1 decision output during the selected period	,	BIN1 COUNT: Number of cells in BIN1 decision output during the selected period	,	BIN1 COUNT: Number of cells in BIN1 decision output during the selected period
+629	,	ProductionStatusToolTipKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	BIN2 수량: 선택한 기간 중에 배출한 BIN2 판정의 셀의 개수	,	BIN2 COUNT: Number of cells in BIN2 decision output during the selected period	,	BIN2 COUNT: Number of cells in BIN2 decision output during the selected period	,	BIN2 COUNT: Number of cells in BIN2 decision output during the selected period
+630	,	ProductionStatusToolTipKey[3]	,	CFormStatisticsEquipmentOperationMonitoring	,	BIN3 수량: 선택한 기간 중에 배출한 BIN3 판정의 셀의 개수	,	BIN3 COUNT: Number of cells in BIN3 decision output during the selected period	,	BIN3 COUNT: Number of cells in BIN3 decision output during the selected period	,	BIN3 COUNT: Number of cells in BIN3 decision output during the selected period
+631	,	ProductionStatusToolTipKey[4]	,	CFormStatisticsEquipmentOperationMonitoring	,	REJECT 수량: 선택한 기간중에 배출한 REJECT 판정의 셀의 개수	,	REJECT COUNT: Number of cells in REJECT decision output during the selected period	,	REJECT COUNT: Number of cells in REJECT decision output during the selected period	,	REJECT COUNT: Number of cells in REJECT decision output during the selected period
+632	,	OperationStatusKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	가동 시간	,	OPERATION TIME	,	OPERATION TIME	,	Thời gian chuyển động 
+633	,	OperationStatusKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 다운 시간	,	EQP DOWN TIME	,	EQP DOWN TIME	,	EQP DOWN TIME
+634	,	OperationStatusKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	표준 시간	,	STANDARD TIME	,	STANDARD TIME	,	Thời gian tiêu chuẩn 
+635	,	OperationStatusKey[3]	,	CFormStatisticsEquipmentOperationMonitoring	,	실 생산 시간	,	REAL PRODUCTION TIME	,	REAL PRODUCTION TIME	,	Thời gian thực tế sản xuất 
+636	,	OperationStatusKey[4]	,	CFormStatisticsEquipmentOperationMonitoring	,	표준 생산 시간	,	STANDARD PRODUCTION TIME	,	STANDARD PRODUCTION TIME	,	Thời gian sản xuất theo tiêu chuẩn 
+637	,	OperationStatusKey[5]	,	CFormStatisticsEquipmentOperationMonitoring	,	시간 가동율(%)	,	TIME OPERATION RATE(%)	,	TIME OPERATION RATE(%)	,	Thời gian tỷ lệ hoạt động ( % )
+638	,	OperationStatusKey[6]	,	CFormStatisticsEquipmentOperationMonitoring	,	성능 가동율(%)	,	PERFORMANCE UTILIZATION RATE(%)	,	PERFORMANCE UTILIZATION RATE(%)	,	Hiệu suất sử dụng (%)
+639	,	OperationStatusKey[7]	,	CFormStatisticsEquipmentOperationMonitoring	,	종합 효율(%)	,	TOTAL EFFICIENCY(%)	,	TOTAL EFFICIENCY(%)	,	Hiệu quả tổng thể (%)
+640	,	OperationStatusToolTipKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	가동 시간: 선택한 시작 날짜와 현재 시간 사이에 간격	,	OPERATION TIME: Interval between the selected start date and the current time	,	OPERATION TIME: Interval between the selected start date and the current time	,	OPERATION TIME: Interval between the selected start date and the current time
+641	,	OperationStatusToolTipKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 다운 시간: 선택한 기간 중에 설비가 정지한 시간	,	EQP DOWN TIME: Time that the equipment stopped during the selected time period	,	EQP DOWN TIME: Time that the equipment stopped during the selected time period	,	EQP DOWN TIME: Time that the equipment stopped during the selected time period
+642	,	OperationStatusToolTipKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	표준 시간: 선택한 기간중에 제품 투입부터 배출까지 평균 시간	,	STANDARD TIME: Average amount of time over the selected period from ware input to output	,	STANDARD TIME: Average amount of time over the selected period from ware input to output	,	STANDARD TIME: Average amount of time over the selected period from ware input to output
+643	,	OperationStatusToolTipKey[3]	,	CFormStatisticsEquipmentOperationMonitoring	,	실 생산 시간: 가동 시간 - 설비 다운 시간	,	REAL PRODUCTION TIME: OPERATION TIME - EQP DOWN TIME	,	REAL PRODUCTION TIME: OPERATION TIME - EQP DOWN TIME	,	REAL PRODUCTION TIME: OPERATION TIME - EQP DOWN TIME
+644	,	OperationStatusToolTipKey[4]	,	CFormStatisticsEquipmentOperationMonitoring	,	표준 생산 시간: 표준 시간 * 생산량	,	STANDARD PRODUCTION TIME: STANDARD TIME * OUT COUNT	,	STANDARD PRODUCTION TIME: STANDARD TIME * OUT COUNT	,	STANDARD PRODUCTION TIME: STANDARD TIME * OUT COUNT
+645	,	OperationStatusToolTipKey[5]	,	CFormStatisticsEquipmentOperationMonitoring	,	시간 가동율(%): 실 생산 시간 / 가동 시간 * 100	,	TIME OPERATION RATE(%): REAL PRODUCTION TIME / OPERATION TIME * 100	,	TIME OPERATION RATE(%): REAL PRODUCTION TIME / OPERATION TIME * 100	,	TIME OPERATION RATE(%): REAL PRODUCTION TIME / OPERATION TIME * 100
+646	,	OperationStatusToolTipKey[6]	,	CFormStatisticsEquipmentOperationMonitoring	,	성능 가동율(%): 표준 생산 시간 / 가동 시간 * 100	,	PERFORMANCE UTILIZATION RATE(%): STANDARD PRODUCTION TIME / OPERATION TIME * 100	,	PERFORMANCE UTILIZATION RATE(%): STANDARD PRODUCTION TIME / OPERATION TIME * 100	,	PERFORMANCE UTILIZATION RATE(%): STANDARD PRODUCTION TIME / OPERATION TIME * 100
+647	,	OperationStatusToolTipKey[7]	,	CFormStatisticsEquipmentOperationMonitoring	,	종합 효율(%)	,	TOTAL EFFICIENCY(%)	,	TOTAL EFFICIENCY(%)	,	TOTAL EFFICIENCY(%)
+648	,	NonOperationStatusKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	총 횟수	,	TOTAL COUNT	,	TOTAL COUNT	,	Tổng số lần
+649	,	NonOperationStatusKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	총 시간	,	TOTAL TIME	,	TOTAL TIME	,	Tổng thời gian
+650	,	NonOperationStatusKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	알람 횟수	,	ALARM COUNT	,	ALARM COUNT	,	Số lần ALARM 
+651	,	NonOperationStatusKey[3]	,	CFormStatisticsEquipmentOperationMonitoring	,	알람 시간	,	ALARM TIME	,	ALARM TIME	,	ALARM TIME
+652	,	NonOperationStatusKey[4]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 정지 횟수	,	EQP STOP COUNT	,	EQP STOP COUNT	,	Số lần dừng thiết bị 
+653	,	NonOperationStatusKey[5]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 정지 시간	,	EQP STOP TIME	,	EQP STOP TIME	,	Thời gian dừng thiết bị 
+654	,	NonOperationStatusKey[6]	,	CFormStatisticsEquipmentOperationMonitoring	,	상위 설비 손실 횟수	,	UPPER EQP LOSS COUNT	,	UPPER EQP LOSS COUNT	,	Số lần LOSS thiết bị UPPER ( UPPER EQP LOSS COUNT )
+655	,	NonOperationStatusKey[7]	,	CFormStatisticsEquipmentOperationMonitoring	,	상위 설비 손실 시간	,	UPPER EQP LOSS TIME	,	UPPER EQP LOSS TIME	,	 Mất thời gian thiết bị UPPER  (UPPER EQP LOSS TIME )
+656	,	NonOperationStatusKey[8]	,	CFormStatisticsEquipmentOperationMonitoring	,	하위 설비 손실 횟수	,	LOWRE EQP LOSS COUNT	,	LOWRE EQP LOSS COUNT	,	Số lần LOSS thiết bị LOWER ( LOWER EQP LOSS COUNT )
+657	,	NonOperationStatusKey[9]	,	CFormStatisticsEquipmentOperationMonitoring	,	하위 설비 손실 시간	,	LOWER EQP LOSS TIME	,	LOWER EQP LOSS TIME	,	 Mất thời gian thiết bị LOWER  (LOWER EQP LOSS TIME )
+658	,	NonOperationStatusToolTipKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	총 횟수: 알람 횟수 + 설비 정지 횟수 + 상위 설비 손실 횟수 + 하위 설비 손실 횟수	,	TOTAL COUNT: ALARM COUNT + EQP STOP COUNT + UPPER EQP LOSS COUNT + LOWER EQP LOSS COUNT	,	TOTAL COUNT: ALARM COUNT + EQP STOP COUNT + UPPER EQP LOSS COUNT + LOWER EQP LOSS COUNT	,	TOTAL COUNT: ALARM COUNT + EQP STOP COUNT + UPPER EQP LOSS COUNT + LOWER EQP LOSS COUNT
+659	,	NonOperationStatusToolTipKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	총 시간: 알람 시간 + 설비 정지 시간 + 상위 설비 손실 시간 + 하위 설비 손실 시간	,	TOTAL TIME: ALARM TIME + EQP STOP TIME + UPPER EQP LOSS TIME + LOWER EQP LOSS TIME	,	TOTAL TIME: ALARM TIME + EQP STOP TIME + UPPER EQP LOSS TIME + LOWER EQP LOSS TIME	,	TOTAL TIME: ALARM TIME + EQP STOP TIME + UPPER EQP LOSS TIME + LOWER EQP LOSS TIME
+660	,	NonOperationStatusToolTipKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	알람 횟수: 선택한 기간 중에 5분 이상 알람으로 설비가 정지된 횟수	,	ALARM COUNT: Number of times the equipment was stopped by an alarm for more than 5 minutes during the selected period	,	ALARM COUNT: Number of times the equipment was stopped by an alarm for more than 5 minutes during the selected period	,	ALARM COUNT: Number of times the equipment was stopped by an alarm for more than 5 minutes during the selected period
+661	,	NonOperationStatusToolTipKey[3]	,	CFormStatisticsEquipmentOperationMonitoring	,	알람 시간: 선택한 기간 중에 5분 이상 알람으로 설비가 정지된 시간의 합	,	ALARM TIME: The sum of time during the selected period when the equipment was stopped by an alarm for more than 5 minutes	,	ALARM TIME: The sum of time during the selected period when the equipment was stopped by an alarm for more than 5 minutes	,	ALARM TIME: The sum of time during the selected period when the equipment was stopped by an alarm for more than 5 minutes
+662	,	NonOperationStatusToolTipKey[4]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 정지 횟수: 선택한 기간 중에 설비가 5분 이상 정지된 횟수	,	EQP STOP COUNT: Number of times the equipment has stopped for more than 5 minutes during the selected period	,	EQP STOP COUNT: Number of times the equipment has stopped for more than 5 minutes during the selected period	,	EQP STOP COUNT: Number of times the equipment has stopped for more than 5 minutes during the selected period
+663	,	NonOperationStatusToolTipKey[5]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 정지 시간: 선택한 기간 중에 설비가 5분 이상 정지된 시간의 합	,	EQP STOP TIME: The sum of time during the selected period that the equipment has stopped for more than 5 minutes	,	EQP STOP TIME: The sum of time during the selected period that the equipment has stopped for more than 5 minutes	,	EQP STOP TIME: The sum of time during the selected period that the equipment has stopped for more than 5 minutes
+664	,	NonOperationStatusToolTipKey[6]	,	CFormStatisticsEquipmentOperationMonitoring	,	상위 설비 손실 횟수: 선택한 기간 중에 상위 설비로 인한 5분 이상 손실 횟수	,	UPPER EQP LOSS COUNT: Number of more than 5 minutes of loss due to the upper equipment during the selected period	,	UPPER EQP LOSS COUNT: Number of more than 5 minutes of loss due to the upper equipment during the selected period	,	UPPER EQP LOSS COUNT: Number of more than 5 minutes of loss due to the upper equipment during the selected period
+665	,	NonOperationStatusToolTipKey[7]	,	CFormStatisticsEquipmentOperationMonitoring	,	상위 설비 손실 시간: 선택한 기간 중에 상위 설비로 인한 5분 이상의 손실 시간의 합	,	UPPER EQP LOSS TIME: The sum of more than 5 minutes of the loss time due to the upper equipment during the selected period	,	UPPER EQP LOSS TIME: The sum of more than 5 minutes of the loss time due to the upper equipment during the selected period	,	UPPER EQP LOSS TIME: The sum of more than 5 minutes of the loss time due to the upper equipment during the selected period
+666	,	NonOperationStatusToolTipKey[8]	,	CFormStatisticsEquipmentOperationMonitoring	,	하위 설비 손실 횟수: 선택한 기간 중에 하위 설비로 인한 5분 이상 손실 횟수	,	LOWRE EQP LOSS COUNT: Number of more than 5 minutes of loss due to lower equipment during the selected period	,	LOWRE EQP LOSS COUNT: Number of more than 5 minutes of loss due to lower equipment during the selected period	,	LOWRE EQP LOSS COUNT: Number of more than 5 minutes of loss due to lower equipment during the selected period
+667	,	NonOperationStatusToolTipKey[9]	,	CFormStatisticsEquipmentOperationMonitoring	,	하위 설비 손실 시간: 선택한 기간 중에 하위 설비로 인한 5분 이상의 손실 시간의 합	,	LOWER EQP LOSS TIME: The sum of more than 5 minutes of the loss time due to the lower equipment during the selected period	,	LOWER EQP LOSS TIME: The sum of more than 5 minutes of the loss time due to the lower equipment during the selected period	,	LOWER EQP LOSS TIME: The sum of more than 5 minutes of the loss time due to the lower equipment during the selected period
+668	,	MomentaryStopStatusKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	총 횟수	,	TOTAL COUNT	,	TOTAL COUNT	,	Tổng số lần
+669	,	MomentaryStopStatusKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	총 시간	,	TOTAL TIME	,	TOTAL TIME	,	Tổng thời gian
+670	,	MomentaryStopStatusKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	알람 횟수	,	ALARM COUNT	,	ALARM COUNT	,	Số lần ALARM 
+671	,	MomentaryStopStatusKey[3]	,	CFormStatisticsEquipmentOperationMonitoring	,	알람 시간	,	ALARM TIME	,	ALARM TIME	,	ALARM TIME
+672	,	MomentaryStopStatusKey[4]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 정지 횟수	,	EQP STOP COUNT	,	EQP STOP COUNT	,	Số lần dừng thiết bị 
+673	,	MomentaryStopStatusKey[5]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 정지 시간	,	EQP STOP TIME	,	EQP STOP TIME	,	Thời gian dừng thiết bị 
+674	,	MomentaryStopStatusKey[6]	,	CFormStatisticsEquipmentOperationMonitoring	,	상위 설비 손실 횟수	,	UPPER EQP LOSS COUNT	,	UPPER EQP LOSS COUNT	,	Số lần LOSS thiết bị UPPER ( UPPER EQP LOSS COUNT )
+675	,	MomentaryStopStatusKey[7]	,	CFormStatisticsEquipmentOperationMonitoring	,	상위 설비 손실 시간	,	UPPER EQP LOSS TIME	,	UPPER EQP LOSS TIME	,	 Mất thời gian thiết bị UPPER  (UPPER EQP LOSS TIME )
+676	,	MomentaryStopStatusKey[8]	,	CFormStatisticsEquipmentOperationMonitoring	,	하위 설비 손실 횟수	,	LOWER EQP LOSS COUNT	,	LOWER EQP LOSS COUNT	,	Số lần LOSS thiết bị LOWER ( LOWER EQP LOSS COUNT )
+677	,	MomentaryStopStatusKey[9]	,	CFormStatisticsEquipmentOperationMonitoring	,	하위 설비 손실 시간	,	LOWER EQP LOSS TIME	,	LOWER EQP LOSS TIME	,	 Mất thời gian thiết bị LOWER  (LOWER EQP LOSS TIME )
+678	,	MomentaryStopStatusToolTipKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	총 횟수: 알람 횟수 + 설비 정지 횟수 + 상위 설비 손실 횟수 + 하위 설비 손실 횟수	,	TOTAL COUNT: ALARM COUNT + EQP STOP COUNT + UPPER EQP LOSS COUNT + LOWER EQP LOSS COUNT	,	TOTAL COUNT: ALARM COUNT + EQP STOP COUNT + UPPER EQP LOSS COUNT + LOWER EQP LOSS COUNT	,	TOTAL COUNT: ALARM COUNT + EQP STOP COUNT + UPPER EQP LOSS COUNT + LOWER EQP LOSS COUNT
+679	,	MomentaryStopStatusToolTipKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	총 시간: 알람 시간 + 설비 정지 시간 + 상위 설비 손실 시간 + 하위 설비 손실 시간	,	TOTAL TIME: ALARM TIME + EQP STOP TIME + UPPER EQP LOSS TIME + LOWER EQP LOSS TIME	,	TOTAL TIME: ALARM TIME + EQP STOP TIME + UPPER EQP LOSS TIME + LOWER EQP LOSS TIME	,	TOTAL TIME: ALARM TIME + EQP STOP TIME + UPPER EQP LOSS TIME + LOWER EQP LOSS TIME
+680	,	MomentaryStopStatusToolTipKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	알람 횟수: 선택한 기간 중에 5분 이하 알람으로 설비가 정지된 횟수	,	ALARM COUNT: Number of times the equipment was stopped by an alarm for less than 5 minutes during the selected period	,	ALARM COUNT: Number of times the equipment was stopped by an alarm for less than 5 minutes during the selected period	,	ALARM COUNT: Number of times the equipment was stopped by an alarm for less than 5 minutes during the selected period
+681	,	MomentaryStopStatusToolTipKey[3]	,	CFormStatisticsEquipmentOperationMonitoring	,	알람 시간: 선택한 기간 중에 5분 이하 알람으로 설비가 정지된 시간의 합	,	ALARM TIME: The sum of time during the selected period when the equipment was stopped by an alarm for less than 5 minutes	,	ALARM TIME: The sum of time during the selected period when the equipment was stopped by an alarm for less than 5 minutes	,	ALARM TIME: The sum of time during the selected period when the equipment was stopped by an alarm for less than 5 minutes
+682	,	MomentaryStopStatusToolTipKey[4]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 정지 횟수: 선택한 기간 중에 설비가 5분 이하 정지된 횟수	,	EQP STOP COUNT: Number of times the equipment has stopped for less than 5 minutes during the selected period	,	EQP STOP COUNT: Number of times the equipment has stopped for less than 5 minutes during the selected period	,	EQP STOP COUNT: Number of times the equipment has stopped for less than 5 minutes during the selected period
+683	,	MomentaryStopStatusToolTipKey[5]	,	CFormStatisticsEquipmentOperationMonitoring	,	설비 정지 시간: 선택한 기간 중에 설비가 5분 이하 정지된 시간의 합	,	EQP STOP TIME: The sum of time during the selected period that the equipment has stopped for less than 5 minutes	,	EQP STOP TIME: The sum of time during the selected period that the equipment has stopped for less than 5 minutes	,	EQP STOP TIME: The sum of time during the selected period that the equipment has stopped for less than 5 minutes
+684	,	MomentaryStopStatusToolTipKey[6]	,	CFormStatisticsEquipmentOperationMonitoring	,	상위 설비 손실 횟수: 선택한 기간 중에 상위 설비로 인한 5분 이하 손실 횟수	,	UPPER EQP LOSS COUNT: Number of less than 5 minutes of loss due to the upper equipment during the selected period	,	UPPER EQP LOSS COUNT: Number of less than 5 minutes of loss due to the upper equipment during the selected period	,	UPPER EQP LOSS COUNT: Number of less than 5 minutes of loss due to the upper equipment during the selected period
+685	,	MomentaryStopStatusToolTipKey[7]	,	CFormStatisticsEquipmentOperationMonitoring	,	상위 설비 손실 시간: 선택한 기간 중에 상위 설비로 인한 5분 이하의 손실 시간의 합	,	UPPER EQP LOSS TIME: The sum of less than 5 minutes of the loss time due to the upper equipment during the selected period	,	UPPER EQP LOSS TIME: The sum of less than 5 minutes of the loss time due to the upper equipment during the selected period	,	UPPER EQP LOSS TIME: The sum of less than 5 minutes of the loss time due to the upper equipment during the selected period
+686	,	MomentaryStopStatusToolTipKey[8]	,	CFormStatisticsEquipmentOperationMonitoring	,	하위 설비 손실 횟수: 선택한 기간 중에 하위 설비로 인한 5분 이하 손실 횟수	,	LOWRE EQP LOSS COUNT: Number of less than 5 minutes of loss due to lower equipment during the selected period	,	LOWRE EQP LOSS COUNT: Number of less than 5 minutes of loss due to lower equipment during the selected period	,	LOWRE EQP LOSS COUNT: Number of less than 5 minutes of loss due to lower equipment during the selected period
+687	,	MomentaryStopStatusToolTipKey[9]	,	CFormStatisticsEquipmentOperationMonitoring	,	하위 설비 손실 시간: 선택한 기간 중에 하위 설비로 인한 5분 이하의 손실 시간의 합	,	LOWER EQP LOSS TIME: The sum of less than 5 minutes of the loss time due to the lower equipment during the selected period	,	LOWER EQP LOSS TIME: The sum of less than 5 minutes of the loss time due to the lower equipment during the selected period	,	LOWER EQP LOSS TIME: The sum of less than 5 minutes of the loss time due to the lower equipment during the selected period
+688	,	FailoverStatusKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	고장에서 다음 고장까지 평균 시간	,	MEAN TIME BETWEEN FAILURE	,	MEAN TIME BETWEEN FAILURE	,	Thời gian trung bình từ LOSS đến LOSS  tiếp theo
+689	,	FailoverStatusKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	고장 후 복구까지 평균 시간	,	MEAN TIME TO REPAIR	,	MEAN TIME TO REPAIR	,	Thời gian trung bình sau khi  LOSS đến khi phục hồi 
+690	,	FailoverStatusToolTipKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	고장에서 다음 고장까지 평균 시간: 장애 발생 후 다음 장애 발생이 일어날 때까지의 평균 시간	,	MEAN TIME BETWEEN FAILURE: Average amount of time after a failure until the next failure occurs	,	MEAN TIME BETWEEN FAILURE: Average amount of time after a failure until the next failure occurs	,	MEAN TIME BETWEEN FAILURE: Average amount of time after a failure until the next failure occurs
+691	,	FailoverStatusToolTipKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	고장 후 복구까지 평균 시간: 장애 발생 후 장애 조치까지 걸린 평균 시간	,	MEAN TIME TO REPAIR: Average amount of time taken after the failure to repair	,	MEAN TIME TO REPAIR: Average amount of time taken after the failure to repair	,	MEAN TIME TO REPAIR: Average amount of time taken after the failure to repair
+692	,	MCRStatusKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	진행 수량	,	COUNT	,	COUNT	,	Số lượng tiến hành chạy 
+693	,	MCRStatusKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	리딩수	,	READING COUNT	,	READING COUNT	,	Số lần đọc 9READING COUNT)
+694	,	MCRStatusKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	리딩율(%)	,	READING RATE(%)	,	READING RATE(%)	,	Tỷ lệ đọc (%) ( READING RATE(%) )
+695	,	MCRStatusToolTipKey[0]	,	CFormStatisticsEquipmentOperationMonitoring	,	진행 수량: MCR 리딩 시도 횟수	,	COUNT: Reading MCR the number of attempts	,	COUNT: Reading MCR the number of attempts	,	COUNT: Reading MCR the number of attempts
+696	,	MCRStatusToolTipKey[1]	,	CFormStatisticsEquipmentOperationMonitoring	,	리딩수: MCR 리딩에 성공한 횟수	,	READING COUNT: Number of successful MCR reads	,	READING COUNT: Number of successful MCR reads	,	READING COUNT: Number of successful MCR reads
+697	,	MCRStatusToolTipKey[2]	,	CFormStatisticsEquipmentOperationMonitoring	,	리딩율(%): 리딩수 / 진행 수량 * 100	,	READING RATE(%): READING COUNT / COUNT * 100	,	READING RATE(%): READING COUNT / COUNT * 100	,	READING RATE(%): READING COUNT / COUNT * 100
+698	,	BtnTitleInterlockCallList	,	CFormStatisticsInterlockCall	,	인터락 콜 목록	,	INTERLOCK CALL LIST	,	INTERLOCK CALL LIST	,	INTERLOCK CALL LIST
+699	,	BtnSelect	,	CFormStatisticsInterlockCall	,	검색	,	SELECT	,	SELECT	,	SELECT
+700	,	BtnTitleOPCallList	,	CFormStatisticsOPCall	,	오퍼레이션 콜 목록	,	OP CALL LIST	,	OP CALL LIST	,	OP CALL LIST
+701	,	BtnSelect	,	CFormStatisticsOPCall	,	검색	,	SELECT	,	SELECT	,	SELECT
+702	,	BtnTitleWeeklyGroup	,	CFormStatisticsProduction	,	주간 그룹	,	WEEKLY GROUP	,	WEEKLY GROUP	,	Nhóm ca ngày
+703	,	BtnTitleNightGroup	,	CFormStatisticsProduction	,	야간 그룹	,	NIGHT GROUP	,	NIGHT GROUP	,	Nhóm ca đêm
+704	,	BtnTitleTotalInputWeekly	,	CFormStatisticsProduction	,	전체 투입량	,	TOTAL INPUT	,	TOTAL INPUT	,	Tổng lượng INPUT
+705	,	BtnTitleTotalOutputWeekly	,	CFormStatisticsProduction	,	전체 배출량	,	TOTAL OUTPUT	,	TOTAL OUTPUT	,	Tổng lượng OUTPUT
+706	,	BtnTitleTotalProductionWeekly	,	CFormStatisticsProduction	,	전체 생산량	,	TOTAL PRODUCTION	,	TOTAL PRODUCTION	,	Tổng lượng sản xuất
+707	,	BtnTitleTotalInputNight	,	CFormStatisticsProduction	,	전체 투입량	,	TOTAL INPUT	,	TOTAL INPUT	,	Tổng lượng INPUT
+708	,	BtnTitleTotalOutputNight	,	CFormStatisticsProduction	,	전체 배출량	,	TOTAL OUTPUT	,	TOTAL OUTPUT	,	Tổng lượng OUTPUT
+709	,	BtnTitleTotalProductionNight	,	CFormStatisticsProduction	,	전체 생산량	,	TOTAL PRODUCTION	,	TOTAL PRODUCTION	,	Tổng lượng sản xuất
+710	,	BtnPrevious	,	CFormStatisticsProduction	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+711	,	BtnNext	,	CFormStatisticsProduction	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+712	,	BtnToday	,	CFormStatisticsProduction	,	금일	,	TODAY	,	TODAY	,	Trong ngày 
+713	,	BtnUpdate	,	CFormStatisticsProduction	,	갱신	,	UPDATE	,	UPDATE	,	Làm mới
+714	,	BtnTitleProductionList	,	CFormStatisticsProduction	,	생산 목록	,	PRODUCTION LIST	,	PRODUCTION LIST	,	LIST sản xuất
+715	,	BtnSelect	,	CFormStatisticsProduction	,	검색	,	SELECT	,	SELECT	,	SELECT
+716	,	BtnTitleTactTimeUnit	,	CFormStatisticsTactTime	,	유닛 택타임	,	UNIT TACT TIME	,	UNIT TACT TIME	,	UNIT TACT TIME
+717	,	BtnTitleTactTimeUnitDetail	,	CFormStatisticsTactTime	,	유닛 택타임 상세 내역	,	UNIT TACT TIME DETAIL	,	UNIT TACT TIME DETAIL	,	UNIT TACT TIME DETAIL
+718	,	BtnTitleTactTimeOutput	,	CFormStatisticsTactTime	,	배출 택타임	,	OUTPUT TACT TIME	,	OUTPUT TACT TIME	,	OUTPUT TACT TIME
+719	,	BtnTitleSlowUnit	,	CFormStatisticsTactTime	,	가장 느린 유닛	,	SLOWEST UNIT	,	SLOWEST UNIT	,	Đơn vị chậm nhất
+720	,	BtnTitleFastUnit	,	CFormStatisticsTactTime	,	가장 빠른 유닛	,	FASTEST UNIT	,	FASTEST UNIT	,	Đơn vị nhanh nhất
+721	,	BtnClearUnit	,	CFormStatisticsTactTime	,	클리어	,	CLEAR	,	CLEAR	,	CLEAR
+722	,	BtnTitleAverage	,	CFormStatisticsTactTime	,	[OutTact]평균 (sec)	,	[OutTact]AVERAGE (sec)	,	[OutTact]AVERAGE (sec)	,	[OutTact]Trung bình (sec)
+723	,	BtnTitleMaxLength	,	CFormStatisticsTactTime	,	최대 길이	,	MAX LENGTH	,	MAX LENGTH	,	Chiều dài tối đa
+724	,	BtnClearOutput	,	CFormStatisticsTactTime	,	클리어	,	CLEAR	,	CLEAR	,	CLEAR
+725	,	BtnOutTactSimpleView	,	CFormStatisticsTactTime	,	간단히 보기	,	SIMPLE VIEW	,	SIMPLE VIEW	,	SIMPLE VIEW
+726	,	BtnTitleTerminalCallList	,	CFormStatisticsTerminalCall	,	터미널 콜 목록	,	TERMINAL CALL LIST	,	TERMINAL CALL LIST	,	TERMINAL CALL LIST
+727	,	BtnSelect	,	CFormStatisticsTerminalCall	,	검색	,	SELECT	,	SELECT	,	SELECT
+728	,	BtnTeachMenu[0]	,	CFormTeach	,	IN셔틀	,	IN-SHUTTLE	,	IN-SHUTTLE	,	IN-SHUTTLE
+729	,	BtnTeachMenu[1]	,	CFormTeach	,	IN로봇	,	IN-ROBOT	,	IN-ROBOT	,	IN-ROBOT
+730	,	BtnTeachMenu[2]	,	CFormTeach	,	검사스테이지	,	INSPECTION-STAGE	,	INSPECTION-STAGE	,	INSPECTION-STAGE
+731	,	BtnTeachMenu[3]	,	CFormTeach	,	OUT로봇	,	OUT-ROBOT	,	OUT-ROBOT	,	OUT-ROBOT
+732	,	BtnTeachMenu[4]	,	CFormTeach	,	OUT플립	,	OUT-FLIP	,	OUT-FLIP	,	OUT-FLIP
+733	,	BtnTeachMenu[5]	,	CFormTeach	,	실린더	,	CYLINDER	,	CYLINDER	,	CYLINDER
+734	,	BtnTeachMenu[6]	,	CFormTeach	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+735	,	BtnTitleCylinderList	,	CFormTeachCylinder	,	실린더 목록	,	CYLINDER LIST	,	CYLINDER LIST	,	CYLINDER LIST
+736	,	BtnTitleCylinderDelayTime	,	CFormTeachCylinder	,	실린더 지연 시간	,	CYLINDER DELAY TIME	,	CYLINDER DELAY TIME	,	CYLINDER DELAY TIME
+737	,	BtnTitleFirstDelayTime	,	CFormTeachCylinder	,	FIRST 이동 지연 시간 (ms)	,	FIRST DELAY TIME (ms)	,	FIRST DELAY TIME (ms)	,	FIRST DELAY TIME (ms)
+738	,	BtnTitleSecondDelayTime	,	CFormTeachCylinder	,	SECOND 이동 지연 시간 (ms)	,	SECOND DELAY TIME (ms)	,	SECOND DELAY TIME (ms)	,	SECOND DELAY TIME (ms)
+739	,	BtnCylinderRepeatMove	,	CFormTeachCylinder	,	실린더 반복 이동	,	CYLINDER REPEAT MOVE	,	CYLINDER REPEAT MOVE	,	Di chuyển lặp lại Cylinder
+740	,	BtnFirstMove	,	CFormTeachCylinder	,	FIRST 이동	,	FIRST MOVE	,	FIRST MOVE	,	di chuyển lần đầu tiên (ms)
+741	,	BtnSecondMove	,	CFormTeachCylinder	,	SECOND 이동	,	SECOND MOVE	,	SECOND MOVE	,	di chuyển lần thứ hai (ms)
+742	,	BtnTitleCycleMoveTime	,	CFormTeachCylinder	,	반복 지연 시간 (ms)	,	CYCLE MOVE TIME (ms)	,	CYCLE MOVE TIME (ms)	,	Thời gian chậm lặp lại (ms)
+743	,	BtnTitleRepeatCount	,	CFormTeachCylinder	,	반복 개수	,	REPEAT COUNT	,	REPEAT COUNT	,	Số lần lặp lại
+744	,	BtnTitleFirstMoveTime	,	CFormTeachCylinder	,	FIRST 이동 시간 (ms)	,	FIRST MOVE TIME (ms)	,	FIRST MOVE TIME (ms)	,	di chuyển lần đầu tiên (ms)
+745	,	BtnTitleSecondMoveTime	,	CFormTeachCylinder	,	SECOND 이동 시간 (ms)	,	SECOND MOVE TIME (ms)	,	SECOND MOVE TIME (ms)	,	di chuyển lần thứ hai (ms)
+746	,	BtnRepeatMove	,	CFormTeachCylinder	,	반복 이동	,	REPEAT MOVE	,	REPEAT MOVE	,	Di chuyển lặp lại  
+747	,	BtnRepeatStop	,	CFormTeachCylinder	,	반복 정지	,	REPEAT STOP	,	REPEAT STOP	,	Dừng lặp lại 
+748	,	BtnGridViewClear	,	CFormTeachCylinder	,	클리어	,	CLEAR	,	CLEAR	,	CLEAR
+749	,	BtnSave	,	CFormTeachCylinder	,	저장	,	SAVE	,	SAVE	,	SAVE
+750	,	mResourceTitleDelayTimeUp	,	CFormTeachCylinder	,	상승 동작 딜레이 (ms)	,	UP MOVE DELAY (ms)	,	UP MOVE DELAY (ms)	,	UP MOVE DELAY (ms)
+751	,	mResourceTitleDelayTimeDown	,	CFormTeachCylinder	,	하강 동작 딜레이 (ms)	,	DOWN MOVE DELAY (ms)	,	DOWN MOVE DELAY (ms)	,	DOWN MOVE DELAY (ms)
+752	,	mResourceTitleMoveTimeUp	,	CFormTeachCylinder	,	상승 동작 시간 (ms)	,	UP MOVE ELAPSED (ms)	,	UP MOVE ELAPSED (ms)	,	UP MOVE ELAPSED (ms)
+753	,	mResourceTitleMoveTimeDown	,	CFormTeachCylinder	,	하강 동작 시간 (ms)	,	DOWN MOVE ELAPSED (ms)	,	DOWN MOVE ELAPSED (ms)	,	DOWN MOVE ELAPSED (ms)
+754	,	mResourceMoveUp	,	CFormTeachCylinder	,	상승 동작	,	UP MOVE	,	UP MOVE	,	UP MOVE
+755	,	mResourceMoveDown	,	CFormTeachCylinder	,	하강 동작	,	DOWN MOVE	,	DOWN MOVE	,	DOWN MOVE
+756	,	mResourceTitleDelayTimeLeft	,	CFormTeachCylinder	,	왼쪽 동작 딜레이 (ms)	,	LEFT MOVE DELAY (ms)	,	LEFT MOVE DELAY (ms)	,	LEFT MOVE DELAY (ms)
+757	,	mResourceTitleDelayTimeRight	,	CFormTeachCylinder	,	오른쪽 동작 딜레이 (ms)	,	RIGHT MOVE DELAY (ms)	,	RIGHT MOVE DELAY (ms)	,	RIGHT MOVE DELAY (ms)
+758	,	mResourceTitleMoveTimeLeft	,	CFormTeachCylinder	,	왼쪽 동작 시간 (ms)	,	LEFT MOVE ELAPSED (ms)	,	LEFT MOVE ELAPSED (ms)	,	LEFT MOVE ELAPSED (ms)
+759	,	mResourceTitleMoveTimeRight	,	CFormTeachCylinder	,	오른쪽 동작 시간 (ms)	,	RIGHT MOVE ELAPSED (ms)	,	RIGHT MOVE ELAPSED (ms)	,	RIGHT MOVE ELAPSED (ms)
+760	,	mResourceMoveLeft	,	CFormTeachCylinder	,	왼쪽 동작	,	LEFT MOVE	,	LEFT MOVE	,	LEFT MOVE
+761	,	mResourceMoveRight	,	CFormTeachCylinder	,	오른쪽 동작	,	RIGHT MOVE	,	RIGHT MOVE	,	RIGHT MOVE
+762	,	mResourceTitleDelayTimeForward	,	CFormTeachCylinder	,	전진 동작 딜레이 (ms)	,	FORWARD MOVE DELAY (ms)	,	FORWARD MOVE DELAY (ms)	,	FORWARD MOVE DELAY (ms)
+763	,	mResourceTitleDelayTimeBackward	,	CFormTeachCylinder	,	후진 동작 딜레이 (ms)	,	BACKWARD MOVE DELAY (ms)	,	BACKWARD MOVE DELAY (ms)	,	BACKWARD MOVE DELAY (ms)
+764	,	mResourceTitleMoveTimeForward	,	CFormTeachCylinder	,	전진 동작 시간 (ms)	,	FORWARD MOVE ELAPSED (ms)	,	FORWARD MOVE ELAPSED (ms)	,	FORWARD MOVE ELAPSED (ms)
+765	,	mResourceTitleMoveTimeBackward	,	CFormTeachCylinder	,	후진 동작 시간 (ms)	,	BACKWARD MOVE ELAPSED (ms)	,	BACKWARD MOVE ELAPSED (ms)	,	BACKWARD MOVE ELAPSED (ms)
+766	,	mResourceMoveForward	,	CFormTeachCylinder	,	전진 동작	,	FORWARD MOVE	,	FORWARD MOVE	,	FORWARD MOVE
+767	,	mResourceMoveBackward	,	CFormTeachCylinder	,	후진 동작	,	BACKWARD MOVE	,	BACKWARD MOVE	,	BACKWARD MOVE
+768	,	mResourceTitleDelayTimeCw	,	CFormTeachCylinder	,	CW 동작 딜레이 (ms)	,	CW MOVE DELAY (ms)	,	CW MOVE DELAY (ms)	,	CW MOVE DELAY (ms)
+769	,	mResourceTitleDelayTimeCcw	,	CFormTeachCylinder	,	CCW 동작 딜레이 (ms)	,	CCW MOVE DELAY (ms)	,	CCW MOVE DELAY (ms)	,	CCW MOVE DELAY (ms)
+770	,	mResourceTitleMoveTimeCw	,	CFormTeachCylinder	,	CW 동작 시간 (ms)	,	CW MOVE ELAPSED (ms)	,	CW MOVE ELAPSED (ms)	,	CW MOVE ELAPSED (ms)
+771	,	mResourceTitleMoveTimeCcw	,	CFormTeachCylinder	,	CCW 동작 시간 (ms)	,	CCW MOVE ELAPSED (ms)	,	CCW MOVE ELAPSED (ms)	,	CCW MOVE ELAPSED (ms)
+772	,	mResourceMoveCw	,	CFormTeachCylinder	,	CW 동작	,	CW MOVE	,	CW MOVE	,	CW MOVE
+773	,	mResourceMoveCcw	,	CFormTeachCylinder	,	CCW 동작	,	CCW MOVE	,	CCW MOVE	,	CCW MOVE
+774	,	mResourceTitleDelayTimeReturn	,	CFormTeachCylinder	,	복귀 동작 딜레이 (ms)	,	RETURN MOVE DELAY (ms)	,	RETURN MOVE DELAY (ms)	,	RETURN MOVE DELAY (ms)
+775	,	mResourceTitleDelayTimeTurn	,	CFormTeachCylinder	,	회전 동작 딜레이 (ms)	,	TURN MOVE DELAY (ms)	,	TURN MOVE DELAY (ms)	,	TURN MOVE DELAY (ms)
+776	,	mResourceTitleMoveTimeReturn	,	CFormTeachCylinder	,	복귀 동작 시간 (ms)	,	RETURN MOVE ELAPSED (ms)	,	RETURN MOVE ELAPSED (ms)	,	RETURN MOVE ELAPSED (ms)
+777	,	mResourceTitleMoveTimeTurn	,	CFormTeachCylinder	,	회전 동작 시간 (ms)	,	TURN MOVE ELAPSED (ms)	,	TURN MOVE ELAPSED (ms)	,	TURN MOVE ELAPSED (ms)
+778	,	mResourceMoveReturn	,	CFormTeachCylinder	,	복귀 동작	,	RETURN MOVE	,	RETURN MOVE	,	RETURN MOVE
+779	,	mResourceMoveTurn	,	CFormTeachCylinder	,	회전 동작	,	TURN MOVE	,	TURN MOVE	,	TURN MOVE
+780	,	BtnTitleVacuumList	,	CFormTeachVacuum	,	진공 목록	,	VACUUM LIST	,	VACUUM LIST	,	VACUUM LIST
+781	,	BtnTitleVacuumDelayTime	,	CFormTeachVacuum	,	진공 동작 대기 시간	,	VACUUM DELAY TIME	,	VACUUM DELAY TIME	,	VACUUM DELAY TIME
+782	,	BtnTitleVacuumTimeout	,	CFormTeachVacuum	,	진공 타임아웃	,	VACUUM TIMEOUT	,	VACUUM TIMEOUT	,	VACUUM TIMEOUT
+783	,	BtnTitleVacuumOffDelayTime	,	CFormTeachVacuum	,	파기 후 안정화 시간	,	BLOW AFTER DEALY TIME	,	BLOW AFTER DEALY TIME	,	BLOW AFTER DEALY TIME
+784	,	BtnVacuum	,	CFormTeachVacuum	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+785	,	BtnBlow	,	CFormTeachVacuum	,	파기	,	BLOW	,	BLOW	,	BLOW
+786	,	BtnTitleVacuumInput	,	CFormTeachVacuum	,	진공 입력	,	VACUUM INPUT	,	VACUUM INPUT	,	VACUUM INPUT
+787	,	BtnTitleVacuumAnalogInput	,	CFormTeachVacuum	,	진공 아날로그 입력	,	VACUUM ANALOG INPUT	,	VACUUM ANALOG INPUT	,	VACUUM ANALOG INPUT
+788	,	BtnTitleVacuumOutput	,	CFormTeachVacuum	,	진공 출력	,	VACUUM OUTPUT	,	VACUUM OUTPUT	,	VACUUM OUTPUT
+789	,	BtnTitleBlowOutput	,	CFormTeachVacuum	,	파기 출력	,	BLOW OUTPUT	,	BLOW OUTPUT	,	BLOW OUTPUT
+790	,	BtnOutputLock	,	CFormTeachVacuum	,	출력 잠금	,	OUTPUT LOCK	,	OUTPUT LOCK	,	OUTPUT LOCK
+791	,	BtnSave	,	CFormTeachVacuum	,	저장	,	SAVE	,	SAVE	,	SAVE
+792	,	BtnTitleAxisName	,	CFormTeachData	,	축 이름	,	AXIS NAME	,	AXIS NAME	,	AXIS NAME
+793	,	BtnServo	,	CFormTeachData	,	서보	,	SERVO	,	SERVO	,	SERVO
+794	,	BtnTitleCurrentPosition	,	CFormTeachData	,	현재 위치	,	CURRENT POSITION	,	CURRENT POSITION	,	CURRENT POSITION
+795	,	BtnHome	,	CFormTeachData	,	원점 복귀	,	ORIGIN	,	ORIGIN	,	ORIGIN
+796	,	BtnAlarm	,	CFormTeachData	,	알람	,	ALARM	,	ALARM	,	ALARM
+797	,	BtnInposition	,	CFormTeachData	,	인포지션	,	INPOSITION	,	INPOSITION	,	INPOSITION
+798	,	BtnPositionMove	,	CFormTeachData	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	POSITION MOVE
+799	,	BtnTitleJog	,	CFormTeachData	,	조그	,	JOG	,	JOG	,	JOG
+800	,	BtnFastJogMode	,	CFormTeachData	,	빠른 조그	,	FAST JOG	,	FAST JOG	,	FAST JOG
+801	,	BtnSlowJogMode	,	CFormTeachData	,	느린 조그	,	SLOW JOG	,	SLOW JOG	,	SLOW JOG
+802	,	BtnJogMovePlus	,	CFormTeachData	,	조그 이동 ( + )	,	JOG MOVE ( + )	,	JOG MOVE ( + )	,	JOG MOVE ( + )
+803	,	BtnJogMoveMinus	,	CFormTeachData	,	조그 이동 ( - )	,	JOG MOVE ( - )	,	JOG MOVE ( - )	,	JOG MOVE ( - )
+804	,	BtnTitleRelativeMoveValue	,	CFormTeachData	,	상대 이동값	,	RELATIVE VALUE	,	RELATIVE VALUE	,	RELATIVE VALUE
+805	,	BtnRelativeMovePlus	,	CFormTeachData	,	상대 이동 ( + )	,	RELATIVE MOVE ( + )	,	RELATIVE MOVE ( + )	,	RELATIVE MOVE ( + )
+806	,	BtnRelativeMoveMinus	,	CFormTeachData	,	상대 이동 ( - )	,	RELATIVE MOVE ( - )	,	RELATIVE MOVE ( - )	,	RELATIVE MOVE ( - )
+807	,	BtnStop	,	CFormTeachData	,	정지	,	STOP	,	STOP	,	STOP
+808	,	BtnMinusLimit	,	CFormTeachData	,	리미트 ( - )	,	LIMIT ( - )	,	LIMIT ( - )	,	LIMIT ( - )
+809	,	BtnHomeSensor	,	CFormTeachData	,	홈 센서	,	HOME SENSOR	,	HOME SENSOR	,	HOME SENSOR
+810	,	BtnPlusLimit	,	CFormTeachData	,	리미트 ( + )	,	LIMIT ( + )	,	LIMIT ( + )	,	LIMIT ( + )
+811	,	BtnTargetPositionMove	,	CFormTeachData	,	절대 위치 이동	,	TARGET POSITION MOVE	,	TARGET POSITION MOVE	,	TARGET POSITION MOVE
+812	,	lblTitleServoLoadRatio	,	CFormTeachData	,	서보 부하율	,	SERVO LOAD RATIO	,	SERVO LOAD RATIO	,	SERVO LOAD RATIO
+813	,	lblTitleCurrentVelocity	,	CFormTeachData	,	현재 동작 속도	,	CURRENT MOVE VELOCITY	,	CURRENT MOVE VELOCITY	,	CURRENT MOVE VELOCITY
+814	,	BtnPositionJog	,	CFormTeachData	,	위치 이동 (조그)	,	POSITION MOVE (JOG)	,	POSITION MOVE (JOG)	,	POSITION MOVE (JOG)
+815	,	BtnSave	,	CFormTeachData	,	저장	,	SAVE	,	SAVE	,	SAVE
+816	,	BtnTitle	,	CFormTeachInShuttle	,	IN셔틀	,	IN-SHUTTLE	,	IN-SHUTTLE	,	IN-SHUTTLE
+817	,	BtnMotorStageX	,	CFormTeachInShuttle	,	스테이지 X1	,	STAGE X1	,	STAGE X1	,	STAGE X1
+818	,	BtnTitlePosition	,	CFormTeachInShuttle	,	위치	,	POSITION	,	POSITION	,	Vị trí 
+819	,	BtnPrevPosition	,	CFormTeachInShuttle	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+820	,	BtnNextPosition	,	CFormTeachInShuttle	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+821	,	BtnTitleBatchMove	,	CFormTeachInShuttle	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
+822	,	BtnPrevBatch	,	CFormTeachInShuttle	,	이전	,	NEXT	,	NEXT	,	NEXT
+823	,	BtnNextBatch	,	CFormTeachInShuttle	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+824	,	BtnBatchCmdScanProcess	,	CFormTeachInShuttle	,	스캔 공정 (간이 광학계)	,	SCAN PROCESS (SUB-OPTICS)	,	SCAN PROCESS (SUB-OPTICS)	,	SCAN PROCESS (SUB-OPTICS)
+825	,	BtnBatchCmdAlignProcess	,	CFormTeachInShuttle	,	얼라인 공정	,	ALIGN PROCESS	,	ALIGN PROCESS	,	ALIGN PROCESS
+826	,	BtnBatchCmdMoveLoadPosition	,	CFormTeachInShuttle	,	투입 위치 이동 (상류설비)	,	MOVE LOAD POSITION (UPPER-EQUIPMENT)	,	MOVE LOAD POSITION (UPPER-EQUIPMENT)	,	MOVE LOAD POSITION (UPPER-EQUIPMENT)
+827	,	BtnBatchCmdMoveScanStartWaitPosition	,	CFormTeachInShuttle	,	스캔 시작 대기 위치 이동	,	MOVE SCAN START WAIT POSITION	,	MOVE SCAN START WAIT POSITION	,	MOVE SCAN START WAIT POSITION
+828	,	BtnBatchCmdMoveScanTriggerStartPosition	,	CFormTeachInShuttle	,	스캔 트리거 시작 위치 이동	,	MOVE SCAN TRIGGER START POSITION	,	MOVE SCAN TRIGGER START POSITION	,	MOVE SCAN TRIGGER START POSITION
+829	,	BtnBatchCmdMoveScanTriggerEndPosition	,	CFormTeachInShuttle	,	스캔 트리거 종료 위치 이동	,	MOVE SCAN TRIGGER END POSITION	,	MOVE SCAN TRIGGER END POSITION	,	MOVE SCAN TRIGGER END POSITION
+830	,	BtnBatchCmdMoveAlignPosition	,	CFormTeachInShuttle	,	얼라인 위치 이동	,	MOVE ALIGN POSITION	,	MOVE ALIGN POSITION	,	MOVE ALIGN POSITION
+831	,	BtnBatchCmdMoveUnloadPosition	,	CFormTeachInShuttle	,	배출 위치 이동 (IN로봇)	,	MOVE UNLOAD POSITION (IN-ROBOT)	,	MOVE UNLOAD POSITION (IN-ROBOT)	,	MOVE UNLOAD POSITION (IN-ROBOT)
+832	,	BtnTitleActuator	,	CFormTeachInShuttle	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
+833	,	UcTeachVacuum1_DeviceName	,	CFormTeachInShuttle	,	P1	,	P1	,	P1	,	P1
+834	,	UcTeachVacuum1_Vacuum	,	CFormTeachInShuttle	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+835	,	UcTeachVacuum1_Blow	,	CFormTeachInShuttle	,	파기	,	BLOW	,	BLOW	,	BLOW
+836	,	UcTeachVacuum1_Sensor	,	CFormTeachInShuttle	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+837	,	UcTeachVacuum2_DeviceName	,	CFormTeachInShuttle	,	P2	,	P2	,	P2	,	P2
+838	,	UcTeachVacuum2_Vacuum	,	CFormTeachInShuttle	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+839	,	UcTeachVacuum2_Blow	,	CFormTeachInShuttle	,	파기	,	BLOW	,	BLOW	,	BLOW
+840	,	UcTeachVacuum2_Sensor	,	CFormTeachInShuttle	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+841	,	BtnUseBlowAutoOff	,	CFormTeachInShuttle	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+842	,	LblTitleAlignData	,	CFormTeachInShuttle	,	[IN셔틀] 얼라인 결과 데이터	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA
+843	,	BtnTitle	,	CFormTeachInRobot	,	IN로봇	,	IN-ROBOT	,	IN-ROBOT	,	IN-ROBOT
+844	,	BtnTitleBatchMove	,	CFormTeachInRobot	,	일괄 동작	,	BATCH MOVE	,	BATCH MOVE	,	BATCH MOVE
+845	,	BtnMotorNachiP1	,	CFormTeachInRobot	,	[P1] 로드 (IN셔틀)	,	[P1] LOAD (IN-SHUTTLE)	,	[P1] LOAD (IN-SHUTTLE)	,	[P1] LOAD (IN-SHUTTLE)
+846	,	BtnMotorNachiP3	,	CFormTeachInRobot	,	[P3] MCR	,	[P3] MCR	,	[P3] MCR	,	[P3] MCR
+847	,	BtnMotorNachiP4	,	CFormTeachInRobot	,	[P4] 언로드 (검사스테이지)	,	[P4] UNLOAD (INSPECTION-STAGE)	,	[P4] UNLOAD (INSPECTION-STAGE)	,	[P4] UNLOAD (INSPECTION-STAGE)
+848	,	BtnTitlePosition	,	CFormTeachInRobot	,	위치	,	POSITION	,	POSITION	,	POSITION
+849	,	BtnBatchCmdLoadGet	,	CFormTeachInRobot	,	[GET] 로드 공정 (IN셔틀)	,	[GET] LOAD PROCESS (IN-SHUTTLE)	,	[GET] LOAD PROCESS (IN-SHUTTLE)	,	[GET] LOAD PROCESS (IN-SHUTTLE)
+850	,	BtnBatchCmdLoadPut	,	CFormTeachInRobot	,	[PUT] 로드 공정 (IN셔틀)	,	[PUT] LOAD PROCESS (IN-SHUTTLE)	,	[PUT] LOAD PROCESS (IN-SHUTTLE)	,	[PUT] LOAD PROCESS (IN-SHUTTLE)
+851	,	BtnBatchCmdAlignZeroSend	,	CFormTeachInRobot	,	얼라인 데이터 리셋 전송	,	ALIGN ZERO DATA SEND	,	ALIGN ZERO DATA SEND	,	ALIGN ZERO DATA SEND
+852	,	BtnBatchCmdAlignSend	,	CFormTeachInRobot	,	얼라인 데이터 전송	,	ALIGN DATA SEND	,	ALIGN DATA SEND	,	ALIGN DATA SEND
+853	,	BtnBatchCmdAlign_Verification_Process	,	CFormTeachInRobot	,	[얼라인 검증] 얼라인 ▶ 투입/배출 ▶ 얼라인  (보정값 반영)	,	[ALIGN VERIFICATION] Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN VERIFICATION] Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN VERIFICATION] Align ▶ Pick/Place ▶ Align (Apply Offset)
+854	,	BtnBatchCmdRobot_Verification_Process	,	CFormTeachInRobot	,	[로봇 검증] 얼라인 ▶ 투입/배출 ▶ 얼라인 (보정값 미반영)	,	[ROBOT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)
+855	,	BtnBatchCmdAlign_Verification_Process2	,	CFormTeachInRobot	,	[얼라인 반복 검증] 투입/배출(Offset) ▶ 얼라인 ▶ 투입/배출 ▶ 얼라인  (보정값 반영)	,	[ALIGN REPEAT VERIFICATION] Pick/Place(Offset) ▶ Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN REPEAT VERIFICATION] Pick/Place(Offset) ▶ Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN REPEAT VERIFICATION] Pick/Place(Offset) ▶ Align ▶ Pick/Place ▶ Align (Apply Offset)
+856	,	BtnBatchCmdRobot_Verification_Process2	,	CFormTeachInRobot	,	[로봇 반복 검증] 얼라인 ▶ 투입/배출 ▶ 얼라인 (보정값 미반영)	,	[ROBOT REPEAT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT REPEAT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT REPEAT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)
+857	,	BtnBatchCmdAlignCalibration	,	CFormTeachInRobot	,	얼라인 캘리브레이션	,	ALIGN CALIBRATION	,	ALIGN CALIBRATION	,	ALIGN CALIBRATION
+858	,	BtnBatchCmdMcrPut	,	CFormTeachInRobot	,	[PUT] MCR 공정	,	[PUT] MCR PROCESS	,	[PUT] MCR PROCESS	,	[PUT] MCR PROCESS
+859	,	BtnBatchCmdUnloadGet	,	CFormTeachInRobot	,	[GET] 언로드 공정 (검사스테이지)	,	[GET] UNLOAD PROCESS (INSPECTION-STAGE)	,	[GET] UNLOAD PROCESS (INSPECTION-STAGE)	,	[GET] UNLOAD PROCESS (INSPECTION-STAGE)
+860	,	BtnBatchCmdUnloadPut	,	CFormTeachInRobot	,	[PUT] 언로드 공정 (검사스테이지)	,	[PUT] UNLOAD PROCESS (INSPECTION-STAGE)	,	[PUT] UNLOAD PROCESS (INSPECTION-STAGE)	,	[PUT] UNLOAD PROCESS (INSPECTION-STAGE)
+861	,	LblTitleAlignData	,	CFormTeachInRobot	,	[IN셔틀] 얼라인 결과 데이터	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA
+862	,	LblTitleOffsetData	,	CFormTeachInRobot	,	[IN로봇] 적용 오프셋 데이터	,	[IN-ROBOT] APPLY OFFSET DATA	,	[IN-ROBOT] APPLY OFFSET DATA	,	[IN-ROBOT] APPLY OFFSET DATA
+863	,	LblTitleMcrData	,	CFormTeachInRobot	,	MCR 데이터	,	MCR DATA	,	MCR DATA	,	MCR DATA
+864	,	BtnTitleActuator	,	CFormTeachInRobot	,	동작	,	ACTUATOR	,	ACTUATOR	,	ACTUATOR
+865	,	UcTeachVacuum1_DeviceName	,	CFormTeachInRobot	,	P1	,	P1	,	P1	,	P1
+866	,	UcTeachVacuum1_Vacuum	,	CFormTeachInRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+867	,	UcTeachVacuum1_Blow	,	CFormTeachInRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
+868	,	UcTeachVacuum1_Sensor	,	CFormTeachInRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+869	,	UcTeachVacuum2_DeviceName	,	CFormTeachInRobot	,	P2	,	P2	,	P2	,	P2
+870	,	UcTeachVacuum2_Vacuum	,	CFormTeachInRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+871	,	UcTeachVacuum2_Blow	,	CFormTeachInRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
+872	,	UcTeachVacuum2_Sensor	,	CFormTeachInRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+873	,	UcTeachCylinder1_DeviceName	,	CFormTeachInRobot	,	P1 실린더	,	P1 CYLINDER	,	P1 CYLINDER	,	P1 CYLINDER
+874	,	UcTeachCylinder1_Action1	,	CFormTeachInRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
+875	,	UcTeachCylinder1_Action2	,	CFormTeachInRobot	,	회전	,	TURN	,	TURN	,	TURN
+876	,	UcTeachCylinder2_DeviceName	,	CFormTeachInRobot	,	P2 실린더	,	P2 CYLINDER	,	P2 CYLINDER	,	P2 CYLINDER
+877	,	UcTeachCylinder2_Action1	,	CFormTeachInRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
+878	,	UcTeachCylinder2_Action2	,	CFormTeachInRobot	,	회전	,	TURN	,	TURN	,	TURN
+879	,	BtnUseBlowAutoOff	,	CFormTeachInRobot	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+880	,	BtnTitleOperationStatus	,	CFormTeachInRobot	,	동작 상태	,	OPERATION STATUS	,	OPERATION STATUS	,	OPERATION STATUS
+881	,	BtnTeachMode	,	CFormTeachInRobot	,	티치 모드	,	TEACH MODE	,	TEACH MODE	,	TEACH MODE
+882	,	BtnPlayBackMode	,	CFormTeachInRobot	,	오토 모드	,	AUTO MODE	,	AUTO MODE	,	AUTO MODE
+883	,	BtnRunningU1	,	CFormTeachInRobot	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1
+884	,	BtnUnderStopping	,	CFormTeachInRobot	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP
+885	,	BtnServoReady	,	CFormTeachInRobot	,	서보	,	SERVO	,	SERVO	,	SERVO
+886	,	BtnHomePosition	,	CFormTeachInRobot	,	홈	,	HOME	,	HOME	,	HOME
+887	,	BtnAlarm	,	CFormTeachInRobot	,	알람	,	ALARM	,	ALARM	,	ALARM
+888	,	BtnInposition	,	CFormTeachInRobot	,	인포지션	,	INPOSITION	,	INPOSITION	,	INPOSITION
+889	,	BtnBatteryWarning	,	CFormTeachInRobot	,	배터리 경고	,	BATTERY WARNING	,	BATTERY WARNING	,	BATTERY WARNING
+890	,	BtnTitleAction	,	CFormTeachInRobot	,	동작	,	OPERATION	,	OPERATION	,	OPERATION
+891	,	BtnStop	,	CFormTeachInRobot	,	정지	,	STOP	,	STOP	,	STOP
+892	,	BtnPause	,	CFormTeachInRobot	,	일시 정지	,	PAUSE	,	PAUSE	,	PAUSE
+893	,	BtnManualMode	,	CFormTeachInRobot	,	매뉴얼 모드	,	MANUAL MODE	,	MANUAL MODE	,	MANUAL MODE
+894	,	BtnMotorInitialize	,	CFormTeachInRobot	,	로봇 초기화	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE
+895	,	BtnPositionMove	,	CFormTeachInRobot	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	POSITION MOVE
+896	,	BtnSave	,	CFormTeachInRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
+897	,	BtnPrevPosition	,	CFormTeachInRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+898	,	BtnNextPosition	,	CFormTeachInRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+899	,	BtnPrevBatch	,	CFormTeachInRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+900	,	BtnNextBatch	,	CFormTeachInRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+901	,	LblTitleJcmMode	,	CFormTeachInRobot	,	JCM 모드 메뉴	,	JCM MODE MENU	,	JCM MODE MENU	,	JCM MODE MENU
+902	,	BtnSubTitleJcmModeCheckTeaching	,	CFormTeachInRobot	,	티칭 확인 위치 선택	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING
+903	,	BtnSubTitleJcmModeOffset	,	CFormTeachInRobot	,	오프셋 설정	,	SET OFFSET	,	SET OFFSET	,	SET OFFSET
+904	,	BtnJcmCmdT1	,	CFormTeachInRobot	,	「T1」	,	「T1」	,	「T1」	,	「T1」
+905	,	BtnJcmCmdT2	,	CFormTeachInRobot	,	「T2」	,	「T2」	,	「T2」	,	「T2」
+906	,	BtnJcmCmdT3	,	CFormTeachInRobot	,	「T3」	,	「T3」	,	「T3」	,	「T3」
+907	,	BtnJcmCmdT4	,	CFormTeachInRobot	,	「T4」	,	「T4」	,	「T4」	,	「T4」
+908	,	BtnJcmCmdT12	,	CFormTeachInRobot	,	「T1_T2」: 동시	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce
+909	,	BtnJcmCmdT34	,	CFormTeachInRobot	,	「T3_T4」: 동시	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce
+910	,	BtnJcmCmdCrossing_T1_S2	,	CFormTeachInRobot	,	「T1 + S2」: 교차	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing
+911	,	BtnJcmCmdCrossing_T2_S1	,	CFormTeachInRobot	,	「T2 + S1」: 교차	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing
+912	,	BtnJcmCmdCrossing_T3_S4	,	CFormTeachInRobot	,	「T3 + S4」: 교차	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing
+913	,	BtnJcmCmdCrossing_T4_S3	,	CFormTeachInRobot	,	「T4 + S3」: 교차	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing
+914	,	BtnJcmCmdCrossing_T12_S34	,	CFormTeachInRobot	,	「T1_T2 + S3_S4」: 동시 && 교차	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing
+915	,	BtnJcmCmdCrossing_T34_S12	,	CFormTeachInRobot	,	「T3_T4 + S1_S2」: 동시 && 교차	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing
+916	,	BtnJcmModeSave	,	CFormTeachInRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
+917	,	BtnJcmModeNoSave	,	CFormTeachInRobot	,	취소	,	CANCEL	,	CANCEL	,	CANCEL
+918	,	BtnJcmMode	,	CFormTeachInRobot	,	JCM 모드	,	JCM MODE	,	JCM MODE	,	JCM MODE
+919	,	BtnPrevJcm	,	CFormTeachInRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+920	,	BtnNextJcm	,	CFormTeachInRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+921	,	BtnTitle	,	CFormTeachInspStage	,	검사스테이지	,	INSPECTION-STAGE	,	INSPECTION-STAGE	,	INSPECTION-STAGE
+922	,	BtnMotorStageX	,	CFormTeachInspStage	,	스테이지 Y	,	STAGE Y	,	STAGE Y	,	STAGE Y
+923	,	BtnTitlePosition	,	CFormTeachInspStage	,	위치	,	POSITION	,	POSITION	,	Vị trí 
+924	,	BtnPrevPosition	,	CFormTeachInspStage	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+925	,	BtnNextPosition	,	CFormTeachInspStage	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+926	,	BtnTitleBatchMove	,	CFormTeachInspStage	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
+927	,	BtnPrevBatch	,	CFormTeachInspStage	,	이전	,	NEXT	,	NEXT	,	NEXT
+928	,	BtnNextBatch	,	CFormTeachInspStage	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+929	,	BtnBatchCmdGrabProcess	,	CFormTeachInspStage	,	그랩 공정	,	GRAB PROCESS	,	GRAB PROCESS	,	GRAB PROCESS
+930	,	BtnBatchCmdMoveLoadPosition	,	CFormTeachInspStage	,	투입 위치 이동 (IN로봇)	,	MOVE LOAD POSITION (IN-ROBOT)	,	MOVE LOAD POSITION (IN-ROBOT)	,	MOVE LOAD POSITION (IN-ROBOT)
+931	,	BtnBatchCmdMoveGrabP1Position	,	CFormTeachInspStage	,	P1 그랩 위치 이동	,	MOVE P1 GRAB POSITION	,	MOVE P1 GRAB POSITION	,	MOVE P1 GRAB POSITION
+932	,	BtnBatchCmdMoveGrabP2Position	,	CFormTeachInspStage	,	P2 그랩 위치 이동	,	MOVE P2 GRAB POSITION	,	MOVE P2 GRAB POSITION	,	MOVE P2 GRAB POSITION
+933	,	BtnBatchCmdMoveUnloadPosition	,	CFormTeachInspStage	,	배출 위치 이동 (OUT로봇)	,	MOVE UNLOAD POSITION (OUT-ROBOT)	,	MOVE UNLOAD POSITION (OUT-ROBOT)	,	MOVE UNLOAD POSITION (OUT-ROBOT)
+934	,	BtnTitleActuator	,	CFormTeachInspStage	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
+935	,	UcTeachVacuum1_DeviceName	,	CFormTeachInspStage	,	P1	,	P1	,	P1	,	P1
+936	,	UcTeachVacuum1_Vacuum	,	CFormTeachInspStage	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+937	,	UcTeachVacuum1_Blow	,	CFormTeachInspStage	,	파기	,	BLOW	,	BLOW	,	BLOW
+938	,	UcTeachVacuum1_Sensor	,	CFormTeachInspStage	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+939	,	UcTeachVacuum2_DeviceName	,	CFormTeachInspStage	,	P2	,	P2	,	P2	,	P2
+940	,	UcTeachVacuum2_Vacuum	,	CFormTeachInspStage	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+941	,	UcTeachVacuum2_Blow	,	CFormTeachInspStage	,	파기	,	BLOW	,	BLOW	,	BLOW
+942	,	UcTeachVacuum2_Sensor	,	CFormTeachInspStage	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+943	,	BtnUseBlowAutoOff	,	CFormTeachInspStage	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+944	,	BtnTitle	,	CFormTeachOutRobot	,	OUT로봇	,	OUT-ROBOT	,	OUT-ROBOT	,	OUT-ROBOT
+945	,	BtnTitleBatchMove	,	CFormTeachOutRobot	,	일괄 동작	,	BATCH MOVE	,	BATCH MOVE	,	BATCH MOVE
+946	,	BtnMotorNachiP1	,	CFormTeachOutRobot	,	[P1] 로드 (검사스테이지)	,	[P1] LOAD (INSPECTION-STAGE)	,	[P1] LOAD (INSPECTION-STAGE)	,	[P1] LOAD (INSPECTION-STAGE)
+947	,	BtnMotorNachiP4	,	CFormTeachOutRobot	,	[P4] 언로드 (아웃플립)	,	[P4] UNLOAD (OUT-FLIP)	,	[P4] UNLOAD (OUT-FLIP)	,	[P4] UNLOAD (OUT-FLIP)
+948	,	BtnTitlePosition	,	CFormTeachOutRobot	,	위치	,	POSITION	,	POSITION	,	POSITION
+949	,	BtnBatchCmdLoadGet	,	CFormTeachOutRobot	,	[GET] 로드 공정 (검사스테이지)	,	[GET] LOAD PROCESS (INSPECTION-STAGE)	,	[GET] LOAD PROCESS (INSPECTION-STAGE)	,	[GET] LOAD PROCESS (INSPECTION-STAGE)
+950	,	BtnBatchCmdLoadPut	,	CFormTeachOutRobot	,	[PUT] 로드 공정 (검사스테이지)	,	[PUT] LOAD PROCESS (INSPECTION-STAGE)	,	[PUT] LOAD PROCESS (INSPECTION-STAGE)	,	[PUT] LOAD PROCESS (INSPECTION-STAGE)
+951	,	BtnBatchCmdUnloadGet	,	CFormTeachOutRobot	,	[GET] 언로드 공정 (아웃플립)	,	[GET] UNLOAD PROCESS (OUT-FLIP)	,	[GET] UNLOAD PROCESS (OUT-FLIP)	,	[GET] UNLOAD PROCESS (OUT-FLIP)
+952	,	BtnBatchCmdUnloadPut	,	CFormTeachOutRobot	,	[PUT] 언로드 공정 (아웃플립)	,	[PUT] UNLOAD PROCESS (OUT-FLIP)	,	[PUT] UNLOAD PROCESS (OUT-FLIP)	,	[PUT] UNLOAD PROCESS (OUT-FLIP)
+953	,	BtnTitleActuator	,	CFormTeachOutRobot	,	동작	,	ACTUATOR	,	ACTUATOR	,	ACTUATOR
+954	,	UcTeachVacuum1_DeviceName	,	CFormTeachOutRobot	,	P1	,	P1	,	P1	,	P1
+955	,	UcTeachVacuum1_Vacuum	,	CFormTeachOutRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+956	,	UcTeachVacuum1_Blow	,	CFormTeachOutRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
+957	,	UcTeachVacuum1_Sensor	,	CFormTeachOutRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+958	,	UcTeachVacuum2_DeviceName	,	CFormTeachOutRobot	,	P2	,	P2	,	P2	,	P2
+959	,	UcTeachVacuum2_Vacuum	,	CFormTeachOutRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+960	,	UcTeachVacuum2_Blow	,	CFormTeachOutRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
+961	,	UcTeachVacuum2_Sensor	,	CFormTeachOutRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+962	,	UcTeachCylinder1_DeviceName	,	CFormTeachOutRobot	,	P1 실린더	,	P1 CYLINDER	,	P1 CYLINDER	,	P1 CYLINDER
+963	,	UcTeachCylinder1_Action1	,	CFormTeachOutRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
+964	,	UcTeachCylinder1_Action2	,	CFormTeachOutRobot	,	회전	,	TURN	,	TURN	,	TURN
+965	,	UcTeachCylinder2_DeviceName	,	CFormTeachOutRobot	,	P2 실린더	,	P2 CYLINDER	,	P2 CYLINDER	,	P2 CYLINDER
+966	,	UcTeachCylinder2_Action1	,	CFormTeachOutRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
+967	,	UcTeachCylinder2_Action2	,	CFormTeachOutRobot	,	회전	,	TURN	,	TURN	,	TURN
+968	,	BtnUseBlowAutoOff	,	CFormTeachOutRobot	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+969	,	BtnTitleOperationStatus	,	CFormTeachOutRobot	,	동작 상태	,	OPERATION STATUS	,	OPERATION STATUS	,	OPERATION STATUS
+970	,	BtnTeachMode	,	CFormTeachOutRobot	,	티치 모드	,	TEACH MODE	,	TEACH MODE	,	TEACH MODE
+971	,	BtnPlayBackMode	,	CFormTeachOutRobot	,	오토 모드	,	AUTO MODE	,	AUTO MODE	,	AUTO MODE
+972	,	BtnRunningU1	,	CFormTeachOutRobot	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1
+973	,	BtnUnderStopping	,	CFormTeachOutRobot	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP
+974	,	BtnServoReady	,	CFormTeachOutRobot	,	서보	,	SERVO	,	SERVO	,	SERVO
+975	,	BtnHomePosition	,	CFormTeachOutRobot	,	홈	,	HOME	,	HOME	,	HOME
+976	,	BtnAlarm	,	CFormTeachOutRobot	,	알람	,	ALARM	,	ALARM	,	ALARM
+977	,	BtnInposition	,	CFormTeachOutRobot	,	인포지션	,	INPOSITION	,	INPOSITION	,	INPOSITION
+978	,	BtnBatteryWarning	,	CFormTeachOutRobot	,	배터리 경고	,	BATTERY WARNING	,	BATTERY WARNING	,	BATTERY WARNING
+979	,	BtnTitleAction	,	CFormTeachOutRobot	,	동작	,	OPERATION	,	OPERATION	,	OPERATION
+980	,	BtnStop	,	CFormTeachOutRobot	,	정지	,	STOP	,	STOP	,	STOP
+981	,	BtnPause	,	CFormTeachOutRobot	,	일시 정지	,	PAUSE	,	PAUSE	,	PAUSE
+982	,	BtnManualMode	,	CFormTeachOutRobot	,	매뉴얼 모드	,	MANUAL MODE	,	MANUAL MODE	,	MANUAL MODE
+983	,	BtnMotorInitialize	,	CFormTeachOutRobot	,	로봇 초기화	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE
+984	,	BtnPositionMove	,	CFormTeachOutRobot	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	POSITION MOVE
+985	,	BtnSave	,	CFormTeachOutRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
+986	,	BtnPrevPosition	,	CFormTeachOutRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+987	,	BtnNextPosition	,	CFormTeachOutRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+988	,	BtnPrevBatch	,	CFormTeachOutRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+989	,	BtnNextBatch	,	CFormTeachOutRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+990	,	LblTitleJcmMode	,	CFormTeachOutRobot	,	JCM 모드 메뉴	,	JCM MODE MENU	,	JCM MODE MENU	,	JCM MODE MENU
+991	,	BtnSubTitleJcmModeCheckTeaching	,	CFormTeachOutRobot	,	티칭 확인 위치 선택	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING
+992	,	BtnSubTitleJcmModeOffset	,	CFormTeachOutRobot	,	오프셋 설정	,	SET OFFSET	,	SET OFFSET	,	SET OFFSET
+993	,	BtnJcmCmdT1	,	CFormTeachOutRobot	,	「T1」	,	「T1」	,	「T1」	,	「T1」
+994	,	BtnJcmCmdT2	,	CFormTeachOutRobot	,	「T2」	,	「T2」	,	「T2」	,	「T2」
+995	,	BtnJcmCmdT3	,	CFormTeachOutRobot	,	「T3」	,	「T3」	,	「T3」	,	「T3」
+996	,	BtnJcmCmdT4	,	CFormTeachOutRobot	,	「T4」	,	「T4」	,	「T4」	,	「T4」
+997	,	BtnJcmCmdT12	,	CFormTeachOutRobot	,	「T1_T2」: 동시	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce
+998	,	BtnJcmCmdT34	,	CFormTeachOutRobot	,	「T3_T4」: 동시	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce
+999	,	BtnJcmCmdCrossing_T1_S2	,	CFormTeachOutRobot	,	「T1 + S2」: 교차	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing
+1000	,	BtnJcmCmdCrossing_T2_S1	,	CFormTeachOutRobot	,	「T2 + S1」: 교차	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing
+1001	,	BtnJcmCmdCrossing_T3_S4	,	CFormTeachOutRobot	,	「T3 + S4」: 교차	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing
+1002	,	BtnJcmCmdCrossing_T4_S3	,	CFormTeachOutRobot	,	「T4 + S3」: 교차	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing
+1003	,	BtnJcmCmdCrossing_T12_S34	,	CFormTeachOutRobot	,	「T1_T2 + S3_S4」: 동시 && 교차	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing
+1004	,	BtnJcmCmdCrossing_T34_S12	,	CFormTeachOutRobot	,	「T3_T4 + S1_S2」: 동시 && 교차	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing
+1005	,	BtnJcmModeSave	,	CFormTeachOutRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
+1006	,	BtnJcmModeNoSave	,	CFormTeachOutRobot	,	취소	,	CANCEL	,	CANCEL	,	CANCEL
+1007	,	BtnJcmMode	,	CFormTeachOutRobot	,	JCM 모드	,	JCM MODE	,	JCM MODE	,	JCM MODE
+1008	,	BtnPrevJcm	,	CFormTeachOutRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+1009	,	BtnNextJcm	,	CFormTeachOutRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+1010	,	BtnTitle	,	CFormTeachOutFlip	,	OUT플립	,	OUT-FLIP	,	OUT-FLIP	,	OUT-FLIP
+1011	,	BtnMotorConveyorX	,	CFormTeachOutFlip	,	컨베이어 X2	,	CONVEYOR X2	,	CONVEYOR X2	,	CONVEYOR X2
+1012	,	BtnMotorFlipZ	,	CFormTeachOutFlip	,	플립 Z	,	FLIP Z	,	FLIP Z	,	FLIP Z
+1013	,	BtnMotorFlipR1	,	CFormTeachOutFlip	,	플립 R1 (P1)	,	FLIP R1 (P1)	,	FLIP R1 (P1)	,	FLIP R1 (P1)
+1014	,	BtnMotorFlipR2	,	CFormTeachOutFlip	,	플립 R2 (P2)	,	FLIP R2 (P2)	,	FLIP R2 (P2)	,	FLIP R2 (P2)
+1015	,	BtnTitlePosition	,	CFormTeachOutFlip	,	위치	,	POSITION	,	POSITION	,	Vị trí 
+1016	,	BtnPrevPosition	,	CFormTeachOutFlip	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+1017	,	BtnNextPosition	,	CFormTeachOutFlip	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+1018	,	BtnTitleBatchMove	,	CFormTeachOutFlip	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
+1019	,	BtnPrevBatch	,	CFormTeachOutFlip	,	이전	,	NEXT	,	NEXT	,	NEXT
+1020	,	BtnNextBatch	,	CFormTeachOutFlip	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+1021	,	BtnBatchCmdSetZero	,	CFormTeachOutFlip	,	컨베이어 포지션 리셋	,	CONVEYOR POSITION RESET	,	CONVEYOR POSITION RESET	,	CONVEYOR POSITION RESET
+1022	,	BtnBatchCmdLoadWait	,	CFormTeachOutFlip	,	투입 위치 이동 (OUT로봇)	,	MOVE LOAD POSITION (OUT-ROBOT)	,	MOVE LOAD POSITION (OUT-ROBOT)	,	MOVE LOAD POSITION (OUT-ROBOT)
+1023	,	BtnBatchCmdUnload	,	CFormTeachOutFlip	,	자재 배출 (OUT컨베이어)	,	[PUT] UNLOAD PROCESS (OUT-CONVEYOR)	,	[PUT] UNLOAD PROCESS (OUT-CONVEYOR)	,	[PUT] UNLOAD PROCESS (OUT-CONVEYOR)
+1024	,	BtnTitleActuator	,	CFormTeachOutFlip	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
+1025	,	UcTeachVacuum1_DeviceName	,	CFormTeachOutFlip	,	회전 P1	,	P1_1_T	,	P1_1_T	,	P1_1_T
+1026	,	UcTeachVacuum1_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1027	,	UcTeachVacuum1_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
+1028	,	UcTeachVacuum1_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1029	,	UcTeachVacuum2_DeviceName	,	CFormTeachOutFlip	,	복귀 P1	,	P1_2_R	,	P1_2_R	,	P1_2_R
+1030	,	UcTeachVacuum2_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1031	,	UcTeachVacuum2_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
+1032	,	UcTeachVacuum2_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1033	,	UcTeachVacuum3_DeviceName	,	CFormTeachOutFlip	,	회전 P2	,	P2_1_T	,	P2_1_T	,	P2_1_T
+1034	,	UcTeachVacuum3_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1035	,	UcTeachVacuum3_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
+1036	,	UcTeachVacuum3_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1037	,	UcTeachVacuum4_DeviceName	,	CFormTeachOutFlip	,	복귀 P2	,	P2_2_R	,	P2_2_R	,	P2_2_R
+1038	,	UcTeachVacuum4_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1039	,	UcTeachVacuum4_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
+1040	,	UcTeachVacuum4_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1041	,	BtnUseBlowAutoOff	,	CFormTeachOutFlip	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+1042	,	BtnOutConveyorAutoMode	,	CFormTeachOutFlip	,	OUT컨베이어 자동 모드	,	OUT CONVEYOR AUTO MODE	,	OUT CONVEYOR AUTO MODE	,	OUT CONVEYOR AUTO MODE
+1043	,	BtnOutConveyorManualMode	,	CFormTeachOutFlip	,	OUT컨베이어 수동 모드	,	OUT CONVEYOR MANUAL MODE	,	OUT CONVEYOR MANUAL MODE	,	OUT CONVEYOR MANUAL MODE
+1044	,	BtnOutConveyorSensor1	,	CFormTeachOutFlip	,	자재 감지 센서 P1	,	CELL DETECT SENSOR P1	,	CELL DETECT SENSOR P1	,	CELL DETECT SENSOR P1
+1045	,	BtnOutConveyorSensor2	,	CFormTeachOutFlip	,	자재 감지 센서 P2	,	CELL DETECT SENSOR P2	,	CELL DETECT SENSOR P2	,	CELL DETECT SENSOR P2
+1046	,	BtnOutConveyorBlockedSensor	,	CFormTeachOutFlip	,	막힘 센서	,	BLOCKED SENSOR	,	BLOCKED SENSOR	,	BLOCKED SENSOR
+1047	,	BtnUserBase	,	CFormTitle	,	사용자	,	USER	,	USER	,	USER
+1048	,	BtnCimBase	,	CFormTitle	,	CIM	,	CIM	,	CIM	,	CIM
+1049	,	BtnConnectBase	,	CFormTitle	,	연결	,	CONNECT	,	CONNECT	,	CONNECT
+1050	,	BtnStateBase	,	CFormTitle	,	상태	,	STATE	,	STATE	,	STATE
+1051	,	BtnTitleVersionInfo	,	CFormTitle	,	버전 정보	,	VERSION INFORMATION	,	VERSION INFORMATION	,	Thông tin VERSION 
+1052	,	mResourceTitleRepeatMove	,	SubBatchMotorRepeatMove	,	반복 이동	,	Repeat Move	,	Repeat Move	,	Repeat Move
+1053	,	mResourceTitleRepeatProgress	,	SubBatchMotorRepeatMove	,	진행	,	Progress	,	Progress	,	Progress

@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeviceCommon</name>
+    </assembly>
+    <members>
+        <member name="T:DeviceCommon.EDevice">
+            <summary>
+            디바이스 종류를 정의함
+            </summary>
+        </member>
+        <member name="F:DeviceCommon.EDevice.Unknown">
+            <summary>
+            정의되지 않음
+            </summary>
+        </member>
+        <member name="F:DeviceCommon.EDevice.MCU">
+            <summary>
+            Multi Control Unit: 복수에 LCU(Local Control Unit)을 제어하는 유닛 (a.k.a FFU Multi Controller)
+            </summary>
+        </member>
+        <member name="F:DeviceCommon.EDevice.PowerMeter">
+            <summary>
+            적산전력계
+            </summary>
+        </member>
+        <member name="F:DeviceCommon.EDevice.TemperatureMeter">
+            <summary>
+            온습도계
+            </summary>
+        </member>
+        <member name="F:DeviceCommon.EDevice.ResistanceMeter">
+            <summary>
+            저항 측정기: 설비에 접지 상태를 측정하는 용도 (GMS, GDS...)
+            </summary>
+        </member>
+        <member name="F:DeviceCommon.EDevice.Manometer">
+            <summary>
+            차압계
+            </summary>
+        </member>
+        <member name="F:DeviceCommon.EDevice.Measurement">
+            <summary>
+            측정
+            </summary>
+        </member>
+        <member name="F:DeviceCommon.EDevice.Motion">
+            <summary>
+            모터
+            </summary>
+        </member>
+        <member name="F:DeviceCommon.EDevice.IO">
+            <summary>
+            Input Output
+            </summary>
+        </member>
+        <member name="T:DeviceCommon.IDeviceInfomation">
+            <summary>
+            디바이스에 대한 기본 정보를 소유하고 있는 인터페이스
+            </summary>
+        </member>
+        <member name="P:DeviceCommon.IDeviceInfomation.Name">
+            <summary>
+            디바이스 고유명을 저장하는 프로퍼티<br/>
+            <br/>
+            📌 로그를 쓸 때 구분하기 위한 용도로 사용 할 수 있음<br/>
+            📌 설정하지 않아도 실제 동작에는 영향이 없는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceCommon.IDeviceInfomation.Category">
+            <summary>
+            디바이스 종류를 저장하는 프로퍼티<br/>
+            <br/>
+            📌 로그를 쓸 때 구분하기 위한 용도로 사용 할 수 있음<br/>
+            📌 설정하지 않아도 실제 동작에는 영향이 없는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceCommon.IDeviceInfomation.Vendor">
+            <summary>
+            밴더 이름을 저장하는 프로퍼티<br/>
+            <br/>
+            📌 로그를 쓸 때 구분하기 위한 용도로 사용 할 수 있음<br/>
+            📌 설정하지 않아도 실제 동작에는 영향이 없는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceCommon.IDeviceInfomation.Model">
+            <summary>
+            모델 이름을 저장하는 프로퍼티<br/>
+            <br/>
+            📌 로그를 쓸 때 구분하기 위한 용도로 사용 할 수 있음<br/>
+            📌 설정하지 않아도 실제 동작에는 영향이 없는 프로퍼티
+            </summary>
+        </member>
+        <member name="T:DeviceCommon.IHaveCommLogEvent">
+            <summary>
+            데이터 송,수신 이벤트를 소유하고 있는 인터페이스
+            </summary>
+        </member>
+        <member name="E:DeviceCommon.IHaveCommLogEvent.OnSent">
+            <summary>
+            패킷을 성공적으로 전송한 직후에 발생하는 이벤트
+            </summary>
+            <remarks>
+            📌 디버깅용으로 제공하는 이벤트로 이벤트 핸들러를 등록하지 않아도 동작에는 전혀 영향을 주지 않음<br/>
+            🚩 이벤트 핸들러 구현부가 무거워질 경우 전체적인 성능에 영향을 줄 수 있음으로 주의 할 것
+            </remarks>
+        </member>
+        <member name="E:DeviceCommon.IHaveCommLogEvent.OnReceived">
+            <summary>
+            패킷을 성공적으로 수신한 직후에 발생하는 이벤트
+            </summary>
+            <remarks>
+            📌 디버깅용으로 제공하는 이벤트로 이벤트 핸들러를 등록하지 않아도 동작에는 전혀 영향을 주지 않음<br/>
+            🚩 이벤트 핸들러 구현부가 무거워질 경우 전체적인 성능에 영향을 줄 수 있음으로 주의 할 것
+            </remarks>
+        </member>
+        <member name="T:DeviceCommon.IHaveErrorLogEvent">
+            <summary>
+            에러 메시지 이벤트를 소유하고 있는 인터페이스
+            </summary>
+        </member>
+        <member name="E:DeviceCommon.IHaveErrorLogEvent.OnErrorMessage">
+            <summary>
+            라이브러리 내부에서 에러가 발생해서 실패 했을 때 발생하는 이벤트
+            </summary>
+            <remarks>
+            📌 디버깅용으로 제공하는 이벤트로 이벤트 핸들러를 등록하지 않아도 동작에는 전혀 영향을 주지 않음<br/>
+            🚩 이벤트 핸들러 구현부가 무거워질 경우 전체적인 성능에 영향을 줄 수 있음으로 주의 할 것
+            </remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeviceMeasurementKyengQcManagerMulti</name>
+    </assembly>
+    <members>
+        <member name="T:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti">
+            <summary>
+            KYENG사 QC Manager Multi 디바이스의 기능을 구현한 클래스
+            </summary>
+            <remarks>
+            📌 <see cref="T:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus"/> 프로토콜을 사용하는 디바이스
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.MAX_UNIT_COUNT">
+            <inheritdoc/>
+            <remarks>
+            📌 <see cref="T:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti"/>에서 지원하는 범위: 최대 32개의 유닛
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.MAX_CHANNEL_COUNT">
+            <inheritdoc/>
+            <remarks>
+            📌 <see cref="T:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti"/>에서 지원하는 범위: 최대 7개의 채널
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.DEFAULT_UNIT_CONVERTER">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.DeviceType">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.Protocol">
+            <summary>
+            모드버스 프로토콜 객체
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.DisplayChannelName">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.DisplayUnitName">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.Name">
+            <inheritdoc/>
+        </member>
+        <member name="E:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.OnError">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.IsInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.UnitConverters">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.InitializeParameter">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.Category">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.Vendor">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.Model">
+            <inheritdoc/>
+        </member>
+        <member name="E:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.OnSent">
+            <inheritdoc/>
+        </member>
+        <member name="E:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.OnReceived">
+            <inheritdoc/>
+        </member>
+        <member name="E:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.OnErrorMessage">
+            <inheritdoc/>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.#ctor">
+            <summary>
+            <see cref="T:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti"/> 클래스의 기본 생성자
+            </summary>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.Initialize(DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter)">
+            <inheritdoc/>
+            <remarks>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Type = ECommType.Socket,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementKyengQcManagerMulti();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.DeInitialize">
+            <inheritdoc/>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.GetVersion(System.Boolean)">
+            <inheritdoc/>
+            <remarks>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            var device = new DeviceMeasurementKyengQcManagerMulti();
+            // DLL 버전 정보 읽기
+            string version = device.GetVersion(bReflesh: true);
+            Console.WriteLine($"DLL 버전: {version}");
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            DLL 버전: 1.0.0.0
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.IsOpened">
+            <inheritdoc/>
+            <remarks>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Type = ECommType.Socket,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementKyengQcManagerMulti();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 통신 준비 상태 확인
+            bool bIsOpened = device.IsOpened();
+            Console.WriteLine($"통신 준비 상태: {bIsOpened}");
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            통신 준비 상태: True
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.TryReadOneChannel(System.Int32,System.Int32,System.Double@)">
+            <inheritdoc/>
+            <remarks>
+            📌 매개변수 <paramref name="slaveIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 매개변수 <paramref name="channelIndex"/>의 입력 범위: 0 ~ 6
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Type = ECommType.Socket,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementKyengQcManagerMulti();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 단일 채널 읽기
+            int slaveIndex = 0;
+            int channelIndex = 0;
+            double readValue;
+            if (device.TryReadOneChannel(slaveIndex, channelIndex, out readValue) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {readValue:0.0000}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: 0.1011
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.TryReadAllChannels(System.Int32,System.Double[]@)">
+            <inheritdoc/>
+            <remarks>
+            📌 매개변수 <paramref name="slaveIndex"/>의 입력 범위: 0 ~ 31
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Type = ECommType.Socket,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementKyengQcManagerMulti();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 모든 채널 읽기
+            int slaveIndex = 0;
+            double[] readValues;
+            if (device.TryReadAllChannels(slaveIndex, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {{ {string.Join(", ", readValues.Select(i => $"{i:0.0000}"))} }}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { 0.1011, 0.2011, 0.3011, 0.4011, 0.5011, 0.6011, 0.7011 }
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.TryReadRandomChannels(System.Int32,System.Int32[],System.Double[]@)">
+            <inheritdoc/>
+            <remarks>
+            📌 매개변수 <paramref name="slaveIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 매개변수 <paramref name="channelIndexes"/>의 개별 입력 범위: 0 ~ 6
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Type = ECommType.Socket,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementKyengQcManagerMulti();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 연속되지 않은 여러 채널 읽기
+            int slaveIndex = 0;
+            int[] channelIndexes = new int[] { 0, 2, 4, 6 };
+            double[] readValues;
+            if (device.TryReadRandomChannels(slaveIndex, channelIndexes, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {{ {string.Join(", ", readValues.Select(i => $"{i:0.0000}"))} }}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { 0.1011, 0.3011, 0.5011, 0.7011 }
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.TryReadSequncialChannels(System.Int32,System.Int32,System.Int32,System.Double[]@)">
+            <inheritdoc/>
+            <remarks>
+            📌 매개변수 <paramref name="slaveIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 매개변수 <paramref name="startIndex"/>의 입력 범위: 0 ~ 6<br/>
+            📌 매개변수 <paramref name="count"/>의 입력 범위: 1 ~ 7<br/>
+            📌 매개변수 (<paramref name="startIndex"/> + <paramref name="count"/>) <![CDATA[<]]> 7
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Type = ECommType.Socket,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementKyengQcManagerMulti();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 연속된 여러 채널 읽기
+            int slaveIndex = 0;
+            int startIndex = 3;
+            int count = 2;
+            double[] readValues;
+            if (device.TryReadSequncialChannels(slaveIndex, startIndex, count, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {{ {string.Join(", ", readValues.Select(i => $"{i:0.0000}"))} }}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { 0.4011, 0.5011 }
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.GetErrorCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti.GetErrorLogInstanceOrNull">
+            <inheritdoc/>
+        </member>
+        <member name="T:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType">
+            <summary>
+            <see cref="T:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti"/>에서 지원하는 통신 타입을 정의함
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.Socket">
+            <summary>
+            TCP/IP 통신
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.SerialPort">
+            <summary>
+            시리얼 통신
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter">
+            <summary>
+            <see cref="T:DeviceDLL.Measurement.KYENG.QcManagerMulti.DeviceMeasurementKyengQcManagerMulti"/> 객체의 초기화 파라미터를 가진 데이터 클래스
+            </summary>
+            <remarks>
+            <br> <see cref="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.Type"/> 설정 값에 따라 사용되는 파라미터</br>
+            <list type="bullet">
+                <item>
+                    <see cref="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.Socket"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SocketIPAddress"/></item>
+                        <item><see cref="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SocketPortNumber"/></item>
+                    </list>
+                </item>
+                <item>
+                    <see cref="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.SerialPort"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortName"/></item>
+                        <item><see cref="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortBaudrate"/></item>
+                        <item><see cref="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortDataBits"/></item>
+                        <item><see cref="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortParity"/></item>
+                        <item><see cref="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortStopBits"/></item>
+                    </list>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.Type">
+            <summary>
+            통신 타입
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SocketIPAddress">
+            <summary>
+            IP 주소<br/>
+            데이터 형식: "{nnn}.{nnn}.{nnn}.{nnn}"
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.Socket"/> 용 파라미터]</remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SocketPortNumber">
+            <summary>
+            포트 번호<br/>
+            데이터 범위: 0x0000 ~ 0xFFFF
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.Socket"/> 용 파라미터]</remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortName">
+            <summary>
+            시리얼 포트 포트 번호<br/>
+            데이터 형식: "COM{n}"
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.SerialPort"/> 용 파라미터]</remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortBaudrate">
+            <summary>
+            시리얼 포트 Baudrate
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.SerialPort"/> 용 파라미터]</remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortDataBits">
+            <summary>
+            시리얼 통신 Data Bits
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.SerialPort"/> 용 파라미터]</remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortParity">
+            <summary>
+            시리얼 통신 Parity
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.SerialPort"/> 용 파라미터]</remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.SerialPortStopBits">
+            <summary>
+            시리얼 통신 Stop Bits
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Measurement.KYENG.QcManagerMulti.ECommType.SerialPort"/> 용 파라미터]</remarks>
+        </member>
+        <member name="M:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:DeviceDLL.Measurement.KYENG.QcManagerMulti.InitializeParameter"/> 객체</returns>
+        </member>
+    </members>
+</doc>

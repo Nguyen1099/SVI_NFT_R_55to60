@@ -1,0 +1,1797 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HLDeviceMotorVirtual</name>
+    </assembly>
+    <members>
+        <member name="F:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.m_objMotorError">
+            <summary>
+            알람 구조체
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.m_objMotorOperationParameter">
+            <summary>
+            모터 구동 정보 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.m_objMotorPosition">
+            <summary>
+            모터 포지션 정보 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.m_objMotorStatus">
+            <summary>
+            모터 상태 정보 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.m_objMotorInitializeParameter">
+            <summary>
+            모터 초기화 정보 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.m_ThreadMotorStatus">
+            <summary>
+            모터 상태 감시 쓰레드
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLInitialize(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMotorInitializeParameter,System.String)">
+            <summary>
+            아진 모터 및 보드 초기화 함수
+            </summary>
+            <param name="objMotorInitializeParameter"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLDeInitialize">
+            <summary>
+            해제
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetVersion(System.Boolean)">
+            <summary>
+            버전 정보
+            </summary>
+            <param name="bReflesh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.InitializeBoard(System.String)">
+            <summary>
+            보드 초기화
+            </summary>
+            <param name="strPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLClose">
+            <summary>
+            아진 모터 및 보드 해제
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetMotorStatusMonitoring(System.Object)">
+            <summary>
+            모터 상태 감시 쓰레드
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.DoMotorStatus">
+            <summary>
+            모터 상태 확인 함수
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetServoOnOff">
+            <summary>
+            서보 On,Off 확인 함수
+            </summary>
+            <remarks>
+            FALSE = 서보 오프 , TRUE = 서보 온
+            </remarks>
+            <returns>FALSE = 서보 오프 , TRUE = 서보 온</returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetHomeStatus">
+            <summary>
+            홈 작업 완료 확인
+            </summary>
+            <remarks>FALSE = 홈 미완료 , TRUE = 홈 완료</remarks>
+            <returns>FALSE = 홈 미완료 , TRUE = 홈 완료</returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetAlarmStatus">
+            <summary>
+            서보 알람 상태 확인
+            </summary>
+            <remarks>FALSE = 서보 알람 발생 없음, TRUE = 서보 알람 발생</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetHomeSensor">
+            <summary>
+            홈 센서 감지 상태 확인
+            </summary>
+            <remarks>FALSE = 홈 센서 감지 되지 않음, TRUE = 홈 센서 감지</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetPlusMinusLimitSensor">
+            <summary>
+            ( + ), ( - ) 리미트 센서 신호 감지 확인
+            </summary>
+            <remarks>FALSE = 센서 감지 되지 않음, TRUE = 센서 감지</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetCommandPosition">
+            <summary>
+            모터 지령 위치값 확인
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetEncoderPosition">
+            <summary>
+            모터 실제 위치값 확인
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetInposition">
+            <summary>
+            모터 인포지션 확인
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.SetUseInposition(HLDeviceDLL.Motor.Virtual.AXT_MOTION_LEVEL_MODE)">
+            <summary>
+            인포지션 사용, 미사용 설정
+            </summary>
+            <param name="eLevelMode">LOW = B접점, HIGH = A접점, UNUSED = 미사용, USED = 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.SetAbsRelMode(HLDeviceDLL.Motor.Virtual.AXT_MOTION_ABSREL)">
+            <summary>
+            모터 구동의 절대, 상대 모드를 설정하는 함수
+            </summary>
+            <param name="eMode">POS_ABS_MODE = 절대 위치 구동, POS_REL_MODE = 상대 위치 구동</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.SetAbsRelMode(System.Int32,HLDeviceDLL.Motor.Virtual.AXT_MOTION_ABSREL)">
+            <summary>
+            모터 구동의 특정 축 절대, 상대 모드를 설정하는 함수
+            </summary>
+            <param name="iAxisNo">축 번호</param>
+            <param name="eMode">POS_ABS_MODE = 절대 위치 구동, POS_REL_MODE = 상대 위치 구동</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetServoLoadRatio">
+            <summary>
+            서보 모터 부하율을 구하는 함수
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.GetCurrentVelocity">
+            <summary>
+            모터 현재 속도를 구하는 함수
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSetHomeProcess">
+            <summary>
+            홈 동작 진행
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetHomeProcessRate(System.Int32@,System.Int32@)">
+            <summary>
+            홈 동작 진행률 확인
+            </summary>
+            <param name="iHomeMainStepNo"></param>
+            <param name="iHomeStepNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSetSoftwareLimit(HLDeviceDLL.Motor.Virtual.AXT_USE)">
+            <summary>
+            +,- 방향 소프트웨어 리미트를 설정하는 함수
+            </summary>
+            <remarks>
+            사용, 미사용 설정시 저장 되어있는 운용 파라미터의 +,- 소프트 웨어 리미트값 적용
+            </remarks>
+            <param name="eUse">ENABLE = 소프트웨어 리미트 사용, DISABLE = 소프트웨어 리미트 미사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLServoOn(HLDeviceDLL.Motor.Virtual.AXT_USE)">
+            <summary>
+            서보 On. Off 기능
+            </summary>
+            <param name="eUse">DISABLE : 서보 Off, ENABLE : 서보 On</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSetPositionZeroSet">
+            <summary>
+            포지션 ZeroSet
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLJogFastMove(HLDeviceDLL.Motor.Virtual.AXT_MOTION_MOVE_DIR)">
+            <summary>
+            빠른 조그 동작
+            </summary>
+            <param name="eDirection">DIR_CCW : ( - ) 방향, DIR_CW : ( + ) 방향</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLJogSlowMove(HLDeviceDLL.Motor.Virtual.AXT_MOTION_MOVE_DIR)">
+            <summary>
+            느린 조그 동작
+            </summary>
+            <param name="eDirection">DIR_CCW : ( - ) 방향, DIR_CW : ( + ) 방향</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveContinue(HLDeviceDLL.Motor.Virtual.AXT_MOTION_MOVE_DIR,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,System.Double,System.Double,System.Double)">
+            <summary>
+            연속 무브
+            </summary>
+            <param name="eDirection">DIR_CCW : ( - ) 방향, DIR_CW : ( + ) 방향</param>
+            <param name="eModeType">속도 모드 설정 <para>VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</para></param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveStop">
+            <summary>
+            단축 감속 정지 함수
+            </summary>
+            <remarks>
+            가감속 적용 모터 정지
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveEStop">
+            <summary>
+            단축 긴급 정지 함수
+            </summary>
+            <remarks>
+            모터 급정지
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLAlarmReset">
+            <summary>
+            모터 알람 상태 초기화
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetCompareTargetPosition(System.Int32)">
+            <summary>
+            모터 포지션 비교
+            </summary>
+            <remarks>
+            현재 위치와 저장된 포지션 인덱스 값과 비교하는 함수
+            </remarks>
+            <param name="iPositionIndex">저장된 포지션 인덱스 값</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetCompareTargetPosition(System.Double,System.Double)">
+            <summary>
+            모터 포지션 비교
+            </summary>
+            <remarks>
+            현재 위치와 타겟 위치 값을 비교
+            </remarks>
+            <param name="dStartPosition">비교 하고자 하는 타겟의 시작 위치</param>
+            <param name="dPosition">비교 하고자 하는 타겟의 현재 위치</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetCompareTargetPosition(System.Double)">
+            <summary>
+            모터 포지션 비교
+            </summary>
+            <remarks>
+            현재 위치와 타겟 위치 값을 비교
+            </remarks>
+            <param name="dPosition">비교 하고자 하는 타겟 위치</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveAbsoluteIndex(System.Int32,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,System.Double,System.Double,System.Double)">
+            <summary>
+            단축 절대 위치 이동
+            </summary>
+            <remarks>
+            포지션 인덱스 값으로 이동
+            </remarks>
+            <param name="iPositionIndex">위치 이동할 인덱스 정보</param>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveAbsolutePosition(System.Int32,System.Double,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,System.Double,System.Double,System.Double)">
+            <summary>
+            단축 절대 위치 이동 (포지션 값으로 이동)
+            </summary>
+            <remarks>
+            속도 오토, 매뉴얼 모드 설정 확인
+            </remarks>
+            <param name="index">위치 이동할 인덱스 정보</param>
+            <param name="dPosition">포지션 정보</param>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns>포지션 값 이동 함수</returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveAbsolutePosition(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            절대 위치 이동
+            </summary>
+            <remarks>
+            포지션 값으로 이동
+            </remarks>
+            <param name="dPosition">포지션 정보</param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveRelativeIndex(System.Int32,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,System.Double,System.Double,System.Double)">
+            <summary>
+            상대 위치 이동
+            </summary>
+            <remarks>
+            포지션 인덱스 값으로 이동
+            <para>##사용 하지는 않을것 같음 private 로 노출 시키지 않고 추 후 사용 용도가 있을 경우 변경하자</para>
+            </remarks>
+            <param name="iPositionIndex">위치 이동할 인덱스 정보</param>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveRelativePosition(System.Double,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,System.Double,System.Double,System.Double)">
+            <summary>
+            단축 상대 위치 이동
+            </summary>
+            <remarks>
+            포지션 값으로 이동
+            </remarks>
+            <param name="dPosition">포지션 정보</param>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLOverrideMaxVelocity(System.Double)">
+            <summary>
+            최대 속도 오버라이드 구동
+            </summary>
+            <remarks>
+            반드시 구동 중에 호출되어야 하며, 구동이 끝난후 호출되면 무시된다. 모션 진행 도중 속도 변경
+            </remarks>
+            <param name="dMaxOverrideVelocity">오버라이드 최대 속도 ( 처음 지정한 속도보다 크게 하려면 반드시 필요 )</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLOverrideVelocity(System.Double)">
+            <summary>
+            속도 오버라이드 구동
+            </summary>
+            <remarks>
+            반드시 구동 중에 호출되어야 하며, 구동이 끝난후 호출되면 무시된다. 모션 진행 도중 속도 변경
+            </remarks>
+            <param name="dOverrideVelocity">오버라이드 속도</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLOverridePosition(System.Double)">
+            <summary>
+            위치 오버라이드 구동
+            </summary>
+            <remarks>
+            반드시 구동 중에 호출되어야 하며, 구동이 끝난후 호출되면 무시된다. 위치 오버라이드의 경우 반대 방향으로 전환은 한번만 가능.
+            <para>모션 진행 도중 목표 거리 변경</para>
+            </remarks>
+            <param name="dOverridePosition">오버라이드 위치</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveOverrideAtIndex(System.Int32,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            단일 지정 위치 도달 했을 경우 오버라이드 된 속도로 구동
+            </summary>
+            <remarks>
+            포지션 인덱스 값 절대 위치
+            </remarks>
+            <param name="iPositionIndex">위치 이동할 인덱스 정보</param>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태</param>
+            <param name="dOverridePosition">오버라이드 위치</param>
+            <param name="dOverrideVelocity">오버라이드 속도</param>
+            <param name="dMaxOverrideVelocity">최대 오버라이드 속도 ( 반드시 모션 진행 전에 설정 되어야 한다 )</param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveOverrideAtPosition(System.Double,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            단일 지정 위치 도달 했을 경우 오버라이드 된 속도로 구동
+            </summary>
+            <remarks>
+            포지션 값 절대 위치
+            </remarks>
+            <param name="dPosition">포지션 정보</param>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="dOverridePosition">오버라이드 위치</param>
+            <param name="dOverrideVelocity">오버라이드 속도</param>
+            <param name="dMaxOverrideVelocity">최대 오버라이드 속도 ( 반드시 모션 진행 전에 설정 되어야 한다 )</param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveMultiOverrideAtIndex(System.Int32,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,System.Double[],System.Double[],System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            다중 지정 위치 도달 했을 경우 오버라이드 된 속도로 구동
+            </summary>
+            <remarks>
+            포지션 인덱스 값 절대 위치
+            </remarks>
+            <param name="iPositionIndex">위치 이동할 인덱스 정보</param>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="dOverridePosition">오버라이드 위치</param>
+            <param name="dOverrideVelocity">오버라이드 속도</param>
+            <param name="dMaxOverrideVelocity">최대 오버라이드 속도 ( 반드시 모션 진행 전에 설정 되어야 한다 )</param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveMultiOverrideAtPosition(System.Double,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,System.Double[],System.Double[],System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            다중 지정 위치 도달 했을 경우 오버라이드 된 속도로 구동
+            </summary>
+            <remarks>
+            포지션 값 절대 위치
+            </remarks>
+            <param name="dPosition">포지션 정보</param>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="dOverridePosition">오버라이드 위치</param>
+            <param name="dOverrideVelocity">오버라이드 속도</param>
+            <param name="dMaxOverrideVelocity">최대 오버라이드 속도 ( 반드시 모션 진행 전에 설정 되어야 한다 )</param>
+            <param name="dVelocity">속도 0일 경우 저장값 사용</param>
+            <param name="dAcceleration">가속도 0일 경우 저장값 사용</param>
+            <param name="dDeceleration">감속도 0일 경우 저장값 사용</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveMultiAbsoluteIndex(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMultiMoveParameter[])">
+            <summary>
+            다축 절대 위치 이동
+            </summary>
+            <remarks>
+            포지션 인덱스 위치
+            </remarks>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="objMultiMoveParameter">다축 기동에 필요한 파라미터 클래스 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveMultiAbsolutePosition(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMultiMoveParameter[])">
+            <summary>
+            다축 절대 위치 이동
+            </summary>
+            <remarks>
+            포지션 값 위치
+            </remarks>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="objMultiMoveParameter">다축 기동에 필요한 파라미터 클래스 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveMultiRelativeIndex(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMultiMoveParameter[])">
+            <summary>
+            다축 상대 위치 이동
+            </summary>
+            <remarks>
+            포지션 인덱스 위치
+            <para>##사용 하지는 않을것 같음 private 로 노출 시키지 않고 추 후 사용 용도가 있을 경우 변경하자</para>
+            </remarks>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="objMultiMoveParameter">다축 기동에 필요한 파라미터 클래스 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveMultiRelativePositioin(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMultiMoveParameter[])">
+            <summary>
+            다축 상대 위치 이동
+            </summary>
+            <remarks>
+            포지션 값 위치
+            </remarks>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="objMultiMoveParameter">다축 기동에 필요한 파라미터 클래스 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveMultiStop(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual[])">
+            <summary>
+            다축 가감속 정지
+            </summary>
+            <param name="objMotorVirtual">정지할 모터 객체 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveMultiEStop(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual[])">
+            <summary>
+            다축 급정지
+            </summary>
+            <param name="objMotorVirtual">정지할 모터 객체 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveLineAbsoluteIndex(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMultiMoveParameter[])">
+            <summary>
+            다축 직선 보간 절대 위치 이동
+            </summary>
+            <remarks>
+            포지션 인덱스 위치 이동
+            </remarks>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="objMulitMoveParameter">다축 기동에 필요한 파라미터 클래스 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveLineAbsolutePosition(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMultiMoveParameter[])">
+            <summary>
+            다축 직선 보간 절대 위치 이동
+            </summary>
+            <remarks>
+            포지션 값 위치 이동
+            </remarks>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="objMulitMoveParameter">다축 기동에 필요한 파라미터 클래스 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveLineRelativeIndex(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMultiMoveParameter[])">
+            <summary>
+            다축 직선 보간 상대 위치 이동
+            </summary>
+            <remarks>
+            포지션 인덱스 위치 이동
+            <para>##사용 하지는 않을것 같음 private 로 노출 시키지 않고 추 후 사용 용도가 있을 경우 변경하자</para>
+            </remarks>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="objMulitMoveParameter">다축 기동에 필요한 파라미터 클래스 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLMoveLineRelativePosition(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.enumVelocityMode,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMultiMoveParameter[])">
+            <summary>
+            다축 직선 보간 상대 위치 이동
+            </summary>
+            <remarks>
+            포지션 값 위치 이동
+            </remarks>
+            <param name="eModeType">속도 모드 설정 VELOCITY_MODE_AUTO_RUN : 오토 런 상태 ,VELOCITY_MODE_MANUAL_RUN : 정지 상태</param>
+            <param name="objMulitMoveParameter">다축 기동에 필요한 파라미터 클래스 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSetTriggerTime(System.Double)">
+            <summary>
+            지정 축의 트리거 출력 시간, 트리거 레벨, 트리거 출력 방법, 트리거 출력시 인터럽트 설정여부
+            </summary>
+            <param name="dTriggerTime">트리거 출력 시간 <para>1usec - 최대 50msec ( 1 - 50000 까지 설정)</para></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSetTriggerBlock(System.Double,System.Double,System.Double)">
+            <summary>
+            지정한 시작 위치부터 종료 위치까지 일정 구간 마다 트리거를 출력하는 함수
+            </summary>
+            <param name="dStartPosition">트리거 출력을 시작하는 위치</param>
+            <param name="dEndPosition">트리거 출력을 종료하는 위치</param>
+            <param name="dPeriodPosition">트리거를 출력하는 특정 구간</param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSetTriggerBlockReset">
+            <summary>
+            트리거 블록 설정을 초기화함
+            </summary>
+            <returns>성공 여부</returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSetStatusRequestReadA5nWarningData">
+            <summary>
+            해당 축에 서보 드라이버에 경고 코드를 요청한다.
+            </summary>
+            <returns>True=요청 성공, False=읽기 진행중</returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetStatusA5nWarningCode(System.UInt32@)">
+            <summary>
+            해당 축에서 경고 코드 요청 결과를 읽어온다.
+            이 함수는 HLSetStatusRequestReadA5nWarningData() 함수 호출 후에 호출해야한다.
+            </summary>
+            <param name="warningCode">경고 코드</param>
+            <returns>True=성공, False=읽기 진행중</returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLLoadMotorPositionParameter(System.String,System.String)">
+            <summary>
+            모터 포지션 정보 불러오기
+            </summary>
+            <remarks>strPath: 파일경로</remarks>
+            <param name="strFilePath"></param>
+            <param name="strModelName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLWaitMotorStatus(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            모터 포지션 인포지션 완료 확인
+            </summary>
+            <param name="objMotor"></param>
+            <param name="bResult"></param>
+            <param name="iTimeOut"></param>
+            <param name="iSleepPeriod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLWaitMotorPositionStatus(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual,System.Boolean,System.Double,System.Int32,System.Int32)">
+            <summary>
+            모터 포지션 이동 완료 확인 ( 포지션 값 )
+            </summary>
+            <param name="objMotor"></param>
+            <param name="bResult"></param>
+            <param name="dPosition"></param>
+            <param name="iTimeOut"></param>
+            <param name="iSleepPeriod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLWaitMotorPositionStatus(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual,System.Boolean,System.Double,System.Double,System.Int32,System.Int32)">
+            <summary>
+            모터 포지션 이동 완료 확인 ( 포지션 값 )
+            </summary>
+            <param name="objMotor"></param>
+            <param name="bResult"></param>
+            <param name="dStartPosition"></param>
+            <param name="dPosition"></param>
+            <param name="iTimeOut"></param>
+            <param name="iSleepPeriod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLWaitMotorPositionStatus(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual,System.Boolean,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            모터 포지션 이동 완료 확인 ( 인덱스 포지션 값 )
+            </summary>
+            <param name="objMotor"></param>
+            <param name="bResult"></param>
+            <param name="iPositionIndex"></param>
+            <param name="iTimeOut"></param>
+            <param name="iSleepPeriod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.SaveMotorPositionParameter(System.String,System.String,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMotorPosition)">
+            <summary>
+            모터 포지션 정보 저장
+            </summary>
+            <remarks>strPath: 파일경로</remarks>
+            <param name="strFilePath"></param>
+            <param name="strModelName"></param>
+            <param name="objMotorPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSaveMotorPositionParameter(System.String,System.String,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMotorPosition)">
+            <summary>
+            모터 포지션 정보 저장
+            </summary>
+            <remarks>
+            strPath: 파일경로
+            </remarks>
+            <param name="strFilePath"></param>
+            <param name="strModelName"></param>
+            <param name="objMotorPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLLoadMotorOperationParameter(System.String,System.String)">
+            <summary>
+            모터 운용 파라미터 불러오기
+            </summary>
+            <remarks>strPath: 파일경로</remarks>
+            <param name="strFilePath"></param>
+            <param name="strModelName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.SaveMotorOperationParameter(System.String,System.String,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMotorOperationParameter)">
+            <summary>
+            모터 운용 파라미터 저장
+            </summary>
+            <remarks>strPath: 파일경로</remarks>
+            <param name="strFilePath"></param>
+            <param name="strModelName"></param>
+            <param name="objMotorOperationParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSaveMotorOperationParameter(System.String,System.String,HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMotorOperationParameter)">
+            <summary>
+            모터 운용 파라미터 저장
+            </summary>
+            <remarks>
+            strPath: 파일경로
+            </remarks>
+            <param name="strFilePath"></param>
+            <param name="strModelName"></param>
+            <param name="objMotorOperationParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetMotorError">
+            <summary>
+            알람 정보 객체를 얻어오는 함수
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetMotorPosition">
+            <summary>
+            포지션 정보 객체를 얻어오는 함수
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetMotorOperationParameter">
+            <summary>
+            모터 운용 정보 객체를 얻어오는 함수
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetMotorInitializeParameter">
+            <summary>
+            초기화 정보 객체를 얻어오는 함수
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLSetMotorInitializeParameter(HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtualDefine.CMotorInitializeParameter)">
+            <summary>
+            초기화 정보 객체를 설정하는 함수
+            </summary>
+            <param name="setParameter"></param>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.HLGetMotorStatus">
+            <summary>
+            모터 상태 정보 객체를 얻어오는 함수
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Motor.Virtual.CDeviceMotorVirtual.MakeErrorMessage(System.String,System.Int32,System.String)">
+            <summary>
+            모션 동작 함수 실행 시 아래의 함수를 통해 실행
+            </summary>
+            <param name="strFunctionName">실행 함수 이름</param>
+            <param name="iReturnCode">실행된 함수 결과 값</param>
+            <param name="strMessage">메세지</param>
+            <returns></returns>
+        </member>
+        <member name="F:INI.ClassINI.MaxSectionSize">
+            <summary>
+            The maximum size of a section in an ini file.
+            </summary>
+            <remarks>
+            This property defines the maximum size of the buffers 
+            used to retreive data from an ini file.  This value is 
+            the maximum allowed by the win32 functions 
+            GetPrivateProfileSectionNames() or 
+            GetPrivateProfileString().
+            </remarks>
+        </member>
+        <member name="T:INI.ClassINI.NativeMethods">
+            <summary>
+            A static class that provides the win32 P/Invoke signatures 
+            used by this class.
+            </summary>
+            <remarks>
+            Note:  In each of the declarations below, we explicitly set CharSet to 
+            Auto.  By default in C#, CharSet is set to Ansi, which reduces 
+            performance on windows 2000 and above due to needing to convert strings
+            from Unicode (the native format for all .Net strings) to Ansi before 
+            marshalling.  Using Auto lets the marshaller select the Unicode version of 
+            these functions when available.
+            </remarks>
+        </member>
+        <member name="M:INI.ClassINI.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="!:IniFile"/> class.
+            </summary>
+            <param name="path">The ini file to read and write from.</param>
+        </member>
+        <member name="P:INI.ClassINI.Path">
+            <summary>
+            Gets the full path of ini file this object instance is operating on.
+            </summary>
+            <value>A file path.</value>
+        </member>
+        <member name="M:INI.ClassINI.GetString(System.String,System.String,System.String)">
+            <summary>
+            Gets the value of a setting in an ini file as a <see cref="T:System.String"/>.
+            </summary>
+            <param name="sectionName">The name of the section to read from.</param>
+            <param name="keyName">The name of the key in section to read.</param>
+            <param name="defaultValue">The default value to return if the key
+            cannot be found.</param>
+            <returns>The value of the key, if found.  Otherwise, returns 
+            <paramref name="defaultValue"/></returns>
+            <remarks>
+            The retreived value must be less than 32KB in length.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> or <paramref name="keyName"/> are 
+            a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.GetInt16(System.String,System.String,System.Int16)">
+            <summary>
+            Gets the value of a setting in an ini file as a <see cref="T:System.Int16"/>.
+            </summary>
+            <param name="sectionName">The name of the section to read from.</param>
+            <param name="keyName">The name of the key in section to read.</param>
+            <param name="defaultValue">The default value to return if the key
+            cannot be found.</param>
+            <returns>The value of the key, if found.  Otherwise, returns 
+            <paramref name="defaultValue"/>.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> or <paramref name="keyName"/> are 
+            a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.GetInt32(System.String,System.String,System.Int32)">
+            <summary>
+            Gets the value of a setting in an ini file as a <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="sectionName">The name of the section to read from.</param>
+            <param name="keyName">The name of the key in section to read.</param>
+            <param name="defaultValue">The default value to return if the key
+            cannot be found.</param>
+            <returns>The value of the key, if found.  Otherwise, returns 
+            <paramref name="defaultValue"/></returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> or <paramref name="keyName"/> are 
+            a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.GetDouble(System.String,System.String,System.Double)">
+            <summary>
+            Gets the value of a setting in an ini file as a <see cref="T:System.Double"/>.
+            </summary>
+            <param name="sectionName">The name of the section to read from.</param>
+            <param name="keyName">The name of the key in section to read.</param>
+            <param name="defaultValue">The default value to return if the key
+            cannot be found.</param>
+            <returns>The value of the key, if found.  Otherwise, returns 
+            <paramref name="defaultValue"/></returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> or <paramref name="keyName"/> are 
+            a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.GetSectionValuesAsList(System.String)">
+            <summary>
+            Gets all of the values in a section as a list.
+            </summary>
+            <param name="sectionName">
+            Name of the section to retrieve values from.
+            </param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> containing <see cref="T:System.Collections.Generic.KeyValuePair`2"/> objects 
+            that describe this section.  Use this verison if a section may contain
+            multiple items with the same key value.  If you know that a section 
+            cannot contain multiple values with the same key name or you don't 
+            care about the duplicates, use the more convenient 
+            <see cref="M:INI.ClassINI.GetSectionValues(System.String)"/> function.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> is a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.GetSectionValues(System.String)">
+            <summary>
+            Gets all of the values in a section as a dictionary.
+            </summary>
+            <param name="sectionName">
+            Name of the section to retrieve values from.
+            </param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.Dictionary`2"/> containing the key/value 
+            pairs found in this section.  
+            </returns>
+            <remarks>
+            If a section contains more than one key with the same name, 
+            this function only returns the first instance.  If you need to 
+            get all key/value pairs within a section even when keys have the 
+            same name, use <see cref="M:INI.ClassINI.GetSectionValuesAsList(System.String)"/>.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> is a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.GetKeyNames(System.String)">
+            <summary>
+            Gets the names of all keys under a specific section in the ini file.
+            </summary>
+            <param name="sectionName">
+            The name of the section to read key names from.
+            </param>
+            <returns>An array of key names.</returns>
+            <remarks>
+            The total length of all key names in the section must be 
+            less than 32KB in length.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> is a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.GetSectionNames">
+            <summary>
+            Gets the names of all sections in the ini file.
+            </summary>
+            <returns>An array of section names.</returns>
+            <remarks>
+            The total length of all section names in the section must be 
+            less than 32KB in length.
+            </remarks>
+        </member>
+        <member name="M:INI.ClassINI.ConvertNullSeperatedStringToStringArray(System.IntPtr,System.Int32)">
+            <summary>
+            Converts the null seperated pointer to a string into a string array.
+            </summary>
+            <param name="ptr">A pointer to string data.</param>
+            <param name="valLength">
+            Length of the data pointed to by <paramref name="ptr"/>.
+            </param>
+            <returns>
+            An array of strings; one for each null found in the array of characters pointed
+            at by <paramref name="ptr"/>.
+            </returns>
+        </member>
+        <member name="M:INI.ClassINI.WriteValueInternal(System.String,System.String,System.String)">
+            <summary>
+            Writes a <see cref="T:System.String"/> value to the ini file.
+            </summary>
+            <param name="sectionName">The name of the section to write to .</param>
+            <param name="keyName">The name of the key to write to.</param>
+            <param name="value">The string value to write</param>
+            <exception cref="T:System.ComponentModel.Win32Exception">
+            The write failed.
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            Writes a <see cref="T:System.String"/> value to the ini file.
+            </summary>
+            <param name="sectionName">The name of the section to write to .</param>
+            <param name="keyName">The name of the key to write to.</param>
+            <param name="value">The string value to write</param>
+            <exception cref="T:System.ComponentModel.Win32Exception">
+            The write failed.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> or <paramref name="keyName"/> or 
+            <paramref name="value"/>  are a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.WriteValue(System.String,System.String,System.Int16)">
+            <summary>
+            Writes an <see cref="T:System.Int16"/> value to the ini file.
+            </summary>
+            <param name="sectionName">The name of the section to write to .</param>
+            <param name="keyName">The name of the key to write to.</param>
+            <param name="value">The value to write</param>
+            <exception cref="T:System.ComponentModel.Win32Exception">
+            The write failed.
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.WriteValue(System.String,System.String,System.Int32)">
+            <summary>
+            Writes an <see cref="T:System.Int32"/> value to the ini file.
+            </summary>
+            <param name="sectionName">The name of the section to write to .</param>
+            <param name="keyName">The name of the key to write to.</param>
+            <param name="value">The value to write</param>
+            <exception cref="T:System.ComponentModel.Win32Exception">
+            The write failed.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> or <paramref name="keyName"/> are 
+            a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.WriteValue(System.String,System.String,System.Single)">
+            <summary>
+            Writes an <see cref="T:System.Single"/> value to the ini file.
+            </summary>
+            <param name="sectionName">The name of the section to write to .</param>
+            <param name="keyName">The name of the key to write to.</param>
+            <param name="value">The value to write</param>
+            <exception cref="T:System.ComponentModel.Win32Exception">
+            The write failed.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> or <paramref name="keyName"/> are 
+            a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.WriteValue(System.String,System.String,System.Double)">
+            <summary>
+            Writes an <see cref="T:System.Double"/> value to the ini file.
+            </summary>
+            <param name="sectionName">The name of the section to write to .</param>
+            <param name="keyName">The name of the key to write to.</param>
+            <param name="value">The value to write</param>
+            <exception cref="T:System.ComponentModel.Win32Exception">
+            The write failed.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> or <paramref name="keyName"/> are 
+            a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.DeleteKey(System.String,System.String)">
+            <summary>
+            Deletes the specified key from the specified section.
+            </summary>
+            <param name="sectionName">
+            Name of the section to remove the key from.
+            </param>
+            <param name="keyName">
+            Name of the key to remove.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> or <paramref name="keyName"/> are 
+            a null reference  (Nothing in VB)
+            </exception>
+        </member>
+        <member name="M:INI.ClassINI.DeleteSection(System.String)">
+            <summary>
+            Deletes a section from the ini file.
+            </summary>
+            <param name="sectionName">
+            Name of the section to delete.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sectionName"/> is a null reference (Nothing in VB)
+            </exception>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_PageBase">
+            <summary>
+            메모리 맵 베이스 클래스 입니다.
+            이 클래스를 상속 받으면 고정된 크기의 메모리 블럭을 생성 합니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._memMap">
+            <summary>
+            메모리 맵 파일 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._byteData">
+            <summary>
+            바이트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._boolData">
+            <summary>
+            불형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._shortData">
+            <summary>
+            쇼트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._intData">
+            <summary>
+            인트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._floatData">
+            <summary>
+            플롯형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._doubleData">
+            <summary>
+            더블형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._stringData">
+            <summary>
+            스트링형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.ByteDataSize">
+            <summary>
+            바이트형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.BoolDataSize">
+            <summary>
+            바이트형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.ShortDataSize">
+            <summary>
+            쇼트형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.IntDataSize">
+            <summary>
+            인트형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.FloatDataSize">
+            <summary>
+            플롯형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.DoubleDataSize">
+            <summary>
+            더블형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.StringDataSize">
+            <summary>
+            스트링형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.PageSize">
+            <summary>
+            메모리 블럭 하나의 크기 입니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.UInt32,System.UInt32)">
+            <summary>
+            메모리 맵 베이스의 생성자 입니다.
+            </summary>
+            <param name="fileName">메모리맵 파일 이름. 기존에 같은 이름의 파일이 존재하지 않으면 만들고, 있으면 파일을 엽니다.</param>
+            <param name="pageIndex">메모리 블럭 인덱스. 메모리 블럭의 인덱스 입니다. 인덱스가 메모리 블럭 보다 커지면 익셉션을 발생시킵니다.</param>
+            <param name="pageCount">메모리 블럭 개수. 메모리 블럭 개수를 참고하여 메모리 맵 파일을 생성합니다. 메모리 블럭은 0보다 커야합니다.</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.CreateMemMap(System.String,System.String,System.UInt32)">
+            <summary>
+            지정한 크기의 메모리 맵 파일을 엽니다. 만약 파일이 존재 하지 않는다면 파일을 생성합니다.
+            </summary>
+            <param name="fileName">메모리 맵 파일 이름</param>
+            <param name="mapName">메모리 맵 이름</param>
+            <param name="pageCount">페이지 개수 (메모리 맵 파일의 총 크기를 결정 한다.)</param>
+            <returns>메모리 맵 파일 클래스</returns>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.ByteData">
+            <summary>
+            바이트형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.BoolData">
+            <summary>
+            바이트형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.ShortData">
+            <summary>
+            쇼트형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.IntData">
+            <summary>
+            인트형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.FloatData">
+            <summary>
+            플롯형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.DoubleData">
+            <summary>
+            더블형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.StringData">
+            <summary>
+            스트링형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.Copy(ENC.MemoryMap.Define.MMData_PageBase)">
+            <summary>
+            입력한 데이터를 내부 데이터 클래스에 복사한다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_ByteData">
+            <summary>
+            바이트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._typeSize">
+            <summary>
+            바이트형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            바이트형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_ByteData.Item(System.Int32)">
+            <summary>
+            바이트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.Copy(ENC.MemoryMap.Define.MMData_ByteData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_BoolData">
+            <summary>
+            불형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._typeSize">
+            <summary>
+            바이트형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            바이트형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_BoolData.Item(System.Int32)">
+            <summary>
+            바이트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.Copy(ENC.MemoryMap.Define.MMData_BoolData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_ShortData">
+            <summary>
+            쇼트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._typeSize">
+            <summary>
+            인트형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            인트형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_ShortData.Item(System.Int32)">
+            <summary>
+            인트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.Copy(ENC.MemoryMap.Define.MMData_ShortData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_IntData">
+            <summary>
+            인트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._typeSize">
+            <summary>
+            인트형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            인트형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_IntData.Item(System.Int32)">
+            <summary>
+            인트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.Copy(ENC.MemoryMap.Define.MMData_IntData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_FloatData">
+            <summary>
+            플롯형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._typeSize">
+            <summary>
+            플롯형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            플롯형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_FloatData.Item(System.Int32)">
+            <summary>
+            플롯형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.Copy(ENC.MemoryMap.Define.MMData_FloatData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_DoubleData">
+            <summary>
+            더블형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._typeSize">
+            <summary>
+            플롯형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            플롯형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_DoubleData.Item(System.Int32)">
+            <summary>
+            플롯형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.Copy(ENC.MemoryMap.Define.MMData_DoubleData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_StringData">
+            <summary>
+            스트링형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._typeSize">
+            <summary>
+            스트링형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._stringLength">
+            <summary>
+            문자열의 최대 길이 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            스트링형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_StringData.Item(System.Int32)">
+            <summary>
+            스트링형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.Copy(ENC.MemoryMap.Define.MMData_StringData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Manager.CMMFManagerMotor">
+            <summary>
+            싱글톤 패턴의 메모리 맵 데이터 매니져 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Manager.CMMFManagerMotor._memMap">
+            <summary>
+            메모리 맵 파일
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Manager.CMMFManagerMotor._MotorPages">
+            <summary>
+            셀 데이터 페이지
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Manager.CMMFManagerMotor._instance">
+            <summary>
+            싱글톤 패턴 인스턴스
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Manager.CMMFManagerMotor._instanceCreateLock">
+            <summary>
+            멀티 쓰레드 환경에서 인스턴스를 생성 할 때 중복 생성 되지 않도록 락을 걸어준다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Manager.CMMFManagerMotor.#ctor">
+            <summary>
+            셀 데이터 매니져 생성자
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Manager.CMMFManagerMotor.Instance">
+            <summary>
+            싱글톤 패턴 인스턴스를 불러온다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Manager.CMMFManagerMotor.DefaultValue">
+            <summary>
+            파일을 처음 만들었을 때 기본값을 써준다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Manager.CMMFManagerMotor.Item(System.Int32)">
+            <summary>
+            페이지 접근 인덱서
+            </summary>
+            <param name="iIndex">페이지 번호</param>
+            <returns></returns>
+        </member>
+        <member name="P:ENC.MemoryMap.Manager.CMMFManagerMotor.Item(ENC.MemoryMap.Manager.CMMFManagerMotor.enumPage)">
+            <summary>
+            페이지 접근 인덱서
+            </summary>
+            <param name="ePage">enumPage</param>
+            <returns></returns>
+        </member>
+        <member name="P:ENC.MemoryMap.Manager.CMMFManagerMotor.Motor1">
+            <summary>
+            MotorInput
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Pages.CMMFPagesMotor">
+            <summary>
+            개별 셀 데이터를 정의한 클래스
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Pages.CMMFPagesMotor.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.UInt32,System.UInt32)">
+            <summary>
+            셀 데이터 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="pageIndex">할당 할 페이지 인덱스</param>
+            <param name="pageCount">메모리 맵에 모든 페이지 개수</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Pages.CMMFPagesMotor.DefaultValue">
+            <summary>
+            기본값을 씁니다.
+            </summary>
+        </member>
+    </members>
+</doc>

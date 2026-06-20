@@ -1,0 +1,1076 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HLDeviceInterfaceCCLinkVirtual</name>
+    </assembly>
+    <members>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.GetVersion(System.Boolean)">
+            <summary>
+            DLL 버전을 반환하는 함수
+            </summary>
+            <param name="bReflesh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLInitialize(HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtualDefine.CInitializeParameter,System.String)">
+            <summary>
+            초기화
+            </summary>
+            <param name="objInitializeParameter"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLDeInitialize">
+            <summary>
+            해제
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLIsConnected">
+            <summary>
+            접속 상태
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLSetInterfaceBit(System.String,System.Boolean)">
+            <summary>
+            BIT영역 Write
+            </summary>
+            <param name="strName"></param>
+            <param name="bData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLSetInterfaceValue(System.String,System.Boolean,System.Int32)">
+            <summary>
+            WORD영역 Write - WORD 영역을 BIT단위 Write
+            </summary>
+            <param name="strName"></param>
+            <param name="bValue"></param>
+            <param name="iIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLSetInterfaceValue(System.String,System.Boolean[],System.Int32)">
+            <summary>
+            WORD영역 Write - WORD 영역을 BIT단위 Write
+            </summary>
+            <remarks>안 쓰임</remarks>
+            <param name="strName"></param>
+            <param name="pValue"></param>
+            <param name="iCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLSetInterfaceValueEx(System.String,System.Boolean[])">
+            <summary>
+            1Word 이상도 처리되도록 하는 함수
+            </summary>
+            <remarks>안 쓰임</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLSetInterfaceValueEx(System.String,System.Int32[])">
+            <summary>
+            WORD영역 Write - 배열
+            </summary>
+            <remarks>안 쓰임</remarks>
+            <param name="strName"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLSetInterfaceValue(System.String,System.Int32)">
+            <summary>
+            WORD영역 Write - int
+            </summary>
+            <param name="strName"></param>
+            <param name="iValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLSetInterfaceValue(System.String,System.Double)">
+            <summary>
+            WORD영역 Write - double
+            </summary>
+            <remarks>안 쓰임</remarks>
+            <param name="strName"></param>
+            <param name="dValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLSetInterfaceValue(System.String,System.String)">
+            <summary>
+            WORD영역 Write - string
+            </summary>
+            <param name="strName"></param>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLGetInterfaceBit(System.String,System.Boolean@)">
+            <summary>
+            BIT영역 Read
+            </summary>
+            <param name="strName"></param>
+            <param name="bData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLGetInterfaceValue(System.String,System.Boolean@,System.Int32)">
+            <summary>
+            WORD영역 Write - WORD 영역을 BIT단위 Read
+            </summary>
+            <param name="strName"></param>
+            <param name="bData"></param>
+            <param name="iIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLGetInterfaceValue(System.String,System.Boolean[]@,System.Int32@)">
+            <summary>
+            WORD영역 Write - WORD 영역을 BIT단위 Read
+            </summary>
+            <param name="strName"></param>
+            <param name="pValue"></param>
+            <param name="iCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLGetInterfaceValue(System.String,System.Int32@)">
+            <summary>
+            WORD영역 Read - int
+            </summary>
+            <param name="strName"></param>
+            <param name="iValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLGetInterfaceValue(System.String,System.Double@)">
+            <summary>
+            WORD영역 Read - double
+            </summary>
+            <remarks>안 쓰임</remarks>
+            <param name="strName"></param>
+            <param name="dValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLGetInterfaceValue(System.String,System.String@)">
+            <summary>
+            WORD영역 Read - String
+            </summary>
+            <remarks>안 쓰임</remarks>
+            <param name="strName"></param>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.CCLinkOpen(System.Boolean)">
+            <summary>
+            CCLink 초기화
+            </summary>
+            <param name="bBoardReset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.CCLinkClose">
+            <summary>
+            CCLink 해제
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.ReadDigital(System.String,System.Boolean@)">
+            <summary>
+            디지털 신호 읽어오는 함수
+            </summary>
+            <param name="strName"></param>
+            <param name="bData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.WriteDigital(System.String,System.Boolean)">
+            <summary>
+            디지털 신호 출력하는 함수
+            </summary>
+            <param name="strName"></param>
+            <param name="bData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.ReadAnalog(System.String,System.Int16[]@)">
+            <summary>
+            아날로그 신호 입력
+            </summary>
+            <param name="strName"></param>
+            <param name="pData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.WriteAnalog(System.String,System.Int16[])">
+            <summary>
+            아날로그 신호 출력
+            </summary>
+            <param name="strName"></param>
+            <param name="pData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.ReadBit(System.Int32,System.Int32,System.Int16[]@)">
+            <summary>
+            입력 비트
+            </summary>
+            <remarks>INPUT</remarks>
+            <param name="iStartAddress"></param>
+            <param name="iSize"></param>
+            <param name="pBuf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.ReadOutBit(System.Int32,System.Int32,System.Int16[]@)">
+            <summary>
+            입력 비트
+            </summary>
+            <remarks>OUTPUT</remarks>
+            <param name="iStartAddress"></param>
+            <param name="iSize"></param>
+            <param name="pBuf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.ReadWord(System.Int32,System.Int32,System.Int16[]@,System.Int16@)">
+            <summary>
+            입력 워드
+            </summary>
+            <remarks>INPUT</remarks>
+            <param name="iStartAddress"></param>
+            <param name="iSize"></param>
+            <param name="pBuf"></param>
+            <param name="sBufSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.ReadOutWord(System.Int32,System.Int32,System.Int16[]@,System.Int16@)">
+            <summary>
+            입력 워드
+            </summary>
+            <remarks>OUTPUT</remarks>
+            <param name="iStartAddress"></param>
+            <param name="iSize"></param>
+            <param name="pBuf"></param>
+            <param name="sBufSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.WriteReadBit(System.Int32,System.Int32,System.Int16[])">
+            <summary>
+            출력 비트
+            </summary>
+            <remarks>INPUT</remarks>
+            <param name="iStartAddress"></param>
+            <param name="iSize"></param>
+            <param name="pBuf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.WriteBit(System.Int32,System.Int32,System.Int16[])">
+            <summary>
+            출력 비트
+            </summary>
+            <remarks>OUTPUT</remarks>
+            <param name="iStartAddress"></param>
+            <param name="iSize"></param>
+            <param name="pBuf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.WriteReadWord(System.Int32,System.Int32,System.Int16[],System.Int16@)">
+            <summary>
+            출력 워드
+            </summary>
+            <remarks>IN</remarks>
+            <param name="iStartAddress"></param>
+            <param name="iSize"></param>
+            <param name="pBuf"></param>
+            <param name="sBufSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.WriteWord(System.Int32,System.Int32,System.Int16[],System.Int16@)">
+            <summary>
+            출력 워드
+            </summary>
+            <remarks>OUT</remarks>
+            <param name="iStartAddress"></param>
+            <param name="iSize"></param>
+            <param name="pBuf"></param>
+            <param name="sBufSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.AsciiToString(System.Char[],System.Int16[],System.Int32)">
+            <summary>
+            아스키코드를 문자열로 변환
+            </summary>
+            <param name="pszOut"></param>
+            <param name="pnaBuf"></param>
+            <param name="iSize"></param>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.HLGetErrorCode">
+            <summary>
+            현재 알람 상태 정보를 리턴하는 함수
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtual.MakeErrorMessage(System.String,System.Int32,System.String)">
+            <summary>
+            IO 동작 함수 실행 시 아래의 함수를 통하여 실행하는 함수
+            </summary>
+            <remarks>strFunctionName: 실행 함수 이름, iReturnCode : 실행된 함수 결과 값</remarks>
+            <param name="strFunctionName"></param>
+            <param name="iReturnCode"></param>
+            <param name="strMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HLDeviceDLL.Interface.CCLink.CDeviceInterfaceCCLinkVirtualDefine.CCCLinkError">
+            <summary>
+            알람 발생 확인 클래스
+            </summary>
+            <remarks>
+            함수 호출 시 반환 형
+            </remarks>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_PageBase">
+            <summary>
+            메모리 맵 베이스 클래스 입니다.
+            이 클래스를 상속 받으면 고정된 크기의 메모리 블럭을 생성 합니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._memMap">
+            <summary>
+            메모리 맵 파일 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._byteData">
+            <summary>
+            바이트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._boolData">
+            <summary>
+            불형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._shortData">
+            <summary>
+            쇼트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._intData">
+            <summary>
+            인트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._floatData">
+            <summary>
+            플롯형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._doubleData">
+            <summary>
+            더블형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase._stringData">
+            <summary>
+            스트링형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.ByteDataSize">
+            <summary>
+            바이트형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.BoolDataSize">
+            <summary>
+            바이트형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.ShortDataSize">
+            <summary>
+            쇼트형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.IntDataSize">
+            <summary>
+            인트형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.FloatDataSize">
+            <summary>
+            플롯형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.DoubleDataSize">
+            <summary>
+            더블형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.StringDataSize">
+            <summary>
+            스트링형 데이터의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_PageBase.PageSize">
+            <summary>
+            메모리 블럭 하나의 크기 입니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.UInt32,System.UInt32)">
+            <summary>
+            메모리 맵 베이스의 생성자 입니다.
+            </summary>
+            <param name="fileName">메모리맵 파일 이름. 기존에 같은 이름의 파일이 존재하지 않으면 만들고, 있으면 파일을 엽니다.</param>
+            <param name="pageIndex">메모리 블럭 인덱스. 메모리 블럭의 인덱스 입니다. 인덱스가 메모리 블럭 보다 커지면 익셉션을 발생시킵니다.</param>
+            <param name="pageCount">메모리 블럭 개수. 메모리 블럭 개수를 참고하여 메모리 맵 파일을 생성합니다. 메모리 블럭은 0보다 커야합니다.</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.CreateMemMap(System.String,System.String,System.UInt32)">
+            <summary>
+            지정한 크기의 메모리 맵 파일을 엽니다. 만약 파일이 존재 하지 않는다면 파일을 생성합니다.
+            </summary>
+            <param name="fileName">메모리 맵 파일 이름</param>
+            <param name="mapName">메모리 맵 이름</param>
+            <param name="pageCount">페이지 개수 (메모리 맵 파일의 총 크기를 결정 한다.)</param>
+            <returns>메모리 맵 파일 클래스</returns>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.ByteData">
+            <summary>
+            바이트형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.BoolData">
+            <summary>
+            바이트형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.ShortData">
+            <summary>
+            쇼트형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.IntData">
+            <summary>
+            인트형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.FloatData">
+            <summary>
+            플롯형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.DoubleData">
+            <summary>
+            더블형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_PageBase.StringData">
+            <summary>
+            스트링형 데이터에 접근합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.Copy(ENC.MemoryMap.Define.MMData_PageBase)">
+            <summary>
+            입력한 데이터를 내부 데이터 클래스에 복사한다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_PageBase.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_ByteData">
+            <summary>
+            바이트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._typeSize">
+            <summary>
+            바이트형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ByteData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            바이트형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_ByteData.Item(System.Int32)">
+            <summary>
+            바이트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.Copy(ENC.MemoryMap.Define.MMData_ByteData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ByteData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_BoolData">
+            <summary>
+            불형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._typeSize">
+            <summary>
+            바이트형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_BoolData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            바이트형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_BoolData.Item(System.Int32)">
+            <summary>
+            바이트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.Copy(ENC.MemoryMap.Define.MMData_BoolData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_BoolData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_ShortData">
+            <summary>
+            쇼트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._typeSize">
+            <summary>
+            인트형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_ShortData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            인트형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_ShortData.Item(System.Int32)">
+            <summary>
+            인트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.Copy(ENC.MemoryMap.Define.MMData_ShortData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_ShortData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_IntData">
+            <summary>
+            인트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._typeSize">
+            <summary>
+            인트형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_IntData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            인트형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_IntData.Item(System.Int32)">
+            <summary>
+            인트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.Copy(ENC.MemoryMap.Define.MMData_IntData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_IntData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_FloatData">
+            <summary>
+            플롯형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._typeSize">
+            <summary>
+            플롯형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_FloatData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            플롯형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_FloatData.Item(System.Int32)">
+            <summary>
+            플롯형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.Copy(ENC.MemoryMap.Define.MMData_FloatData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_FloatData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_DoubleData">
+            <summary>
+            더블형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._typeSize">
+            <summary>
+            플롯형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_DoubleData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            플롯형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_DoubleData.Item(System.Int32)">
+            <summary>
+            플롯형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.Copy(ENC.MemoryMap.Define.MMData_DoubleData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_DoubleData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Define.MMData_StringData">
+            <summary>
+            스트링형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._memMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._memView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._typeSize">
+            <summary>
+            스트링형의 크기 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._stringLength">
+            <summary>
+            문자열의 최대 길이 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._mapOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Define.MMData_StringData._mapSize">
+            <summary>
+            메모리 맵 크기 (바이트)
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            스트링형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="offset">메모리 맵 시작 위치 (바이트)</param>
+            <param name="size">메모리 맵 크기 (바이트)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="P:ENC.MemoryMap.Define.MMData_StringData.Item(System.Int32)">
+            <summary>
+            스트링형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.getPosition(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.Copy(ENC.MemoryMap.Define.MMData_StringData)">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:ENC.MemoryMap.Define.MMData_StringData.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Manager.CMMFManagerCCLink">
+            <summary>
+            싱글톤 패턴의 메모리 맵 데이터 매니져 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Manager.CMMFManagerCCLink._memMap">
+            <summary>
+            메모리 맵 파일
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Manager.CMMFManagerCCLink._CCLinkPages">
+            <summary>
+            셀 데이터 페이지
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Manager.CMMFManagerCCLink._instance">
+            <summary>
+            싱글톤 패턴 인스턴스
+            </summary>
+        </member>
+        <member name="F:ENC.MemoryMap.Manager.CMMFManagerCCLink._instanceCreateLock">
+            <summary>
+            멀티 쓰레드 환경에서 인스턴스를 생성 할 때 중복 생성 되지 않도록 락을 걸어준다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Manager.CMMFManagerCCLink.#ctor">
+            <summary>
+            셀 데이터 매니져 생성자
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Manager.CMMFManagerCCLink.Instance">
+            <summary>
+            싱글톤 패턴 인스턴스를 불러온다.
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Manager.CMMFManagerCCLink.DefaultValue">
+            <summary>
+            파일을 처음 만들었을 때 기본값을 써준다.
+            </summary>
+        </member>
+        <member name="P:ENC.MemoryMap.Manager.CMMFManagerCCLink.Item(System.Int32)">
+            <summary>
+            페이지 접근 인덱서
+            </summary>
+            <param name="iIndex">페이지 번호</param>
+            <returns></returns>
+        </member>
+        <member name="P:ENC.MemoryMap.Manager.CMMFManagerCCLink.Item(ENC.MemoryMap.Manager.CMMFManagerCCLink.enumPage)">
+            <summary>
+            페이지 접근 인덱서
+            </summary>
+            <param name="ePage">enumPage</param>
+            <returns></returns>
+        </member>
+        <member name="P:ENC.MemoryMap.Manager.CMMFManagerCCLink.CCLink_IN">
+            <summary>
+            CCLinkInputUpper
+            </summary>
+        </member>
+        <member name="T:ENC.MemoryMap.Pages.CMMFPagesCCLink">
+            <summary>
+            개별 셀 데이터를 정의한 클래스
+            </summary>
+        </member>
+        <member name="M:ENC.MemoryMap.Pages.CMMFPagesCCLink.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.UInt32,System.UInt32)">
+            <summary>
+            셀 데이터 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="pageIndex">할당 할 페이지 인덱스</param>
+            <param name="pageCount">메모리 맵에 모든 페이지 개수</param>
+        </member>
+        <member name="M:ENC.MemoryMap.Pages.CMMFPagesCCLink.DefaultValue">
+            <summary>
+            기본값을 씁니다.
+            </summary>
+        </member>
+    </members>
+</doc>

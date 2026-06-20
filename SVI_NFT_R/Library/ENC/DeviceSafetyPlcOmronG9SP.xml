@@ -1,0 +1,660 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeviceSafetyPlcOmronG9SP</name>
+    </assembly>
+    <members>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.EquipmentStatusAndEchoBackData">
+            <summary>
+            장치 상태 및 에코 백 데이터를 가지고 있는 데이터 클래스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.EquipmentStatusAndEchoBackData.IsEquipmentNormalRunning">
+            <summary>
+            장치 정상 작동 플래그
+            </summary>
+            <remarks>
+            <list type="table">
+                <listheader>
+                    <term>값</term>
+                    <description>설명</description>
+                </listheader>
+                <item>
+                    <term>0</term>
+                    <description>에러가 발생하거나 프로그램이 정지되었습니다</description>
+                </item>
+                <item>
+                    <term>1</term>
+                    <description>정상 상태(에러 없음)이며 프로그램이 실행되는 중입니다</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.EquipmentStatusAndEchoBackData.IsOutputPowerSupplyError">
+            <summary>
+            출력 전원 공급 에러 플래그
+            </summary>
+            <remarks>
+            <list type="table">
+                <listheader>
+                    <term>값</term>
+                    <description>설명</description>
+                </listheader>
+                <item>
+                    <term>0</term>
+                    <description>출력 전원 공급 전압이 정상입니다</description>
+                </item>
+                <item>
+                    <term>1</term>
+                    <description>출력 전원 공급 전압 에러이거나 또는 전원 공급이 꺼졌습니다</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.EquipmentStatusAndEchoBackData.IsSafetyIoPortError">
+            <summary>
+            안전 I/O 단자 에러 플래그
+            </summary>
+            <remarks>
+            <list type="table">
+                <listheader>
+                    <term>값</term>
+                    <description>설명</description>
+                </listheader>
+                <item>
+                    <term>0</term>
+                    <description>안전 I/O 단자에 에러가 없습니다</description>
+                </item>
+                <item>
+                    <term>1</term>
+                    <description>안전 I/O 단자에 에러가 있습니다</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.EquipmentStatusAndEchoBackData.IsFunctionBlockError">
+            <summary>
+            펑션 블록 에러 플래그
+            </summary>
+            <remarks>
+            <list type="table">
+                <listheader>
+                    <term>값</term>
+                    <description>설명</description>
+                </listheader>
+                <item>
+                    <term>0</term>
+                    <description>펑션 블록에 에러가 없습니다</description>
+                </item>
+                <item>
+                    <term>1</term>
+                    <description>펑션 블록에 에러가 있습니다</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.EquipmentStatusAndEchoBackData.EchoBack">
+            <summary>
+            에코 백
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ErrorInformation">
+            <summary>
+            <c>Safety PLC</c>에 에러 정보를 가지고 있는 데이터 클래스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ErrorInformation.ErrorCode">
+            <summary>
+            에러 코드
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ErrorInformation.Description">
+            <summary>
+            에러 설명
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ErrorInformation.MapIndex">
+            <summary>
+            맵 인덱스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ErrorInformation.BitIndex">
+            <summary>
+            비트 인덱스
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IoData">
+            <summary>
+            <see cref="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IoData.Rawdata"/>를 <c>Bit</c> 단위로 접근 할 수 있는 기능을 가진 클래스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IoData.BitCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IoData.Rawdata">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IoData.Item(System.Int32)">
+            <summary>
+            비트 배열처럼 접근 할 수 있게하는 프로퍼티
+            </summary>
+            <param name="bitIndex">접근 할 비트 인덱스</param>
+            <returns>해당 인덱스에 비트 값</returns>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IoData.GetBit(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IoData.SetBit(System.Int32,System.Boolean)">
+            <summary>
+            해당 비트 인덱스에 값을 쓰는 함수
+            </summary>
+            <param name="bitIndex">접근 할 비트 인덱스</param>
+            <param name="setValue">비트 값</param>
+            <returns>해당 인덱스에 비트 값</returns>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IReadOnlyIoData">
+            <summary>
+            <see cref="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IReadOnlyIoData.Rawdata"/>를 <c>Bit</c> 단위로 접근 할 수 있는 기능을 가진 읽기 전용 인터페이스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IReadOnlyIoData.BitCount">
+            <summary>
+            접근 할 수 있는 최대 비트의 개수를 저장하고 있는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IReadOnlyIoData.Rawdata">
+            <summary>
+            원본 데이터를 저장하고 있는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IReadOnlyIoData.Item(System.Int32)">
+            <summary>
+            비트 배열처럼 접근 할 수 있게하는 읽기 전용 프로퍼티
+            </summary>
+            <param name="bitIndex">접근 할 비트 인덱스</param>
+            <returns>해당 인덱스에 비트 값</returns>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.Define.IReadOnlyIoData.GetBit(System.Int32)">
+            <summary>
+            해당 비트 인덱스에 값을 가져오는 함수
+            </summary>
+            <param name="bitIndex">접근 할 비트 인덱스</param>
+            <returns>해당 인덱스에 비트 값</returns>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData">
+            <summary>
+            <c>Safety PLC</c> 모니터 데이터를 가지고 있는 읽기 전용 인터페이스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.IsValid">
+            <summary>
+            해당 데이터가 유효한지 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.ErrorReason">
+            <summary>
+            <see cref="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.IsValid"/>의 값이 <c>false</c> 일 때 이유를 설명한 문자열이 저장되는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.TagOutputIoData">
+            <summary>
+            옵션 통신 송신 데이터 플래그 (TAG I/O)
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.SafetyInputIoData">
+            <summary>
+            안전 입력 단자 데이터 플래그
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.SafetyOutputIoData">
+            <summary>
+            안전 출력 단자 데이터 플래그
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.SafetyInputStatusData">
+            <summary>
+            안전 입력 단자 상태 플래그
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.SafetyOutputStatusData">
+            <summary>
+            안전 출력 단자 상태 플래그
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.SafetyInputErrorData">
+            <summary>
+            안전 입력 단자 에러 원인
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.SafetyOutputErrorData">
+            <summary>
+            안전 출력 단자 에러 원인
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.EquipmentStatusAndEchoBackData">
+            <summary>
+            장치 상태 및 에코 백
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.ConfigurationID">
+            <summary>
+            구성 ID
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.PlcRunningTime">
+            <summary>
+            장치 전도 시간
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.CurrentErrorInformations">
+            <summary>
+            현재 에러 정보
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.ErrorLogRecords">
+            <summary>
+            에러 로그
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData.ActionLogRecords">
+            <summary>
+            동작 로그
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcSignatureData">
+            <summary>
+            <c>Safety PLC</c> 프로그램 수정 이력 데이터를 가지고 있는 읽기 전용 인터페이스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcSignatureData.IsValid">
+            <summary>
+            해당 데이터가 유효한지 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcSignatureData.ErrorReason">
+            <summary>
+            <see cref="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcSignatureData.IsValid"/>의 값이 <c>false</c> 일 때 이유를 설명한 문자열이 저장되는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcSignatureData.SignatureCode">
+            <summary>
+            시그니처 코드
+            </summary>
+            <remarks>
+            시그니처 코드란?
+            <list type="bullet">
+                <item>프로그램의 Logic 및 툴 설정에 대한 고유의 ID</item>
+                <item>만약 프로그램의 변경이 이루어 질 경우 해당 ID의 Number가 변경됨</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcSignatureData.LastModifyDateTime">
+            <summary>
+            마지막 수정 이력 날짜
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.LogRecord">
+            <summary>
+            로그 데이터를 가지고 있는 읽기 전용 데이터 클래스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.LogRecord.Code">
+            <summary>
+            동작에 대한 코드를 저장하는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.LogRecord.Description">
+            <summary>
+            동작에 대한 설명을 저장하는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.LogRecord.OccurredTime">
+            <summary>
+            동작의 발생 시간을 저장하는 프로퍼티
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.SafetyIoErrorInformation">
+            <summary>
+            안전 I/O의 에러 데이터를 가지고 있는 읽기 전용 데이터 클래스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.SafetyIoErrorInformation.ErrorCode">
+            <summary>
+            에러 코드를 저장하는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.Define.SafetyIoErrorInformation.Description">
+            <summary>
+            에러 코드에 대한 설명을 저장하는 프로퍼티
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.TagIoData">
+            <summary>
+            TAG I/O 데이터 플래그를 나타내는 데이터 클래스
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP">
+            <summary>
+            Omron사 G9SP 디바이스의 기능을 구현한 클래스
+            </summary>
+            <remarks>
+            📌 UDP통신에서 자체 프로토콜을 사용하는 디바이스
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.Category">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.Vendor">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.Model">
+            <inheritdoc/>
+        </member>
+        <member name="E:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.OnSent">
+            <inheritdoc/>
+        </member>
+        <member name="E:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.OnReceived">
+            <inheritdoc/>
+        </member>
+        <member name="E:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.OnErrorMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.IsInitialized">
+            <summary>
+            라이브러리 초기화 진행 여부를 나타내는 프로퍼티
+            </summary>
+            <remarks>
+            📌 라이브러리 초기화가 이미 진행 됐으면 true, 아니면 false를 반환함<br/>
+            📌 초기화 상태를 변경 시키기 위해서는 <see cref="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.Initialize(DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter)"/>, <see cref="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.DeInitialize"/> 함수를 호출 해야함
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.IsConnected">
+            <summary>
+            디바이스와 통신 연결 상태를 나타내는 프로퍼티
+            </summary>
+            <remarks>
+            📌 UDP통신이라서 마지막 요청에대한 성공 여부를 표시함
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.SendTagIoData">
+            <summary>
+            TAG I/O 출력 데이터를 설정하는 프로퍼티
+            </summary>
+            <remarks>
+            📌 <see cref="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.TryReadSafetyPlcMonitorData(DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData@)"/> 함수 호출시 설정 값 적용됨
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.InitializeParameter">
+            <summary>
+            초기화 파라미터를 저장하는 프로퍼티
+            </summary>
+            <remarks>
+            📌 <see cref="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.Initialize(DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter)"/> 함수를 통해서만 파라미터를 적용 할 수 있음<br/>
+            🚩 최초 초기화 이후에 초기화 파라미터 변경이 없다는 컨샙으로 구현되어 있음으로 값을 직접 변경해도 적용되지 않음으로 주의 할 것
+            </remarks>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.Initialize(DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter)">
+            <summary>
+            라이브러리를 초기화하는 함수
+            </summary>
+            <remarks>
+            <br>📌 입력된 초기화 파라미터로 라이브러리 내부에 코어를 초기화하고, 통신 자동 접속 스레드를 시작함</br>
+            </remarks>
+            <param name="initializeParameter">초기화 파라미터 객체</param>
+            <returns>초기화 성공시 true를 실패시 false를 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                RemoteHostName = "192.168.1.100",
+                RemoteHostPort = 9600,
+                NodeSafetyPlc = 100,
+                NodeSelf = 2,
+                ReceiveTimeout = TimeSpan.FromMilliseconds(200)
+            };
+            
+            // 라이브러리 초기화
+            var device = new DeviceSafetyPlcOmronG9SP();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.DeInitialize">
+            <summary>
+            라이브러리를 정리하는 함수<br/>
+            <br/>
+            📌 통신 자동 접속 스레드를 중지시키고, 코어에 접속을 강제로 해제함
+            </summary>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.GetVersion(System.Boolean)">
+            <summary>
+            DLL 버전을 반환하는 함수
+            </summary>
+            <param name="bReflesh">DLL 버전 데이터를 갱신할지 여부<br/>true: 무조건 DLL 파일 정보에서 읽어옴<br/>false: 기존에 갱신한 이력이 있으면 이전 값을 반환하고 없으면 DLL 파일 정보에서 읽어옴<br/>기본 값: false</param>
+            <returns>DLL 버전을 "n.n.n.n" 형식으로 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            var device = new DeviceSafetyPlcOmronG9SP();
+            // DLL 버전 정보 읽기
+            string version = comm.GetVersion(bReflesh: true);
+            Console.WriteLine($"DLL 버전: {version}");
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            DLL 버전: 1.0.0.0
+            </code>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.TryReadSafetyPlcMonitorData(DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData@)">
+            <summary>
+            <c>Safety PLC</c>에서 상태 데이터를 읽어오는 함수
+            </summary>
+            <remarks>
+            📌 함수 호출시 <see cref="P:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.SendTagIoData"/> 값이 <c>Safety PLC</c>에 적용됨
+            </remarks>
+            <param name="safetyPlcMonitorDataOrNull"><see cref="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcMonitorData"/> 데이터 객체(실패시 <c>null</c> 반환)</param>
+            <returns>true = 성공, false = 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                RemoteHostName = "192.168.1.100",
+                RemoteHostPort = 9600,
+                NodeSafetyPlc = 100,
+                NodeSelf = 2,
+                ReceiveTimeout = TimeSpan.FromMilliseconds(200)
+            };
+            
+            // 라이브러리 초기화
+            var device = new DeviceSafetyPlcOmronG9SP();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 모니터 데이터 읽기
+            ISafetyPlcMonitorData readValue;
+            if (device.TryReadSafetyPlcMonitorData(out readValue) == true)
+            {
+                // 읽기에 성공한 경우
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.TryReadSafetyPlcSignatureData(DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcSignatureData@)">
+            <summary>
+            <c>Safety PLC</c>에서 시그니쳐 데이터 읽어오는 함수
+            </summary>
+            <param name="safetyPlcSignatureDataOrNull"><see cref="T:DeviceDLL.SafetyPlc.Omron.G9SP.Define.ISafetyPlcSignatureData"/> 데이터 객체(실패시 <c>null</c> 반환)</param>
+            <returns>true = 성공, false = 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                RemoteHostName = "192.168.1.100",
+                RemoteHostPort = 9600,
+                NodeSafetyPlc = 100,
+                NodeSelf = 2,
+                ReceiveTimeout = TimeSpan.FromMilliseconds(200)
+            };
+            
+            // 라이브러리 초기화
+            var device = new DeviceSafetyPlcOmronG9SP();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 시그니쳐 데이터 읽기
+            ISafetyPlcSignatureData readValue;
+            if (device.TryReadSafetyPlcSignatureData(out readValue) == true)
+            {
+                // 읽기에 성공한 경우
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.GetErrorCode">
+            <summary>
+            마지막에 발생한 <see cref="T:DeviceDLL.SafetyPlc.Omron.G9SP.ErrorCode"/> 객체를 반환하는 함수
+            </summary>
+            <returns>마지막에 발생한 <see cref="T:DeviceDLL.SafetyPlc.Omron.G9SP.ErrorCode"/> 객체</returns>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP.GetErrorLogInstanceOrNull">
+            <summary>
+            에러 로그 인터페이스를 반환하는 함수
+            </summary>
+            <returns>null=실패, other=성공</returns>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.ErrorCode">
+            <summary>
+            <see cref="T:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP"/>에서 사용되는 에러 정보를 가진 클래스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.ErrorCode.EventTime">
+            <summary>
+            에러가 발생한 시간을 나타내는 프로퍼티
+            </summary>
+            <remarks>데이터 형식: "yyyy/MM/dd hh:mm:ss"</remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.ErrorCode.FunctionName">
+            <summary>
+            에러가 발생한 함수를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.ErrorCode.ReturnCode">
+            <summary>
+            함수에서 반환한 결과 코드를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.ErrorCode.Message">
+            <summary>
+            발생한 에러에대한 메시지를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.ErrorCode.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:DeviceDLL.SafetyPlc.Omron.G9SP.ErrorCode"/> 객체</returns>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter">
+            <summary>
+            <see cref="T:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP"/> 객체의 초기화 파라미터를 가진 데이터 클래스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter.RemoteHostName">
+            <inheritdoc/>
+            <remarks>
+            기본 값: "192.168.1.100"
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter.RemoteHostPort">
+            <inheritdoc/>
+            <remarks>
+            기본 값: 9600
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter.NodeSafetyPlc">
+            <inheritdoc/>
+            <remarks>
+            기본 값: 100
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter.NodeSelf">
+            <inheritdoc/>
+            <remarks>
+            기본 값: 2
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter.ReceiveTimeout">
+            <inheritdoc/>
+            <remarks>
+            기본 값: 200ms
+            </remarks>
+        </member>
+        <member name="M:DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:DeviceDLL.SafetyPlc.Omron.G9SP.InitializeParameter"/> 객체</returns>
+        </member>
+        <member name="T:DeviceDLL.SafetyPlc.Omron.G9SP.IReadOnlyInitializeParameter">
+            <summary>
+            <see cref="T:DeviceDLL.SafetyPlc.Omron.G9SP.DeviceSafetyPlcOmronG9SP"/> 객체의 초기화 파라미터를 가진 읽기전용 데이터 인터페이스
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.IReadOnlyInitializeParameter.RemoteHostName">
+            <summary>
+            Safety PLC의 IP 주소<br/>
+            데이터 형식: "{nnn}.{nnn}.{nnn}.{nnn}"
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.IReadOnlyInitializeParameter.RemoteHostPort">
+            <summary>
+            Safety PLC의 포트 번호<br/>
+            데이터 범위: 0x0000 ~ 0xFFFF
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.IReadOnlyInitializeParameter.NodeSafetyPlc">
+            <summary>
+            Safety PLC의 노드 번호<br/>
+            <br/>
+            📌 <see cref="P:DeviceDLL.SafetyPlc.Omron.G9SP.IReadOnlyInitializeParameter.RemoteHostName"/>의 4번째 자리와 똑같이 설정해야함
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.IReadOnlyInitializeParameter.NodeSelf">
+            <summary>
+            제어 PC의 노드 번호<br/>
+            <br/>
+            📌 <see cref="P:DeviceDLL.SafetyPlc.Omron.G9SP.IReadOnlyInitializeParameter.NodeSafetyPlc"/>와 겹치지 않게 설정해야함
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.SafetyPlc.Omron.G9SP.IReadOnlyInitializeParameter.ReceiveTimeout">
+            <summary>
+            수신 대기 시간
+            </summary>
+        </member>
+    </members>
+</doc>

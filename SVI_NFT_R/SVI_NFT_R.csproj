@@ -1,0 +1,1972 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A32A917-24FF-4A9F-9F83-C7B2D1BB3D5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SVI_NFT_R</RootNamespace>
+    <AssemblyName>SVI_NFT_R</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\.output\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LOGIN_VER2; USE_HIGH_RESOLUTION_TIMER; CIM_V3_GAMMA</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>D:\01_EXE\SVI_NFT_R\</OutputPath>
+    <DefineConstants>TRACE;LOGIN_VER2; USE_HIGH_RESOLUTION_TIMER; CIM_V3_GAMMA</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Other\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Cyotek.Windows.Forms.ImageBox, Version=1.2.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Other\Cyotek.Windows.Forms.ImageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceAlignCognex">
+      <HintPath>Library\ENC\DeviceAlignCognex.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceAngleSensorDgac, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\DeviceAngleSensorDgac.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\DeviceCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceFfuLv32">
+      <HintPath>Library\ENC\DeviceFfuLv32.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceManometerPTA">
+      <HintPath>Library\ENC\DeviceManometerPTA.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceMeasurementCommon, Version=1.0.8241.35260, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\DeviceMeasurementCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceMeasurementKeyenceIL">
+      <HintPath>Library\ENC\DeviceMeasurementKeyenceIL.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceMeasurementKyengQcManagerMulti, Version=1.0.8241.35261, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\DeviceMeasurementKyengQcManagerMulti.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceMeasurementVirtual, Version=1.0.8241.35260, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\DeviceMeasurementVirtual.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceProtocolModbus, Version=1.0.8819.36603, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\DeviceProtocolModbus.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceRpmMp5W">
+      <HintPath>Library\ENC\DeviceRpmMp5W.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceSafetyPlcOmronG9SP, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\DeviceSafetyPlcOmronG9SP.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceTrayAlign">
+      <HintPath>Library\ENC\DeviceTrayAlign.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.Device.Communication">
+      <HintPath>Library\ENC\ENC.Device.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.IO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\ENC.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.IO.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\ENC.IO.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.IO.DebugKit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\ENC.IO.DebugKit.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.IO.Device.AdvantechGPIO">
+      <HintPath>Library\ENC\ENC.IO.Device.AdvantechGPIO.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.IO.Device.Ajin">
+      <HintPath>Library\ENC\ENC.IO.Device.Ajin.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.IO.Device.Melsec, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\ENC.IO.Device.Melsec.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.IO.Device.MemoryMappedFile">
+      <HintPath>Library\ENC\ENC.IO.Device.MemoryMappedFile.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.IO.Device.Mock">
+      <HintPath>Library\ENC\ENC.IO.Device.Mock.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC.IO.Device.TechWing">
+      <HintPath>Library\ENC\ENC.IO.Device.TechWing.dll</HintPath>
+    </Reference>
+    <Reference Include="ENCDeviceKeyenceCL3000">
+      <HintPath>Library\ENC\ENCDeviceKeyenceCL3000.dll</HintPath>
+    </Reference>
+    <Reference Include="ENCDeviceMcuLocalViewer32">
+      <HintPath>Library\ENC\ENCDeviceMcuLocalViewer32.dll</HintPath>
+    </Reference>
+    <Reference Include="ENCDeviceMotorFastech, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\ENCDeviceMotorFastech.dll</HintPath>
+    </Reference>
+    <Reference Include="ENCDeviceMotorIna, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\ENCDeviceMotorIna.dll</HintPath>
+    </Reference>
+    <Reference Include="ENCDeviceUpsAPC">
+      <HintPath>Library\ENC\ENCDeviceUpsAPC.dll</HintPath>
+    </Reference>
+    <Reference Include="ENCDeviceUpsLGR">
+      <HintPath>Library\ENC\ENCDeviceUpsLGR.dll</HintPath>
+    </Reference>
+    <Reference Include="ENC_Log, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\ENC_Log.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceElectrostaticPGMS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceElectrostaticPGMS.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceFfuBlueCordMcul32, Version=1.0.8619.33260, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceFfuBlueCordMcul32.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceFFUMCU32, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceFFUMCU32.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceFileInterfaceFTP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceFileInterfaceFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceInterfaceCCLink, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceInterfaceCCLink.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceInterfaceCCLinkVirtual, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceInterfaceCCLinkVirtual.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceInterfaceMelsec, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceInterfaceMelsec.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceInterfaceMelsecVirtual, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceInterfaceMelsecVirtual.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceIOAjin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceIOAjin.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceIOVirtual, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceIOVirtual.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceLabelPrintBixolon">
+      <HintPath>Library\ENC\HLDeviceLabelPrintBixolon.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceMCRCognex, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceMCRCognex.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceMCRLeuze">
+      <HintPath>Library\ENC\HLDeviceMCRLeuze.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceMotorAjin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceMotorAjin.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceMotorVirtual, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceMotorVirtual.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDevicePowerMeterAccura, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDevicePowerMeterAccura.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDevicePowerMeterAccura2500, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDevicePowerMeterAccura2500.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceTemperatureNEOSHSD, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceTemperatureNEOSHSD.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceTemperatureStdM4">
+      <HintPath>Library\ENC\HLDeviceTemperatureStdM4.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceTemperatureTK4S, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ENC\HLDeviceTemperatureTK4S.dll</HintPath>
+    </Reference>
+    <Reference Include="HLDeviceTemperatureTsdV50">
+      <HintPath>Library\ENC\HLDeviceTemperatureTsdV50.dll</HintPath>
+    </Reference>
+    <Reference Include="Itenso.TimePeriod, Version=2.1.1.0, Culture=neutral, PublicKeyToken=8cb6db75b4e81486, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Other\Itenso.TimePeriod.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack">
+      <HintPath>Library\Other\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>Library\Other\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfiumViewer, Version=2.13.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Other\PdfiumViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="urLink, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Other\urLink.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CIM\CCIMAbstract.cs" />
+    <Compile Include="CIM\CCIMDefine.cs" />
+    <Compile Include="CIM\CCIMImplementAbstract.cs" />
+    <Compile Include="CIM\CCIMImplementSVI_M.cs" />
+    <Compile Include="CIM\CCIMSendMessage.cs" />
+    <Compile Include="CIM\CDialogCellOutCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogCellOutCode.designer.cs">
+      <DependentUpon>CDialogCellOutCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CDialogCIMConnectWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogCIMConnectWait.designer.cs">
+      <DependentUpon>CDialogCIMConnectWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CDialogCIMDisconnected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogCIMDisconnected.designer.cs">
+      <DependentUpon>CDialogCIMDisconnected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CDialogCIMMessageTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogCIMMessageTest.Designer.cs">
+      <DependentUpon>CDialogCIMMessageTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CDialogEQPFunctionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogEQPFunctionList.designer.cs">
+      <DependentUpon>CDialogEQPFunctionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CDialogInterlockMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogInterlockMessage.designer.cs">
+      <DependentUpon>CDialogInterlockMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CDialogLossCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogLossCode.designer.cs">
+      <DependentUpon>CDialogLossCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CDialogOperatorCallMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogOperatorCallMessage.designer.cs">
+      <DependentUpon>CDialogOperatorCallMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CDialogTerminalMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogTerminalMessage.designer.cs">
+      <DependentUpon>CDialogTerminalMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CDialogUnitInterlockMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIM\CDialogUnitInterlockMessage.designer.cs">
+      <DependentUpon>CDialogUnitInterlockMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIM\CProcessCIM.cs" />
+    <Compile Include="CIM\CProcessCIMCarrierInformationDownload.cs" />
+    <Compile Include="CIM\CProcessCIMCellInformationDownload.cs" />
+    <Compile Include="CIM\CProcessCIMCellLotInformationReply.cs" />
+    <Compile Include="CIM\CProcessCIMCellLotInformationDownload.cs" />
+    <Compile Include="CIM\CProcessCIMCellJobProcessRequest.cs" />
+    <Compile Include="CIM\CProcessCIMControlStateRequest.cs" />
+    <Compile Include="CIM\CProcessCIMConveyorMoveStateRequest.cs" />
+    <Compile Include="CIM\CProcessCIMCurrentAlarmListRequest.cs" />
+    <Compile Include="CIM\CProcessCIMCurrentPPIDRequest.cs" />
+    <Compile Include="CIM\CProcessCIMDateAndTimeSetRequest.cs" />
+    <Compile Include="CIM\CProcessCIMECListRequest.cs" />
+    <Compile Include="CIM\CProcessCIMECSetRequest.cs" />
+    <Compile Include="CIM\CProcessCIMEQStateRequest.cs" />
+    <Compile Include="CIM\CProcessCIMEquipmentApproveSend.cs" />
+    <Compile Include="CIM\CProcessCIMFunctionChangeRequest.cs" />
+    <Compile Include="CIM\CProcessCIMFunctionStateRequest.cs" />
+    <Compile Include="CIM\CProcessCIMInterlockRequest.cs" />
+    <Compile Include="CIM\CProcessCIMOPCallRequest.cs" />
+    <Compile Include="CIM\CProcessCIMPPIDListRequest.cs" />
+    <Compile Include="CIM\CProcessCIMPPParamRemoteRequest.cs" />
+    <Compile Include="CIM\CProcessCIMPPParamRequest.cs" />
+    <Compile Include="CIM\CProcessCIMSpecificationversionStateRequest.cs" />
+    <Compile Include="CIM\CProcessCIMTerminalDisplayRequest.cs" />
+    <Compile Include="CIM\CProcessCIMTraceRequest.cs" />
+    <Compile Include="CIM\CProcessCIMUnitInterlockRequest.cs" />
+    <Compile Include="CIM\CProcessCIMUnitStateRequest.cs" />
+    <Compile Include="CIM\Define\HostCommandAcknowledge.cs" />
+    <Compile Include="CIM\Define\Acknowledge7.cs" />
+    <Compile Include="CIM\Define\Acknowledge6.cs" />
+    <Compile Include="CIM\Define\CommandCode.cs" />
+    <Compile Include="CIM\Define\LoginAcknowledge.cs" />
+    <Compile Include="CIM\SendMessage.cs" />
+    <Compile Include="Database\CProcessDatabaseHistorySafetyPlcModifiedEvent.cs" />
+    <Compile Include="Data\AlarmList.cs" />
+    <Compile Include="Data\CAlarmDefine.cs" />
+    <Compile Include="Data\CellData\CellDataManager.cs" />
+    <Compile Include="Data\CellData\Define\CellDataHandler.cs" />
+    <Compile Include="Data\CellData\Define\OneCell.AlignResultData.cs" />
+    <Compile Include="Data\CellData\Define\OneCell.CimData.cs" />
+    <Compile Include="Data\CellData\Define\OneCell.cs" />
+    <Compile Include="Data\CellData\Define\OneCell.EqInterfaceData.cs" />
+    <Compile Include="Data\CellData\Define\OneCell.JudgementData.cs" />
+    <Compile Include="Data\CellData\Define\OneCell.MainData.cs" />
+    <Compile Include="Data\CellData\Define\OneCell.ReaderData.cs" />
+    <Compile Include="Data\CellData\Define\OneCell.WorkOrderData.cs" />
+    <Compile Include="Data\CellData\Enum\ECellData.cs" />
+    <Compile Include="Data\CellData\Enum\ECellPlacement.cs" />
+    <Compile Include="Data\CellData\Enum\EInspectionResult.cs" />
+    <Compile Include="Data\CellData\Enum\EJudge.cs" />
+    <Compile Include="Data\CellData\Enum\EProcess.cs" />
+    <Compile Include="Data\CellData\Enum\EReaderType.cs" />
+    <Compile Include="Data\CellData\Enum\EStatus.cs" />
+    <Compile Include="Data\CellData\Enum\ECylinderStatus.cs" />
+    <Compile Include="Data\CellData\Enum\ETrackingResult.cs" />
+    <Compile Include="Data\CellData\ExtentionMethods.cs" />
+    <Compile Include="Data\Config\CConfig.cs" />
+    <Compile Include="Data\Config\Define\CConfig.CommunicationParameter.cs" />
+    <Compile Include="Data\Config\Define\CConfig.EcmParameter.cs" />
+    <Compile Include="Data\Config\Define\CConfig.FileInterfaceParameter.cs" />
+    <Compile Include="Data\Config\Define\CConfig.InterfaceParameter.cs" />
+    <Compile Include="Data\Config\Define\ConfigIni\CConfig.CimParameter.cs" />
+    <Compile Include="Data\Config\Define\ConfigIni\CConfig.DatabaseParameter.cs" />
+    <Compile Include="Data\Config\Define\ConfigIni\CConfig.MccOptionParameter.cs" />
+    <Compile Include="Data\Config\Define\ConfigIni\CConfig.OptionParameter.cs" />
+    <Compile Include="Data\Config\Define\ConfigIni\CConfig.SignalTowerParameter.cs" />
+    <Compile Include="Data\Config\Define\ConfigIni\CConfig.SystemParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.AlignInitializeParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.InspInitializeParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.RobotInitializeParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.SafetyPlcParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.AngleSensorParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.ElectrostaticParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.FfuParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.MeasurementInitializeParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.PowerMeterParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.MccInitializeParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.MCRParameter.cs" />
+    <Compile Include="Data\Config\Define\DeviceIni\CConfig.TemperatureParameter.cs" />
+    <Compile Include="Data\Config\Define\DllVersionIni\CConfig.DllVersionParameter.cs" />
+    <Compile Include="Data\Config\Define\IniFolder\CConfig.AnalogCalibrationParameter.cs" />
+    <Compile Include="Data\Config\Define\IniFolder\CConfig.CCLinkIEParameter.cs" />
+    <Compile Include="Data\Config\Define\IniFolder\CConfig.CCLinkVer2Parameter.cs" />
+    <Compile Include="Data\Config\Define\IniFolder\CConfig.IOInitializeParameter.cs" />
+    <Compile Include="Data\Config\Define\IniFolder\CConfig.SpecificationVersionStateParameter.cs" />
+    <Compile Include="Data\Config\Define\ModelFolder\CConfig.AlignOptionParameter.cs" />
+    <Compile Include="Data\Config\Define\ModelFolder\CConfig.CrucialOptionParameter.cs" />
+    <Compile Include="Data\Config\Define\ModelFolder\CConfig.OffsetParameter.cs" />
+    <Compile Include="Data\Config\Define\ModelFolder\CConfig.RobotModelParameter.cs" />
+    <Compile Include="Data\Config\Define\ModelFolder\CConfig.ModelParameter.cs" />
+    <Compile Include="Data\Config\Define\ModelFolder\CConfig.InspOptionParameter.cs" />
+    <Compile Include="Data\Config\Define\VirtualConfigIni\CConfig.VirtualParameter.cs" />
+    <Compile Include="Data\Config\WaitTime\Define\IgnoreSettingAttribute.cs" />
+    <Compile Include="Data\Config\WaitTime\Define\IReadOnlyWaitTime.cs" />
+    <Compile Include="Data\Config\WaitTime\Define\IWaitTimeSetting.cs" />
+    <Compile Include="Data\Config\WaitTime\Define\WaitTime.CategoryAttribute.cs" />
+    <Compile Include="Data\Config\WaitTime\Define\WaitTime.CommTimeout.cs" />
+    <Compile Include="Data\Config\WaitTime\Define\WaitTIme.Equipment.cs" />
+    <Compile Include="Data\Config\WaitTime\Define\WaitTime.Etc.cs" />
+    <Compile Include="Data\Config\WaitTime\Define\WaitTime.ImplWaitTime.cs" />
+    <Compile Include="Data\Config\WaitTime\Enum\ETimeUnit.cs" />
+    <Compile Include="Data\Config\WaitTime\ExtensionMethods.cs" />
+    <Compile Include="Data\Config\WaitTime\WaitTime.cs" />
+    <Compile Include="Data\CProcessMain.SerialReaders.cs" />
+    <Compile Include="Data\CRecipe.cs" />
+    <Compile Include="Data\BackupFileMap.cs" />
+    <Compile Include="Data\Door\Define\EDoor.cs" />
+    <Compile Include="Data\Door\Define\EGroup.cs" />
+    <Compile Include="Data\Door\Define\EType.cs" />
+    <Compile Include="Data\Door\DoorManager.cs" />
+    <Compile Include="Data\Door\DoorManager.OneDoor.cs" />
+    <Compile Include="Data\Door\ExtentionMethods.cs" />
+    <Compile Include="Data\Door\IDoor.cs" />
+    <Compile Include="Data\EHS\EMS\EEmsGroupFlags.cs" />
+    <Compile Include="Data\EHS\EMS\IEmsHandle.cs" />
+    <Compile Include="Data\EHS\ExtensionMethods.cs" />
+    <Compile Include="Data\FileClean.Define.ConfigSet.cs" />
+    <Compile Include="Data\FileClean.Define.ScheduleItemSet.cs" />
+    <Compile Include="Data\FileClean.Scheduler.cs" />
+    <Compile Include="Data\IBackupFileMapUserInterface.cs" />
+    <Compile Include="Data\IReadOnlyBackupFileMap.cs" />
+    <Compile Include="Data\KeepData.cs" />
+    <Compile Include="Data\Mcc\Log\LogItems\ActionLog\05_OutFlipMccLogItems.cs" />
+    <Compile Include="Data\Mcc\Log\LogItems\ActionLog\06_OutConveyorMccLogItems.cs" />
+    <Compile Include="Data\Mcc\Log\MccLogManager.cs" />
+    <Compile Include="Data\Mcc\Log\Extention\MccLogExtention.cs" />
+    <Compile Include="Data\Mcc\Log\Extention\MccLogProvider.cs" />
+    <Compile Include="Data\Mcc\Log\Define\UnitName.cs" />
+    <Compile Include="Data\Mcc\Log\IMccLogItem.cs" />
+    <Compile Include="Data\Mcc\Log\MccSignalLogItem.cs" />
+    <Compile Include="Data\Mcc\Log\MccActionLogItem.cs" />
+    <Compile Include="Data\Mcc\Log\MccLogData.cs" />
+    <Compile Include="Data\Mcc\Log\LogItems\ActionLog\01_InShuttleMccLogItems.cs" />
+    <Compile Include="Data\Mcc\Log\LogItems\ActionLog\04_OutRobotMccLogItems.cs" />
+    <Compile Include="Data\Mcc\Log\LogItems\ActionLog\03_InspStageMccLogItems.cs" />
+    <Compile Include="Data\Mcc\Log\LogItems\ActionLog\99_InspectMccLogItems.cs" />
+    <Compile Include="Data\Mcc\Log\LogItems\ActionLog\02_InRobotMccLogItems.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\ConnectInfo.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\IClock.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\IFileSystem.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\IMccConfig.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\IMccLogQueue.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\IPathBuilder.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\IRemoteFileClient.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\IRetentionPolicy.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\IRotationPolicy.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\SystemClock.cs" />
+    <Compile Include="Data\Mcc\Transfer\Abstractions\SystemFileSystem.cs" />
+    <Compile Include="Data\Mcc\Transfer\Adapter\ConcurrentMccLogQueueAdapter.cs" />
+    <Compile Include="Data\Mcc\Transfer\Implementations\DefaultPathBuilder.cs" />
+    <Compile Include="Data\Mcc\Transfer\Implementations\SimpleRetentionPolicy.cs" />
+    <Compile Include="Data\Mcc\Transfer\Implementations\TimeWindowRotationPolicy.cs" />
+    <Compile Include="Data\Mcc\Transfer\Adapter\MccConfigAdapter.cs" />
+    <Compile Include="Data\Mcc\Transfer\MccLogTransferService.cs" />
+    <Compile Include="Data\Mcc\Transfer\Adapter\RemoteFileClientAdapter.cs" />
+    <Compile Include="Data\MtbiDataCollector.cs" />
+    <Compile Include="Data\OutputTactTime.cs" />
+    <Compile Include="Data\ProductCounter.cs" />
+    <Compile Include="Data\Resource.cs" />
+    <Compile Include="Data\SerialReader\ISerialReaderConfig.cs" />
+    <Compile Include="Data\SerialReader\ISerialReaderInitializer.cs" />
+    <Compile Include="Data\SerialReader\ISerialReaderReportCsv.cs" />
+    <Compile Include="Data\SerialReader\ISerialReaderStatistics.cs" />
+    <Compile Include="Data\SerialReader\ReadingEventArgs.cs" />
+    <Compile Include="Data\SerialReader\SerialReader.cs" />
+    <Compile Include="Data\TactLogger\CellOutputEventArgs.cs" />
+    <Compile Include="Data\TactLogger\EAction.cs" />
+    <Compile Include="Data\TactLogger\ICellOutputUnit.cs" />
+    <Compile Include="Data\TactLogger\IReadOnlyTactLogger.cs" />
+    <Compile Include="Data\TactLogger\IReadOnlyTactLoggerSet.cs" />
+    <Compile Include="Data\TactLogger\TactLogger.cs" />
+    <Compile Include="Data\TactLogger\TactLoggerSet.cs" />
+    <Compile Include="Data\TactLogger\WritingLogEventArgs.cs" />
+    <Compile Include="Data\TactTime_PriviousStyle\CCycleTactTime.cs" />
+    <Compile Include="Data\TactTime_PriviousStyle\CTactTime.cs" />
+    <Compile Include="Data\TactTime_PriviousStyle\ETactTime.cs" />
+    <Compile Include="Data\TactTime_PriviousStyle\Manager.cs" />
+    <Compile Include="Data\TactTime_PriviousStyle\Tact.cs" />
+    <Compile Include="Data\TactTime_PriviousStyle\UnitTact.cs" />
+    <Compile Include="Data\Utils\AutoScale.cs" />
+    <Compile Include="Data\Utils\CompressZipByIO.cs" />
+    <Compile Include="Data\Utils\ConditionBuilder.cs" />
+    <Compile Include="Data\Utils\ConvertRotateXY.cs" />
+    <Compile Include="Data\Utils\CountRecoder.cs" />
+    <Compile Include="Data\Utils\DeepClone.cs" />
+    <Compile Include="Data\Utils\DigitalSignalObserver.cs" />
+    <Compile Include="Data\Utils\ExceptionTool.cs" />
+    <Compile Include="Data\Utils\GetBuildDateTime.cs" />
+    <Compile Include="Data\Utils\GetFileVersion.cs" />
+    <Compile Include="Data\Utils\GetTimeStamp.cs" />
+    <Compile Include="Data\Utils\GetUiInputIdleTime.cs" />
+    <Compile Include="Data\Utils\InRange.cs" />
+    <Compile Include="Data\Utils\NoiseFilter\FilterOptionFlags.cs" />
+    <Compile Include="Data\Utils\NoiseFilter\NoiseFilter.cs" />
+    <Compile Include="Data\Utils\NoiseFilter\NoiseFilterManager.cs" />
+    <Compile Include="Data\Utils\PagingHandler.cs" />
+    <Compile Include="Data\Utils\RegistryComponent.cs" />
+    <Compile Include="Data\Utils\SetAllStringMemberValues.cs" />
+    <Compile Include="Data\Utils\Shuffle.cs" />
+    <Compile Include="Data\Utils\SyncToken.cs" />
+    <Compile Include="Data\Utils\SystemTime.cs" />
+    <Compile Include="Data\Utils\TimedAlarmActivator\TimedAlarmActivator.cs" />
+    <Compile Include="Data\Utils\TimedAlarmActivator\TimedAlarmActivator.Statistics.cs" />
+    <Compile Include="Data\Utils\TimedAlarmActivator\TimedAlarmActivator.TimedAlarm.cs" />
+    <Compile Include="Data\Xml\Collections\XmlSerializableDictionary.cs" />
+    <Compile Include="Data\Xml\Serialization\XmlSerializer.cs" />
+    <Compile Include="Data\Xml\Serialization\XmlSerializerHelper.cs" />
+    <Compile Include="DEVICE\ACTUATOR\CVacuum.cs" />
+    <Compile Include="DEVICE\Align\CDeviceAlignInterface.cs" />
+    <Compile Include="DEVICE\Align\Define\Enum\EStatus.cs" />
+    <Compile Include="DEVICE\Align\Define\Enum\EWait.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\GetCellCount.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\ParsingError.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseAlignCompleteData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseAlignErrorData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseAlignResultData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseAlignStartData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseCalibrationCompleteData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseCalibrationMoveCompleteData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseCalibrationMoveData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseCalibrationMoveHomeData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseCalibrationStartData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseLightLevelResultData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseLightTemperatureResultData.cs" />
+    <Compile Include="DEVICE\Align\Define\ExtensionMethods\TryParseModelListResultData.cs" />
+    <Compile Include="DEVICE\Align\Define\ReceiveData\AlignCompleteData.cs" />
+    <Compile Include="DEVICE\Align\Define\ReceiveData\AlignResultData.cs" />
+    <Compile Include="DEVICE\Align\Define\ReceiveData\AlignStartData.cs" />
+    <Compile Include="DEVICE\Align\Define\ReceiveData\CalibrationMoveData.cs" />
+    <Compile Include="DEVICE\Align\Define\ReceiveData\CalibrationMoveHomeData.cs" />
+    <Compile Include="DEVICE\Align\Define\SendData\AlignStartData.cs" />
+    <Compile Include="DEVICE\AngleSensor\CDeviceAngleSensor.cs" />
+    <Compile Include="DEVICE\AngleSensor\CDeviceAngleSensorAbstract.cs" />
+    <Compile Include="DEVICE\AngleSensor\CDeviceAngleSensorDgac.cs" />
+    <Compile Include="DEVICE\AngleSensor\CDeviceAngleSensorVirtual.cs" />
+    <Compile Include="DEVICE\ACTUATOR\CVacuumAbstract.cs" />
+    <Compile Include="DEVICE\Electrostatic\CDeviceElectrostatic.cs" />
+    <Compile Include="DEVICE\Electrostatic\CDeviceElectrostaticAbstract.cs" />
+    <Compile Include="DEVICE\Electrostatic\CDeviceElectrostaticPGMS.cs" />
+    <Compile Include="DEVICE\Electrostatic\CDeviceElectrostaticVirtual.cs" />
+    <Compile Include="DEVICE\FFU\CDeviceFfuBlueCordMcul32.cs" />
+    <Compile Include="DEVICE\FFU\CDeviceFfuLocalViewer32.cs" />
+    <Compile Include="DEVICE\Interface\CDeviceInterfaceCCLinkIE.cs" />
+    <Compile Include="DEVICE\Interface\CDeviceInterfaceCCLinkIEVirtual.cs" />
+    <Compile Include="DEVICE\Interface\CDeviceInterfaceCCLinkVer2.cs" />
+    <Compile Include="DEVICE\Interface\CDeviceInterfaceCCLinkVer2Virtual.cs" />
+    <Compile Include="DEVICE\IoHardware.cs" />
+    <Compile Include="DEVICE\IO\CDeviceIODefine.cs" />
+    <Compile Include="DEVICE\Measurement\Factory.cs" />
+    <Compile Include="DEVICE\Measurement\Initialize.cs" />
+    <Compile Include="DEVICE\MOTOR\CDeviceMotorIna.cs" />
+    <Compile Include="DEVICE\MOTOR\CDeviceMotorFastech.cs" />
+    <Compile Include="DEVICE\Nachi\CDeviceNachi.cs" />
+    <Compile Include="DEVICE\Nachi\CDeviceNachi.RobotStatus.cs" />
+    <Compile Include="DEVICE\Nachi\CDeviceNachiInterface.cs" />
+    <Compile Include="DEVICE\Nachi\Define\ERobotCylinder.cs" />
+    <Compile Include="DEVICE\Nachi\Define\EErrorCode.cs" />
+    <Compile Include="DEVICE\Nachi\Define\EJcmCommand.cs" />
+    <Compile Include="DEVICE\Nachi\Define\EMethod.cs" />
+    <Compile Include="DEVICE\Nachi\Define\ERmsDataPosition.cs" />
+    <Compile Include="DEVICE\Nachi\Define\ERobotProcess.cs" />
+    <Compile Include="DEVICE\Nachi\Define\EStage.cs" />
+    <Compile Include="DEVICE\Nachi\Define\ETool.cs" />
+    <Compile Include="DEVICE\Nachi\Define\Geometry.cs" />
+    <Compile Include="DEVICE\Nachi\Define\IBitGroup.cs" />
+    <Compile Include="DEVICE\Nachi\Define\IBitOne.cs" />
+    <Compile Include="DEVICE\Nachi\Define\IHaveLogEvent.cs" />
+    <Compile Include="DEVICE\Nachi\Define\IInputHandler.cs" />
+    <Compile Include="DEVICE\Nachi\Define\IOutputHandler.cs" />
+    <Compile Include="DEVICE\Nachi\Define\IReadOnlyBitGroup.cs" />
+    <Compile Include="DEVICE\Nachi\Define\IReadOnlyBitOne.cs" />
+    <Compile Include="DEVICE\Nachi\Define\NachiRobotAlignData.cs" />
+    <Compile Include="DEVICE\Nachi\Define\ProcessPreOrder.cs" />
+    <Compile Include="DEVICE\Nachi\Define\RmsData.cs" />
+    <Compile Include="DEVICE\Nachi\Define\RmsDataChangedEventArgs.cs" />
+    <Compile Include="DEVICE\Nachi\Define\RobotHandshakeHandler.cs" />
+    <Compile Include="DEVICE\Nachi\Define\SignalController.BitAreaBitGroup.cs" />
+    <Compile Include="DEVICE\Nachi\Define\SignalController.BitAreaBitOne.cs" />
+    <Compile Include="DEVICE\Nachi\Define\SignalController.cs" />
+    <Compile Include="DEVICE\Nachi\Define\SignalController.InputHandler.cs" />
+    <Compile Include="DEVICE\Nachi\Define\SignalController.OutputHandler.cs" />
+    <Compile Include="DEVICE\Nachi\Define\SignalController.WordAreaBitGroup.cs" />
+    <Compile Include="DEVICE\Nachi\Define\SignalController.WordAreaBitOne.cs" />
+    <Compile Include="DEVICE\Nachi\Define\SignalNames.cs" />
+    <Compile Include="DEVICE\Nachi\ExtensionMethods.cs" />
+    <Compile Include="DEVICE\PowerMeter\CDevicePowerMeterAccura2300.cs" />
+    <Compile Include="DEVICE\PowerMeter\FdcReportDataSet.cs" />
+    <Compile Include="DEVICE\SafetyPlc\CDeviceSafetyPlc.cs" />
+    <Compile Include="DEVICE\SafetyPlc\CDeviceSafetyPlcAbstract.cs" />
+    <Compile Include="DEVICE\SafetyPlc\CDeviceSafetyPlcOmronG9SP.cs" />
+    <Compile Include="DEVICE\SafetyPlc\CDeviceSafetyPlcVirtual.cs" />
+    <Compile Include="DEVICE\Svi\CDeviceSviInterface.cs" />
+    <Compile Include="DEVICE\Svi\Define\Data\AlignOffset.cs" />
+    <Compile Include="DEVICE\Svi\Define\Data\CellInformation.cs" />
+    <Compile Include="DEVICE\Svi\Define\Data\DefectPoint.cs" />
+    <Compile Include="DEVICE\Svi\Define\Data\LinkedInspection.cs" />
+    <Compile Include="DEVICE\Svi\Define\Data\TotalResult.cs" />
+    <Compile Include="DEVICE\Svi\Define\Enum\EAlarmType.cs" />
+    <Compile Include="DEVICE\Svi\Define\Enum\EPossible.cs" />
+    <Compile Include="DEVICE\Svi\Define\Enum\EPower.cs" />
+    <Compile Include="DEVICE\Svi\Define\Enum\EStatus.cs" />
+    <Compile Include="DEVICE\Svi\Define\Enum\EWait.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\IsNoCell.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\ParsingError.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseAlignData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseAmoGrabEndData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseAmoGrabStartData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseAutoReviewData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseCellDataSyncData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseCheckLaserStatusData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseCheckStatusData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseCurrentRecipeInformationRequestData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseErrorMessageData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseGrabEndData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseGrabStartData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseInspectResultData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseJavasSoftwareErrorData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseLaserStatusData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseLightDataForDvReport.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseLightIntensityData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseLightTemperatureData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseLinkedInspection.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseRecipeValidationData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseTotalResultDataForCG.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseTotalResultDataForFront.cs" />
+    <Compile Include="DEVICE\Svi\Define\ExtentionMethods\TryParseTotalResultDataForRear.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\AlignData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\AmoGrabEndData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\AmoGrabStartData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\AutoReviewData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\CellDataSyncData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\GrabEndData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\GrabStartData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\InspectResultData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\LightDataForDvReport.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\RecipeValidationData.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\TotalResultDataForCG.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\TotalResultDataForFront.cs" />
+    <Compile Include="DEVICE\Svi\Define\ReceiveData\TotalResultDataForRear.cs" />
+    <Compile Include="DEVICE\Svi\Define\SendData\AmoGrabEndData.cs" />
+    <Compile Include="DEVICE\Svi\Define\SendData\AmoGrabStartData.cs" />
+    <Compile Include="DEVICE\Svi\Define\SendData\CellDataSyncData.cs" />
+    <Compile Include="DEVICE\Svi\Define\SendData\GrabEndData.cs" />
+    <Compile Include="DEVICE\Svi\Define\SendData\GrabStartData.cs" />
+    <Compile Include="DEVICE\Svi\Define\SendData\LinkedInspectionData.cs" />
+    <Compile Include="DEVICE\Temperature\CDeviceTemperatureNEOSHSD.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SEQUENCE\Common\IInputUnitNode.cs" />
+    <Compile Include="SEQUENCE\Common\InterferenceRegion\Define\InterferenceRegion.IInterferenceRegionPermit.cs" />
+    <Compile Include="SEQUENCE\Common\InterferenceRegion\Define\InterferenceRegion.ImplInterferenceRegionPermit.cs" />
+    <Compile Include="SEQUENCE\Common\InterferenceRegion\InterferenceRegion.cs" />
+    <Compile Include="SEQUENCE\Common\IUnitNode.cs" />
+    <Compile Include="SEQUENCE\Common\MotorPositionSet.cs" />
+    <Compile Include="SEQUENCE\Common\SubBatchMotorRepeatMove.cs" />
+    <Compile Include="SEQUENCE\Common\TrackInManager.cs" />
+    <Compile Include="SEQUENCE\Common\TrackInManager.Define.cs" />
+    <Compile Include="SEQUENCE\Common\TrackInManager.TaskTrackInSet.cs" />
+    <Compile Include="SEQUENCE\Common\UnitGroup.cs" />
+    <Compile Include="SEQUENCE\Common\UnitGroup.SequenceConditions.cs" />
+    <Compile Include="SEQUENCE\Common\UnitManager.cs" />
+    <Compile Include="SEQUENCE\Common\UnitManager.UnitGroupOption.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\EVacuumCommand.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\ICheckPending.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\IPassiveVacuumAction.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\ReceiveVacuumEventArgs.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\Address.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\AddressOptionSet.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\Define\LoadInterface.Define.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\LoadInterface.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\LoadInterfaceSignalController.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\EEqToEqUiGroup.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\EqToEqUiDataManager.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\EqToEqUiGroup.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\EqToEqUiOneBitSet.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\EqToEqUiOneDataSet.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\IProcessManagerLoadInterface.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\Define\InShuttle.Define.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\Define\InShuttleAlignVision.Define.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\Define\InShuttleInspect.Define.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\Define\InShuttleMotorX.Define.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\Define\InShuttlePicker.Define.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\InShuttle.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\InShuttle.SequenceConditions.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\InShuttle.SubBatchMove.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\InShuttleAlignVision.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\InShuttleInspect.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\InShuttleInterlock.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\InShuttleMotorX.cs" />
+    <Compile Include="SEQUENCE\Main\01_InShuttle\InShuttlePicker.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\Define\InRobot.Define.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\Define\InRobotMcr.Define.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\Define\InRobotNachi.Define.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\Define\InRobotPicker.Define.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\Define\InRobotSendAlign.Define.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\Define\InRobotTurnCylinder.Define.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\Define\RobotSequenceItemSet.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobot.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobot.PendantRemoteControl.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobot.SequenceConditions.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobot.SubBatchMove.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobot.SubSequence.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobotInterlock.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobotMcr.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobotNachi.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobotPicker.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobotSendAlign.cs" />
+    <Compile Include="SEQUENCE\Main\02_InRobot\InRobotTurnCylinder.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\Define\InspStage.Define.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\Define\InspStageInspect.Define.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\Define\InspStageMotorY.Define.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\Define\InspStagePicker.Define.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\InspStage.InternalAlgorithmData.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\InspStage.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\InspStage.SequenceConditions.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\InspStage.SubBatchMove.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\InspStageInspect.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\InspStageInterlock.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\InspStageMotorY.cs" />
+    <Compile Include="SEQUENCE\Main\03_InspStage\InspStagePicker.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\Define\OutRobot.Define.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\Define\OutRobotTurnCylinder.Define.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\Define\OutRobotNachi.Define.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\Define\OutRobotPicker.Define.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\Define\RobotSequenceItemSet.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\OutRobot.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\OutRobot.PendantRemoteControl.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\OutRobot.SequenceConditions.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\OutRobot.SubBatchMove.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\OutRobot.SubSequence.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\OutRobotTurnCylinder.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\OutRobotInterlock.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\OutRobotNachi.cs" />
+    <Compile Include="SEQUENCE\Main\04_OutRobot\OutRobotPicker.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\Define\OutFlipMotorR.Define.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\Define\OutFlipMotorX.Define.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\Define\OutFlip.Define.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\Define\OutFlipMotorZ.Define.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\Define\OutFlipPicker.Define.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\Define\OutFlipSensor.Define.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlip.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlip.SequenceConditions.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlip.SubBatchMove.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlipInterlock.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlipMotorR.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlipMotorX.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlipMotorZ.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlipPicker.cs" />
+    <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlipSensor.cs" />
+    <Compile Include="UI\Dialog\CDialogAlarmPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogAlarmPosition.designer.cs">
+      <DependentUpon>CDialogAlarmPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogIndividualAnalogCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogIndividualAnalogCalibration.Designer.cs">
+      <DependentUpon>CDialogIndividualAnalogCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogJudgemnetTableSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogJudgemnetTableSelect.Designer.cs">
+      <DependentUpon>CDialogJudgemnetTableSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogMessage.designer.cs">
+      <DependentUpon>CDialogMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogNoOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogNoOperation.designer.cs">
+      <DependentUpon>CDialogNoOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogNotification.Designer.cs">
+      <DependentUpon>CDialogNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogSelectLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogSelectLanguage.designer.cs">
+      <DependentUpon>CDialogSelectLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\PopupKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\PopupKeyPad.Designer.cs">
+      <DependentUpon>PopupKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DoubleBufferPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEQUENCE\Abstract\CProcessAbstract.cs" />
+    <Compile Include="SEQUENCE\Abstract\CProcessInterlockAbstract.cs" />
+    <Compile Include="SEQUENCE\Common\CProcessInterlock.cs" />
+    <Compile Include="SEQUENCE\Common\CProcessMotion.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\EInterface.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\EPosition.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\IProcessManagerInterface.cs" />
+    <Compile Include="SEQUENCE\Common\TrackOut.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="UI\Dialog\CDialogPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogPassword.designer.cs">
+      <DependentUpon>CDialogPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DrawComponentGroupPosition.cs" />
+    <Compile Include="UI\DrawImageToPictureBox.cs" />
+    <Compile Include="UI\ESwapOrigin.cs" />
+    <Compile Include="UI\FlagEnumUiEditor.cs" />
+    <Compile Include="UI\FormEnumSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormEnumSelect.designer.cs">
+      <DependentUpon>FormEnumSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormFlagSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormFlagSelect.designer.cs">
+      <DependentUpon>FormFlagSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfig.designer.cs">
+      <DependentUpon>CFormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigOffset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigOffset.Designer.cs">
+      <DependentUpon>CFormConfigOffset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigWaitTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigWaitTime.designer.cs">
+      <DependentUpon>CFormConfigWaitTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormAlarm.designer.cs">
+      <DependentUpon>CFormAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormMain.designer.cs">
+      <DependentUpon>CFormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupDevice.designer.cs">
+      <DependentUpon>CFormSetupDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupIO.designer.cs">
+      <DependentUpon>CFormSetupIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupMonitor.Designer.cs">
+      <DependentUpon>CFormSetupMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupMotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupMotion.designer.cs">
+      <DependentUpon>CFormSetupMotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupNachi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupNachi.designer.cs">
+      <DependentUpon>CFormSetupNachi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupNachiOffsetData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupNachiOffsetData.designer.cs">
+      <DependentUpon>CFormSetupNachiOffsetData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsProduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsProduction.designer.cs">
+      <DependentUpon>CFormStatisticsProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachCylinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachCylinder.Designer.cs">
+      <DependentUpon>CFormTeachCylinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachInRobot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachInRobot.designer.cs">
+      <DependentUpon>CFormTeachInRobot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachOutFlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachOutFlip.designer.cs">
+      <DependentUpon>CFormTeachOutFlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachInShuttle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachInShuttle.designer.cs">
+      <DependentUpon>CFormTeachInShuttle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachInspStage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachInspStage.designer.cs">
+      <DependentUpon>CFormTeachInspStage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachOutRobot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachOutRobot.designer.cs">
+      <DependentUpon>CFormTeachOutRobot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HMergedCell.cs" />
+    <Compile Include="UI\IoIndicatorSet.cs" />
+    <Compile Include="UI\LineBetweenControls.cs" />
+    <Compile Include="UI\OffsetData.cs" />
+    <Compile Include="UI\SpeedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\CDefine.cs" />
+    <Compile Include="UI\Dialog\CDialogEQState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogEQState.Designer.cs">
+      <DependentUpon>CDialogEQState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogWait.designer.cs">
+      <DependentUpon>CDialogWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogDoor.Designer.cs">
+      <DependentUpon>CDialogDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialog\CDialogLogin.designer.cs">
+      <DependentUpon>CDialogLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigMCCLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigMCCLog.Designer.cs">
+      <DependentUpon>CFormConfigMCCLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormCommon.designer.cs">
+      <DependentUpon>CFormCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormMainCIM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormMainCIM.designer.cs">
+      <DependentUpon>CFormMainCIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormMainFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormMainFlow.designer.cs">
+      <DependentUpon>CFormMainFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormMenu.designer.cs">
+      <DependentUpon>CFormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormTitle.designer.cs">
+      <DependentUpon>CFormTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Main\CFormView.designer.cs">
+      <DependentUpon>CFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Main\CMainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Main\CMainFrame.designer.cs">
+      <DependentUpon>CMainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupAlignVision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupAlignVision.Designer.cs">
+      <DependentUpon>CFormSetupAlignVision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupEqToEq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupEqToEq.Designer.cs">
+      <DependentUpon>CFormSetupEqToEq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupVision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupVision.Designer.cs">
+      <DependentUpon>CFormSetupVision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsCellLogItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsCellLogItem.Designer.cs">
+      <DependentUpon>CFormStatisticsCellLogItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsDBCell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsDBCell.Designer.cs">
+      <DependentUpon>CFormStatisticsDBCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsDBEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsDBEvent.Designer.cs">
+      <DependentUpon>CFormStatisticsDBEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsDBMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsDBMessage.Designer.cs">
+      <DependentUpon>CFormStatisticsDBMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsDBProcessData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsDBProcessData.Designer.cs">
+      <DependentUpon>CFormStatisticsDBProcessData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsEQPLoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsEQPLoss.Designer.cs">
+      <DependentUpon>CFormStatisticsEQPLoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsEQtoEQLoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsEQtoEQLoss.Designer.cs">
+      <DependentUpon>CFormStatisticsEQtoEQLoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsEquipmentOperationMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsEquipmentOperationMonitoring.Designer.cs">
+      <DependentUpon>CFormStatisticsEquipmentOperationMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachData.Designer.cs">
+      <DependentUpon>CFormTeachData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CProcessLogin.cs" />
+    <Compile Include="Data\CProcessSafetyDoor.cs" />
+    <Compile Include="Data\CSafetyIO.cs" />
+    <Compile Include="Database\CCryptography.cs" />
+    <Compile Include="Database\CCsvFile.cs" />
+    <Compile Include="Database\CDatabaseAbstract.cs" />
+    <Compile Include="Database\CDatabaseImplementAbstract.cs" />
+    <Compile Include="Database\CDatabaseImplementHistory.cs" />
+    <Compile Include="Database\CDatabaseSendMessage.cs" />
+    <Compile Include="Database\CErrorReturn.cs" />
+    <Compile Include="Database\CProcessDatabaseHistory.cs" />
+    <Compile Include="Database\CProcessDatabaseHistoryEquipmentLowerLossTimeEvent.cs" />
+    <Compile Include="Database\CProcessDatabaseHistoryEquipmentUpperLossTimeEvent.cs" />
+    <Compile Include="Database\CProcessDatabaseInformation.cs" />
+    <Compile Include="Database\CProcessDatabaseHistoryAlarmEvent.cs" />
+    <Compile Include="Database\CProcessDatabaseHistoryDelete.cs" />
+    <Compile Include="Database\CProcessDatabase.cs" />
+    <Compile Include="Database\CProcessDatabaseHistoryEquipmentStopEvent.cs" />
+    <Compile Include="Database\CTxtFile.cs" />
+    <Compile Include="Data\CProcessTowerLamp.cs" />
+    <Compile Include="Data\CUserInformation.cs" />
+    <Compile Include="Data\MMF\CMMFManagerMachineStatus.cs" />
+    <Compile Include="Data\MMF\CMMFPagesMachineStatus.cs" />
+    <Compile Include="DEVICE\FileInterface\CDeviceFileInterface.cs" />
+    <Compile Include="DEVICE\FileInterface\CDeviceFileInterfaceAbstract.cs" />
+    <Compile Include="DEVICE\FileInterface\CDeviceFileInterfaceFTP.cs" />
+    <Compile Include="DEVICE\FileInterface\CDeviceFileInterfaceVirtual.cs" />
+    <Compile Include="Database\CProcessDatabaseMonitorSVID.cs" />
+    <Compile Include="Database\CDatabaseDefine.cs" />
+    <Compile Include="Database\CManagerTable.cs" />
+    <Compile Include="Database\CSchemaInformation.cs" />
+    <Compile Include="Database\CSQLite.cs" />
+    <Compile Include="Data\ClassINI.cs" />
+    <Compile Include="Data\CModel.cs" />
+    <Compile Include="Data\CDocument.cs" />
+    <Compile Include="UI\Form\Config\CFormConfigOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigOption.Designer.cs">
+      <DependentUpon>CFormConfigOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigRecipe.Designer.cs">
+      <DependentUpon>CFormConfigRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigSignalTower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Config\CFormConfigSignalTower.Designer.cs">
+      <DependentUpon>CFormConfigSignalTower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CFormInterface.cs" />
+    <Compile Include="UI\Form\Setup\CFormSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetup.Designer.cs">
+      <DependentUpon>CFormSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupDB.Designer.cs">
+      <DependentUpon>CFormSetupDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupInitialize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Setup\CFormSetupInitialize.Designer.cs">
+      <DependentUpon>CFormSetupInitialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatistics.Designer.cs">
+      <DependentUpon>CFormStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsAlarm.Designer.cs">
+      <DependentUpon>CFormStatisticsAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsTactTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Statistics\CFormStatisticsTactTime.Designer.cs">
+      <DependentUpon>CFormStatisticsTactTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeach.Designer.cs">
+      <DependentUpon>CFormTeach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachVacuum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachVacuum.Designer.cs">
+      <DependentUpon>CFormTeachVacuum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CProcessMain.cs" />
+    <Compile Include="Data\MMF\CMMFDataDefine.cs" />
+    <Compile Include="DEVICE\ACTUATOR\CCylinder.cs" />
+    <Compile Include="DEVICE\ACTUATOR\CCylinderAbstract.cs" />
+    <Compile Include="DEVICE\FFU\CDeviceFFU.cs" />
+    <Compile Include="DEVICE\FFU\CDeviceFFUAbstract.cs" />
+    <Compile Include="DEVICE\FFU\CDeviceFFUMCU32.cs" />
+    <Compile Include="DEVICE\FFU\CDeviceFFUVirtual.cs" />
+    <Compile Include="DEVICE\Interface\CDeviceInterface.cs" />
+    <Compile Include="DEVICE\Interface\CDeviceInterfaceAbstract.cs" />
+    <Compile Include="DEVICE\IO\CDeviceIO.cs" />
+    <Compile Include="DEVICE\IO\CDeviceIOAbstract.cs" />
+    <Compile Include="DEVICE\IO\CDeviceIOAjin.cs" />
+    <Compile Include="DEVICE\IO\CDeviceIOVirtual.cs" />
+    <Compile Include="DEVICE\MCR\CDeviceMCR.cs" />
+    <Compile Include="DEVICE\MCR\CDeviceMCRAbstract.cs" />
+    <Compile Include="DEVICE\MCR\CDeviceMCRCognex.cs" />
+    <Compile Include="DEVICE\MCR\CDeviceMCRVirtual.cs" />
+    <Compile Include="DEVICE\MOTOR\CDeviceMotor.cs" />
+    <Compile Include="DEVICE\MOTOR\CDeviceMotorAbstract.cs" />
+    <Compile Include="DEVICE\MOTOR\CDeviceMotorAjin.cs" />
+    <Compile Include="DEVICE\MOTOR\CDeviceMotorVirtual.cs" />
+    <Compile Include="DEVICE\PowerMeter\CDevicePowerMeter.cs" />
+    <Compile Include="DEVICE\PowerMeter\CDevicePowerMeterAbstract.cs" />
+    <Compile Include="DEVICE\PowerMeter\CDevicePowerMeterAccura2500.cs" />
+    <Compile Include="DEVICE\PowerMeter\CDevicePowerMeterVirtual.cs" />
+    <Compile Include="DEVICE\Temperature\CDeviceTemperature.cs" />
+    <Compile Include="DEVICE\Temperature\CDeviceTemperatureAbstract.cs" />
+    <Compile Include="DEVICE\Temperature\CDeviceTemperatureTK4S.cs" />
+    <Compile Include="DEVICE\Temperature\CDeviceTemperatureVirtual.cs" />
+    <Compile Include="UI\FormKeyBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormKeyBoard.designer.cs">
+      <DependentUpon>FormKeyBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormKeyPad.designer.cs">
+      <DependentUpon>FormKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\SwapComponentPosition.cs" />
+    <Compile Include="UI\SwapPair.cs" />
+    <Compile Include="UI\SwapPairEventArgs.cs" />
+    <Compile Include="UI\UserControls\UcCellIndicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcCellIndicator.designer.cs">
+      <DependentUpon>UcCellIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcCell.designer.cs">
+      <DependentUpon>UcCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcDoorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcDoorControl.Designer.cs">
+      <DependentUpon>UcDoorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcDoorStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcDoorStatus.Designer.cs">
+      <DependentUpon>UcDoorStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcMonitorCellInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcMonitorCellInfo.Designer.cs">
+      <DependentUpon>UcMonitorCellInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcSettingAlign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcSettingAlign.Designer.cs">
+      <DependentUpon>UcSettingAlign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcShellSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcShellSelector.designer.cs">
+      <DependentUpon>UcShellSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcTeachCylinder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcTeachCylinder.Designer.cs">
+      <DependentUpon>UcTeachCylinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcHandshakeSignalItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcHandshakeSignalItem.Designer.cs">
+      <DependentUpon>UcHandshakeSignalItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcTeachVacuum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcTeachVacuum.designer.cs">
+      <DependentUpon>UcTeachVacuum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcTrayModelData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcTrayModelData.Designer.cs">
+      <DependentUpon>UcTrayModelData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcUnitStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcUnitStatus.designer.cs">
+      <DependentUpon>UcUnitStatus.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CIM\CDialogCellOutCode.resx">
+      <DependentUpon>CDialogCellOutCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIM\CDialogCIMConnectWait.resx">
+      <DependentUpon>CDialogCIMConnectWait.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIM\CDialogCIMDisconnected.resx">
+      <DependentUpon>CDialogCIMDisconnected.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIM\CDialogCIMMessageTest.resx">
+      <DependentUpon>CDialogCIMMessageTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIM\CDialogEQPFunctionList.resx">
+      <DependentUpon>CDialogEQPFunctionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIM\CDialogInterlockMessage.resx">
+      <DependentUpon>CDialogInterlockMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIM\CDialogLossCode.resx">
+      <DependentUpon>CDialogLossCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIM\CDialogOperatorCallMessage.resx">
+      <DependentUpon>CDialogOperatorCallMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIM\CDialogTerminalMessage.resx">
+      <DependentUpon>CDialogTerminalMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIM\CDialogUnitInterlockMessage.resx">
+      <DependentUpon>CDialogUnitInterlockMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogAlarmPosition.resx">
+      <DependentUpon>CDialogAlarmPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogIndividualAnalogCalibration.resx">
+      <DependentUpon>CDialogIndividualAnalogCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogEQState.resx">
+      <DependentUpon>CDialogEQState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogJudgemnetTableSelect.resx">
+      <DependentUpon>CDialogJudgemnetTableSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogMessage.resx">
+      <DependentUpon>CDialogMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogNoOperation.resx">
+      <DependentUpon>CDialogNoOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogNotification.resx">
+      <DependentUpon>CDialogNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogPassword.resx">
+      <DependentUpon>CDialogPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogSelectLanguage.resx">
+      <DependentUpon>CDialogSelectLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogWait.resx">
+      <DependentUpon>CDialogWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogDoor.resx">
+      <DependentUpon>CDialogDoor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\CDialogLogin.resx">
+      <DependentUpon>CDialogLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialog\PopupKeyPad.resx">
+      <DependentUpon>PopupKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormEnumSelect.resx">
+      <DependentUpon>FormEnumSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormFlagSelect.resx">
+      <DependentUpon>FormFlagSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Config\CFormConfig.resx">
+      <DependentUpon>CFormConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Config\CFormConfigMCCLog.resx">
+      <DependentUpon>CFormConfigMCCLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Config\CFormConfigOption.resx">
+      <DependentUpon>CFormConfigOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Config\CFormConfigOffset.resx">
+      <DependentUpon>CFormConfigOffset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Config\CFormConfigRecipe.resx">
+      <DependentUpon>CFormConfigRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Config\CFormConfigSignalTower.resx">
+      <DependentUpon>CFormConfigSignalTower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Config\CFormConfigWaitTime.resx">
+      <DependentUpon>CFormConfigWaitTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Main\CFormAlarm.resx">
+      <DependentUpon>CFormAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Main\CFormCommon.resx">
+      <DependentUpon>CFormCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Main\CFormMain.resx">
+      <DependentUpon>CFormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Main\CFormMainCIM.resx">
+      <DependentUpon>CFormMainCIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Main\CFormMainFlow.resx">
+      <DependentUpon>CFormMainFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Main\CFormMenu.resx">
+      <DependentUpon>CFormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Main\CFormTitle.resx">
+      <DependentUpon>CFormTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Main\CFormView.resx">
+      <DependentUpon>CFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Main\CMainFrame.resx">
+      <DependentUpon>CMainFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetup.resx">
+      <DependentUpon>CFormSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupAlignVision.resx">
+      <DependentUpon>CFormSetupAlignVision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupDevice.resx">
+      <DependentUpon>CFormSetupDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupIO.resx">
+      <DependentUpon>CFormSetupIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupMonitor.resx">
+      <DependentUpon>CFormSetupMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupMotion.resx">
+      <DependentUpon>CFormSetupMotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupEqToEq.resx">
+      <DependentUpon>CFormSetupEqToEq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupDB.resx">
+      <DependentUpon>CFormSetupDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupInitialize.resx">
+      <DependentUpon>CFormSetupInitialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupNachi.resx">
+      <DependentUpon>CFormSetupNachi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupNachiOffsetData.resx">
+      <DependentUpon>CFormSetupNachiOffsetData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Setup\CFormSetupVision.resx">
+      <DependentUpon>CFormSetupVision.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatistics.resx">
+      <DependentUpon>CFormStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsAlarm.resx">
+      <DependentUpon>CFormStatisticsAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsCellLogItem.resx">
+      <DependentUpon>CFormStatisticsCellLogItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsDBCell.resx">
+      <DependentUpon>CFormStatisticsDBCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsDBEvent.resx">
+      <DependentUpon>CFormStatisticsDBEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsDBMessage.resx">
+      <DependentUpon>CFormStatisticsDBMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsDBProcessData.resx">
+      <DependentUpon>CFormStatisticsDBProcessData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsEQPLoss.resx">
+      <DependentUpon>CFormStatisticsEQPLoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsEQtoEQLoss.resx">
+      <DependentUpon>CFormStatisticsEQtoEQLoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsEquipmentOperationMonitoring.resx">
+      <DependentUpon>CFormStatisticsEquipmentOperationMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsProduction.resx">
+      <DependentUpon>CFormStatisticsProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Statistics\CFormStatisticsTactTime.resx">
+      <DependentUpon>CFormStatisticsTactTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeach.resx">
+      <DependentUpon>CFormTeach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachCylinder.resx">
+      <DependentUpon>CFormTeachCylinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachData.resx">
+      <DependentUpon>CFormTeachData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachInRobot.resx">
+      <DependentUpon>CFormTeachInRobot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachOutFlip.resx">
+      <DependentUpon>CFormTeachOutFlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachInShuttle.resx">
+      <DependentUpon>CFormTeachInShuttle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachInspStage.resx">
+      <DependentUpon>CFormTeachInspStage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachOutRobot.resx">
+      <DependentUpon>CFormTeachOutRobot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachVacuum.resx">
+      <DependentUpon>CFormTeachVacuum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormKeyBoard.resx">
+      <DependentUpon>FormKeyBoard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormKeyPad.resx">
+      <DependentUpon>FormKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SpeedButton.resx">
+      <DependentUpon>SpeedButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcCellIndicator.resx">
+      <DependentUpon>UcCellIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcCell.resx">
+      <DependentUpon>UcCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcDoorControl.resx">
+      <DependentUpon>UcDoorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcDoorStatus.resx">
+      <DependentUpon>UcDoorStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcHandshakeSignalItem.resx">
+      <DependentUpon>UcHandshakeSignalItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcMonitorCellInfo.resx">
+      <DependentUpon>UcMonitorCellInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcSettingAlign.resx">
+      <DependentUpon>UcSettingAlign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcShellSelector.resx">
+      <DependentUpon>UcShellSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcTeachCylinder.resx">
+      <DependentUpon>UcTeachCylinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcTeachVacuum.resx">
+      <DependentUpon>UcTeachVacuum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcTrayModelData.resx">
+      <DependentUpon>UcTrayModelData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcUnitStatus.resx">
+      <DependentUpon>UcUnitStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Database\RECORD\RECORD_INFORMATION_ALARM.xlsx" />
+    <None Include="Database\RECORD\RECORD_INFORMATION_SVID.xlsx" />
+    <None Include="Database\RECORD\RECORD_INFORMATION_UI_TEXT.xlsx" />
+    <None Include="Database\RECORD\RECORD_INFORMATION_USER.xlsx" />
+    <None Include="Database\RECORD\RECORD_INFORMATION_USER_MESSAGE.xlsx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq\EqToEq.SelfToUpper.Bits.xlsx" />
+    <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq\EqToEq.SelfToUpper.Words.xlsx" />
+    <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq\EqToEq.UpperToSelf.Bits.xlsx" />
+    <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq\EqToEq.UpperToSelf.Words.xlsx" />
+    <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq\MonitorIO.Conveyor.xlsx" />
+    <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq\MonitorIO.Position.xlsx" />
+    <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq\MonitorIO.Words.xlsx" />
+    <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataGroups\EqToEq\EqToEq.BitDeviceMap.xlsx" />
+    <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataGroups\EqToEq\EqToEq.WordDeviceMap.xlsx" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToUpper.BitsSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToUpper.Bits.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToUpper.WordsSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToUpper.Words.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.UpperToSelf.BitsSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.UpperToSelf.Bits.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.UpperToSelf.WordsSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.UpperToSelf.Words.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\MonitorIO.ConveyorSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\MonitorIO.Conveyor.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\MonitorIO.PositionSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\MonitorIO.Position.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\MonitorIO.WordsSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\MonitorIO.Words.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataGroups\EqToEq.BitDeviceMapSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataGroups\EqToEq.BitDeviceMap.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataGroups\EqToEq.WordDeviceMapSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataGroups\EqToEq.WordDeviceMap.g.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOP_VIEW_FLOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENC.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AXL.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\RECORD\RECORD_INFORMATION_ALARM.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\RECORD\RECORD_INFORMATION_SVID.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\RECORD\RECORD_INFORMATION_UI_TEXT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\RECORD\RECORD_INFORMATION_USER.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\RECORD\RECORD_INFORMATION_USER_MESSAGE.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_ALARM.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_ALARM_EVENT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_CELL_INPUT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_CELL_OUTPUT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_CELL_TRACK_IN.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_CELL_TRACK_OUT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_EQUIPMENT_LOWER_LOSS_TIME_EVENT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_EQUIPMENT_STOP_EVENT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_EQUIPMENT_TP_CODE_EVENT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_EQUIPMENT_UPPER_LOSS_TIME_EVENT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_INTERLOCK_CALL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_MACHINE_RESULT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_MCR_STATUS.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_OP_CALL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_PROCESS_DATA_CELL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_PROCESS_DATA_JUDGEMENT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_PROCESS_DATA_READER.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_PROCESS_DATA_TACT_TIME.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_PROCESS_DATA_VISION_RESULT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_PROCESS_DATA_WORK_ORDER.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_SAFETY_PLC_MODIFIED_EVENT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_HISTORY_TERMINAL_CALL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_INFORMATION_ALARM.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_INFORMATION_EC.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_INFORMATION_SVID.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_INFORMATION_UI_TEXT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_INFORMATION_USER.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\TABLE\TABLE_INFORMATION_USER_MESSAGE.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EzBasicAxl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EziMOTIONPlusE.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="INA_AZ_DLL.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.BitDeviceMap.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.LowerToSelf.Bits.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.LowerToSelf.Words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.SelfToLower.Bits.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.SelfToLower.Words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.SelfToUpper.Bits.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.SelfToUpper.Words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.UpperToSelf.Bits.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.UpperToSelf.Words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\EqToEq.WordDeviceMap.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\MonitorIO.Conveyor.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\MonitorIO.Position.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IoMappingData\EqToEq\MonitorIO.Words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.ico" />
+    <Content Include="MdFunc32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pdfium.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\divide.png" />
+    <None Include="Resources\equal-mathematical-sign.png" />
+    <None Include="Resources\mathematical-basic-signs-of-plus-and-minus-with-a-slash.png" />
+    <None Include="Resources\minus-sign.png" />
+    <None Include="Resources\multiply-mathematical-sign.png" />
+    <None Include="Resources\plus-positive-add-mathematical-symbol.png" />
+    <None Include="Resources\iconfinder_down_308965.png" />
+    <None Include="Resources\iconfinder_left_308959.png" />
+    <None Include="Resources\iconfinder_right_308950.png" />
+    <None Include="Resources\iconfinder_stop_5355313.png" />
+    <None Include="Resources\iconfinder_up_308945.png" />
+    <None Include="Resources\RobotCoordinateX000.png" />
+    <None Include="Resources\RobotCoordinateX090.png" />
+    <None Include="Resources\RobotCoordinateX180.png" />
+    <None Include="Resources\RobotCoordinateX270.png" />
+    <None Include="Resources\CELL_FLOW.png" />
+    <None Include="Resources\자율안전확인신고 마크.png" />
+    <None Include="Resources\passwordView.png" />
+    <None Include="Resources\ROOP_TOP_VIEW.png" />
+    <None Include="Resources\sensor_off.png" />
+    <None Include="Resources\sensor_on.png" />
+    <None Include="Resources\352901_rotate_rotation_icon.png" />
+    <None Include="Resources\352901_rotate_rotation_icon2.png" />
+    <Content Include="Resources\ClosedCover.png" />
+    <Content Include="Resources\DoNotOperate.png" />
+    <Content Include="Resources\touchScreen.png" />
+    <Content Include="Resources\Warning.png" />
+    <Content Include="Utility\WaitForAppTerminate.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\SamsungLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="CsvHelper">
+      <Version>33.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="FluentFTP">
+      <Version>52.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="NModbus.Serial">
+      <Version>3.0.81</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.Core">
+      <Version>1.0.119</Version>
+    </PackageReference>
+    <PackageReference Include="System.IO.Ports">
+      <Version>9.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory">
+      <Version>4.5.5</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>6.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if not exist "d:\ENC\DevNuGetPackages" mkdir "d:\ENC\DevNuGetPackages"
+
+if "$(ConfigurationName)" == "Debug" (
+    if not exist "$(TargetDir)ITEM\" (
+        xcopy "$(ProjectDir)..\..\..\env\debug-default\" "$(TargetDir)" /E /I /Y
+        xcopy "$(ProjectDir)..\..\..\env\ITEM\" "$(TargetDir)ITEM\" /E /I /Y
+    )
+)
+
+start "엑셀 -&gt; 텍스트 변환" /wait /d "$(ProjectDir)Database\RECORD\" UtilExcelToText.exe</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

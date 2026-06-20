@@ -1,0 +1,1016 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeviceProtocolModbus</name>
+    </assembly>
+    <members>
+        <member name="T:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus">
+            <summary>
+            모드버스 프로토콜을 구현한 클래스
+            </summary>
+            
+            <remarks>
+            <b>참고 사항</b>
+            <br>💡 이 라이브러리를 사용하기 위해서는 프로젝트에서 'EasyModbus.dll'을 참조해야함.</br>
+            <br>💡 이 라이브러리는 Modbus TCP와 Modbus RTU 프로토콜을 지원함.</br>
+            <br>💡 모드버스에서 레지스터 영역의 개별 데이터 크기는 16Bits로 정의되어있음.</br>
+            <br>💡 용어 설명</br>
+            <list type="bullet">
+                <item>
+                    레지스터(Register)란?
+                    <code>
+                    Modbus에 레지스터라는 16Bits 정수 데이터를 저장하는 영역에서 읽어온 값을 의미함. 본 라이브러리에서는 int[]으로 표현하고 있음.
+                    </code>
+                </item>
+                <item>
+                    코일(Coils)이란?
+                    <code>
+                    Modbus에 코일이라는 1Bit 데이터를 저장하는 영역에서 읽어온 값을 의미함. 본 라이브러리에서는 bool[]으로 표현하고 있음.
+                    </code>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.Name">
+            <summary>
+            이름을 저장하는 프로퍼티
+            </summary>
+            <remarks>
+            📌 라이브러리 내부에서 사용되지 않는 프로퍼티로 따로 설정하지 않아도 동작에 전혀 영향을 주지 않음
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ModbusCore">
+            <summary>
+            Modbus 통신 코어 객체를 저장하는 프로퍼티
+            </summary>
+            <remarks>
+            📌 실제 Modbus 기능이 구현된 코어임. 이 라이브러리를 직접 사용하기 위해서는 프로젝트에서 'EasyModbus.dll'을 참조해야함.
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.IsInitialized">
+            <summary>
+            라이브러리 초기화 진행 여부를 나타내는 프로퍼티
+            </summary>
+            <remarks>
+            📌 라이브러리 초기화가 이미 진행 됐으면 true, 아니면 false를 반환함<br/>
+            📌 초기화 상태를 변경 시키기 위해서는 <see cref="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.Initialize(DeviceDLL.Protocol.Modbus.InitializeParameter,System.Int32,System.Int32,System.Boolean)"/>, <see cref="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.DeInitialize"/> 함수를 호출 해야함<br/>
+            </remarks>
+        </member>
+        <member name="E:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.OnSent">
+            <summary>
+            패킷을 성공적으로 전송한 직후에 발생하는 이벤트
+            </summary>
+            <remarks>
+            📌 디버깅용으로 제공하는 이벤트로 이벤트 핸들러를 등록하지 않아도 동작에는 전혀 영향을 주지 않음<br/>
+            🚩 이벤트 핸들러 구현부가 무거워질 경우 전체적인 성능에 영향을 줄 수 있음으로 주의 할 것
+            </remarks>
+        </member>
+        <member name="E:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.OnReceived">
+            <summary>
+            패킷을 성공적으로 수신한 직후에 발생하는 이벤트
+            </summary>
+            <remarks>
+            📌 디버깅용으로 제공하는 이벤트로 이벤트 핸들러를 등록하지 않아도 동작에는 전혀 영향을 주지 않음<br/>
+            🚩 이벤트 핸들러 구현부가 무거워질 경우 전체적인 성능에 영향을 줄 수 있음으로 주의 할 것
+            </remarks>
+        </member>
+        <member name="E:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.OnException">
+            <summary>
+            <b>Try</b>로 시작하는 함수 내부에서 예외가 발생해서 실패 했을 때 발생하는 이벤트
+            </summary>
+            <remarks>
+            📌 디버깅용으로 제공하는 이벤트로 이벤트 핸들러를 등록하지 않아도 동작에는 전혀 영향을 주지 않음<br/>
+            🚩 이벤트 핸들러 구현부가 무거워질 경우 전체적인 성능에 영향을 줄 수 있음으로 주의 할 것
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.InitializeParameter">
+            <summary>
+            초기화 파라미터를 저장하는 프로퍼티
+            </summary>
+            <remarks>
+            📌 <see cref="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.Initialize(DeviceDLL.Protocol.Modbus.InitializeParameter,System.Int32,System.Int32,System.Boolean)"/> 함수를 통해서만 파라미터를 적용 할 수 있음<br/>
+            🚩 최초 초기화 이후에 초기화 파라미터 변경이 없다는 컨샙으로 구현되어 있음으로 값을 직접 변경해도 적용되지 않음으로 주의 할 것
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.SlaveIdCommFailCounts">
+            <summary>
+            통신중인 슬레이브 ID에 연속 통신 실패 횟수 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.Initialize(DeviceDLL.Protocol.Modbus.InitializeParameter,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            라이브러리를 초기화하는 함수
+            </summary>
+            <remarks>
+            <br>📌 입력된 초기화 파라미터로 라이브러리 내부에 코어를 초기화하고, 통신 자동 접속 스레드를 시작함</br>
+            </remarks>
+            <param name="initializeParameter">초기화 파라미터 객체</param>
+            <param name="readRetryCount">수신에 실패 했을 때 재시도 횟수<br/>기본 값: 2</param>
+            <param name="readTimeout">수신 대기 시간<br/>단위: milli second<br/>기본 값: 1000</param>
+            <param name="bUseCommLog">통신 로그 사용 여부<br/>기본 값: false</param>
+            <returns>초기화 성공시 true를 실패시 false를 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.DeInitialize">
+            <summary>
+            라이브러리를 정리하는 함수
+            </summary>
+            <remarks>
+            📌 통신 자동 접속 스레드를 중지시키고, 코어에 접속을 강제로 해제함
+            </remarks>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.GetVersion(System.Boolean)">
+            <summary>
+            DLL 버전을 반환하는 함수
+            </summary>
+            <param name="bReflesh">DLL 버전 데이터를 갱신할지 여부<br/>true: 무조건 DLL 파일 정보에서 읽어옴<br/>false: 기존에 갱신한 이력이 있으면 이전 값을 반환하고 없으면 DLL 파일 정보에서 읽어옴<br/>기본 값: false</param>
+            <returns>DLL 버전을 "n.n.n.n" 형식으로 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            var comm = new DeviceProtocolModbus();
+            // DLL 버전 정보 읽기
+            string version = comm.GetVersion(bReflesh: true);
+            Console.WriteLine($"DLL 버전: {version}");
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            DLL 버전: 1.0.0.0
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.IsConnected">
+            <summary>
+            연결 상태를 반환하는 함수
+            </summary>
+            <remarks>
+                이 함수는 초기화때 설정된 프로토콜 타입에 따라서 다른 상태를 나타냄
+                <list type="bullet">
+                    <item><see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusTcp"/>: 서버 접속 상태를 나타냄</item>
+                    <item><see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusAscii"/>: 시리얼 포트 열림 상태를 나타냄</item>
+                    <item><see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusRtu"/>: 시리얼 포트 열림 상태를 나타냄</item>
+                    <item><see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusUdp"/>: 초기화 후에 항상 true를 반환함</item>
+                </list>
+                🚩 <see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusTcp"/>에서 최초 연결 후 서버가 끊어졌을 때 다시 요청을 보내기 전까지 끊어짐을 감지하지 못 함으로 주의 할 것
+            </remarks>
+            <returns>true: 통신이 연결된 상태<br/>false: 통신 연결이 해제된 상태</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 연결 상태 확인
+            bool bIsConnected = comm.IsConnected();
+            Console.WriteLine($"연결 상태: {bIsConnected}");
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            연결 상태: true
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryConnect">
+            <summary>
+            연결을 시도하는 함수
+            </summary>
+            <remarks>
+                이 함수는 초기화때 설정된 프로토콜 타입에 따라서 다른 동작을 함
+                <list type="bullet">
+                    <item><see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusTcp"/>: 서버에 접속 시도</item>
+                    <item><see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusAscii"/>: 시리얼 포트 열기 시도</item>
+                    <item><see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusRtu"/>: 시리얼 포트 열기 시도</item>
+                    <item><see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusUdp"/>: 내부 연결 플래그만 변경됨</item>
+                </list>
+            </remarks>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.BeginSyncBlock">
+            <summary>
+            작업 동기화 블록 시작
+            </summary>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ExceptionEndSyncBlock(System.Int32,System.Exception)">
+            <summary>
+            작업 동기화 블록 예외 끝
+            </summary>
+            <param name="slaveID">슬레이브 ID</param>
+            <param name="ex">예외</param>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.EndSyncBlock(System.Int32,System.Boolean)">
+            <summary>
+            작업 동기화 블록 끝
+            </summary>
+            <param name="slaveID">슬레이브 ID</param>
+            <param name="bResult">작업 결과</param>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryReadCoils(System.Int32,System.Int32,System.Int32,System.Boolean[]@)">
+            <summary>
+            Coils 영역에 값을 읽어오는 함수<br/>
+            Function Code = 1(0x01)<br/>
+            <![CDATA[[Coils, Read&Write, 1~9999]]]>
+            </summary>
+            <param name="slaveId">유닛 ID<br/>입력 범위: 1 to 247</param>
+            <param name="startIndex">시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="readCount">읽어 올 데이터 개수<br/>입력 범위: 1 to 2000 (0x7D0)</param>
+            <param name="readCoilsOrNull">결과 데이터 배열 [Bit Array]<br/>❗ 통신 연결 상태가 아니면 null이 반환됨</param>
+            <returns>true: 성공<br/>false: 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // Coils 영역 읽기
+            int slaveId = 1;
+            int startIndex = 0;
+            int readCount = 1;
+            bool[] readValues;
+            if (comm.TryReadCoils(slaveId, startIndex, readCount, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"Coils 영역에서 읽은 값: {readValues[0]}");
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            Coils 영역에서 읽은 값: true
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryReadDiscreteInputs(System.Int32,System.Int32,System.Int32,System.Boolean[]@)">
+            <summary>
+            Discrete Inputs 영역에 값을 읽어오는 함수<br/>
+            Function Code = 2(0x02)<br/>
+            <![CDATA[[Discrete Inputs, Read-Only, 10001~19999]]]>
+            </summary>
+            <param name="slaveId">유닛 ID<br/>입력 범위: 1 to 247</param>
+            <param name="startIndex">시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="readCount">읽어 올 데이터 개수<br/>입력 범위: 1 to 2000 (0x7D0)</param>
+            <param name="readDiscreteInputsOrNull">결과 데이터 배열 [Bit Array]<br/>❗ 통신 연결 상태가 아니면 null이 반환됨</param>
+            <returns>true: 성공<br/>false: 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // Discrete Inputs 영역 읽기
+            int slaveId = 1;
+            int startIndex = 0;
+            int readCount = 1;
+            bool[] readValues;
+            if (comm.TryReadDiscreteInputs(slaveId, startIndex, readCount, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"Discrete Inputs 영역에서 읽은 값: {readValues[0]}");
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            Discrete Inputs 영역에서 읽은 값: true
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryReadHoldingRegisters(System.Int32,System.Int32,System.Int32,System.Int32[]@)">
+            <summary>
+            Holding Registers 영역에 값을 읽어오는 함수<br/>
+            Function Code = 3(0x03)<br/>
+            <![CDATA[[Holding Registers, Read&Write, 40001~49999]]]>
+            </summary>
+            <param name="slaveId">유닛 ID<br/>입력 범위: 1 to 247</param>
+            <param name="startIndex">시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="readCount">읽어 올 데이터 개수<br/>입력 범위: 1 to 125 (0x7D)</param>
+            <param name="readRegistersOrNull">결과 데이터 배열 [Word(16Bits) Array]<br/>❗ 통신 연결 상태가 아니면 null이 반환됨</param>
+            <returns>true: 성공<br/>false: 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // Holding Registers 영역 읽기
+            int slaveId = 1;
+            int startIndex = 0;
+            int readCount = 1;
+            int[] readValues;
+            if (comm.TryReadHoldingRegisters(slaveId, startIndex, readCount, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"Holding Registers 영역에서 읽은 값: {readValues[0]}");
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            Holding Registers 영역에서 읽은 값: 1
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryReadInputRegisters(System.Int32,System.Int32,System.Int32,System.Int32[]@)">
+            <summary>
+            Input Registers 영역에 값을 읽어오는 함수<br/>
+            Function Code = 4(0x04)<br/>
+            <![CDATA[[Input Registers, Read-Only, 30001~39999]]]>
+            </summary>
+            <param name="slaveId">유닛 ID<br/>입력 범위: 1 to 247</param>
+            <param name="startIndex">시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="readCount">읽어 올 데이터 개수<br/>입력 범위: 1 to 125 (0x7D)</param>
+            <param name="readRegistersOrNull">결과 데이터 배열 [Word(16Bits) Array]<br/>❗ 통신 연결 상태가 아니면 null이 반환됨</param>
+            <returns>true: 성공<br/>false: 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // Input Registers 영역 읽기
+            int slaveId = 1;
+            int startIndex = 0;
+            int readCount = 1;
+            int[] readValues;
+            if (comm.TryReadInputRegisters(slaveId, startIndex, readCount, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"Input Registers 영역에서 읽은 값: {readValues[0]}");
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            Input Registers 영역에서 읽은 값: 1
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryWriteSingleCoil(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Coils 영역에 단독 값을 쓰는 함수<br/>
+            Function Code = 5(0x05)<br/>
+            <![CDATA[[Coils, Read&Write, 1~9999]]]>
+            </summary>
+            <param name="slaveId">유닛 ID<br/>입력 범위: 1 to 247</param>
+            <param name="startIndex">시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="writeValue">쓸 데이터 [Bit]<br/>Bit: false(0x0000) or true(0xFF00)</param>
+            <returns>true: 성공<br/>false: 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // Coils 영역 쓰기
+            int slaveId = 1;
+            int startIndex = 0;
+            bool writeValue = true;
+            if (comm.TryWriteSingleCoil(slaveId, startIndex, writeValue) == true)
+            {
+                // 쓰기에 성공한 경우
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryWriteSingleRegister(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Holding Registers 영역에 단독 값을 쓰는 함수<br/>
+            Function Code = 6(0x06)<br/>
+            <![CDATA[[Holding Registers, Read&Write, 40001~49999]]]>
+            </summary>
+            <param name="slaveId">유닛 ID<br/>입력 범위: 1 to 247</param>
+            <param name="startIndex">시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="writeValue">쓸 데이터 [Word(16Bits)]<br/>Word(16Bits): 0x0000 to 0xFFFF</param>
+            <returns>true: 성공<br/>false: 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // Holding Registers 영역 쓰기
+            int slaveId = 1;
+            int startIndex = 0;
+            int writeValue = 1;
+            if (comm.TryWriteSingleRegister(slaveId, startIndex, writeValue) == true)
+            {
+                // 쓰기에 성공한 경우
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryWriteMultipleCoils(System.Int32,System.Int32,System.Boolean[])">
+            <summary>
+            Coils 영역에 배열 값을 쓰는 함수<br/>
+            Function Code = 15(0x0F)<br/>
+            <![CDATA[[Coils, Read&Write, 1~9999]]]>
+            </summary>
+            <param name="slaveId">유닛 ID<br/>입력 범위: 1 to 247</param>
+            <param name="startIndex">시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="writeValues">쓸 데이터 [Bit Array]<br/>배열의 크기 범위: 0x0001 to 0x07B0</param>
+            <returns>true: 성공<br/>false: 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // Coils 영역 쓰기
+            int slaveId = 1;
+            int startIndex = 0;
+            bool[] writeValues = new bool[] { true };
+            if (comm.TryWriteMultipleCoils(slaveId, startIndex, writeValues) == true)
+            {
+                // 쓰기에 성공한 경우
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryWriteMultipleRegisters(System.Int32,System.Int32,System.Int32[])">
+            <summary>
+            Holding Registers 영역에 배열 값을 쓰는 함수<br/>
+            Function Code = 16(0x10)<br/>
+            <![CDATA[[Holding Registers, Read&Write, 40001~49999]]]>
+            </summary>
+            <param name="slaveId">유닛 ID<br/>입력 범위: 1 to 247</param>
+            <param name="startIndex">시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="writeValues">쓸 데이터 [Word(16Bits) Array]<br/>배열의 크기 범위: 0x0001 to 0x07B</param>
+            <returns>true: 성공<br/>false: 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // Holding Registers 영역 쓰기
+            int slaveId = 1;
+            int startIndex = 0;
+            int[] writeValues = new int[] { 1 };
+            if (comm.TryWriteMultipleRegisters(slaveId, startIndex, writeValues) == true)
+            {
+                // 쓰기에 성공한 경우
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.TryReadWriteMultipleRegisters(System.Int32,System.Int32,System.Int32,System.Int32[]@,System.Int32,System.Int32[])">
+            <summary>
+            Holding Registers 영역에 배열 값을 쓰고 읽는 함수<br/>
+            Read Write Multiple Registers, Function Code = 23(0x17)<br/>
+            <![CDATA[[Holding Registers, Read&Write, 40001~49999]]]>
+            </summary>
+            <param name="slaveId">유닛 ID<br/>입력 범위: 1 to 247</param>
+            <param name="readStartIndex">읽기 시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="readCount">1 to 125 (0x7D)</param>
+            <param name="readValues">읽은 데이터 배열 [Word(16Bits) Array]<br/>❗ 통신 연결 상태가 아니면 null이 반환됨</param>
+            <param name="writeStartIndex">쓰기 시작 주소 인덱스<br/>입력 범위: 0x0000 to 0xFFFF</param>
+            <param name="writeValues">쓸 데이터 [Word(16Bits) Array]<br/>배열의 크기 범위: 0x0001 to 0x07B0</param>
+            <returns>true: 성공<br/>false: 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new InitializeParameter()
+            {
+                Protocol = EProtocol.ModbusTcp,
+                SocketIPAddress = "127.0.0.1",
+                SocketPortNumber = 502
+            };
+            
+            // 라이브러리 초기화
+            var comm = new DeviceProtocolModbus();
+            int readRetryCount = 2;
+            int readTimeout = 1000;
+            if (comm.Initialize(initializeParameter, readRetryCount, readTimeout) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // Holding Registers 영역 읽기, 쓰기
+            int slaveId = 1;
+            int readStartIndex = 0;
+            int readCount = 1;
+            int writeStartIndex = 0;
+            int[] writeValues = new int[] { 1 };
+            if (comm.TryReadWriteMultipleRegisters(slaveId, readStartIndex, readCount, out readValues, writeStartIndex, writeValues) == true)
+            {
+                // 성공한 경우
+            }
+            
+            // 라이브러리 정리
+            comm.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertFloatToRegisters(System.Single,DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            입력된 <see cref="T:System.Single"/>(32Bits 실수) 값을 레지스터 데이터(16Bits 정수 배열)로 변환하는 함수
+            </summary>
+            <param name="value"><see cref="T:System.Single"/>(32Bits 실수) 값</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns>레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 2</returns>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertDoubleToRegisters(System.Double,DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            입력된 <see cref="T:System.Double"/>(64Bits 실수) 값을 레지스터 데이터(16Bits 정수 배열)로 변환하는 함수
+            </summary>
+            <param name="value"><see cref="T:System.Double"/>(64Bits 실수) 값</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns>레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 4</returns>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertInt16ToRegisters(System.Int16,DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            입력된 <see cref="T:System.Int16"/>(16Bits 정수) 값을 레지스터 데이터(16Bits 정수 배열)로 변환하는 함수
+            </summary>
+            <param name="value"><see cref="T:System.Int16"/>(16Bits 정수) 값</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns>레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 1</returns>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertUInt16ToRegisters(System.UInt16,DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            입력된 <see cref="T:System.UInt16"/>(16Bits 부호 없는 정수) 값을 레지스터 데이터(16Bits 정수 배열)로 변환하는 함수
+            </summary>
+            <param name="value"><see cref="T:System.UInt16"/>(16Bits 부호 없는 정수) 값</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns>레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 1</returns>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertIntToRegisters(System.Int32,DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            입력된 <see cref="T:System.Int32"/>(32Bits 정수) 값을 레지스터 데이터(16Bits 정수 배열)로 변환하는 함수
+            </summary>
+            <param name="value"><see cref="T:System.Int32"/>(32Bits 정수) 값</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns>레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 2</returns>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertUIntToRegisters(System.UInt32,DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            입력된 <see cref="T:System.UInt32"/>(32Bits 부호 없는 정수) 값을 레지스터 데이터(16Bits 정수 배열)로 변환하는 함수
+            </summary>
+            <param name="value"><see cref="T:System.UInt32"/>(32Bits 부호 없는 정수) 값</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns>레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 2</returns>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertLongToRegisters(System.Int64,DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            입력된 <see cref="T:System.Int64"/>(64Bits 정수) 값을 레지스터 데이터(16Bits 정수 배열)로 변환하는 함수
+            </summary>
+            <param name="value"><see cref="T:System.Int64"/>(64Bits 정수) 값</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns>레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 4</returns>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertULongToRegisters(System.UInt64,DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            입력된 <see cref="T:System.UInt64"/>(64Bits 부호 없는 정수) 값을 레지스터 데이터(16Bits 정수 배열)로 변환하는 함수
+            </summary>
+            <param name="value"><see cref="T:System.UInt64"/>(64Bits 부호 없는 정수) 값</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns>레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 4</returns>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertStringToRegisters(System.String,DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            입력된 <see cref="T:System.String"/>(ASCII 문자열) 값을 레지스터 데이터(16Bits 정수 배열)로 변환하는 함수
+            </summary>
+            <param name="value"><see cref="T:System.String"/>(ASCII 문자열) 값</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns>레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 입력된 문자열 길이에따라 가변됨(1Word에 2글자)</returns>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertRegistersToFloat(System.Int32[],DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            레지스터 데이터(int16[2])를 <see cref="T:System.Single"/>(32Bits 실수) 값으로 변환하는 함수
+            </summary>
+            <param name="registers">레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 2</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns><see cref="T:System.Single"/>(32Bits 실수) 값</returns>
+            <exception cref="T:System.ArgumentException">입력한 배열의 길이가 맞지 않음</exception>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertRegistersToDouble(System.Int32[],DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            레지스터 데이터(int16[4])를 <see cref="T:System.Double"/>(64Bits 실수) 값으로 변환하는 함수
+            </summary>
+            <param name="registers">레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 4</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns><see cref="T:System.Double"/>(64Bits 실수) 값</returns>
+            <exception cref="T:System.ArgumentException">입력한 배열의 길이가 맞지 않음</exception>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertRegistersToInt16(System.Int32[],DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            레지스터 데이터(int16[1])를 <see cref="T:System.Int16"/>(16Bits 정수) 값으로 변환하는 함수
+            </summary>
+            <param name="registers">레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 1</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns><see cref="T:System.Int16"/>(16Bits 정수) 값</returns>
+            <exception cref="T:System.ArgumentException">입력한 배열의 길이가 맞지 않음</exception>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertRegistersToUInt16(System.Int32[],DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            레지스터 데이터(int16[1])를 <see cref="T:System.UInt16"/>(16Bits 부호 없는 정수) 값으로 변환하는 함수
+            </summary>
+            <param name="registers">레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 1</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns><see cref="T:System.UInt16"/>(16Bits 부호 없는 정수) 값</returns>
+            <exception cref="T:System.ArgumentException">입력한 배열의 길이가 맞지 않음</exception>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertRegistersToInt(System.Int32[],DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            레지스터 데이터(int16[2])를 <see cref="T:System.Int32"/>(32Bits 정수) 값으로 변환하는 함수
+            </summary>
+            <param name="registers">레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 2</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns><see cref="T:System.Int32"/>(32Bits 정수) 값</returns>
+            <exception cref="T:System.ArgumentException">입력한 배열의 길이가 맞지 않음</exception>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertRegistersToUInt(System.Int32[],DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            레지스터 데이터(int16[2])를 <see cref="T:System.UInt32"/>(32Bits 부호 없는 정수) 값으로 변환하는 함수
+            </summary>
+            <param name="registers">레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 2</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns><see cref="T:System.UInt32"/>(32Bits 부호 없는 정수) 값</returns>
+            <exception cref="T:System.ArgumentException">입력한 배열의 길이가 맞지 않음</exception>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertRegistersToLong(System.Int32[],DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            레지스터 데이터(int16[4])를 <see cref="T:System.Int64"/>(64Bits 정수) 값으로 변환하는 함수
+            </summary>
+            <param name="registers">레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 4</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns><see cref="T:System.Int64"/>(64Bits 정수) 값</returns>
+            <exception cref="T:System.ArgumentException">입력한 배열의 길이가 맞지 않음</exception>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertRegistersToULong(System.Int32[],DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            레지스터 데이터(int16[4])를 <see cref="T:System.UInt64"/>(64Bits 부호 없는 정수) 값으로 변환하는 함수
+            </summary>
+            <param name="registers">레지스터 데이터(16Bits 정수 배열)<br/>배열 길이: 4</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns><see cref="T:System.UInt64"/>(64Bits 부호 없는 정수) 값</returns>
+            <exception cref="T:System.ArgumentException">입력한 배열의 길이가 맞지 않음</exception>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus.ConvertRegistersToString(System.Int32[],DeviceDLL.Protocol.Modbus.ERegisterOrder)">
+            <summary>
+            레지스터 데이터(int16[n])를 <see cref="T:System.String"/>(ASCII 문자열) 값으로 변환하는 함수
+            </summary>
+            <param name="registers">레지스터 데이터(16Bits 정수 배열)</param>
+            <param name="registerOrder">레지스터 배열의 데이터 정렬 순서<br/>기본 값: <see cref="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh"/></param>
+            <returns><see cref="T:System.String"/>(ASCII 문자열) 값</returns>
+        </member>
+        <member name="T:DeviceDLL.Protocol.Modbus.EParity">
+            <summary>
+            Modbus 통신에서 사용되는 패리티 비트 설정을 나타냅니다.
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EParity.None">
+            <summary>
+            패리티 비트를 사용하지 않습니다.
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EParity.Odd">
+            <summary>
+            홀수 패리티 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EParity.Even">
+            <summary>
+            짝수 패리티 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EParity.Mark">
+            <summary>
+            패리티 비트를 항상 1로 설정합니다.
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EParity.Space">
+            <summary>
+            패리티 비트를 항상 0으로 설정합니다.
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.Protocol.Modbus.EProtocol">
+            <summary>
+            모드버스 프로토콜 타입을 정의함
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusTcp">
+            <summary>
+            TCP/IP 클라이언트 기반에 모드버스 프로토콜
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusRtu">
+            <summary>
+            시리얼 통신 바이트 기반에 모드버스 프로토콜
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusAscii">
+            <summary>
+            시리얼 통신 Ascii 기반에 모드버스 프로토콜
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusUdp">
+            <summary>
+            UDP 기반에 모드버스 프로토콜
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.Protocol.Modbus.ERegisterOrder">
+            <summary>
+            레지스터 ↔ 데이터 변환에서 레지스터 배열의 데이터 정렬 순서를 정의함
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.LowToHigh">
+            <summary>
+            리틀 엔디안(Little-Endian)
+            </summary>
+            <remarks>
+            <br>낮은(시작)주소에 하위 바이트부터 기록, Intel CPU 계열 (윈도우 상에서 사용되는 바이트 오더)</br>
+            <br>ex> int[1] { 0x01020304 } → short[2] { 0x0304, 0x0102 } → byte[4] { 0x04, 0x03, 0x02, 0x01 }</br>
+            </remarks>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.ERegisterOrder.HighToLow">
+            <summary>
+            빅 엔디안(Big-Endian)
+            </summary>
+            <remarks>
+            <br>낮은(시작) 주소에 상위 바이트부터 기록, Sparc / RISC CPU 계열 (네트워크 상에서 사용되는 바이트 오더)</br>
+            <br>ex> int[1] { 0x01020304 } → short[2] { 0x0102, 0x0304 } → byte[4] { 0x01, 0x02, 0x03, 0x04 }</br>
+            </remarks>
+        </member>
+        <member name="T:DeviceDLL.Protocol.Modbus.EStopBits">
+            <summary>
+            Modbus 통신에서 사용되는 정지 비트 설정을 나타냅니다.
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EStopBits.None">
+            <summary>
+            정지 비트가 없음.
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EStopBits.One">
+            <summary>
+            하나의 정지 비트.
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EStopBits.Two">
+            <summary>
+            두 개의 정지 비트.
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.EStopBits.OnePointFive">
+            <summary>
+            1.5개의 정지 비트.
+            </summary>
+        </member>
+        <member name="T:DeviceDLL.Protocol.Modbus.InitializeParameter">
+            <summary>
+            모드버스 객체의 초기화 파라미터를 가진 데이터 클래스
+            </summary>
+            <remarks>
+            <br> <see cref="F:DeviceDLL.Protocol.Modbus.InitializeParameter.Protocol"/> 설정 값에 따라 사용되는 파라미터</br>
+            <list type="bullet">
+                <item>
+                    <see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusTcp"/>나 <see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusUdp"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SocketIPAddress"/></item>
+                        <item><see cref="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SocketPortNumber"/></item>
+                    </list>
+                </item>
+                <item>
+                    <see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusRtu"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortName"/></item>
+                        <item><see cref="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortBaudrate"/></item>
+                        <item><see cref="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortDataBits"/></item>
+                        <item><see cref="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortParity"/></item>
+                        <item><see cref="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortStopBits"/></item>
+                    </list>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.InitializeParameter.Protocol">
+            <summary>
+            모드버스 프로토콜 타입
+            </summary>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SocketIPAddress">
+            <summary>
+            IP 주소<br/>
+            데이터 형식: "{nnn}.{nnn}.{nnn}.{nnn}"
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusTcp"/>나 <see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusUdp"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SocketPortNumber">
+            <summary>
+            포트 번호<br/>
+            데이터 범위: 0x0000 ~ 0xFFFF
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusTcp"/>나 <see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusUdp"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortName">
+            <summary>
+            시리얼 포트 포트 번호<br/>
+            데이터 형식: "COM{n}"
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusRtu"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortBaudrate">
+            <summary>
+            시리얼 포트 Baudrate
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusRtu"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortDataBits">
+            <summary>
+            시리얼 포트 Data Bits
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusRtu"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortParity">
+            <summary>
+            시리얼 포트 Parity
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusRtu"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:DeviceDLL.Protocol.Modbus.InitializeParameter.SerialPortStopBits">
+            <summary>
+            시리얼 포트 Stop Bits
+            </summary>
+            <remarks>[<see cref="F:DeviceDLL.Protocol.Modbus.EProtocol.ModbusRtu"/> 용 파라미터]</remarks>
+        </member>
+        <member name="M:DeviceDLL.Protocol.Modbus.InitializeParameter.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:DeviceDLL.Protocol.Modbus.InitializeParameter"/> 객체</returns>
+        </member>
+        <member name="T:DeviceDLL.Protocol.Modbus.InterFrameDelay">
+            <remarks><br><see cref="T:DeviceDLL.Protocol.Modbus.InterFrameDelay"/>에 관한 자세한 내용은 <see href="https://www.modbus.org/docs/Modbus_over_serial_line_V1_02.pdf">모드버스 시리얼 통신 문서</see> 13페이지 참조</br></remarks>
+        </member>
+    </members>
+</doc>

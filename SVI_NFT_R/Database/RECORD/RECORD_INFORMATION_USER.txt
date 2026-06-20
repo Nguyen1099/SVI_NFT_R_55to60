@@ -1,0 +1,4 @@
+﻿ID	,	PASSWORD	,	NAME	,	DEPARTMENT	,	POSITION	,	AUTHORITY_LEVEL
+op	,	MQ==	,	Operator	,	department	,	position	,	OPERATOR
+eng	,	MQ==	,	Engineer	,	department	,	position	,	ENGINEER
+master	,	MQ==	,	Master	,	department	,	position	,	MASTER

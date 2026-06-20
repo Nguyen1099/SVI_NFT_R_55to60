@@ -1,0 +1,3 @@
+﻿ID,ByteIndex,BitIndex,HandlingDataTypeString,HandlingDataSize,ArrayLength,DecimalPoint,Label,Description,Comment
+DUMMY,0,,short,,,,,,
+Reserved,718,,short,,,,,,

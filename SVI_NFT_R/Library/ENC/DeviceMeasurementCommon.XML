@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeviceMeasurementCommon</name>
+    </assembly>
+    <members>
+        <member name="T:Device.Measurement.EMeasurementDevice">
+            <summary>
+            지원하는 측정 디바이스 종류를 정의함
+            </summary>
+        </member>
+        <member name="F:Device.Measurement.EMeasurementDevice.Virtual">
+            <summary>
+            가상 디바이스
+            </summary>
+        </member>
+        <member name="F:Device.Measurement.EMeasurementDevice.KyengQcManagerMulti">
+            <summary>
+            KYENG사 QC Manager Multi 디바이스
+            </summary>
+        </member>
+        <member name="F:Device.Measurement.EMeasurementDevice.KeyenceIL">
+            <summary>
+            Keyence사 IL 시리즈 디바이스
+            </summary>
+        </member>
+        <member name="T:Device.Measurement.ErrorCode">
+            <summary>
+            측정 디바이스 공용으로 사용되는 에러 정보를 가진 클래스
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.ErrorCode.EventTime">
+            <summary>
+            에러가 발생한 시간을 나타내는 프로퍼티
+            </summary>
+            <remarks>데이터 형식: "yyyy/MM/dd hh:mm:ss"</remarks>
+        </member>
+        <member name="P:Device.Measurement.ErrorCode.FunctionName">
+            <summary>
+            에러가 발생한 함수를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.ErrorCode.ReturnCode">
+            <summary>
+            함수에서 반환한 결과 코드를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.ErrorCode.Message">
+            <summary>
+            발생한 에러에대한 메시지를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="M:Device.Measurement.ErrorCode.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:Device.Measurement.ErrorCode"/> 객체</returns>
+        </member>
+        <member name="T:Device.Measurement.IDeviceMeasurement">
+            <summary>
+            측정 디바이스의 공용 기능을 정의한 인터페이스
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurement.MAX_UNIT_COUNT">
+            <summary>
+            해당 디바이스에서 지원하는 최대 유닛 수를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurement.MAX_CHANNEL_COUNT">
+            <summary>
+            해당 디바이스에서 지원하는 최대 채널 수를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurement.DEFAULT_UNIT_CONVERTER">
+            <summary>
+            해당 디바이스에 기본 단위 변환 컨버터를 나타내는 프로퍼티<br/>
+            <br/>
+            📌 통신에서 읽은 int32(high-word + low-word) 값을 실제 단위로 변환하는 공식
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurement.DeviceType">
+            <summary>
+            해당 디바이스에 타입을 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurement.IsInitialized">
+            <summary>
+            라이브러리 초기화 진행 여부를 나타내는 프로퍼티<br/>
+            <br/>
+            📌 라이브러리 초기화가 이미 진행 됐으면 true, 아니면 false를 반환함<br/>
+            📌 초기화 상태를 변경 시키기 위해서는 <see cref="M:Device.Measurement.IDeviceMeasurementInitialize`1.Initialize(`0)"/>, <see cref="M:Device.Measurement.IDeviceMeasurement.DeInitialize"/> 함수를 호출 해야함
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurement.UnitConverters">
+            <summary>
+            각각 [유닛, 채널]에 매칭되는 단위 변환 컨버터를 나타내는 프로퍼티 (기본 값: <see cref="P:Device.Measurement.IDeviceMeasurement.DEFAULT_UNIT_CONVERTER"/>)<br/>
+            <br/>
+            📌 [유닛, 채널]의 2차원 배열으로 구성되어 있음
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurement.DisplayChannelName">
+            <summary>
+            [유닛, 채널] UI에 표시될 채널 이름을 설정하거나 가져오는 프로퍼티<br/>
+            <br/>
+            📌 [유닛, 채널]의 2차원 배열으로 구성되어 있음
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurement.DisplayUnitName">
+            <summary>
+            [유닛, 채널] UI에 표시될 단위 이름을 설정하거나 가져오는 프로퍼티<br/>
+            <br/>
+            📌 [유닛, 채널]의 2차원 배열으로 구성되어 있음
+            </summary>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurement.Name">
+            <summary>
+            이름을 저장하거나 가져오는 프로퍼티<br/>
+            <br/>
+            📌 라이브러리 내부에서 사용되지 않는 프로퍼티로 따로 설정하지 않아도 동작에 전혀 영향을 주지 않음
+            </summary>
+        </member>
+        <member name="E:Device.Measurement.IDeviceMeasurement.OnError">
+            <summary>
+            함수 내부에서 에러가 발생해서 실패 했을 때 발생하는 이벤트<br/>
+            <br/>
+            📌 디버깅용으로 제공하는 이벤트로 이벤트 핸들러를 등록하지 않아도 동작에는 전혀 영향을 주지 않음<br/>
+            🚩 이벤트 핸들러 구현부가 무거워질 경우 전체적인 성능에 영향을 줄 수 있음으로 주의 할 것
+            </summary>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurement.DeInitialize">
+            <summary>
+            라이브러리를 정리하는 함수<br/>
+            <br/>
+            📌 통신 자동 접속 스레드를 중지시키고, 코어에 접속을 강제로 해제함
+            </summary>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurement.GetVersion(System.Boolean)">
+            <summary>
+            DLL 버전을 반환하는 함수
+            </summary>
+            <param name="bReflesh">DLL 버전 데이터를 갱신할지 여부<br/>true: 무조건 DLL 파일 정보에서 읽어옴<br/>false: 기존에 갱신한 이력이 있으면 이전 값을 반환하고 없으면 DLL 파일 정보에서 읽어옴<br/>기본 값: false</param>
+            <returns>DLL 버전을 "n.n.n.n" 형식으로 반환함</returns>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurement.IsOpened">
+            <summary>
+            통신 준비 상태를 반환하는 함수
+            </summary>
+            <returns>true: 통신이 준비된 상태<br/>false: 통신 준비가 안된 상태</returns>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurement.TryReadOneChannel(System.Int32,System.Int32,System.Double@)">
+            <summary>
+            입력한 단일 채널에 값을 읽어오는 함수
+            </summary>
+            <param name="slaveIndex">유닛 인덱스</param>
+            <param name="channelIndex">채널 인덱스</param>
+            <param name="readValue">결과 (UnitConveter로 변환한 실제 값을 반환함)</param>
+            <returns>true = 성공, false = 실패</returns>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurement.TryReadAllChannels(System.Int32,System.Double[]@)">
+            <summary>
+            해당 유닛에 모든 채널에 값을 읽어오는 함수
+            </summary>
+            <param name="slaveIndex">유닛 인덱스</param>
+            <param name="readValues">결과 값 배열 (UnitConveter로 변환한 실제 값을 반환함)</param>
+            <returns>true = 성공, false = 실패</returns>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurement.TryReadRandomChannels(System.Int32,System.Int32[],System.Double[]@)">
+            <summary>
+            해당 유닛에 요청한 채널들에 값을 읽어오는 함수<br/>
+            <br/>
+            📌 읽을 수 있는 전체 채널을 읽어서 요청한 인덱스 순서에 맞게 결과를 생성해서 반환하는 방식으로 동작함
+            </summary>
+            <param name="slaveIndex">유닛 인덱스</param>
+            <param name="channelIndexes">채널 인덱스 배열</param>
+            <param name="readValues">결과 값 배열 (UnitConveter로 변환한 실제 값을 반환함)</param>
+            <returns>true = 성공, false = 실패</returns>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurement.TryReadSequncialChannels(System.Int32,System.Int32,System.Int32,System.Double[]@)">
+            <summary>
+            입력한 한 채널에 값을 읽어오는 함수
+            </summary>
+            <param name="slaveIndex">유닛 인덱스</param>
+            <param name="startIndex">시작 채널 인덱스</param>
+            <param name="count">읽어올 채널 수</param>
+            <param name="readValues">결과 값 배열 (UnitConveter로 변환한 실제 값을 반환함)</param>
+            <returns>true = 성공, false = 실패</returns>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurement.GetErrorCode">
+            <summary>
+            마지막에 발생한 <see cref="T:Device.Measurement.ErrorCode"/> 객체를 반환하는 함수
+            </summary>
+            <returns>마지막에 발생한 <see cref="T:Device.Measurement.ErrorCode"/> 객체</returns>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurement.GetErrorLogInstanceOrNull">
+            <summary>
+            에러 로그 인터페이스를 반환하는 함수
+            </summary>
+            <returns>null=실패, other=성공</returns>
+        </member>
+        <member name="T:Device.Measurement.IDeviceMeasurementInitialize`1">
+            <summary>
+            측정 디바이스 초기화 기능을 정의한 인터페이스
+            </summary>
+            <typeparam name="TInitializeParameter">초기화 파라미터 객체의 타입</typeparam>
+        </member>
+        <member name="P:Device.Measurement.IDeviceMeasurementInitialize`1.InitializeParameter">
+            <summary>
+            초기화 파라미터를 저장하는 프로퍼티<br/>
+            <br/>
+            📌 <see cref="M:Device.Measurement.IDeviceMeasurementInitialize`1.Initialize(`0)"/> 함수를 통해서만 파라미터를 적용 할 수 있음<br/>
+            🚩 최초 초기화 이후에 초기화 파라미터 변경이 없다는 컨샙으로 구현되어 있음으로 값을 직접 변경해도 적용되지 않음으로 주의 할 것
+            </summary>
+        </member>
+        <member name="M:Device.Measurement.IDeviceMeasurementInitialize`1.Initialize(`0)">
+            <summary>
+            라이브러리를 초기화하는 함수
+            </summary>
+            <param name="initializeParameter">초기화 파라미터 객체</param>
+            <returns>초기화 성공시 true를 실패시 false를 반환함</returns>
+        </member>
+    </members>
+</doc>

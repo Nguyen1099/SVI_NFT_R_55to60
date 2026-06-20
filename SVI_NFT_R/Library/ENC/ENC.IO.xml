@@ -1,0 +1,1204 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENC.IO</name>
+    </assembly>
+    <members>
+        <member name="T:ENC.IO.DataMappingAssignManager">
+            <summary>
+            사용자가 작성한 맵에의해 생성된 데이터 코드와 맵을 연결해주는 클래스
+            </summary>
+        </member>
+        <member name="P:ENC.IO.DataMappingAssignManager.IsInitialized">
+            <summary>
+            초기화 진행 여부
+            </summary>
+        </member>
+        <member name="M:ENC.IO.DataMappingAssignManager.Initialize(ENC.IO.DataMappingAssignOptionSet,System.Collections.Generic.List{ENC.IO.Common.ErrorSet})">
+            <summary>
+            초기화
+            </summary>
+            <param name="option"><see cref="T:ENC.IO.DataMappingAssignManager"/>클래스 초기화 옵션</param>
+            <param name="errorAndWarnings">초기화중 발생한 에러 및 경고</param>
+            <returns>true=성공, false=실패</returns>
+        </member>
+        <member name="M:ENC.IO.DataMappingAssignManager.DeInitialize">
+            <summary>
+            정리
+            </summary>
+        </member>
+        <member name="M:ENC.IO.DataMappingAssignManager.GetDataOrNullFromType(System.Type)">
+            <summary>
+            입력된 타입이 핸들링 데이터 블록이나 핸들링 데이터 그룹일 경우 포함된 데이터의 정보를 반환하는 함수
+            </summary>
+            <param name="type">핸들링 데이터 블록이나 핸들링 데이터 그룹의 타입</param>
+            <returns>null=지원하지 않는 타입, other=클래스에 포함된 데이터 정보</returns>
+        </member>
+        <member name="M:ENC.IO.DataMappingAssignManager.GetTypeOrNullFromFullName(System.String)">
+            <summary>
+            핸들링 데이터 블록이나 핸들링 데이터 그룹의 이름으로 타입을 반환하는 함수
+            </summary>
+            <param name="fullName">핸들링 데이터 블록이나 핸들링 데이터 그룹의 이름</param>
+            <returns>이름에 해당하는 타입</returns>
+        </member>
+        <member name="M:ENC.IO.DataMappingAssignManager.GetBlockSize(System.Type)">
+            <summary>
+            입력된 핸들링 데이터 블록이나 핸들링 데이터 그룹 타입에 크기(바이트)
+            </summary>
+            <param name="type">핸들링 데이터 블록이나 핸들링 데이터 그룹 타입</param>
+            <returns>입력된 타입의 바이트 크기</returns>
+        </member>
+        <member name="T:ENC.IO.DataMappingAssignOptionSet">
+            <summary>
+            <see cref="T:ENC.IO.DataMappingAssignManager"/>클래스 초기화 옵션 데이터 클래스
+            </summary>
+        </member>
+        <member name="P:ENC.IO.DataMappingAssignOptionSet.DataGroupBaseDirectoryPaths">
+            <summary>
+            데이터 그룹의 맵 파일이 있는 경로 리스트
+            </summary>
+        </member>
+        <member name="P:ENC.IO.DataMappingAssignOptionSet.DataBlockBaseDirectoryPaths">
+            <summary>
+            데이터 블록의 맵 파일이 있는 경로 리스트
+            </summary>
+        </member>
+        <member name="T:ENC.IO.EAddressFormat">
+            <summary>
+            핸들링 데이터 시각화 주소 타입 표시 옵션
+            </summary>
+        </member>
+        <member name="F:ENC.IO.EAddressFormat.Bit">
+            <summary>
+            비트 단위로 표시
+            </summary>
+            <remarks>
+            B15 = 15번째 비트, B0 = 0번째 비트
+            </remarks>
+        </member>
+        <member name="F:ENC.IO.EAddressFormat.Byte">
+            <summary>
+            바이트 단위로 표시
+            </summary>
+            <remarks>
+            33 = 33번째 바이트, 0 = 0번째 바이트
+            </remarks>
+        </member>
+        <member name="F:ENC.IO.EAddressFormat.Word">
+            <summary>
+            워드 단위로 표시 (2바이트)
+            </summary>
+            <remarks>
+            W23 = 23번째 워드, W0 = 0번째 워드
+            </remarks>
+        </member>
+        <member name="F:ENC.IO.EAddressFormat.DWord">
+            <summary>
+            더블 워드 단위로 표시 (4바이트)
+            </summary>
+            <remarks>
+            DW99 = 99번째 더블 워드, DW0 = 0번째 더블 워드
+            </remarks>
+        </member>
+        <member name="T:ENC.IO.ESearchOption">
+            <summary>
+            핸들링 데이터 시각화 검색 옵션
+            </summary>
+        </member>
+        <member name="F:ENC.IO.ESearchOption.All">
+            <summary>
+            포함된 모든 클래스를 검색함
+            </summary>
+        </member>
+        <member name="F:ENC.IO.ESearchOption.TopLevelOnly">
+            <summary>
+            최상위 클래스만 검색함
+            </summary>
+        </member>
+        <member name="T:ENC.IO.HandlingDataVisualizeHelper">
+            <summary>
+            핸들링 데이터의 정보를 시각화해주는 기능을 가진 클래스
+            </summary>
+        </member>
+        <member name="M:ENC.IO.HandlingDataVisualizeHelper.GetHandlingDataDebugText(System.Type,ENC.IO.HandlingDataVisualizerOptionSet)">
+            <summary>
+            입력된 핸들링 데이터 정보를 문자열로 출력하는 함수
+            </summary>
+            <param name="type">핸들링 데이터 타입</param>
+            <param name="optionOrNull">핸들링 데이터 시각화 옵션</param>
+            <returns>핸들링 데이터 정보를 문자열</returns>
+            <remarks>이 기능이 제대로 동작하려면 <see cref="T:ENC.IO.DataMappingAssignManager"/>에 타입 등록하는 과정이 선행되어야한다</remarks>
+        </member>
+        <member name="T:ENC.IO.HandlingDataVisualizerOptionSet">
+            <summary>
+            핸들링 데이터 시각화 옵션 데이터 클래스
+            </summary>
+        </member>
+        <member name="P:ENC.IO.HandlingDataVisualizerOptionSet.UsingHexIndex">
+            <summary>
+            인덱스를 16진수로 표시할지 여부
+            </summary>
+        </member>
+        <member name="P:ENC.IO.HandlingDataVisualizerOptionSet.UsingHexAddress">
+            <summary>
+            주소를 16진수로 표시할지 여부
+            </summary>
+        </member>
+        <member name="P:ENC.IO.HandlingDataVisualizerOptionSet.UsingWriteAddress">
+            <summary>
+            주소를 표시할지 여부
+            </summary>
+        </member>
+        <member name="P:ENC.IO.HandlingDataVisualizerOptionSet.UsingWriteSimpleInformation">
+            <summary>
+            간단한 정보 사용 여부
+            </summary>
+        </member>
+        <member name="P:ENC.IO.HandlingDataVisualizerOptionSet.UsingWriteFullInformation">
+            <summary>
+            상세 정보 사용 여부
+            </summary>
+        </member>
+        <member name="P:ENC.IO.HandlingDataVisualizerOptionSet.UsingFormatting">
+            <summary>
+            출력물에 탭 및 개행 사용 여부
+            </summary>
+        </member>
+        <member name="P:ENC.IO.HandlingDataVisualizerOptionSet.IndentString">
+            <summary>
+            탭 표시 문자열
+            </summary>
+        </member>
+        <member name="P:ENC.IO.HandlingDataVisualizerOptionSet.SerachOption">
+            <summary>
+            클래스 검색 옵션
+            </summary>
+        </member>
+        <member name="P:ENC.IO.HandlingDataVisualizerOptionSet.AddressFormat">
+            <summary>
+            주소 표시 형식 옵션
+            </summary>
+        </member>
+        <member name="T:ENC.IO.IoHardwareMapping">
+            <summary>
+            IO 하드웨어를 맵핑하고 핸들링 데이터를 생성하는 클래스
+            </summary>
+        </member>
+        <member name="P:ENC.IO.IoHardwareMapping.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:ENC.IO.IoHardwareMapping.IsUsingMemoryMapVirtualMachine">
+            <inheritdoc/>
+        </member>
+        <member name="P:ENC.IO.IoHardwareMapping.IsInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="P:ENC.IO.IoHardwareMapping.Size">
+            <inheritdoc/>
+        </member>
+        <member name="P:ENC.IO.IoHardwareMapping.FirstIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:ENC.IO.IoHardwareMapping.LastIndex">
+            <inheritdoc/>
+        </member>
+        <member name="P:ENC.IO.IoHardwareMapping.IoHardwareHandlers">
+            <inheritdoc/>
+        </member>
+        <member name="M:ENC.IO.IoHardwareMapping.Continue(ENC.IO.Common.IIoHardwareMappingInitializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ENC.IO.IoHardwareMapping.SetDeviceName(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ENC.IO.IoHardwareMapping.PushIoHardwareHandler(ENC.IO.Common.IIoHardwareHandler)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ENC.IO.IoHardwareMapping.UsingMemoryMapVirtualMachine(System.Boolean,System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ENC.IO.IoHardwareMapping.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="M:ENC.IO.IoHardwareMapping.DeInitialize">
+            <summary>
+            정리
+            </summary>
+        </member>
+        <member name="M:ENC.IO.IoHardwareMapping.CreateData``1(ENC.IO.Common.IReadOnlyHandlingDataSet,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ENC.IO.IoHardwareMapping.CreateArrayData``1(ENC.IO.Common.IReadOnlyHandlingDataSet,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ENC.IO.ExtensionMethods">
+            <summary>
+            핸들링 데이터 사용 편의를 위한 확장 기능
+            </summary>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetString(ENC.IO.Common.IHandlingArrayData{System.Char},System.String)">
+            <summary>
+            문자 배열 핸들링 데이터에 문자열을 쓰는 함수
+            </summary>
+            <param name="handler">문자 배열 핸들링 데이터</param>
+            <param name="value">쓸 문자열</param>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetString(ENC.IO.Common.IHandlingArrayData{System.Char},System.String,System.Int32,System.Int32)">
+            <summary>
+            문자 배열 핸들링 데이터에 문자열을 쓰는 함수
+            </summary>
+            <param name="handler">문자 배열 핸들링 데이터</param>
+            <param name="value">쓸 문자열</param>
+            <param name="startArrayIndex">시작 배열 인덱스</param>
+            <param name="arrayCount">배열 길이</param>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetString(ENC.IO.Common.IHandlingArrayData{System.Char})">
+            <summary>
+            문자 배열 핸들링 데이터에서 문자열을 읽는 함수
+            </summary>
+            <param name="handler">문자 배열 핸들링 데이터</param>
+            <returns>읽은 문자열</returns>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetFirst``1(ENC.IO.Common.IHandlingArrayData{``0})">
+            <summary>
+            배열 핸들링 데이터에서 첫 번째 데이터를 읽는 함수
+            </summary>
+            <typeparam name="T">핸들링 데이터가 취급하는 데이터 타입</typeparam>
+            <param name="src">배열 핸들링 데이터</param>
+            <returns>읽은 첫 번째 데이터</returns>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetLast``1(ENC.IO.Common.IHandlingArrayData{``0})">
+            <summary>
+            배열 핸들링 데이터에서 마지막 데이터를 읽는 함수
+            </summary>
+            <typeparam name="T">핸들링 데이터가 취급하는 데이터 타입</typeparam>
+            <param name="src">배열 핸들링 데이터</param>
+            <returns>읽은 마지막 데이터</returns>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetAll``1(ENC.IO.Common.IHandlingArrayData{``0})">
+            <summary>
+            배열 핸들링 데이터에서 모든 데이터를 읽는 함수
+            </summary>
+            <typeparam name="T">핸들링 데이터가 취급하는 데이터 타입</typeparam>
+            <param name="src">배열 핸들링 데이터</param>
+            <returns>읽은 모든 데이터</returns>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingData{System.Byte},System.Double)">
+            <summary>
+            정수형 단일 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingData{System.SByte},System.Double)">
+            <summary>
+            정수형 단일 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingData{System.UInt16},System.Double)">
+            <summary>
+            정수형 단일 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingData{System.Int16},System.Double)">
+            <summary>
+            정수형 단일 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingData{System.UInt32},System.Double)">
+            <summary>
+            정수형 단일 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingData{System.Int32},System.Double)">
+            <summary>
+            정수형 단일 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingData{System.UInt64},System.Double)">
+            <summary>
+            정수형 단일 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingData{System.Int64},System.Double)">
+            <summary>
+            정수형 단일 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingArrayData{System.Byte},System.Int32,System.Double)">
+            <summary>
+            정수형 배열 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingArrayData{System.SByte},System.Int32,System.Double)">
+            <summary>
+            정수형 배열 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingArrayData{System.UInt16},System.Int32,System.Double)">
+            <summary>
+            정수형 배열 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingArrayData{System.Int16},System.Int32,System.Double)">
+            <summary>
+            정수형 배열 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingArrayData{System.UInt32},System.Int32,System.Double)">
+            <summary>
+            정수형 배열 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingArrayData{System.Int32},System.Int32,System.Double)">
+            <summary>
+            정수형 배열 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingArrayData{System.UInt64},System.Int32,System.Double)">
+            <summary>
+            정수형 배열 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.SetDouble(ENC.IO.Common.IHandlingArrayData{System.Int64},System.Int32,System.Double)">
+            <summary>
+            정수형 배열 핸들링 데이터에 부동 소수점 데이터를 쓰는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>정수로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingData{System.Byte})">
+            <summary>
+            정수형 단일 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingData{System.SByte})">
+            <summary>
+            정수형 단일 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingData{System.UInt16})">
+            <summary>
+            정수형 단일 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingData{System.Int16})">
+            <summary>
+            정수형 단일 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingData{System.UInt32})">
+            <summary>
+            정수형 단일 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingData{System.Int32})">
+            <summary>
+            정수형 단일 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingData{System.UInt64})">
+            <summary>
+            정수형 단일 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingData{System.Int64})">
+            <summary>
+            정수형 단일 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 단일 핸들링 데이터</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingArrayData{System.Byte},System.Int32)">
+            <summary>
+            정수형 배열 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingArrayData{System.SByte},System.Int32)">
+            <summary>
+            정수형 배열 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingArrayData{System.UInt16},System.Int32)">
+            <summary>
+            정수형 배열 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingArrayData{System.Int16},System.Int32)">
+            <summary>
+            정수형 배열 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingArrayData{System.UInt32},System.Int32)">
+            <summary>
+            정수형 배열 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingArrayData{System.Int32},System.Int32)">
+            <summary>
+            정수형 배열 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingArrayData{System.UInt64},System.Int32)">
+            <summary>
+            정수형 배열 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.GetDouble(ENC.IO.Common.IHandlingArrayData{System.Int64},System.Int32)">
+            <summary>
+            정수형 배열 핸들링 데이터에서 읽은 값을 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <param name="data">정수형 배열 핸들링 데이터</param>
+            <param name="arrayIndex">배열 인덱스</param>
+            <returns>부동 소수점으로 변환된 값</returns>
+            <remarks>해당 기능은 DecimalPoint 옵션을 사용 할 경우 적용됨</remarks>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.ConvertToValue``1(ENC.IO.Common.IHaveHandlingDataInformation,System.Double)">
+            <summary>
+            입력된 부동 소수점 데이터를 정수로 변환하는 함수
+            </summary>
+            <typeparam name="T">정수 타입</typeparam>
+            <param name="info">핸들링 데이터 정보</param>
+            <param name="value">부동 소수점 데이터</param>
+            <returns>변환된 정수 데이터</returns>
+            <exception cref="T:System.NotSupportedException">입력된 핸들링 데이터가 정보가 정수 타입이 아닌 경우</exception>
+        </member>
+        <member name="M:ENC.IO.ExtensionMethods.ConvertToDouble``1(ENC.IO.Common.IHaveHandlingDataInformation,``0)">
+            <summary>
+            입력된 정수 데이터를 부동 소수점 데이터로 변환하는 함수
+            </summary>
+            <typeparam name="T">정수 타입</typeparam>
+            <param name="info">핸들링 데이터 정보</param>
+            <param name="value">정수 값</param>
+            <returns>변환된 부동 소수점 데이터</returns>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.MemoryMapPage">
+            <summary>
+            메모리 맵 베이스 클래스 입니다.
+            이 클래스를 상속 받으면 고정된 크기의 메모리 블럭을 생성 합니다.
+            배열의 크기는 생성자에서 설정 합니다.
+            </summary>
+            <![CDATA[
+            [메모리맵 페이지 베이스 클래스]
+            
+            1. PageBase 고정된 **1Page의 크기를 가진다.
+            2. 각각의 데이터 형에 배열 처럼 접근하여 사용 할 수 있다.
+            3. PageBase 상속 받은 클래스에는 프로퍼티를 정의하여 배열 접근에 용이하게 한다.
+            4. 배열 크기가 다른 데이터를 복사 할 수 없습니다. (예외발생)
+            
+            **1Page: PageBase 정의된 데이터 크기를 의미하며 고정된 크기를 가진다. (생성자에서 크기 설정 가능)
+            ]]>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.MemoryMapPage.ByteArray">
+            <summary>
+            [인덱서] 바이트형 데이터에 접근합니다. (Zero Base Index)
+            DataSize:1byte
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.MemoryMapPage.BoolArray">
+            <summary>
+            [인덱서] 불리언형 데이터에 접근합니다. (Zero Base Index)
+            DataSize:4byte
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.MemoryMapPage.ShortArray">
+            <summary>
+            [인덱서] 쇼트형 데이터에 접근합니다. (Zero Base Index)
+            DataSize:2byte
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.MemoryMapPage.IntArray">
+            <summary>
+            [인덱서] 인트형 데이터에 접근합니다. (Zero Base Index)
+            DataSize:4byte
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.MemoryMapPage.LongArray">
+            <summary>
+            [인덱서] 롱형 데이터에 접근합니다. (Zero Base Index)
+            DataSize:8byte
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.MemoryMapPage.FloatArray">
+            <summary>
+            [인덱서] 플롯형 데이터에 접근합니다. (Zero Base Index)
+            DataSize:4byte
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.MemoryMapPage.DoubleArray">
+            <summary>
+            [인덱서] 더블형 데이터에 접근합니다. (Zero Base Index)
+            DataSize:8byte
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.MemoryMapPage.StringArray">
+            <summary>
+            [인덱서] 스트링형 데이터에 접근합니다. (Zero Base Index)
+            Encoder:Unicode
+            DataSize:2byte
+            </summary>
+        </member>
+        <member name="F:Gen.Data.MemoryMap.MemoryMapPage.PageBlockSize">
+            <summary>
+            메모리 블럭 하나의 전체 크기 입니다. (바이트)
+            </summary>
+        </member>
+        <member name="F:Gen.Data.MemoryMap.MemoryMapPage.PageBlockCount">
+            <summary>
+            메모리맵 페이지 블록의 총 개수 입니다.
+            </summary>
+        </member>
+        <member name="F:Gen.Data.MemoryMap.MemoryMapPage.PageBlockIndex">
+            <summary>
+            현재 페이지 블록의 인덱스 입니다. (Zero Base Index)
+            </summary>
+        </member>
+        <member name="F:Gen.Data.MemoryMap.MemoryMapPage.mMemoryMap">
+            <summary>
+            메모리 맵 파일 클래스 입니다.
+            </summary>
+        </member>
+        <member name="F:Gen.Data.MemoryMap.MemoryMapPage.mbDisposed">
+            <summary>
+            메모리 해제 완료 플래그 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.Copy(Gen.Data.MemoryMap.MemoryMapPage)">
+            <summary>
+            입력한 데이터를 내부 데이터 클래스에 복사한다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">복사 할 대상과 크기가 다를 때 발생하는 예외</exception>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.Clear">
+            <summary>
+            내부 모든 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.SetDefaultValue">
+            <summary>
+            내부에 모든 데이터를 클리어하고 기본값을 씁니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.Dispose">
+            <summary>
+            dispose()를 호출하여 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.Initailze">
+            <summary>
+            파일기반으로 운영 할 때 처음 파일이 생성된 경우에는 기본값을 넣어준다
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.Dispose(System.Boolean)">
+            <summary>
+            관리되지 않는 리소스의 확보, 해제 또는 다시 설정과 관련된 응용 프로그램 정의 작업을 수행합니다.
+            </summary>
+            <param name="disposing">메모리 해제</param>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.#ctor(System.String,System.String,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            메모리 맵 페이지 베이스의 생성자 입니다. 
+            </summary>                                                                                                                                                                                
+            <param name="memoryMapFileNameOrNull">메모리맵 파일 이름. 기존에 같은 이름의 파일이 존재하지 않으면 만들고, 있으면 파일을 엽니다. 값이 Null이면 파일을 열지 않고 메모리맵 이름으로 생성합니다.</param>
+            <param name="memoryMapName">메모리맵 이름. 다른 페이지와 이름이 겹치면 오작동 할 수 있습니다.</param>
+            <param name="pageIndex">메모리 블럭 인덱스. 메모리 블럭의 인덱스 입니다. 인덱스가 메모리 블럭 보다 커지면 익셉션을 발생시킵니다. (Zero Base Index)</param>
+            <param name="pageCount">메모리 블럭 개수. 메모리 블럭 개수를 참고하여 메모리 맵 파일을 생성합니다. 메모리 블럭은 0보다 커야합니다.</param>
+            <param name="byteArraySize">바이트형 배열 사이즈 정의 (값은 최소 0보다 커야합니다)</param>
+            <param name="boolArraySize">불리언형 배열 사이즈 정의 (값은 최소 0보다 커야합니다)</param>
+            <param name="shortArraySize">쇼트형 배열 사이즈 정의 (값은 최소 0보다 커야합니다)</param>
+            <param name="intArraySize">인트형 배열 사이즈 정의 (값은 최소 0보다 커야합니다)</param>
+            <param name="longArraySize">롱형 배열 사이즈 정의 (값은 최소 0보다 커야합니다)</param>
+            <param name="floatArraySize">플롯형 배열 사이즈 정의 (값은 최소 0보다 커야합니다)</param>
+            <param name="doubleArraySize">더블형 배열 사이즈 정의 (값은 최소 0보다 커야합니다)</param>
+            <param name="stringArraySize">문자열형 배열 사이즈 정의 (값은 최소 0보다 커야합니다)</param>
+            <param name="stringMaxLength">문자열형 최대 길이 정의 (값은 최소 0보다 커야합니다)</param>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 페이지 인덱스가 총 페이지 수보다 클 때 발생하는 예외</exception>
+            <exception cref="T:System.ArgumentException">입려한 배열의 크기가 0 일 때 발생하는 예외</exception>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.Finalize">
+            <summary>
+            소멸자 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.OpenOrCreateMemoryMapFile(System.String,System.String)">
+            <summary>
+            지정한 크기의 메모리 맵 파일을 엽니다. 만약 파일이 존재 하지 않는다면 파일을 생성합니다.
+            </summary>                                                      
+            <param name="fileName">메모리 맵 파일 이름</param>
+            <param name="mapName">메모리 맵 이름</param>                                                         
+            <returns>메모리 맵 파일 클래스</returns>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.MemoryMapPage.OpenOrCreateMemoryMap(System.String)">
+            <summary>
+            지정한 이름의 메모리 맵에 접속하거나, 존재하지 않으면 메모리상에 생성합니다.
+            </summary>                                                       
+            <param name="mapName">메모리 맵 이름</param>                                                            
+            <returns>메모리 맵 파일 클래스</returns>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.IPageData`1">
+            <summary>
+            메모리맵 페이지 데이터의 인터페이스 입니다.
+            </summary>
+            <typeparam name="T">배열의 타입</typeparam>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.IPageData`1.ArrayCount">
+            <summary>
+            배열의 총 개수
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.IPageData`1.DataBlockSize">
+            <summary>
+            데이터 블록의 크기 (바이트)
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.IPageData`1.Length">
+            <summary>
+            문자열의 최대 길이
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.IPageData`1.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.IPageData`1.Copy(Gen.Data.MemoryMap.PageDataArray.IPageData{`0})">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">복사 할 대상과 크기가 다를 때 발생하는 예외</exception>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.IPageData`1.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.IPageData`1.ToBytes(System.Int32)">
+            <summary>
+            바이트 배열을 읽어 옵니다.
+            </summary>
+            <param name="count">읽어올 바이트 개수</param>
+            <returns>설정한 데이터의 배열</returns>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.IPageData`1.ToBytes(System.Int64,System.Int32)">
+            <summary>
+            바이트 배열을 읽어 옵니다.
+            </summary>
+            <param name="position">시작 바이트 옵셋</param>
+            <param name="count">읽어올 바이트 개수</param>
+            <returns>설정한 데이터의 배열</returns>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.IPageData`1.WriteBytes(System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            바이트 배열을 씁니다.
+            </summary>
+            <param name="position">쓸 대상에 시작 바이트 옵셋</param>
+            <param name="buffer">쓰기 버퍼</param>
+            <param name="offset">쓰기 버퍼에 시작 옵셋</param>
+            <param name="count">쓸 바이트 개수</param>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.IPageDataArray`1">
+            <summary>
+            페이지 데이터 배열에 접근 할 수 있는 인터페이스 입니다.
+            </summary>
+            <typeparam name="T">배열 데이터 타입</typeparam>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.IPageDataArray`1.Item(System.Int32)">
+            <summary>
+            해당 인덱스에 접근하여 데이터를 쓰거나 읽을 수 있습니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>인덱스에 위치한 데이터</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 인덱스가 설정한 크기를 초과했습니다.</exception>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1">
+             <summary>
+             메모리맵 페이지 개별 데이터 배열 베이스 클래스 입니다.
+             </summary>
+             <typeparam name="T">배열의 타입</typeparam>
+             <![CDATA[
+             [메모리맵 데이터 베이스 클래스]
+             
+             1. 상속 받은 클래스는 아래와 같이 데이터에 접근 할 수 있는 인덱서를 구현하여야 합니다.
+            public {Type} this[int idx]
+            {
+               get
+               {
+                    return getIndexOfValue(idx);
+               }
+               set
+               {
+                    setIndexOfValue(idx, value);
+               }
+            }
+             ]]>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.TypeSize">
+            <summary>
+            타입 사이즈 (바이트)
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.DataBlockSize">
+            <summary>
+            데이터 블록의 크기 (바이트)
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.ArrayCount">
+            <summary>
+            배열의 총 개수
+            </summary>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.Length">
+            <summary>
+            문자열의 최대 길이
+            </summary>
+        </member>
+        <member name="F:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.mMemoryMap">
+            <summary>
+            메모리 맵 파일 입니다.
+            </summary>
+        </member>
+        <member name="F:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.mMemoryMapView">
+            <summary>
+            메모리 맵 뷰 입니다.
+            </summary>
+        </member>
+        <member name="F:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.mMemoryMapStartOffset">
+            <summary>
+            메모리 맵의 시작 위치 (바이트)
+            </summary>
+        </member>
+        <member name="F:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.mbDisposed">
+            <summary>
+            메모리 해제 완료 플래그 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.Copy(Gen.Data.MemoryMap.PageDataArray.IPageData{`0})">
+            <summary>
+            입력한 데이터를 복사합니다.
+            </summary>
+            <param name="sourceData">복사 할 데이터</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">복사 할 대상과 크기가 다를 때 발생하는 예외</exception>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.Clear">
+            <summary>
+            내부 데이터를 클리어 합니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.ToBytes">
+            <summary>
+            내부 전체 데이터의 바이트 배열을 읽어 옵니다.
+            </summary>
+            <returns>내부 전체 데이터의 배열</returns>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.ToBytes(System.Int32)">
+            <summary>
+            바이트 배열을 읽어 옵니다.
+            </summary>
+            <param name="count">읽어올 바이트 개수</param>
+            <returns>설정한 데이터의 배열</returns>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.ToBytes(System.Int64,System.Int32)">
+            <summary>
+            바이트 배열을 읽어 옵니다.
+            </summary>
+            <param name="position">시작 바이트 옵셋</param>
+            <param name="count">읽어올 바이트 개수</param>
+            <returns>설정한 데이터의 배열</returns>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.ToByteSpan(System.Int32,System.Span{System.Byte})">
+            <summary>
+            바이트 배열을 읽어 옵니다.
+            </summary>
+            <param name="position">시작 바이트 옵셋</param>
+            <param name="buffer">읽어올 바이트 버퍼</param>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.WriteBytes(System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            바이트 배열을 씁니다.
+            </summary>
+            <param name="position">쓸 대상에 시작 바이트 옵셋</param>
+            <param name="buffer">쓰기 버퍼</param>
+            <param name="offset">쓰기 버퍼에 시작 옵셋</param>
+            <param name="count">쓸 바이트 개수</param>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.WriteByteSpan(System.Int32,System.ReadOnlySpan{System.Byte})">
+            <summary>
+            바이트 배열을 씁니다.
+            </summary>
+            <param name="position">쓸 대상에 시작 바이트 옵셋</param>
+            <param name="buffer">쓰기 버퍼</param>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.Dispose">
+            <summary>
+            Dispose()를 호출하면 메모리를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.GetValueFromIndex(System.Int32)">
+            <summary>
+            메모리 맵에서 지정한 인덱스에 데이터를 읽어 옵니다.
+            </summary>
+            <param name="idx">인덱스</param>
+            <returns>읽은 데이터</returns>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.SetValueFromIndex(System.Int32,`0)">
+            <summary>
+            메모리 맵에서 지정한 엑덱스에 데이터를 씁니다.
+            </summary>
+            <param name="idx">인덱스</param>
+            <param name="value">쓸 데이터</param>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.GetStartPositionFromIndex(System.Int32)">
+            <summary>
+            인덱스에 해당하는 메모리 시작 위치(바이트)를 계산합니다.
+            </summary>
+            <param name="idx">데이터의 인덱스</param>
+            <returns>메모리 위치(바이트)</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 데이터 인덱스가 설정한 메모리 영역을 초과 할 때 발생하는 예외</exception>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.Dispose(System.Boolean)">
+            <summary>
+            관리되지 않는 리소스의 확보, 해제 또는 다시 설정과 관련된 응용 프로그램 정의 작업을 수행합니다.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            T형 데이터 클래스의 생성자 입니다.
+            </summary>
+            <param name="memMap">메모리 맵 파일 클래스</param>
+            <param name="startPosition">메모리 맵 시작 위치 (바이트)</param>
+            <param name="arraySize">메모리 맵 크기 (바이트)</param>
+            <param name="maxLength">배열 길이 (문자열을 제외하면 1로 설정)</param>
+            <param name="access">접근 권한</param>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBase`1.Finalize">
+            <summary>
+            소멸자
+            </summary>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.PageDataBoolArray">
+            <summary>
+            불리언형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataBoolArray.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            불리언형 데이터 배열 클래스 입니다.
+            </summary>
+            <param name="memMap">메모리 맵</param>
+            <param name="offset">메모리 맵 옵셋 (바이트)</param>
+            <param name="arrayLength">배열 길이</param>
+            <param name="access">엑세스 권한</param>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataBoolArray.Item(System.Int32)">
+            <summary>
+            불리언형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 인덱스가 설정한 크기를 초과했습니다.</exception>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.PageDataByteArray">
+            <summary>
+            바이트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataByteArray.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            바이트형 데이터 배열 클래스 입니다.
+            </summary>
+            <param name="memMap">메모리 맵</param>
+            <param name="offset">메모리 맵 옵셋 (바이트)</param>
+            <param name="arrayLength">배열 길이</param>
+            <param name="access">엑세스 권한</param>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataByteArray.Item(System.Int32)">
+            <summary>
+            바이트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 인덱스가 설정한 크기를 초과했습니다.</exception>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.PageDataDoubleArray">
+            <summary>
+            더블형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataDoubleArray.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            어블형 데이터 배열 클래스 입니다.
+            </summary>
+            <param name="memMap">메모리 맵</param>
+            <param name="offset">메모리 맵 옵셋 (바이트)</param>
+            <param name="arrayLength">배열 길이</param>
+            <param name="access">엑세스 권한</param>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataDoubleArray.Item(System.Int32)">
+            <summary>
+            더블형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 인덱스가 설정한 크기를 초과했습니다.</exception>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.PageDataFloatArray">
+            <summary>
+            플롯형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataFloatArray.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            플롯형 데이터 배열 클래스 입니다.
+            </summary>
+            <param name="memMap">메모리 맵</param>
+            <param name="offset">메모리 맵 옵셋 (바이트)</param>
+            <param name="arrayLength">배열 길이</param>
+            <param name="access">엑세스 권한</param>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataFloatArray.Item(System.Int32)">
+            <summary>
+            플롯형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 인덱스가 설정한 크기를 초과했습니다.</exception>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.PageDataIntArray">
+            <summary>
+            인트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataIntArray.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            인트형 데이터 배열 클래스 입니다.
+            </summary>
+            <param name="memMap">메모리 맵</param>
+            <param name="offset">메모리 맵 옵셋 (바이트)</param>
+            <param name="arrayLength">배열 길이</param>
+            <param name="access">엑세스 권한</param>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataIntArray.Item(System.Int32)">
+            <summary>
+            인트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 인덱스가 설정한 크기를 초과했습니다.</exception>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.PageDataLongArray">
+            <summary>
+            롱형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataLongArray.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            롱형 데이터 배열 클래스 입니다.
+            </summary>
+            <param name="memMap">메모리 맵</param>
+            <param name="offset">메모리 맵 옵셋 (바이트)</param>
+            <param name="arrayLength">배열 길이</param>
+            <param name="access">엑세스 권한</param>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataLongArray.Item(System.Int32)">
+            <summary>
+            롱형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 인덱스가 설정한 크기를 초과했습니다.</exception>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.PageDataShortArray">
+            <summary>
+            쇼트형 데이터 클래스 입니다.
+            </summary>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataShortArray.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            쇼트형 데이터 배열 클래스 입니다.
+            </summary>
+            <param name="memMap">메모리 맵</param>
+            <param name="offset">메모리 맵 옵셋 (바이트)</param>
+            <param name="arrayLength">배열 길이</param>
+            <param name="access">엑세스 권한</param>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataShortArray.Item(System.Int32)">
+            <summary>
+            쇼트형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 인덱스가 설정한 크기를 초과했습니다.</exception>
+        </member>
+        <member name="T:Gen.Data.MemoryMap.PageDataArray.PageDataStringArray">
+            <summary>
+            스트링형 데이터 클래스 입니다.
+            </summary>
+            <remarks>
+            스트링형 데이터는 레퍼런스 타입이라서 벨류 타입 처럼 사용 할 수 없기 때문에 생성자 및 인덱서등을 재정의해주었습니다.
+            </remarks>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataStringArray.Encoding">
+            <summary>
+            문자열 인코딩 (기본값: UTF-8)
+            </summary>
+            <remarks>
+            UTF-8 인코딩은 언어에 따라 데이터 크기가 가변됨으로 한글을 사용해야하는 경우 Unicode(a.k.a UTF-16)로 변경 필요함.
+            </remarks>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataStringArray.#ctor(System.IO.MemoryMappedFiles.MemoryMappedFile,System.Int64,System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)">
+            <summary>
+            스트링형 데이터 배열 클래스 입니다.
+            </summary>
+            <param name="memMap">메모리 맵</param>
+            <param name="offset">메모리 맵 옵셋 (바이트)</param>
+            <param name="arrayLength">배열 길이</param>
+            <param name="stringLength">최대 문자열 길이</param>
+            <param name="access">엑세스 권한</param>
+        </member>
+        <member name="P:Gen.Data.MemoryMap.PageDataArray.PageDataStringArray.Item(System.Int32)">
+            <summary>
+            스트링형 데이터의 인덱서 입니다.
+            </summary>
+            <param name="idx">반환 할 데이터의 인덱스</param>
+            <returns>인덱스에 위치한 값</returns>
+            <exception cref="T:System.IndexOutOfRangeException">입력한 인덱스가 설정한 크기를 초과했습니다.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">입력한 문자열의 길이가 설정한 길이를 초과했습니다.</exception>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataStringArray.GetValueFromIndex(System.Int32)">
+            <summary>
+            메모리 맵에서 지정한 인덱스에 데이터를 읽어 옵니다.
+            </summary>
+            <param name="idx">인덱스</param>
+            <returns>읽은 데이터</returns>
+        </member>
+        <member name="M:Gen.Data.MemoryMap.PageDataArray.PageDataStringArray.SetValueFromIndex(System.Int32,System.String)">
+            <summary>
+            메모리 맵에서 지정한 인덱스에 데이터를 씁니다.
+            </summary>
+            <param name="idx">인덱스</param>
+            <param name="value">쓸 데이터</param>         
+        </member>
+    </members>
+</doc>

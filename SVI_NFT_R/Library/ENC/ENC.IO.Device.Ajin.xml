@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENC.IO.Device.Ajin</name>
+    </assembly>
+    <members>
+        <member name="T:ENC.IO.Device.Ajin.ExtensionMethods">
+            <summary>
+            Ajin IO 디바이스 추가 기능이 정의된 클래스
+            </summary>
+        </member>
+        <member name="M:ENC.IO.Device.Ajin.ExtensionMethods.AddDeviceAjinDI32(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Ajin DI32 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="moduleIndex">DI32 디바이스의 모듈 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Ajin.ExtensionMethods.AddDeviceAjinDI16(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Ajin DI16 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="moduleIndex">DI16 디바이스의 모듈 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Ajin.ExtensionMethods.AddDeviceAjinDO32(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Ajin DO32 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="moduleIndex">DO32 디바이스의 모듈 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Ajin.ExtensionMethods.AddDeviceAjinDO16(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Ajin DO16 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="moduleIndex">DO16 디바이스의 모듈 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Ajin.ExtensionMethods.AddDeviceAjinAI16(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Ajin AI16 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="moduleIndex">AI16 디바이스의 모듈 인덱스</param>
+            <param name="startChannelIndex">AI16 디바이스의 시작 채널 인덱스</param>
+            <param name="nextChannelIndex">AI16 디바이스의 마지막 채널에 다음 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.Ajin.ExtensionMethods.AddDeviceAjinAO8(ENC.IO.Common.IIoHardwareMappingInitializeContext,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Ajin AO8 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="moduleIndex">AO8 디바이스의 모듈 인덱스</param>
+            <param name="startChannelIndex">AO8 디바이스의 시작 채널 인덱스</param>
+            <param name="nextChannelIndex">AO8 디바이스의 마지막 채널에 다음 인덱스</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+    </members>
+</doc>

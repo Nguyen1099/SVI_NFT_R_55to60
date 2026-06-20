@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HLDeviceMCRCognex</name>
+    </assembly>
+    <members>
+        <member name="T:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex">
+            <summary>
+            Cognex사 MCR 디바이스의 기능을 구현한 클래스
+            </summary>
+            <remarks>
+            📌 사용자 정의 통신 프로토콜을 사용하는 디바이스
+            </remarks>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex.GetVersion(System.Boolean)">
+            <summary>
+            DLL 버전을 반환하는 함수
+            </summary>
+            <returns>DLL 버전을 "n.n.n.n" 형식으로 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            var device = new CDeviceMCRCognex();
+            // DLL 버전 정보 읽기
+            string version = comm.HLGetVersion();
+            Console.WriteLine($"DLL 버전: {version}");
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            DLL 버전: 1.0.0.0
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex.HLGetErrorCode">
+            <summary>
+            마지막에 발생한 <see cref="T:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CMCRError"/> 객체를 반환하는 함수
+            </summary>
+            <returns>마지막에 발생한 <see cref="T:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CMCRError"/> 객체</returns>
+            <b>예제 코드</b>
+            <code>
+            var mcrError = new CDeviceMCRCognexDefine.CMCRError();
+            // DLL 버전 정보 읽기
+            var error = mcrError.HLGetErrorCode();
+            Console.WriteLine($"이벤트 발생 시간: {error.strEventTime}");
+            Console.WriteLine($"수행된 함수 이름: {error.strFunctionName}");
+            Console.WriteLine($"알람 리턴 결과: {error.iReturnCode}");
+            Console.WriteLine($"알람 메세지: {error.strMessage}");
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            이벤트 발생 시간: Time
+            수행된 함수 이름: FunctionName
+            알람 리턴 결과: ReturnCode
+            알람 메세지: Message
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex.HLInitialize(HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CInitializeParameter)">
+            <summary>
+            라이브러리를 초기화하는 함수
+            </summary>
+            <remarks>
+            <br>📌 입력된 초기화 파라미터로 라이브러리 내부에 코어를 초기화하고, 통신 자동 접속 스레드를 시작함</br>
+            </remarks>
+            <param name="objInitializeParameter">초기화 파라미터 객체</param>
+            <returns>초기화 성공시 true를 실패시 false를 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceMCRCognexDefine.CInitializeParameter()
+            {
+                 strIPAddress = 192.168.0.63
+                 strPortNumber = 21;
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceMCRCognex();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex.HLDeInitialize">
+            <summary>
+            라이브러리를 정리하는 함수<br/>
+            <br/>
+            📌 통신 자동 접속 스레드를 중지시키고, 코어에 접속을 강제로 해제함
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex.HLIsConnected">
+            <summary>
+            통신 준비 상태를 반환하는 함수
+            </summary>
+            <returns>true: 통신이 준비된 상태<br/>false: 통신 준비가 안된 상태</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceMCRCognexDefine.CInitializeParameter()
+            {
+                 strIPAddress = 192.168.0.63
+                 strPortNumber = 21;
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceMCRCognex();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 통신 준비 상태 확인
+            bool bIsConnected = device.HLIsConnected();
+            Console.WriteLine($"통신 준비 상태: {bIsConnected}");
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            통신 준비 상태: True
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex.HLReadData(System.String@)">
+            <summary>
+            마지막 요청에 대한 응답 값을 읽어오는 함수
+            </summary>
+            <param name="strReadData">수신한 데이터 (실패시 기존값)</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 응답 타임아웃은 5초로 고정되어 있음
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceMCRCognexDefine.CInitializeParameter()
+            {
+                 strIPAddress = 192.168.0.63
+                 strPortNumber = 21;
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceMCRCognex();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // MCR 데이터 읽기
+            string strData = "";
+            if (device.HLReadData(ref strData) == true)
+            {
+                Console.WriteLine($"MCR 리딩 데이터: {strData}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            MCR 리딩 데이터 : 리딩데이터
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex.HLTrigger">
+            <summary>
+            트리거 데이터 전송
+            </summary>
+            <returns>true = 성공, false = 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceMCRCognexDefine.CInitializeParameter()
+            {
+                 strIPAddress = 192.168.0.63
+                 strPortNumber = 21;
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceMCRCognex();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 트리거 데이터 전송
+            device.HLTrigger();
+            
+            // MCR 데이터 읽기
+            string strData = "";
+            if (device.HLReadData(ref strData) == true)
+            {
+                Console.WriteLine($"MCR 리딩 데이터: {strData}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            MCR 리딩 데이터 : 리딩데이터
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex.HLDeviceName">
+            <summary>
+            디바이스 네임 요청 데이터 전송
+            </summary>
+            <returns>true = 성공, false = 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceMCRCognexDefine.CInitializeParameter()
+            {
+                 strIPAddress = 192.168.0.63
+                 strPortNumber = 21;
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceMCRCognex();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 디바이스 네임 요청 데이터 전송
+            device.HLDeviceName();
+            
+            // MCR 데이터 읽기
+            string strData = "";
+            if (device.HLReadData(ref strData) == true)
+            {
+                Console.WriteLine($"MCR 리딩 데이터: {strData}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            MCR 리딩 데이터 : 리딩데이터
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex.HLSerialNo">
+            <summary>
+            시리얼 넘버 요청 데이터 전송
+            </summary>
+            <returns>true = 성공, false = 실패</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceMCRCognexDefine.CInitializeParameter()
+            {
+                 strIPAddress = 192.168.0.63
+                 strPortNumber = 21;
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceMCRCognex();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 시리얼 넘버 요청 데이터 전송
+            device.HLSerialNo();
+            
+            // MCR 데이터 읽기
+            string strData = "";
+            if (device.HLReadData(ref strData) == true)
+            {
+                Console.WriteLine($"MCR 리딩 데이터: {strData}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            MCR 리딩 데이터 : 리딩데이터
+            </code>
+        </member>
+        <member name="T:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine">
+            <summary>
+            <see cref="T:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex"/>에서 사용되는 데이터 클래스를 가지고 있는 클래스
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CInitializeParameter">
+            <summary>
+            <see cref="T:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex"/> 객체의 초기화 파라미터를 가진 데이터 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CInitializeParameter.strIPAddress">
+            <summary>
+            IP 주소<br/>
+            데이터 형식: "{nnn}.{nnn}.{nnn}.{nnn}"
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CInitializeParameter.strPortNumber">
+            <summary>
+            포트 번호<br/>
+            데이터 범위: 0x0000 ~ 0xFFFF
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CInitializeParameter.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CInitializeParameter"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CMCRError">
+            <summary>
+            <see cref="T:HLDeviceDLL.MCR.Cognex.HLDeviceMCRCognex"/>에서 사용되는 에러 정보를 가진 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CMCRError.strEventTime">
+            <summary>
+            에러가 발생한 시간을 나타내는 프로퍼티
+            </summary>
+            <remarks>데이터 형식: "yyyy/MM/dd hh:mm:ss"</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CMCRError.strFunctionName">
+            <summary>
+            에러가 발생한 함수를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CMCRError.iReturnCode">
+            <summary>
+            함수에서 반환한 결과 코드를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CMCRError.strMessage">
+            <summary>
+            발생한 에러에대한 메시지를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CMCRError.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.MCR.Cognex.CDeviceMCRCognexDefine.CMCRError"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.Common.ClientSocket.EReceiveDataType">
+            <summary>
+            수신 데이터 타입
+            </summary>
+        </member>
+    </members>
+</doc>

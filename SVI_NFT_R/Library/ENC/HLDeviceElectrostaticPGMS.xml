@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HLDeviceElectrostaticPGMS</name>
+    </assembly>
+    <members>
+        <member name="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS">
+            <summary>
+            INIXD사 GMS 디바이스의 기능을 구현한 클래스
+            </summary>
+            <remarks>
+            📌 자체 프로토콜을 사용하는 디바이스
+            </remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.DEF_RECEIVE_COUNT">
+            <summary>
+            해당 디바이스에서 지원하는 측정 채널 수를 나타내는 상수
+            </summary>
+            <remarks>
+            📌 <see cref="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS"/>에서 지원하는 범위: 최대 5개의 채널
+            </remarks>
+        </member>
+        <member name="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.CallBackFuntionReceiveData">
+            <summary>
+            통신 패킷을 수신했을 때 발생하는 콜백의 데이터를 정의하는 대리자
+            </summary>
+            <param name="objReceiveData">수신한 통신 패킷 객체</param>
+        </member>
+        <member name="P:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.Category">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.Vendor">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.Model">
+            <inheritdoc/>
+        </member>
+        <member name="E:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.OnSent">
+            <inheritdoc/>
+        </member>
+        <member name="E:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.OnReceived">
+            <inheritdoc/>
+        </member>
+        <member name="E:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.OnErrorMessage">
+            <inheritdoc/>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.HLInitialize(HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter)">
+            <summary>
+            라이브러리를 초기화하는 함수
+            </summary>
+            <remarks>
+            <br>📌 입력된 초기화 파라미터로 라이브러리 내부에 코어를 초기화하고, 통신 자동 접속 스레드를 시작함</br>
+            </remarks>
+            <param name="objInitializeParameter">초기화 파라미터 객체</param>
+            <returns>초기화 성공시 true를 실패시 false를 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceElectrostaticPGMSDefine.CInitializeParameter()
+            {
+                eType = CDeviceCommunicationAbstract.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceElectrostaticPGMS();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.HLDeInitialize">
+            <summary>
+            라이브러리를 정리하는 함수<br/>
+            <br/>
+            📌 통신 자동 접속 스레드를 중지시키고, 코어에 접속을 강제로 해제함
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.GetVersion(System.Boolean)">
+            <summary>
+            DLL 버전을 반환하는 함수
+            </summary>
+            <returns>DLL 버전을 "n.n.n.n" 형식으로 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            var device = new CDeviceElectrostaticPGMS();
+            // DLL 버전 정보 읽기
+            string version = comm.GetVersion();
+            Console.WriteLine($"DLL 버전: {version}");
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            DLL 버전: 1.0.0.0
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.HLIsConnected">
+            <summary>
+            통신 준비 상태를 반환하는 함수
+            </summary>
+            <returns>true: 통신이 준비된 상태<br/>false: 통신 준비가 안된 상태</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceElectrostaticPGMSDefine.CInitializeParameter()
+            {
+                eType = CDeviceCommunicationAbstract.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceElectrostaticPGMS();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 통신 준비 상태 확인
+            bool bIsConnected = device.HLIsConnected();
+            Console.WriteLine($"통신 준비 상태: {bIsConnected}");
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            통신 준비 상태: True
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.SetCallbackFunction(HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.CallBackFuntionReceiveData)">
+            <summary>
+            패킷을 성공적으로 수신한 직후에 실행되는 콜백 함수를 등록하는 함수
+            </summary>
+            <param name="objReceiveData">콜백 함수</param>
+            <remarks>
+            📌 디버깅용으로 제공하는 이벤트로 이벤트 핸들러를 등록하지 않아도 동작에는 전혀 영향을 주지 않음<br/>
+            🚩 이벤트 핸들러 구현부가 무거워질 경우 전체적인 성능에 영향을 줄 수 있음으로 주의 할 것
+            </remarks>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.HLSaveNickName(System.Int32,System.String)">
+            <summary>
+            해당 어드레스에 닉네임을 설정하는 함수
+            </summary>
+            <param name="iAddress">어드레스</param>
+            <param name="strNickName">닉네임</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="iAddress"/>의 입력 범위: 0 ~ 999<br/>
+            📌 매개변수 <paramref name="strNickName"/>의 문자열 길이 범위: 0 ~ 27, ASCII
+            📌 매개변수 <paramref name="strNickName"/>는 연결된 디바이스끼리 겹치지 않도록 유니크하게 정해야함
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceElectrostaticPGMSDefine.CInitializeParameter()
+            {
+                eType = CDeviceCommunicationAbstract.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceElectrostaticPGMS();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 닉네임 설정
+            int address = 0;
+            string nickname = "EXAMPLE NICKNAME 01";
+            if (device.HLSaveNickName(address, nickname) == false)
+            {
+                // 설정에 실패한 경우
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.HLLoadNickName(System.Int32,System.String@)">
+            <summary>
+            해당 어드레스에서 닉네임을 읽어오는 함수
+            </summary>
+            <param name="iAddress">어드레스</param>
+            <param name="strNickName">닉네임 (실패시 공백)</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="iAddress"/>의 입력 범위: 0 ~ 999<br/>
+            📌 매개변수 <paramref name="strNickName"/>의 문자열 길이 범위: 0 ~ 27, ASCII
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceElectrostaticPGMSDefine.CInitializeParameter()
+            {
+                eType = CDeviceCommunicationAbstract.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceElectrostaticPGMS();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 닉네임 읽기
+            int address = 0;
+            string nickname;
+            if (device.HLLoadNickName(address, out nickname) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {nickname}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: EXAMPLE NICKNAME 01
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.HLReadChannel(System.String,System.String[]@)">
+            <summary>
+            닉네임에 해당하는 디바이스의 전체 채널의 값을 읽어오는 함수
+            </summary>
+            <param name="strNickName">닉네임</param>
+            <param name="strResult">각 채널의 저항 값 (혹은 상태 값을 나타내는 문자열)</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="strNickName"/>의 문자열 길이 범위: 0 ~ 27, ASCII<br/>
+            📌 매개변수 <paramref name="strResult"/>에는 기본적으로 0 ~ 9999 사이의 값이 들어감. 값이 '123'일 경우 '1.23 Ω'을 의미함. 그리고 특정 값일 때 상태를 나타내는 문자열이 들어감.
+            <list type="table">
+                <listheader>
+                    <term>값</term>
+                    <description>의미</description>
+                </listheader>
+                <item>
+                    <term><c>OPEN</c> (원래 값: 9999)</term>
+                    <description>접지가 끊어진 상태</description>
+                </item>
+                <item>
+                    <term><c>RANGE OVER</c> (원래 값: 9998)</term>
+                    <description>9.99 Ω 초과시</description>
+                </item>
+                <item>
+                    <term><c>DISABLE</c> (원래 값: 9997)</term>
+                    <description>PORT 를 측정 안하게 GMS 기기에서 설정 해놓은 상태</description>
+                </item>
+            </list>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceElectrostaticPGMSDefine.CInitializeParameter()
+            {
+                eType = CDeviceCommunicationAbstract.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceCommunicationAbstract.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceElectrostaticPGMS();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 닉네임 읽기
+            int address = 0;
+            string nickname;
+            if (device.HLLoadNickName(address, out nickname) == true)
+            {
+                // 모든 채널에 값 읽기
+                string[] readValues;
+                if (device.HLReadChannel(nickname, out readValues) == true)
+                {
+                    // 읽기에 성공한 경우
+                    Console.WriteLine($"읽은 값: {{ {string.Join(", ", readValues)} }}");
+                }
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { OPEN, 123, 432, RANGE OVER, DISABLE }
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS.HLGetErrorCode">
+            <summary>
+            마지막에 발생한 <see cref="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CPGMSError"/> 객체를 반환하는 함수
+            </summary>
+            <returns>마지막에 발생한 <see cref="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CPGMSError"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine">
+            <summary>
+            <see cref="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS"/>에서 사용되는 데이터 클래스를 가지고 있는 클래스
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter">
+            <summary>
+            <see cref="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS"/> 객체의 초기화 파라미터를 가진 데이터 클래스
+            </summary>
+            <remarks>
+            <br> <see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.eType"/> 설정 값에 따라 사용되는 파라미터</br>
+            <list type="bullet">
+                <item>
+                    <see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SOCKET"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.strSocketIPAddress"/></item>
+                        <item><see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.iSocketPortNumber"/></item>
+                    </list>
+                </item>
+                <item>
+                    <see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.strSerialPortName"/></item>
+                        <item><see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.iSerialPortBaudrate"/></item>
+                        <item><see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.iSerialPortDataBits"/></item>
+                        <item><see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.eParity"/></item>
+                        <item><see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.eStopBits"/></item>
+                    </list>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType">
+            <summary>
+            통신 타입을 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SOCKET">
+            <summary>
+            TCP/IP 통신
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT">
+            <summary>
+            시리얼 통신
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_FINAL">
+            <summary>
+            통신 타입의 개수
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortParity">
+            <summary>
+            패리티 비트를 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE">
+            <summary>
+            패리티 검사를 수행하지 않습니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortParity.PARITY_ODD">
+            <summary>
+            비트 집합의 비트 합계가 홀수가 되도록 패리티 비트를 설정합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortParity.PARITY_EVEN">
+            <summary>
+            비트 집합의 비트 합계가 짝수가 되도록 패리티 비트를 설정합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortParity.PARITY_MARK">
+            <summary>
+            패리티 비트를 1로 설정된 상태로 유지합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortParity.PARITY_SPACE">
+            <summary>
+            패리티 비트를 0으로 설정된 상태로 유지합니다.
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortStopBits">
+            <summary>
+            정지 비티의 수를 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_NONE">
+            <summary>
+            정지 비트를 사용하지 않습니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE">
+            <summary>
+            1비트의 정지 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_TWO">
+            <summary>
+            2비트의 정지 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE_POINT_FIVE">
+            <summary>
+            1.5비트의 정지 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.eType">
+            <summary>
+            통신 타입
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.strSocketIPAddress">
+            <summary>
+            IP 주소<br/>
+            데이터 형식: "{nnn}.{nnn}.{nnn}.{nnn}"
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SOCKET"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.iSocketPortNumber">
+            <summary>
+            포트 번호<br/>
+            데이터 범위: 0x0000 ~ 0xFFFF
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SOCKET"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.strSerialPortName">
+            <summary>
+            시리얼 포트 포트 번호<br/>
+            데이터 형식: "COM{n}"
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.iSerialPortBaudrate">
+            <summary>
+            시리얼 포트 Baudrate
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.iSerialPortDataBits">
+            <summary>
+            시리얼 포트 Data Bits
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.eParity">
+            <summary>
+            시리얼 포트 Parity
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.eStopBits">
+            <summary>
+            시리얼 포트 Stop Bits
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CInitializeParameter"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CReceiveData">
+            <summary>
+            통신으로 수신한 데이터를 담고있는 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CReceiveData.strData">
+            <summary>
+            수신한 문자열 데이터
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CReceiveData.byteReceiveData">
+            <summary>
+            수신한 바이트 데이터
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CReceiveData.iByteLength">
+            <summary>
+            수신한 바이트 길이
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CReceiveData.Clear">
+            <summary>
+            데이터를 클리어하는 함수
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CReceiveData.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CReceiveData"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CPGMSError">
+            <summary>
+            <see cref="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMS"/>에서 사용되는 에러 정보를 가진 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CPGMSError.strEventTime">
+            <summary>
+            에러가 발생한 시간을 나타내는 프로퍼티
+            </summary>
+            <remarks>데이터 형식: "yyyy/MM/dd hh:mm:ss"</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CPGMSError.strFunctionName">
+            <summary>
+            에러가 발생한 함수를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CPGMSError.iReturnCode">
+            <summary>
+            함수에서 반환한 결과 코드를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CPGMSError.strMessage">
+            <summary>
+            발생한 에러에대한 메시지를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CPGMSError.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.Electrostatic.PGMS.CDeviceElectrostaticPGMSDefine.CPGMSError"/> 객체</returns>
+        </member>
+    </members>
+</doc>

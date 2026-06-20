@@ -1,0 +1,12 @@
+﻿ID,ByteIndex,BitIndex,HandlingDataTypeString,HandlingDataSize,ArrayLength,DecimalPoint,Label,Description,Comment
+Availability,0,0,bool,,,,,,
+Interlock,0,1,bool,,,,,,
+Move,0,2,bool,,,,,,
+Run,0,3,bool,,,,,,
+InDelay1,0,4,bool,,,,,,Carrier 공급 지연
+InDelay2,0,5,bool,,,,,,Panel 공급 지연
+WorkDelay1,0,6,bool,,,,,,작업자 작업시간 오버
+WorkDelay2,0,7,bool,,,,,,공정 배출 Delay
+OutDelay1,1,0,bool,,,,,,Carrier 배출 지연
+OutDelay2,1,1,bool,,,,,,Panel 배출 지연
+CellCount,2,,short,,,,,,설비 내부에 Panel 수

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENC.IO.DebugKit</name>
+    </assembly>
+    <members>
+        <member name="T:ENC.IO.DebugKit.ExtensionMethods">
+            <summary>
+            디버그 킷 확장 매서드가 정의된 클래스
+            </summary>
+        </member>
+        <member name="M:ENC.IO.DebugKit.ExtensionMethods.ShowDebugViewer(ENC.IO.Common.IHandlingDataCreator)">
+            <summary>
+            해당 IO 하드웨어에대한 뷰어 UI를 생성하는 함수
+            </summary>
+            <param name="handlingDataCreator">뷰어 UI를 생성할 IO 하드웨어 객체</param>
+        </member>
+        <member name="M:ENC.IO.DebugKit.ExtensionMethods.ShowErrorDisplayUi(System.Collections.Generic.List{ENC.IO.Common.ErrorSet})">
+            <summary>
+            입력된 에러 리스트에 내용을 표시하는 다이얼로그를 생성하는 함수
+            </summary>
+            <param name="errors">에러 리스트</param>
+            <returns>다이얼로그 결과</returns>
+        </member>
+        <member name="F:ENC.IO.DebugKit.FormDebugViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ENC.IO.DebugKit.FormDebugViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ENC.IO.DebugKit.FormDebugViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ENC.IO.DebugKit.FormGoto.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ENC.IO.DebugKit.FormGoto.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ENC.IO.DebugKit.FormGoto.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ENC.IO.DebugKit.FormWrite.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ENC.IO.DebugKit.FormWrite.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ENC.IO.DebugKit.FormWrite.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ENC.IO.DebugKit.UcSelectNumberFormat.components">
+            <summary> 
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:ENC.IO.DebugKit.UcSelectNumberFormat.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:ENC.IO.DebugKit.UcSelectNumberFormat.InitializeComponent">
+            <summary> 
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+            </summary>
+        </member>
+        <member name="F:ENC.IO.Common.FormError.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ENC.IO.Common.FormError.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ENC.IO.Common.FormError.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:UiAsset.SpeedButton">
+            <summary>
+            버튼을 클릭한 뒤 버튼 주위에 테두리가 생기는 않는 버튼 스타일
+            </summary>
+        </member>
+    </members>
+</doc>

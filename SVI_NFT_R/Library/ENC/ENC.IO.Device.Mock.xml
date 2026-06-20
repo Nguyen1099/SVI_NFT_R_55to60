@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENC.IO.Device.Mock</name>
+    </assembly>
+    <members>
+        <member name="T:ENC.IO.Device.Mock.ExtensionMethods">
+            <summary>
+            Mock 디바이스 추가 기능이 정의된 클래스
+            </summary>
+        </member>
+        <member name="M:ENC.IO.Device.Mock.ExtensionMethods.AddDeviceMock(ENC.IO.Common.IIoHardwareMappingInitializeContext,ENC.IO.Common.EHardwareDataType,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 Mock 디바이스를 추가한다
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="dataType">Mock 디바이스의 데이터 타입</param>
+            <param name="deviceStartOffset">Mock 디바이스의 바이트 시작 오프셋</param>
+            <param name="byteSize">Mock 디바이스의 바이트 크기</param>
+            <param name="bIsReadOnlyDevice">읽기 전용 디바이스 여부</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+    </members>
+</doc>

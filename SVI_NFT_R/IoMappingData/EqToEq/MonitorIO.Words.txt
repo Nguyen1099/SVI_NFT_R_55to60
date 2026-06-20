@@ -1,0 +1,4 @@
+﻿ID,ByteIndex,BitIndex,HandlingDataTypeString,HandlingDataSize,ArrayLength,DecimalPoint,Label,Description,Comment
+EquipmentStatus,0,,MonitorIO.Conveyor,,,,,,
+ReservedCellPositions,auto,,MonitorIO.Position,,4,,,,
+CellPosition,auto,,MonitorIO.Position,,,,,,

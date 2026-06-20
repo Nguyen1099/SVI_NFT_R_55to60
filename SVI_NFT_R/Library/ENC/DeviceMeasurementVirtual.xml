@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeviceMeasurementVirtual</name>
+    </assembly>
+    <members>
+        <member name="T:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual">
+            <summary>
+            Virtual 디바이스의 기능을 구현한 클래스 (KYENG사 QC Manager Multi 디바이스를 기준으로 작성됨)
+            </summary>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.MAX_UNIT_COUNT">
+            <inheritdoc/>
+            <remarks>
+            📌 <see cref="T:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual"/>에서 지원하는 범위: 최대 32개의 유닛
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.MAX_CHANNEL_COUNT">
+            <inheritdoc/>
+            <remarks>
+            📌 <see cref="T:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual"/>에서 지원하는 범위: 최대 7개의 채널
+            </remarks>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.DEFAULT_UNIT_CONVERTER">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.DeviceType">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.DisplayChannelName">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.DisplayUnitName">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.Name">
+            <inheritdoc/>
+        </member>
+        <member name="E:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.OnError">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.IsInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.UnitConverters">
+            <inheritdoc/>
+        </member>
+        <member name="P:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.InitializeParameter">
+            <inheritdoc/>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.#ctor">
+            <summary>
+            <see cref="T:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual"/> 클래스의 기본 생성자
+            </summary>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.Initialize(System.Object)">
+            <inheritdoc/>
+            <remarks>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            object initializeParameter = null;
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementVirtual();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.DeInitialize">
+            <inheritdoc/>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.GetVersion(System.Boolean)">
+            <inheritdoc/>
+            <remarks>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            var device = new DeviceMeasurementVirtual();
+            // DLL 버전 정보 읽기
+            string version = device.GetVersion(bReflesh: true);
+            Console.WriteLine($"DLL 버전: {version}");
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            DLL 버전: 1.0.0.0
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.IsOpened">
+            <inheritdoc/>
+            <remarks>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            object initializeParameter = null;
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementVirtual();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 통신 준비 상태 확인
+            bool bIsOpened = device.IsOpened();
+            Console.WriteLine($"통신 준비 상태: {bIsOpened}");
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            통신 준비 상태: True
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.TryReadOneChannel(System.Int32,System.Int32,System.Double@)">
+            <inheritdoc/>
+            <remarks>
+            📌 매개변수 <paramref name="slaveIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 매개변수 <paramref name="channelIndex"/>의 입력 범위: 0 ~ 6
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            object initializeParameter = null;
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementVirtual();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 단일 채널 읽기
+            int slaveIndex = 0;
+            int channelIndex = 0;
+            double readValue;
+            if (device.TryReadOneChannel(slaveIndex, channelIndex, out readValue) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {readValue:0.0000}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: 0.1011
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.TryReadAllChannels(System.Int32,System.Double[]@)">
+            <inheritdoc/>
+            <remarks>
+            📌 매개변수 <paramref name="slaveIndex"/>의 입력 범위: 0 ~ 31
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            object initializeParameter = null;
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementVirtual();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 모든 채널 읽기
+            int slaveIndex = 0;
+            double[] readValues;
+            if (device.TryReadAllChannels(slaveIndex, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {{ {string.Join(", ", readValues.Select(i => $"{i:0.0000}"))} }}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { 0.1011, 0.2011, 0.3011, 0.4011, 0.5011, 0.6011, 0.7011 }
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.TryReadRandomChannels(System.Int32,System.Int32[],System.Double[]@)">
+            <inheritdoc/>
+            <remarks>
+            📌 매개변수 <paramref name="slaveIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 매개변수 <paramref name="channelIndexes"/>의 개별 입력 범위: 0 ~ 6
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            object initializeParameter = null;
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementVirtual();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 연속되지 않은 여러 채널 읽기
+            int slaveIndex = 0;
+            int[] channelIndexes = new int[] { 0, 2, 4, 6 };
+            double[] readValues;
+            if (device.TryReadRandomChannels(slaveIndex, channelIndexes, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {{ {string.Join(", ", readValues.Select(i => $"{i:0.0000}"))} }}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { 0.1011, 0.3011, 0.5011, 0.7011 }
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.TryReadSequncialChannels(System.Int32,System.Int32,System.Int32,System.Double[]@)">
+            <inheritdoc/>
+            <remarks>
+            📌 매개변수 <paramref name="slaveIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 매개변수 <paramref name="startIndex"/>의 입력 범위: 0 ~ 6<br/>
+            📌 매개변수 <paramref name="count"/>의 입력 범위: 1 ~ 7<br/>
+            📌 매개변수 (<paramref name="startIndex"/> + <paramref name="count"/>) <![CDATA[<]]> 7
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            object initializeParameter = null;
+            
+            // 라이브러리 초기화
+            var device = new DeviceMeasurementVirtual();
+            if (device.Initialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 연속된 여러 채널 읽기
+            int slaveIndex = 0;
+            int startIndex = 3;
+            int count = 2;
+            double[] readValues;
+            if (device.TryReadSequncialChannels(slaveIndex, startIndex, count, out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {{ {string.Join(", ", readValues.Select(i => $"{i:0.0000}"))} }}");
+            }
+            
+            // 라이브러리 정리
+            device.DeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { 0.4011, 0.5011 }
+            </code>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.GetErrorCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:DeviceDLL.Measurement.ENC.Virtual.DeviceMeasurementVirtual.GetErrorLogInstanceOrNull">
+            <inheritdoc/>
+            <remarks>📌 해당 라이브러리에서 지원하지 않는 기능</remarks>
+        </member>
+    </members>
+</doc>

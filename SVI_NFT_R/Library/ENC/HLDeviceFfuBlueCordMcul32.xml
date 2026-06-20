@@ -1,0 +1,722 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HLDeviceFfuBlueCordMcul32</name>
+    </assembly>
+    <members>
+        <member name="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total">
+            <summary>
+            Blue Cord사 MCUL32-TOTAL 디바이스의 기능을 구현한 클래스
+            </summary>
+            <remarks>
+            📌 <see cref="T:DeviceDLL.Protocol.Modbus.DeviceProtocolModbus"/> 프로토콜을 사용하는 디바이스
+            </remarks>
+        </member>
+        <member name="P:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.MAX_UNIT_COUNT">
+            <summary>
+            해당 디바이스에서 지원하는 최대 유닛 수를 나타내는 프로퍼티
+            </summary>
+            <remarks>
+            📌 <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total"/>에서 지원하는 범위: 최대 1개의 유닛
+            </remarks>
+        </member>
+        <member name="P:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.MAX_CHANNEL_COUNT">
+            <summary>
+            해당 디바이스에서 지원하는 최대 채널 수를 나타내는 프로퍼티
+            </summary>
+            <remarks>
+            📌 <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total"/>에서 지원하는 범위: 최대 32개의 채널
+            </remarks>
+        </member>
+        <member name="P:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.Category">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.Vendor">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.Model">
+            <inheritdoc/>
+        </member>
+        <member name="E:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.OnSent">
+            <inheritdoc/>
+        </member>
+        <member name="E:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.OnReceived">
+            <inheritdoc/>
+        </member>
+        <member name="E:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.OnErrorMessage">
+            <inheritdoc/>
+        </member>
+        <member name="P:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.Protocol">
+            <summary>
+            모드버스 프로토콜 객체
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLInitialize(HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter,System.Boolean)">
+            <summary>
+            라이브러리를 초기화하는 함수
+            </summary>
+            <param name="objInitializeParameter">초기화 파라미터 객체</param>
+            <param name="bOldVersion">이전 방식과 호환성을 위한 플래그<br/>true=내부 스레드에서 일괄 읽기, false=개별 함수 호출시 읽기<br/>기본 값: true</param>
+            <returns>초기화 성공시 true를 실패시 false를 반환함</returns>
+            <remarks>
+            📌 입력된 초기화 파라미터로 라이브러리 내부에 코어를 초기화하고, 통신 자동 접속 스레드를 시작함<br/>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter()
+            {
+                eType = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            if (device.HLInitialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 라이브러리 정리
+            device.HLDeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLDeInitialize">
+            <summary>
+            라이브러리를 정리하는 함수<br/>
+            <br/>
+            📌 통신 자동 접속 스레드를 중지시키고, 코어에 접속을 강제로 해제함
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.GetVersion(System.Boolean)">
+            <summary>
+            DLL 버전을 반환하는 함수
+            </summary>
+            <param name="bReflesh">DLL 버전 데이터를 갱신할지 여부<br/>true: 무조건 DLL 파일 정보에서 읽어옴<br/>false: 기존에 갱신한 이력이 있으면 이전 값을 반환하고 없으면 DLL 파일 정보에서 읽어옴<br/>기본 값: false</param>
+            <returns>DLL 버전을 "n.n.n.n" 형식으로 반환함</returns>
+            <b>예제 코드</b>
+            <code>
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            // DLL 버전 정보 읽기
+            string version = device.HLGetVersion(bReflesh: true);
+            Console.WriteLine($"DLL 버전: {version}");
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            DLL 버전: 1.0.0.0
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLIsConnected">
+            <summary>
+            통신 준비 상태를 반환하는 함수
+            </summary>
+            <returns>true: 통신이 준비된 상태<br/>false: 통신 준비가 안된 상태</returns>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter()
+            {
+                eType = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            if (device.HLInitialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 통신 준비 상태 확인
+            bool bIsConnected = device.HLIsConnected();
+            Console.WriteLine($"통신 준비 상태: {bIsConnected}");
+            
+            // 라이브러리 정리
+            device.HLDeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            통신 준비 상태: True
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLGetFanSpeed(System.Byte,System.Int32@)">
+            <summary>
+            선택한 인덱스의 팬의 속도를 읽어오는 함수
+            </summary>
+            <param name="fanIndex">팬 인덱스</param>
+            <param name="currentFanSpeed">팬 속도(단위: RPM)</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="fanIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 실제로 값을 읽어오는 최소 인터벌은 1초로 1초 보다 빠르게 호출될 경우 직전에 읽은 값을 반환함<br/>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter()
+            {
+                eType = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            if (device.HLInitialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 팬 속도 읽기
+            byte fanIndex = 0;
+            int currentFanSpeed;
+            if (device.HLGetFanSpeed(fanIndex, out currentFanSpeed) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {currentFanSpeed}");
+            }
+            
+            // 라이브러리 정리
+            device.HLDeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: 123
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLGetFanStatus(System.Byte,System.String[]@)">
+            <summary>
+            선택한 인덱스의 팬의 상태를 읽어오는 함수
+            </summary>
+            <param name="fanIndex">팬 인덱스</param>
+            <param name="fanStatus">팬의 상태</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="fanIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 실제로 값을 읽어오는 최소 인터벌은 1초로 1초 보다 빠르게 호출될 경우 직전에 읽은 값을 반환함<br/>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter()
+            {
+                eType = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            if (device.HLInitialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 팬 상태 읽기
+            byte fanIndex = 0;
+            string[] fanStatus;
+            if (device.HLGetFanStatus(fanIndex, out fanStatus) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {{ {string.Join(", ", fanStatus)} }}");
+            }
+            
+            // 라이브러리 정리
+            device.HLDeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { Remote }
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLGetFanStatus(System.Byte,HLDeviceDLL.FFU.BlueCordMcul32Total.EAlarmCode@)">
+            <summary>
+            선택한 인덱스의 팬의 알람 코드를 읽어오는 함수
+            </summary>
+            <param name="fanIndex">팬 인덱스</param>
+            <param name="alarmCode">팬의 알람 코드</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="fanIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 실제로 값을 읽어오는 최소 인터벌은 1초로 1초 보다 빠르게 호출될 경우 직전에 읽은 값을 반환함<br/>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter()
+            {
+                eType = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            if (device.HLInitialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 팬 알람 코드 읽기
+            byte fanIndex = 0;
+            EAlarmCode alarmCode;
+            if (device.HLGetFanStatus(fanIndex, out alarmCode) == true)
+            {
+                // 읽기에 성공한 경우
+                Console.WriteLine($"읽은 값: {{ {alarmCode} }}");
+            }
+            
+            // 라이브러리 정리
+            device.HLDeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { Remote }
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLGetFanSpeedAll(System.Int32[]@)">
+            <summary>
+            모든 팬의 속도를 읽어오는 함수
+            </summary>
+            <param name="readValuesOrNull">팬 속도 배열(단위: RPM)</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="readValuesOrNull"/>은 읽기에 실패한 경우 <c>null</c>을 반환함<br/>
+            📌 실제로 값을 읽어오는 최소 인터벌은 1초로 1초 보다 빠르게 호출될 경우 직전에 읽은 값을 반환함<br/>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter()
+            {
+                eType = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            if (device.HLInitialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 전체 팬 속도 읽기
+            int[] readValues;
+            if (device.HLGetFanSpeedAll(out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                byte fanIndex = 0;
+                Console.WriteLine($"읽은 값: {readValues[fanIndex]}");
+            }
+            
+            // 라이브러리 정리
+            device.HLDeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: 123
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLGetFanStatusAll(System.Collections.Generic.IReadOnlyList{System.String[]}@)">
+            <summary>
+            모든 팬의 상태를 읽어오는 함수
+            </summary>
+            <param name="readStatusOrNull">팬 상태 배열</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="readStatusOrNull"/>은 읽기에 실패한 경우 <c>null</c>을 반환함<br/>
+            📌 실제로 값을 읽어오는 최소 인터벌은 1초로 1초 보다 빠르게 호출될 경우 직전에 읽은 값을 반환함<br/>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter()
+            {
+                eType = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            if (device.HLInitialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 전체 팬 상태 읽기
+            IReadOnlyList&lt;string[]&gt; readValues;
+            if (device.HLGetFanStatusAll(out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                byte fanIndex = 0;
+                Console.WriteLine($"읽은 값: {{ {string.Join(", ", readValues[fanIndex])} }}");
+            }
+            
+            // 라이브러리 정리
+            device.HLDeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { Remote }
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLGetFanStatusAll(HLDeviceDLL.FFU.BlueCordMcul32Total.EAlarmCode[]@)">
+            <summary>
+            모든 팬의 알람 코드를 읽어오는 함수
+            </summary>
+            <param name="alarmCodesOrNull">팬 알람 코드 배열</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="alarmCodesOrNull"/>은 읽기에 실패한 경우 <c>null</c>을 반환함<br/>
+            📌 실제로 값을 읽어오는 최소 인터벌은 1초로 1초 보다 빠르게 호출될 경우 직전에 읽은 값을 반환함<br/>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter()
+            {
+                eType = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            if (device.HLInitialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 전체 팬 알람 코드 읽기
+            EAlarmCode[] readValues;
+            if (device.HLGetFanStatusAll(out readValues) == true)
+            {
+                // 읽기에 성공한 경우
+                byte fanIndex = 0;
+                Console.WriteLine($"읽은 값: {{ {readValues[fanIndex]} }}");
+            }
+            
+            // 라이브러리 정리
+            device.HLDeInitialize();
+            return;
+            </code>
+            <b>예제 코드 콘솔 출력</b>
+            <code>
+            읽은 값: { Remote }
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLSetFanSpeed(System.Byte,System.Int32)">
+            <summary>
+            선택한 인덱스의 팬의 속도를 설정하는 함수
+            </summary>
+            <param name="fanIndex">팬 인덱스</param>
+            <param name="setFanSpeed">팬 속도(단위: RPM)</param>
+            <returns>true = 성공, false = 실패</returns>
+            <remarks>
+            📌 매개변수 <paramref name="fanIndex"/>의 입력 범위: 0 ~ 31<br/>
+            📌 매개변수 <paramref name="setFanSpeed"/>의 입력 범위: 0 ~ 1500<br/>
+            </remarks>
+            <b>예제 코드</b>
+            <code>
+            // 초기화 파라미터 설정
+            var initializeParameter = new CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter()
+            {
+                eType = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL,
+                strSerialPortName = "COM1",
+                iSerialPortBaudrate = 19200,
+                iSerialPortDataBits = 8,
+                eStopBits = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE,
+                eParity = CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE
+            };
+            
+            // 라이브러리 초기화
+            var device = new CDeviceFfuBlueCordMcul32Total();
+            if (device.HLInitialize(initializeParameter) == false)
+            {
+                // 초기화 실패
+                return;
+            }
+            
+            // 팬 속도 쓰기
+            byte fanIndex = 0;
+            int setFanSpeed = 1000;
+            if (device.HLSetFanSpeed(fanIndex, setFanSpeed) == true)
+            {
+                // 쓰기에 성공한 경우
+            }
+            
+            // 라이브러리 정리
+            device.HLDeInitialize();
+            return;
+            </code>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total.HLGetErrorCode">
+            <summary>
+            마지막에 발생한 <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CBlueCordMcul32TotalError"/> 객체를 반환하는 함수
+            </summary>
+            <returns>마지막에 발생한 <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CBlueCordMcul32TotalError"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine">
+            <summary>
+            <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total"/>에서 사용되는 데이터 클래스를 가지고 있는 클래스
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter">
+            <summary>
+            <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total"/> 객체의 초기화 파라미터를 가진 데이터 클래스
+            </summary>
+            <remarks>
+            <br> <see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.eType"/> 설정 값에 따라 사용되는 파라미터</br>
+            <list type="bullet">
+                <item>
+                    <see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SOCKET"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.strSocketIPAddress"/></item>
+                        <item><see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.iSocketPortNumber"/></item>
+                    </list>
+                </item>
+                <item>
+                    <see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 설정시
+                    <list type="bullet">
+                        <item><see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.strSerialPortName"/></item>
+                        <item><see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.iSerialPortBaudrate"/></item>
+                        <item><see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.iSerialPortDataBits"/></item>
+                        <item><see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.eParity"/></item>
+                        <item><see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.eStopBits"/></item>
+                    </list>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType">
+            <summary>
+            통신 타입을 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SOCKET">
+            <summary>
+            TCP/IP 통신
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT">
+            <summary>
+            시리얼 통신
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_FINAL">
+            <summary>
+            통신 타입의 개수
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity">
+            <summary>
+            패리티 비트를 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_NONE">
+            <summary>
+            패리티 검사를 수행하지 않습니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_ODD">
+            <summary>
+            비트 집합의 비트 합계가 홀수가 되도록 패리티 비트를 설정합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_EVEN">
+            <summary>
+            비트 집합의 비트 합계가 짝수가 되도록 패리티 비트를 설정합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_MARK">
+            <summary>
+            패리티 비트를 1로 설정된 상태로 유지합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortParity.PARITY_SPACE">
+            <summary>
+            패리티 비트를 0으로 설정된 상태로 유지합니다.
+            </summary>
+        </member>
+        <member name="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits">
+            <summary>
+            정지 비티의 수를 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_NONE">
+            <summary>
+            정지 비트를 사용하지 않습니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE">
+            <summary>
+            1비트의 정지 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_TWO">
+            <summary>
+            2비트의 정지 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumSerialPortStopBits.STOP_BITS_ONE_POINT_FIVE">
+            <summary>
+            1.5비트의 정지 비트를 사용합니다.
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.eType">
+            <summary>
+            통신 타입
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.strSocketIPAddress">
+            <summary>
+            IP 주소<br/>
+            데이터 형식: "{nnn}.{nnn}.{nnn}.{nnn}"
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SOCKET"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.iSocketPortNumber">
+            <summary>
+            포트 번호<br/>
+            데이터 범위: 0x0000 ~ 0xFFFF
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SOCKET"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.strSerialPortName">
+            <summary>
+            시리얼 포트 포트 번호<br/>
+            데이터 형식: "COM{n}"
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.iSerialPortBaudrate">
+            <summary>
+            시리얼 포트 Baudrate
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.iSerialPortDataBits">
+            <summary>
+            시리얼 포트 Data Bits
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.eParity">
+            <summary>
+            시리얼 포트 Parity
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.eStopBits">
+            <summary>
+            시리얼 포트 Stop Bits
+            </summary>
+            <remarks>[<see cref="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.enumType.TYPE_SERIAL_PORT"/> 용 파라미터]</remarks>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CInitializeParameter"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CBlueCordMcul32TotalError">
+            <summary>
+            <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine"/>에서 사용되는 에러 정보를 가진 클래스
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CBlueCordMcul32TotalError.strEventTime">
+            <summary>
+            에러가 발생한 시간을 나타내는 프로퍼티
+            </summary>
+            <remarks>데이터 형식: "yyyy/MM/dd hh:mm:ss"</remarks>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CBlueCordMcul32TotalError.strFunctionName">
+            <summary>
+            에러가 발생한 함수를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CBlueCordMcul32TotalError.iReturnCode">
+            <summary>
+            함수에서 반환한 결과 코드를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CBlueCordMcul32TotalError.strMessage">
+            <summary>
+            발생한 에러에대한 메시지를 나타내는 프로퍼티
+            </summary>
+        </member>
+        <member name="M:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CBlueCordMcul32TotalError.Clone">
+            <summary>
+            해당 객체를 깊은 복사하는 함수
+            </summary>
+            <returns>깊은 복사된 <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32TotalDefine.CBlueCordMcul32TotalError"/> 객체</returns>
+        </member>
+        <member name="T:HLDeviceDLL.FFU.BlueCordMcul32Total.EAlarmCode">
+            <summary>
+            <see cref="T:HLDeviceDLL.FFU.BlueCordMcul32Total.CDeviceFfuBlueCordMcul32Total"/>의 알람 코드를 정의함
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.EAlarmCode.NotConnect">
+            <summary>
+            의미 없음
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.EAlarmCode.MotorError">
+            <summary>
+            모터에 과전류나 과열이 발생한 경우
+            </summary>
+        </member>
+        <member name="F:HLDeviceDLL.FFU.BlueCordMcul32Total.EAlarmCode.Remote">
+            <summary>
+            리모트 상태인 경우
+            </summary>
+        </member>
+    </members>
+</doc>

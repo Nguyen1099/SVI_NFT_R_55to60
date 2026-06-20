@@ -1,0 +1,156 @@
+﻿ID	,	TEXT_KOREA	,	TEXT_CHINA	,	TEXT_ENGLISH	,	TEXT_VIETNAM
+90000	,	시작하시겠습니까?	,	你确定要退出该计划吗?	,	DO YOU WANT TO START?	,	Bạn có muốn START không?
+90001	,	프로그램을 종료하시겠습니까?	,	DO YOU WANT TO EXIT THE PROGRAM?	,	DO YOU WANT TO EXIT THE PROGRAM?	,	Bạn có muốn kết thúc chương trình không?
+90002	,	Cell Out 리스트에 등록 하시겠습니까?	,	DO YOU WANT TO REGISTER IN THE CELL OUT LIST?	,	DO YOU WANT TO REGISTER IN THE CELL OUT LIST?	,	Bạn có muốn đăng ký vào CELL OUT LIST không?
+90003	,	Cell Out 리스트에 삭제 하시겠습니까?	,	DO YOU WANT TO DELETE IT FROM THE CELL OUT LIST?	,	DO YOU WANT TO DELETE IT FROM THE CELL OUT LIST?	,	Bạn có muốn xóa khỏi CELL OUT LIST không?
+90004	,	해당 스테이지에서 CELL을 제거해 주세요.	,	REMOVE THE CELL FROM THE STAGE.	,	REMOVE THE CELL FROM THE STAGE.	,	Vui lòng xóa CELL khỏi STAGE.
+90005	,	해당 스테이지에서 TRAY를 제거해 주세요.	,	REMOVE THE TRAY FROM THE STAGE.	,	REMOVE THE TRAY FROM THE STAGE.	,	Vui lòng xóa TRAY khỏi STAGE.
+90006	,	Cell Out을 진행하시겠습니까?	,	DO YOU WANT TO RUN CELL OUT?	,	DO YOU WANT TO RUN CELL OUT?	,	Bạn có muốn tiến hành Cell Out không?
+90007	,	아이디가 없습니다.	,	THERE IS NOT ID.	,	THERE IS NOT ID.	,	Không có ID.
+90008	,	비밀번호가 없습니다.	,	THERE IS NOT PASSWORD.	,	THERE IS NOT PASSWORD.	,	Bạn không có mật khẩu.
+90009	,	유저 아이디가 일치하지 않습니다.	,	USER ID DO NOT MATCH.	,	USER ID DO NOT MATCH.	,	ID người dùng không khớp.
+90010	,	로그인 정보가 일치하지 않습니다.	,	THE LOGIN INFORMATION DOES NOT MATCH.	,	THE LOGIN INFORMATION DOES NOT MATCH.	,	Thông tin đăng nhập không khớp.
+90011	,	PPID가 없습니다.	,	THERE IS NOT PPID.	,	THERE IS NOT PPID.	,	Thiếu PPID.
+90012	,	PPID가 중복됩니다.	,	THE PPID IS DUPLICATED.	,	THE PPID IS DUPLICATED.	,	PPID bị trùng lặp.
+90013	,	PPID 번호가 중복됩니다.	,	THE PPID NUMBER IS DUPLICATED.	,	THE PPID NUMBER IS DUPLICATED.	,	THE PPID NUMBER IS DUPLICATED.
+90014	,	아직 수정된 결과를 커밋하지 않았습니다. 커밋하시겠습니까? (아니요를 누르면 롤백)	,	YOU HAVE NOT COMMITTED THE RESULTS YET. DO YOU WANT TO COMMIT? (PRESS NO TO ROLL BACK)	,	YOU HAVE NOT COMMITTED THE RESULTS YET. DO YOU WANT TO COMMIT? (PRESS NO TO ROLL BACK)	,	Kết quả đã sửa  chưa được cam kết kết quả . Bạn có muốn cam kết không? (Nhấn No để quay lại)
+90015	,	배출 택타임 최대 제한에 걸립니다.	,	OUTPUT TACT TIME TAKES THE MAXIMUM LIMIT.	,	OUTPUT TACT TIME TAKES THE MAXIMUM LIMIT.	,	OUTPUT TACT TIME Phải mất một giới hạn tối đa.
+90016	,	저장이 완료되었습니다.	,	SAVING IS COMPLETE.	,	SAVING IS COMPLETE.	,	Quá trình lưu hoàn tất.
+90017	,	불러오기가 완료되었습니다.	,	LOADING IS COMPLETE.	,	LOADING IS COMPLETE.	,	Quá trình LOAD hoàn tất.
+90018	,	설비 알람 상태를 확인하여 주십시오.	,	CHECK THE EQUIPMENT ALARM STATUS.	,	CHECK THE EQUIPMENT ALARM STATUS.	,	Kiểm tra trạng thái báo động thiết bị. ALARM STATUS.
+90019	,	설비가 정지 상태가 아니면 도어창에 접근할 수 없습니다.	,	YOU CAN NOT ACCESS THE DOOR DIALOG UNLESS THE EQUIPMENT IS STOPPED.	,	YOU CAN NOT ACCESS THE DOOR DIALOG UNLESS THE EQUIPMENT IS STOPPED.	,	Bạn không thể truy cập vào  DOOR trừ khi quá trình cài đặt bị dừng.
+90020	,	레시피를 저장하시겠습니까?	,	DO YOU WANT TO SAVE THE RECIPE?	,	DO YOU WANT TO SAVE THE RECIPE?	,	Bạn có muốn lưu công thức không? SAVE  RECIPE?
+90021	,	레시피를 불러오시겠습니까?	,	DO YOU WANT TO LOAD THE RECIPE?	,	DO YOU WANT TO LOAD THE RECIPE?	,	Bạn có muốn gọi lên công thức?  LOAD  RECIPE?
+90022	,	레시피를 삭제하시겠습니까?	,	DO YOU WANT TO DELETE THE RECIPE?	,	DO YOU WANT TO DELETE THE RECIPE?	,	Bạn có chắc chắn muốn xóa công thức không? DELETE  RECIPE?
+90023	,	레시피를 생성하시겠습니까?	,	DO YOU WANT TO CREATE THE RECIPE?	,	DO YOU WANT TO CREATE THE RECIPE?	,	Bạn có muốn tạo công thức không? CREATE RECIPE?
+90024	,	오프셋 데이터를 저장하시겠습니까?	,	DO YOU WANT TO SAVE THE OFFSET DATA?	,	DO YOU WANT TO SAVE THE OFFSET DATA?	,	Bạn có muốn lưu công thức không? SAVE  OFFSET DATA?
+90025	,	오프셋 데이터를 불러오시겠습니까?	,	DO YOU WANT TO LOAD THE OFFSET DATA?	,	DO YOU WANT TO LOAD THE OFFSET DATA?	,	Bạn có muốn gọi lên công thức?  LOAD  OFFSET DATA?
+90026	,	오프셋 데이터를 삭제하시겠습니까?	,	DO YOU WANT TO DELETE THE OFFSET DATA?	,	DO YOU WANT TO DELETE THE OFFSET DATA?	,	Bạn có chắc chắn muốn xóa công thức không? DELETE  OFFSET DATA?
+90027	,	오프셋 데이터를 생성하시겠습니까?	,	DO YOU WANT TO CREATE THE OFFSET DATA?	,	DO YOU WANT TO CREATE THE OFFSET DATA?	,	Bạn có muốn tạo công thức không? CREATE OFFSET DATA?
+90028	,	로깅 시간은 01 ~ 99분 사이로 설정해야 합니다.	,	LOGGING TIME RANGE IS 01 ~ 99 MIN.	,	LOGGING TIME RANGE IS 01 ~ 99 MIN.	,	Thời gian LOG TIME phải được cài đặt từ   01 ~ 99 phút.
+90029	,	로깅 스캔 시간은 01 ~ 60초 사이로 설정해야 합니다.	,	LOGGING SCAN TIME RANGE IS 01 ~ 60 SEC.	,	LOGGING SCAN TIME RANGE IS 01 ~ 60 SEC.	,	Thời gian LOG SCAN TIME phải được cài đặt từ 01 ~ 60 giây.
+90030	,	로그 보관 기간은 30 ~ 365일 사이로 설정해야 합니다.	,	LOG DELETE PERIOD IS 30 ~ 365 DAYS.	,	LOG DELETE PERIOD IS 30 ~ 365 DAYS.	,	LOG DELETE PERIOD IS 30 ~ 365 DAYS.
+90031	,	문을 잠글 수 없습니다. 설비 내부에 작업자가 있는지 확인해주세요.	,	Can not lock the door. Please check if there are workers inside the equipment.	,	Can not lock the door. Please check if there are workers inside the equipment.	,	Can not lock the door. Please check if there are workers inside the equipment.
+90032	,	설비 도어를 잠그고 세이프티 키 상태를 오토로 변경해 주십시오.	,	LOCK THE EQUIPMENT DOOR AND CHANGE THE SAFETY KEY STATUS TO AUTO.	,	LOCK THE EQUIPMENT DOOR AND CHANGE THE SAFETY KEY STATUS TO AUTO.	,	Khóa cửa thiết bị và thay đổi trạng thái khóa an toàn thành Tự động.
+90033	,	설비 도어를 잠그고 세이프티 키 상태를 티치로 변경해 주십시오.	,	LOCK THE EQUIPMENT DOOR AND CHANGE THE SAFETY KEY STATUS TO TEACH.	,	LOCK THE EQUIPMENT DOOR AND CHANGE THE SAFETY KEY STATUS TO TEACH.	,	Khóa cửa thiết bị và thay đổi trạng thái khóa an toàn thành TEACH.
+90034	,	정면 세이프티 키 모드 AUTO가 아닙니다.	,	FRONT SAFETY KEY MODE IS NOT AUTO.	,	FRONT SAFETY KEY MODE IS NOT AUTO.	,	FRONT SAFETY KEY MODE Không ở trạng thái AUTO
+90035	,	후면 세이프티 키 모드 AUTO가 아닙니다.	,	REAR SAFETY KEY MODE IS NOT AUTO.	,	REAR SAFETY KEY MODE IS NOT AUTO.	,	REAR SAFETY KEY MODE Không ở trạng thái AUTO
+90036	,	정면 세이프티 키 모드 TEACH가 아닙니다.	,	FRONT SAFETY KEY MODE IS NOT TEACH.	,	FRONT SAFETY KEY MODE IS NOT TEACH.	,	FRONT SAFETY KEY MODE  Không ở trạng thái TEACH 
+90037	,	후면 세이프티 키 모드 TEACH가 아닙니다.	,	REAR SAFETY KEY MODE IS NOT TEACH.	,	REAR SAFETY KEY MODE IS NOT TEACH.	,	REAR SAFETY KEY MODE  Không ở trạng thái TEACH 
+90038	,	세이프티 키 모드 AUTO가 아닙니다.	,	SAFETY KEY MODE IS NOT AUTO.	,	SAFETY KEY MODE IS NOT AUTO.	,	SAFETY KEY MODE Không ở trạng thái AUTO
+90039	,	세이프티 키 모드 TEACH가 아닙니다.	,	SAFETY KEY MODE IS NOT TEACH.	,	SAFETY KEY MODE IS NOT TEACH.	,	SAFETY KEY MODE  Không ở trạng thái TEACH 
+90040	,	설비 자동 운전 상태 입니다.	,	MACHINE IS AUTO RUN STATUS.	,	MACHINE IS AUTO RUN STATUS.	,	Thiết bị đang ở trạng thái hoạt động tự động. ( AUTO RUNNING. )
+90041	,	메인 진공 공압 센서가 감지 되지 않았습니다.	,	MAIN VACUUM AIR SENSOR NOT DETECT.	,	MAIN VACUUM AIR SENSOR NOT DETECT.	,	Cảm biến khí nén chân không chính (MAIN VACUUM AIR SENSOR )  không được phát hiện.
+90042	,	메인 에어 공압 센서가 감지 되지 않았습니다.	,	MAIN AIR SENSOR NOT DETECT.	,	MAIN AIR SENSOR NOT DETECT.	,	Cảm biến khí nén chân không chính (MAIN AIR SENSOR )  không được phát hiện.
+90043	,	전면 부 비상 정지 상태 입니다.	,	FORNT SUB EMG STOP STATE.	,	FORNT SUB EMG STOP STATE.	,	FORNT SUB EMG STOP STATE.
+90044	,	후면 부 비상 정지 상태 입니다.	,	REAR SUB EMG STOP STATE.	,	REAR SUB EMG STOP STATE.	,	REAR SUB EMG STOP STATE.
+90045	,	설비 메인 MC OFF 상태 입니다.	,	MACHINE MAIN MC OFF STATE.	,	MACHINE MAIN MC OFF STATE.	,	Thiết bị MAIN đang ở  trạng thái MC OFF.
+90046	,	설비 메인 FIRST CP OFF 상태 입니다.	,	MACHINE FIRST CP OFF STATE.	,	MACHINE FIRST CP OFF STATE.	,	Thiết bị MAIN đang ở  trạng thái FIRST CP OFF
+90047	,	설비 메인 SECOND CP OFF 상태 입니다.	,	MACHINE SECOND CP OFF STATE.	,	MACHINE SECOND CP OFF STATE.	,	Thiết bị MAIN đang ở  trạng thái SECOND CP OFF 
+90048	,	설비 전장 박스 온도 알람 상태 입니다.	,	MACHINE BOX TEMPETURE ALARM STATE.	,	MACHINE BOX TEMPETURE ALARM STATE.	,	Thiết bị ELECTRONIC BOX đang ở trạng thái cảnh báo nhiệt độ 
+90049	,	설비 연기 감지 상태 입니다.	,	MACHINE SMOKE DETECT STATE.	,	MACHINE SMOKE DETECT STATE.	,	Thiết bị đang ở trạng thái phát hiện khói (SMOKE SENSOR)
+90050	,	광학 쿨링 공압 센서가 감지 되지 않았습니다.	,	OPTIAL COOLING AIR SENSOR NOT DETECT.	,	OPTIAL COOLING AIR SENSOR NOT DETECT.	,	cảm biến áp suất không khí làm mát quangmáy SDV VISION chưa được phát hiện.
+90051	,	설비 SAFETY_PLC_MODE OFF 상태가 아닙니다.	,	EQP SAFTTY PLC MODE STATUS IS NOT OFF.	,	EQP SAFTTY PLC MODE STATUS IS NOT OFF.	,	EQP SAFTTY PLC MODE  không ở trạng thái OFF 
+90052	,	설비 SAFETY_PLC_SIGNAL_NORMAL ON 상태가 아닙니다.	,	EQP SAFTTY PLC SIGNAL NORMAL STATUS IS NOT ON.	,	EQP SAFTTY PLC SIGNAL NORMAL STATUS IS NOT ON.	,	EQP SAFTTY PLC SIGNAL NORMAL STATUS IS NOT ON.
+90053	,	설비 도어가 열려 있습니다.	,	EQUIPMENT DOOR IS OPEN.	,	EQUIPMENT DOOR IS OPEN.	,	EQUIPMENT DOOR IS OPEN.
+90054	,	저장하시겠습니까?	,	DO YOU WANT TO SAVE?	,	DO YOU WANT TO SAVE?	,	Bạn có muốn lưu công thức không?
+90055	,	불러오시겠습니까?	,	DO YOU WANT TO LOAD?	,	DO YOU WANT TO LOAD?	,	Bạn có muốn gọi công thức lên không ?
+90056	,	LOT END 실행 하겠습니까?	,	DO YOU WANT TO LOT END?	,	DO YOU WANT TO LOT END?	,	DO YOU WANT TO LOT END?
+90057	,	라이트 커튼 센서가 감지되어 인터락이 발생했습니다.	,	LIGHT CURTAIN DETECTED.	,	LIGHT CURTAIN DETECTED.	,	LIGHT CURTAIN DETECTED.
+90058	,	MAIN FAN 1이 미작동 중입니다.	,	MAIN FAN 1 IS NOT RUN.	,	MAIN FAN 1 IS NOT RUN.	,	MAIN FAN 1  đang không RUN .
+90059	,	MAIN FAN 2이 미작동 중입니다.	,	MAIN FAN 2 IS NOT RUN.	,	MAIN FAN 2 IS NOT RUN.	,	MAIN FAN 2  đang không RUN .
+90060	,	MAIN FAN 3이 미작동 중입니다.	,	MAIN FAN 3 IS NOT RUN.	,	MAIN FAN 3 IS NOT RUN.	,	MAIN FAN 3  đang không RUN .
+90061	,	MAIN FAN 4이 미작동 중입니다.	,	MAIN FAN 4 IS NOT RUN.	,	MAIN FAN 4 IS NOT RUN.	,	MAIN FAN 4  đang không RUN .
+90062	,	SUB FAN 1이 미작동 중입니다.	,	SUB FAN 1 IS NOT RUN.	,	SUB FAN 1 IS NOT RUN.	,	SUB FAN 1  đang không RUN .
+90063	,	SUB FAN 2이 미작동 중입니다.	,	SUB FAN 2 IS NOT RUN.	,	SUB FAN 2 IS NOT RUN.	,	SUB FAN 2  đang không RUN .
+90064	,	SUB FAN 3이 미작동 중입니다.	,	SUB FAN 3 IS NOT RUN.	,	SUB FAN 3 IS NOT RUN.	,	SUB FAN 3  đang không RUN .
+90065	,	SUB FAN 4이 미작동 중입니다.	,	SUB FAN 4 IS NOT RUN.	,	SUB FAN 4 IS NOT RUN.	,	SUB FAN 4  đang không RUN .
+90066	,	[{0}] 이 미작동 중입니다.	,	[{0}] IS NOT RUN.	,	[{0}] IS NOT RUN.	,	[{0}] IS NOT RUN.
+90067	,	EFU 가동중이 아닙니다.	,	EFU IS NOT RUN.	,	EFU IS NOT RUN.	,	EFU đang không RUN .
+90068	,	실내등이 켜져 있습니다.	,	INSIDE LAMP IS ON.	,	INSIDE LAMP IS ON.	,	INSIDE LAMP IS ON.
+90069	,	얼라인 데이터를 클리어 하시겠습니까?	,	DO YOU WANT TO ALIGN DATA CLEAR?	,	DO YOU WANT TO ALIGN DATA CLEAR?	,	DO YOU WANT TO ALIGN DATA CLEAR?
+90070	,	출력 신호 변경 잠금 상태입니다.	,	OUTPUT SIGNAL CHANGE LOCK STATUS.	,	OUTPUT SIGNAL CHANGE LOCK STATUS.	,	OUTPUT SIGNAL CHANGE LOCK STATUS.
+90071	,	레시피 변경 사항이 없습니다.	,	THERE ARE NO CHANGES TO THE RECIPE.	,	THERE ARE NO CHANGES TO THE RECIPE.	,	THERE ARE NO CHANGES TO THE RECIPE.
+90072	,	오토 켈리브레이션 모드 진입에 실패 했습니다.	,	FAILED TO ENTER AUTO CALIBRATION MODE.	,	FAILED TO ENTER AUTO CALIBRATION MODE.	,	FAILED TO ENTER AUTO CALIBRATION MODE.
+90073	,	오토 켈리브레이션에 실패 했습니다.	,	AUTO CALIBRATION FAILED.	,	AUTO CALIBRATION FAILED.	,	AUTO CALIBRATION FAILED.
+90074	,	오토 켈리브레이션 진행중에는 변경 할 수 없습니다.	,	IT CANNOT BE CHANGED WHILE AUTO CALIBRATION IS IN PROGRESS.	,	IT CANNOT BE CHANGED WHILE AUTO CALIBRATION IS IN PROGRESS.	,	IT CANNOT BE CHANGED WHILE AUTO CALIBRATION IS IN PROGRESS.
+90075	,	로봇 쪽 신호가 먼저 준비 되어야 진행 할 수 있습니다.	,	THE ROBOT SIDE SIGNAL MUST BE PREPARED FIRST TO PROCEED.	,	THE ROBOT SIDE SIGNAL MUST BE PREPARED FIRST TO PROCEED.	,	THE ROBOT SIDE SIGNAL MUST BE PREPARED FIRST TO PROCEED.
+90076	,	로봇 툴에 셀이 없습니다. 로봇 툴에 셀을 로드 한 뒤 다시 시도해 주세요.	,	THERE IS NO CELL IN THE ROBOT TOOL. LOAD THE CELL INTO THE ROBOT TOOL AND TRY AGAIN.	,	THERE IS NO CELL IN THE ROBOT TOOL. LOAD THE CELL INTO THE ROBOT TOOL AND TRY AGAIN.	,	THERE IS NO CELL IN THE ROBOT TOOL. LOAD THE CELL INTO THE ROBOT TOOL AND TRY AGAIN.
+90077	,	로봇 위치가 원점이 아닙니다. 로봇 초기화를 실행 한 뒤 다시 시도해 주세요.	,	THE ROBOT POSITION IS NOT THE ORIGIN. PLEASE INITIALIZE THE ROBOT AND TRY AGAIN.	,	THE ROBOT POSITION IS NOT THE ORIGIN. PLEASE INITIALIZE THE ROBOT AND TRY AGAIN.	,	THE ROBOT POSITION IS NOT THE ORIGIN. PLEASE INITIALIZE THE ROBOT AND TRY AGAIN.
+90078	,	설비 내부에 셀이 존재하면 옵션을 변경 할 수 없습니다. 설비 내부에 셀을 제거 한 뒤 다시 시도해 주세요.	,	IF A CELL EXISTS INSIDE THE MACHINE THE OPTION CANNOT BE CHANGED. REMOVE THE CELLS INSIDE THE MACHINE AND TRY AGAIN.	,	IF A CELL EXISTS INSIDE THE MACHINE THE OPTION CANNOT BE CHANGED. REMOVE THE CELLS INSIDE THE MACHINE AND TRY AGAIN.	,	IF A CELL EXISTS INSIDE THE MACHINE THE OPTION CANNOT BE CHANGED. REMOVE THE CELLS INSIDE THE MACHINE AND TRY AGAIN.
+90079	,	해당 유닛에 셀 정보가 존재하여 배치 동작을 실행 할 수 없습니다.	,	THE BATCH MOVE CANNOT BE PERFORMED BECAUSE CELL INFORMATION EXISTS IN THE UNIT.	,	THE BATCH MOVE CANNOT BE PERFORMED BECAUSE CELL INFORMATION EXISTS IN THE UNIT.	,	THE BATCH MOVE CANNOT BE PERFORMED BECAUSE CELL INFORMATION EXISTS IN THE UNIT.
+90080	,	데이터가 변경 되었습니다. 저장 하시겠습니까?	,	YOUR DATA HAS BEEN CHANGED. DO YOU WANT TO SAVE THE CHANGES?	,	YOUR DATA HAS BEEN CHANGED. DO YOU WANT TO SAVE THE CHANGES?	,	YOUR DATA HAS BEEN CHANGED. DO YOU WANT TO SAVE THE CHANGES?
+90081	,	우선 과열 리셋 버튼을 누른 후 알람을 클리어 해주세요.	,	First press the over-temperature reset button and clear the alarm.	,	First press the over-temperature reset button and clear the alarm.	,	First press the over-temperature reset button and clear the alarm.
+90082	,	우선 연기 감지 리셋 버튼을 누른 후 알람을 클리어 해주세요.	,	First press the reset button for smoke detection and clear the alarm.	,	First press the reset button for smoke detection and clear the alarm.	,	First press the reset button for smoke detection and clear the alarm.
+90083	,	이동하시겠습니까?	,	Do you want moving?	,	Do you want moving?	,	Do you want moving?
+90084	,	라이선스 동글키를 감지할 수 없습니다.	,	LISENCE KEY RECOGNITION FAILED.	,	LISENCE KEY RECOGNITION FAILED.	,	LISENCE KEY RECOGNITION FAILED.
+90085	,	설비 전체 초기화 상태가 아닙니다.	,	EQUIPMENT IS NOT INITIALIZED.	,	EQUIPMENT IS NOT INITIALIZED.	,	EQUIPMENT IS NOT INITIALIZED.
+90086	,	[{0}] 초기화 상태가 아닙니다.	,	[{0}] IS NOT INITIALIZED.	,	[{0}] IS NOT INITIALIZED.	,	[{0}] IS NOT INITIALIZED.
+90087	,	[{0}] 잠김 상태가 아닙니다.	,	[{0}] IS NOT LOCKED.	,	[{0}] IS NOT LOCKED.	,	[{0}] IS NOT LOCKED.
+90088	,	[{0}] 키를 소지하십시오.	,	[{0}] CARRY THE KEY.	,	[{0}] CARRY THE KEY.	,	[{0}] CARRY THE KEY.
+90089	,	[{0}] 내부 작업자 확인 후 도어를 잠그십시오.	,	[{0}] CHECK THE INNER OPERATOR AND LOCK THE DOOR.	,	[{0}] CHECK THE INNER OPERATOR AND LOCK THE DOOR.	,	[{0}] CHECK THE INNER OPERATOR AND LOCK THE DOOR.
+90090	,	[{0}] 열림 상태입니다.	,	[{0}] IS OPENED.	,	[{0}] IS OPENED.	,	[{0}] IS OPENED.
+90091	,	[{0}] 키 미감지 상태입니다.	,	[{0}] KEY IS NOT DETECTED.	,	[{0}] KEY IS NOT DETECTED.	,	[{0}] KEY IS NOT DETECTED.
+90092	,	로봇 오프셋 {0} 데이터 인터락 값을 초과 했습니다.	,	ROBOT OFFSET {0} VALUE IS EXCEEDS INTERLOCK RANGE.	,	ROBOT OFFSET {0} VALUE IS EXCEEDS INTERLOCK RANGE.	,	ROBOT OFFSET {0} VALUE IS EXCEEDS INTERLOCK RANGE.
+90093	,	나찌 로봇에서 지원하지 않는 조합으로 요청 했습니다.	,	ROBOT NOT SUPPORT SELECT COMBINATION REQUEST.	,	ROBOT NOT SUPPORT SELECT COMBINATION REQUEST.	,	ROBOT NOT SUPPORT SELECT COMBINATION REQUEST.
+90094	,	셀 데이터와 셀 실물의 개수가 일치하지 않습니다.	,	CELL COUNT MISSMATCH.	,	CELL COUNT MISSMATCH.	,	CELL COUNT MISSMATCH.
+90095	,	셀 실물 위치와 셀 데이터가 일치하지 않습니다.	,	CELL INFORMATION AND POSITION MISSMATCH.	,	CELL INFORMATION AND POSITION MISSMATCH.	,	CELL INFORMATION AND POSITION MISSMATCH.
+90096	,	트레이 실물 위치와 데이터가 일치하지 않습니다.	,	TRAY INFORMATION AND POSITION MISSMATCH.	,	TRAY INFORMATION AND POSITION MISSMATCH.	,	TRAY INFORMATION AND POSITION MISSMATCH.
+90097	,	[{0}]이(가) [{1}]과(와) 충돌 위치에 있습니다.	,	It is collision position between [{0}] and [{1}].	,	It is collision position between [{0}] and [{1}].	,	It is collision position between [{0}] and [{1}].
+90098	,	[{0}]이(가) {1} 위치가 아닙니다. [{0}]의 위치를 확인해 주세요.	,	[{0}] is not {1} position. check the [{0}] position.	,	[{0}] is not {1} position. check the [{0}] position.	,	[{0}] is not {1} position. check the [{0}] position.
+90099	,	[{0}]이(가) 서보 알람 상태입니다. 서보 알람을 리셋 해주세요.	,	[{0}] is servo alarm status. Servo alarm reset.	,	[{0}] is servo alarm status. Servo alarm reset.	,	[{0}] is servo alarm status. Servo alarm reset.
+90100	,	[{0}]이(가) 서보 오프 상태입니다. 서보 온 상태로 변경해주세요.	,	[{0}] is servo-off status. Change the servo-on status.	,	[{0}] is servo-off status. Change the servo-on status.	,	[{0}] is servo-off status. Change the servo-on status.
+90101	,	[{0}]이(가) 자동 모드가 아닙니다. 로봇에 상태를 확인해주세요.	,	[{0}] is not entry automatic mode. Check the robot status.	,	[{0}] is not entry automatic mode. Check the robot status.	,	[{0}] is not entry automatic mode. Check the robot status.
+90102	,	[{0}]이(가) 매뉴얼 모드 진입에 실패했습니다. 로봇에 상태를 확인해주세요.	,	[{0}] is failed to entry manual mode. Check the robot status.	,	[{0}] is failed to entry manual mode. Check the robot status.	,	[{0}] is failed to entry manual mode. Check the robot status.
+90103	,	[{0}]이(가) 매뉴얼 모드 해제에 실패했습니다. 로봇에 상태를 확인해주세요.	,	[{0}] is failed to exit manual mode. Check the robot status.	,	[{0}] is failed to exit manual mode. Check the robot status.	,	[{0}] is failed to exit manual mode. Check the robot status.
+90104	,	[{0}]이(가) 자동 재생 모드가 아닙니다. 로봇에 상태를 확인 후 초기화를 진행해 주세요.	,	[{0}] is not entry playback mode. Initialize after check the robot status.	,	[{0}] is not entry playback mode. Initialize after check the robot status.	,	[{0}] is not entry playback mode. Initialize after check the robot status.
+90105	,	[{0}]이(가) 서보 온 상태가 아닙니다. 로봇에 상태를 확인 후 초기화를 진행해 주세요.	,	[{0}] is not servo-on status. Initialize after check the robot status.	,	[{0}] is not servo-on status. Initialize after check the robot status.	,	[{0}] is not servo-on status. Initialize after check the robot status.
+90106	,	[{0}]이(가) 알람 발생 상태입니다. 로봇에 상태를 확인 후 초기화를 진행해 주세요.	,	[{0}] is alarm occurred status. Initialize after check the robot status.	,	[{0}] is alarm occurred status. Initialize after check the robot status.	,	[{0}] is alarm occurred status. Initialize after check the robot status.
+90107	,	[{0}]이(가) 이동중입니다. 로봇이 멈출 때까지 기다려주세요.	,	[{0}] is keep moving status. Until wait for robot is stopping.	,	[{0}] is keep moving status. Until wait for robot is stopping.	,	[{0}] is keep moving status. Until wait for robot is stopping.
+90108	,	[{0}]이(가) 서보 배터리 경고가 발생했습니다. 로봇에 서보 배터리를 점검해 주세요.	,	[{0}] is servo battery warning occurred status. Check the robot servo battery.	,	[{0}] is servo battery warning occurred status. Check the robot servo battery.	,	[{0}] is servo battery warning occurred status. Check the robot servo battery.
+90109	,	[{0}]이(가) 비상 정지 상태입니다. 비상 정지 상태를 해제한 후 초기화를 진행해 주세요.	,	[{0}] is emergency stop status. Initialize after resolved emergency stop status.	,	[{0}] is emergency stop status. Initialize after resolved emergency stop status.	,	[{0}] is emergency stop status. Initialize after resolved emergency stop status.
+90110	,	[{0}]이(가) 매뉴얼 모드 진입 상태가 아닙니다. 로봇을 매뉴얼 모드로 전환 해주세요.	,	[{0}] is not entry manual mode status. Switch the robot to manual mode.	,	[{0}] is not entry manual mode status. Switch the robot to manual mode.	,	[{0}] is not entry manual mode status. Switch the robot to manual mode.
+90111	,	[{0}]이(가) {1} 인터페이스 알람 상태 입니다. 로봇에 상태를 확인 후 초기화를 진행해 주세요.	,	[{0}] is {1} interface alarm occured status. Initialize after check the robot status.	,	[{0}] is {1} interface alarm occured status. Initialize after check the robot status.	,	[{0}] is {1} interface alarm occured status. Initialize after check the robot status.
+90112	,	[{0}]이(가) 일시 정지 상태 입니다. 로봇에 상태를 확인 후 초기화를 진행해 주세요.	,	[{0}] is pause stop status. Initialize after check the robot status.	,	[{0}] is pause stop status. Initialize after check the robot status.	,	[{0}] is pause stop status. Initialize after check the robot status.
+90113	,	[{0}] 연결에 실패 했습니다. 디바이스를 점검해 주세요.	,	[{0}] connection failed. Check the device.	,	[{0}] connection failed. Check the device.	,	[{0}] connection failed. Check the device.
+90114	,	GPS MC가 꺼져있어 [{0}]을(를) 구동 할 수 없습니다.	,	Can not operate the [{0}] because the GPS MC is off.	,	Can not operate the [{0}] because the GPS MC is off.	,	Can not operate the [{0}] because the GPS MC is off.
+90115	,	설비 [{0}] 내부에 다인수 키가 감지되었습니다. 설비 내부에 키를 확인해 주세요.	,	A safety key has been detected inside the [{0}] of the equipment. Please check the key inside the equipment.	,	A safety key has been detected inside the [{0}] of the equipment. Please check the key inside the equipment.	,	A safety key has been detected inside the [{0}] of the equipment. Please check the key inside the equipment.
+90116	,	[{0}] 설비에 인터락 신호가 감지되었습니다. [{0}] 설비를 확인해 주세요.	,	A interlock signal has been detected on the [{0}] equipment. Please check the [{0}] equipment.	,	A interlock signal has been detected on the [{0}] equipment. Please check the [{0}] equipment.	,	A interlock signal has been detected on the [{0}] equipment. Please check the [{0}] equipment.
+90117	,	[{0}] 설비에 문 열림 신호가 감지되었습니다. [{0}] 설비를 확인해 주세요.	,	A door open signal has been detected on the [{0}] equipment. Please check the [{0}] equipment.	,	A door open signal has been detected on the [{0}] equipment. Please check the [{0}] equipment.	,	A door open signal has been detected on the [{0}] equipment. Please check the [{0}] equipment.
+90118	,	[{0}] 설비에 비상정지 신호가 감지되었습니다. [{0}] 설비를 확인해 주세요.	,	A Emergency signal has been detected on the [{0}] equipment. Please check the [{0}] equipment.	,	A Emergency signal has been detected on the [{0}] equipment. Please check the [{0}] equipment.	,	A Emergency signal has been detected on the [{0}] equipment. Please check the [{0}] equipment.
+90119	,	AR 설비의 시작 대기 상태가 완료되지 않았습니다. AR 설비를 시작대기 상태로 만들어 주세요.	,	The wait for start of the AR equipment is not complete. Please put the AR equipment into a standby state.	,	The wait for start of the AR equipment is not complete. Please put the AR equipment into a standby state.	,	The wait for start of the AR equipment is not complete. Please put the AR equipment into a standby state.
+90120	,	[{0}] 팬던트를 확인해 주시기 바랍니다. [{0}] 티칭 후 원점 위치에 복귀하지 않아서 명령을 실행 할 수 없습니다.	,	Please check the [{0}] pandant. The command cannot be executed because it has not returned to its origin after [{0}] teaching.	,	Please check the [{0}] pandant. The command cannot be executed because it has not returned to its origin after [{0}] teaching.	,	Please check the [{0}] pandant. The command cannot be executed because it has not returned to its origin after [{0}] teaching.
+90121	,	현재 설비가 [{0}]이(가) 아니라서 명령을 수행 할 수 없습니다. 설비를 [{0}]로 변경 후 다시 시도해주세요.	,	The command cannot be executed because the current equipment is not in [{0}]. Please change the [{0}] and execute it again.	,	The command cannot be executed because the current equipment is not in [{0}]. Please change the [{0}] and execute it again.	,	The command cannot be executed because the current equipment is not in [{0}]. Please change the [{0}] and execute it again.
+90122	,	[{0}] 라이트 커튼이 뮤팅 상태입니다.	,	[{0}] light-curtain is muting state.	,	[{0}] light-curtain is muting state.	,	[{0}] light-curtain is muting state.
+90123	,	[{0}] 라이트 커튼이 감지 상태입니다.	,	[{0}] light-curtain is detected.	,	[{0}] light-curtain is detected.	,	[{0}] light-curtain is detected.
+90124	,	TC에서 로그인 정보를 받지 못했습니다.	,	Failed to receive login information from TC.	,	Failed to receive login information from TC.	,	Failed to receive login information from TC.
+90125	,	TC에서 로그아웃 정보를 받지 못했습니다.	,	Failed to receive logout information from TC.	,	Failed to receive logout information from TC.	,	Failed to receive logout information from TC.
+90126	,	레시피를 생성 할 수 없습니다. 설비에서 생성하는 PPID는 "TT_"로 시작해야 합니다.	,	Unable to create recipe. The PPID generated by the equipment must start with "TT_".	,	Unable to create recipe. The PPID generated by the equipment must start with "TT_".	,	Unable to create recipe. The PPID generated by the equipment must start with "TT_".
+90127	,	레시피를 생성 할 수 없습니다. 설비에서 수동으로 생성 할 수 있는 레시피 개수를 초과 했습니다.	,	Unable to create recipe. The number of recipes that can be manually generated by the equipment has exceeded.	,	Unable to create recipe. The number of recipes that can be manually generated by the equipment has exceeded.	,	Unable to create recipe. The number of recipes that can be manually generated by the equipment has exceeded.
+90128	,	레시피를 편집 할 수 없습니다. TPM Loss Code를 J/C로 선택하여 주세요.	,	You cannot edit the recipe; please select the TPM Loss Code as J/C.	,	You cannot edit the recipe; please select the TPM Loss Code as J/C.	,	You cannot edit the recipe; please select the TPM Loss Code as J/C.
+90129	,	레시피를 편집 할 수 없습니다. 선택된 레시피는 RMS에서 관리하는 영역입니다.	,	Unable to edit recipe. The selected recipe is an area managed by RMS.	,	Unable to edit recipe. The selected recipe is an area managed by RMS.	,	Unable to edit recipe. The selected recipe is an area managed by RMS.
+90130	,	트레이 레시피를 편집 할 수 없습니다. 설비 내부에 트레이 정보가 있습니다.	,	The tray recipe cannot be edited. The tray information is stored within the equipment.	,	The tray recipe cannot be edited. The tray information is stored within the equipment.	,	The tray recipe cannot be edited. The tray information is stored within the equipment.
+90131	,	오프셋 데이터를 복사하시겠습니까?	,	DO YOU WANT TO COPY THE OFFSET DATA?	,	DO YOU WANT TO COPY THE OFFSET DATA?	,	DO YOU WANT TO COPY THE OFFSET DATA?
+90132	,	[{0}] - [{1}]에 설정 가능한 위치 값의 범위는 [{2}] ~ [{3}] 입니다. (입력 값: [{4}])	,	The range of position values at the [{0}] - [{1}] is [{2}] to [{3}]. (Input value: [{4}])	,	The range of position values at the [{0}] - [{1}] is [{2}] to [{3}]. (Input value: [{4}])	,	The range of position values at the [{0}] - [{1}] is [{2}] to [{3}]. (Input value: [{4}])
+90133	,	[{0}]이(가) 홈 프로세스 실패 입니다.	,	[{0}] is Home Process Fail. Check Servo Status	,	[{0}] is Home Process Fail. Check Servo Status	,	[{0}] is Home Process Fail. Check Servo Status
+90134	,	[{0}]이(가) 홈 프로세스 타임아웃 입니다.	,	[{0}] is Home Process TimeOut. Check Servo Status	,	[{0}] is Home Process TimeOut. Check Servo Status	,	[{0}] is Home Process TimeOut. Check Servo Status
+90135	,	사용자가 작업을 취소 했습니다.	,	The user has canceled the operation.	,	The user has canceled the operation.	,	The user has canceled the operation.
+90136	,	ENABLE 스위치를 GRIP 해주세요.	,	Please grip the enable switch.	,	Please grip the enable switch.	,	Please grip the enable switch.
+90137	,	[{0}] 로봇 팬던트 EMS 버튼이 눌려있습니다. 확인 후 알람을 클리어 해주세요.	,	The [{0}] robot pendant EMS button is pressed. Please clear the alarm after checking.	,	The [{0}] robot pendant EMS button is pressed. Please clear the alarm after checking.	,	The [{0}] robot pendant EMS button is pressed. Please clear the alarm after checking.
+90138	,	[{0}] 로봇 컨트롤러 EMS 버튼이 눌려있습니다. 확인 후 알람을 클리어 해주세요.	,	The [{0}] robot controller EMS button is pressed. Please clear the alarm after checking.	,	The [{0}] robot controller EMS button is pressed. Please clear the alarm after checking.	,	The [{0}] robot controller EMS button is pressed. Please clear the alarm after checking.
+90139	,	EQ TO EQ 상위설비에서 현재 RUN 가능한 상태가 아닙니다.	,	EQ TO EQ is not currently in a run-ready state.	,	EQ TO EQ is not currently in a run-ready state.	,	EQ TO EQ is not currently in a run-ready state.
+90140	,	EQ TO EQ 하위설비에서 현재 RUN 가능한 상태가 아닙니다.	,	EQ TO EQ is not currently in a run-ready state.	,	EQ TO EQ is not currently in a run-ready state.	,	EQ TO EQ is not currently in a run-ready state.
+90141	,	EQ TO EQ 상위설비가 현재 가동중 입니다.	,	EQ TO EQ Upper currently in Running	,	EQ TO EQ Upper currently in Running	,	EQ TO EQ Upper currently in Running
+90142	,	EQ TO EQ 하위설비가 현재 가동중 입니다.	,	EQ TO EQ Lower currently in Running	,	EQ TO EQ Lower currently in Running	,	EQ TO EQ Lower currently in Running
+90143	,	[{0}] 동작을 할 수 없습니다. (확인: [{1}])	,	Can not do the [{0}] action. (Check: [{1}])	,	Can not do the [{0}] action. (Check: [{1}])	,	Can not do the [{0}] action. (Check: [{1}])
+90144	,	현재 설비에서 일부 모터나 로봇을 가상으로 사용하고 있습니다.	,	Some motors or robots are currently being used virtually in this equipment.	,	Some motors or robots are currently being used virtually in this equipment.	,	Some motors or robots are currently being used virtually in this equipment.
+90145	,	현재 트레이에 작업을 완료했습니다.\n\n트레이를 교체해주세요.	,	Completed the task on the current tray.\n\nPlease replace the tray.	,	Completed the task on the current tray.\n\nPlease replace the tray.	,	Completed the task on the current tray.\n\nPlease replace the tray.
+90146	,	현재 트레이 포트가 비어있습니다.\n\n트레이를 투입해주세요.	,	The tray port is currently empty.\n\nPlease insert the tray.	,	The tray port is currently empty.\n\nPlease insert the tray.	,	The tray port is currently empty.\n\nPlease insert the tray.
+90147	,	설비 내부에 셀의 총합이 트레이 포켓 개수를 초과했습니다.\n\n트레이를 확인해주세요.	,	The total number of cells inside the equipment exceeds the number of pockets in the tray.\n\nPlease check the tray.	,	The total number of cells inside the equipment exceeds the number of pockets in the tray.\n\nPlease check the tray.	,	The total number of cells inside the equipment exceeds the number of pockets in the tray.\n\nPlease check the tray.
+90148	,	트레이 포트가 UNLOCK상태입니다. 트레이 포트를 확인해주세요.	,	The tray port is in an Unlock state. Please check the tray port.	,	The tray port is in an Unlock state. Please check the tray port.	,	The tray port is in an Unlock state. Please check the tray port.
+90149	,	트레이 포트가 열려있습니다. 트레이 포트를 확인해주세요.	,	The tray port is open. Please check the tray port.	,	The tray port is open. Please check the tray port.	,	The tray port is open. Please check the tray port.
+90150	,	트레이 포트에 트레이가 감지되지 않았습니다.	,	No tray has been detected in the tray port.	,	No tray has been detected in the tray port.	,	No tray has been detected in the tray port.
+90151	,	설정 변경 잠금 상태입니다.	,	The settings are locked.	,	The settings are locked.	,	The settings are locked.
+90152	,	하류 설비로 인해 인터페이스가 지연되고 있습니다.\n\n하류 설비를 확인해 주세요. [{0}]	,	The interface is delayed due to lower equipment.\n\nPlease check the lower equipment. [{0}]	,	The interface is delayed due to lower equipment.\n\nPlease check the lower equipment. [{0}]	,	Giao diện bị trì hoãn do thiết bị cấp dưới.\n\nVui lòng kiểm tra thiết bị cấp dưới. [{0}]
+90153	,	하류 설비로 인해 인터페이스가 지연되고 있습니다.\n\n하류 설비의 인터페이스 신호 클리어 상태를 확인해 주세요. [{0}]	,	The interface is delayed due to the lower equipment.\n\nPlease check the clear status of the interface signal on the lower equipment. [{0}]	,	The interface is delayed due to the lower equipment.\n\nPlease check the clear status of the interface signal on the lower equipment. [{0}]	,	Giao diện bị trì hoãn do thiết bị hạ lưu.\n\nVui lòng kiểm tra trạng thái xóa tín hiệu giao diện trên thiết bị hạ lưu. [{0}]
+90154	,	경고!\n\n[{0}]에 운영 모드가 [{1}]로 설정된 상태입니다.	,	Warning!\n\nThe operating mode of [{0}] is set to [{1}].	,	Warning!\n\nThe operating mode of [{0}] is set to [{1}].	,	Warning!\n\nChế độ vận hành của [{0}] đã được đặt thành [{1}]

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENC.IO.Device.TechWing</name>
+    </assembly>
+    <members>
+        <member name="T:ENC.IO.Device.TechWing.ExtensionMethods">
+            <summary>
+            TechWing IO 디바이스 추가 기능이 정의된 클래스
+            </summary>
+        </member>
+        <member name="M:ENC.IO.Device.TechWing.ExtensionMethods.AddDeviceTechWingDI24(ENC.IO.Common.IIoHardwareMappingInitializeContext,DeviceDLL.Protocol.Modbus.DeviceProtocolModbus,System.Byte)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 TechWing TWP100에 DI24 모듈 영역에대한 디바이스를 추가한다<br/>
+            <br/>
+            ※ 디바이스에 48바이트가 할당됨
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="modbus">모드버스 통신 객체</param>
+            <param name="slaveID">해당 모듈에 모드버스 슬레이브 ID</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.TechWing.ExtensionMethods.AddDeviceTechWingDO24(ENC.IO.Common.IIoHardwareMappingInitializeContext,DeviceDLL.Protocol.Modbus.DeviceProtocolModbus,System.Byte)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 TechWing TWP100에 DO24 모듈 영역에대한 디바이스를 추가한다<br/>
+            <br/>
+            ※ 디바이스에 48바이트가 할당됨
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="modbus">모드버스 통신 객체</param>
+            <param name="slaveID">해당 모듈에 모드버스 슬레이브 ID</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.TechWing.ExtensionMethods.AddDeviceTechWingAI24(ENC.IO.Common.IIoHardwareMappingInitializeContext,DeviceDLL.Protocol.Modbus.DeviceProtocolModbus,System.Byte)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 TechWing TWP100에 AI24 모듈 영역에대한 디바이스를 추가한다<br/>
+            <br/>
+            ※ 디바이스에 48바이트가 할당됨
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="modbus">모드버스 통신 객체</param>
+            <param name="slaveID">해당 모듈에 모드버스 슬레이브 ID</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+        <member name="M:ENC.IO.Device.TechWing.ExtensionMethods.AddDeviceTechWingAO24(ENC.IO.Common.IIoHardwareMappingInitializeContext,DeviceDLL.Protocol.Modbus.DeviceProtocolModbus,System.Byte)">
+            <summary>
+            IO 하드웨어 맵핑 초기화 객체에 TechWing TWP100에 AO24 모듈 영역에대한 디바이스를 추가한다<br/>
+            <br/>
+            ※ 디바이스에 48바이트가 할당됨
+            </summary>
+            <param name="context">IO 하드웨어 맵핑 초기화 객체</param>
+            <param name="modbus">모드버스 통신 객체</param>
+            <param name="slaveID">해당 모듈에 모드버스 슬레이브 ID</param>
+            <returns>IO 하드웨어 맵핑 초기화 객체</returns>
+        </member>
+    </members>
+</doc>
