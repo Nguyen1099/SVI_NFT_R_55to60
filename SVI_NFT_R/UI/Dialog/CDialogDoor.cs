@@ -1333,8 +1333,8 @@ namespace SVI_NFT_R
                 return;
             }
 
-            //var signalControllers = m_objDocument.m_objProcessMain.m_objProcessMotion.UnloadInterface.SignalControllers as UnloadInterfaceSignalController[];
-            //signalControllers[0].LowerBits.InterlockDoorClosed.Value = !signalControllers[0].LowerBits.InterlockDoorClosed.Value;
+            var signalControllers = m_objDocument.m_objProcessMain.m_objProcessMotion.UnloadInterface.SignalControllers as UnloadInterfaceSignalController[];
+            signalControllers[0].LowerBits.InterlockDoorClosed.Value = !signalControllers[0].LowerBits.InterlockDoorClosed.Value;
         }
 
         private void BtnTouch_Click(object sender, EventArgs e)

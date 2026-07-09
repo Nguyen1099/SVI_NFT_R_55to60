@@ -21,13 +21,15 @@ namespace SVI_NFT_R
             mResources[nameof(EProcess.InspStage)] = new string[] { "검사스테이지", "INSPECTION-STAGE" };
             mResources[nameof(EProcess.OutRobot)] = new string[] { "OUT로봇", "OUT-ROBOT" };
             mResources[nameof(EProcess.OutFlip)] = new string[] { "OUT플립", "OUT-FLIP" };
+            mResources[nameof(EProcess.OutShuttle)] = new string[] { "OUT셔틀", "OUT-SHUTTLE" };
             // Regist All Motors
             mResources[nameof(CProcessMotion.EMotor.IN_SHUTTLE_X1)] = new string[] { "IN셔틀 X1 축", "IN-SHUTTLE X1 AXIS" };
             mResources[nameof(CProcessMotion.EMotor.INSP_STAGE_Y)] = new string[] { "검사스테이지 Y 축", "INSPECTION-STAGE Y AXIS" };
             mResources[nameof(CProcessMotion.EMotor.OUT_FLIP_R1)] = new string[] { "OUT플립 R1 축", "OUT-FLIP R1 AXIS" };
             mResources[nameof(CProcessMotion.EMotor.OUT_FLIP_R2)] = new string[] { "OUT플립 R2 축", "OUT-FLIP R2 AXIS" };
             mResources[nameof(CProcessMotion.EMotor.OUT_FLIP_Z)] = new string[] { "OUT플립 Z 축", "OUT-FLIP Z AXIS" };
-            mResources[nameof(CProcessMotion.EMotor.OUT_CONVEYOR_X2)] = new string[] { "아웃컨베이어 X2 축", "OUT-CONVEYOR X2 AXIS" };
+            mResources[nameof(CProcessMotion.EMotor.OUT_SHUTTLE_X2)] = new string[] { "OUT셔틀 X2 축", "OUT-SHUTTLE X2 AXIS" };
+            //mResources[nameof(CProcessMotion.EMotor.OUT_CONVEYOR_X2)] = new string[] { "아웃컨베이어 X2 축", "OUT-CONVEYOR X2 AXIS" };
             // Regist All Robots
             mResources[nameof(CProcessMotion.ERobot.IN_ROBOT)] = new string[] { "IN로봇", "IN-ROBOT" };
             mResources[nameof(CProcessMotion.ERobot.OUT_ROBOT)] = new string[] { "OUT로봇", "OUT-ROBOT" };

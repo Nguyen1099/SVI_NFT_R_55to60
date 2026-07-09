@@ -23,12 +23,12 @@ namespace SVI_NFT_R
                         LogType = CDefine.ELogType.LOG_PROCESS_05_OUT_FLIP;
                         CellDetectSensor1 = CDeviceIODefine.EDigitalInput.X_OUT_CONVEYOR_P1_CELL_DETECT_SENSOR;
                         CellDetectSensor2 = CDeviceIODefine.EDigitalInput.X_OUT_CONVEYOR_P2_CELL_DETECT_SENSOR;
-                        ConveyorBlockSensor = CDeviceIODefine.EDigitalInput.X_OUT_CONVEYOR_CELL_OVERLAP_SENSOR;
-                        AlarmCheckInputFail = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_N_CELL_EXIST_CHECK;
-                        AlarmCheckBlockedFail = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_N_OUTPUT_BLOCKED_CHECK;
-                        AlarmCheckOutputCellP1 = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_P1_CELL_NOT_EXIST_CHECK;
-                        AlarmCheckOutputCellP2 = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_P2_CELL_NOT_EXIST_CHECK;
-                        AlarmCheckOutputCellAll = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_ALL_CELL_NOT_EXIST_CHECK;
+                        //ConveyorBlockSensor = CDeviceIODefine.EDigitalInput.X_OUT_CONVEYOR_CELL_OVERLAP_SENSOR;
+                        //AlarmCheckInputFail = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_N_CELL_EXIST_CHECK;
+                        //AlarmCheckBlockedFail = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_N_OUTPUT_BLOCKED_CHECK;
+                        //AlarmCheckOutputCellP1 = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_P1_CELL_NOT_EXIST_CHECK;
+                        //AlarmCheckOutputCellP2 = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_P2_CELL_NOT_EXIST_CHECK;
+                        //AlarmCheckOutputCellAll = CAlarmDefine.EAlarmList.SE_UNLOADER_CONVEYOR_ALL_CELL_NOT_EXIST_CHECK;
 
                         break;
                     default:

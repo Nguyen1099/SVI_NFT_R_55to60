@@ -461,6 +461,7 @@ namespace SVI_NFT_R
             Resource.Initialize(this);
 
             m_objLogManager.SetHeader(CDefine.ELogType.LOG_SIGNAL_INTERFACE_LOAD.ToString(), LoadInterface.SIGNAL_DUMP_LOG_CSV_HEADER());
+            m_objLogManager.SetHeader(CDefine.ELogType.LOG_SIGNAL_INTERFACE_UNLOAD.ToString(), UnloadInterface.SIGNAL_DUMP_LOG_CSV_HEADER());
             m_objLogManager.SetHeader(m_objCycleTactTime.m_tactInShuttle.LogType.ToString(), m_objCycleTactTime.m_tactInShuttle.strHeader);
             m_objLogManager.SetHeader(m_objCycleTactTime.m_tactInRobot.LogType.ToString(), m_objCycleTactTime.m_tactInRobot.strHeader);
             m_objLogManager.SetHeader(m_objCycleTactTime.m_tactInspStage.LogType.ToString(), m_objCycleTactTime.m_tactInspStage.strHeader);
@@ -1697,8 +1698,15 @@ namespace SVI_NFT_R
                 var motorPositionZ = outFlip.MotorZ.Axis.HLGetMotorPosition();
                 SetEcmDataMotor(ecmParameterOrNull, CConfig.EEquipmentEcmList.OUT_FLIP_UP_Z_POS, motorPositionZ, (int)OutFlipMotorZ.EPosition.Up);
                 SetEcmDataMotor(ecmParameterOrNull, CConfig.EEquipmentEcmList.OUT_FLIP_DOWN_Z_POS, motorPositionZ, (int)OutFlipMotorZ.EPosition.Down);
-                var motorPositionX = outFlip.MotorConveyorX.Axis.HLGetMotorPosition();
-                SetEcmDataMotor(ecmParameterOrNull, CConfig.EEquipmentEcmList.OUT_CONVEYOR_UNLOAD_X_POS, motorPositionX, (int)OutFlipMotorX.EPosition.Unload);
+                //var motorPositionX = outFlip.MotorConveyorX.Axis.HLGetMotorPosition();
+                //SetEcmDataMotor(ecmParameterOrNull, CConfig.EEquipmentEcmList.OUT_CONVEYOR_UNLOAD_X_POS, motorPositionX, (int)OutFlipMotorX.EPosition.Unload);
+            }
+            // OutShuttle
+            {
+                var outShuttle = m_objProcessMain.m_objProcessMotion.OutShuttle;
+                var motorPositionX = outShuttle.MotorStageX.Axis.HLGetMotorPosition();
+                SetEcmDataMotor(ecmParameterOrNull, CConfig.EEquipmentEcmList.OUT_SHUTTLE_LOAD_X_POS, motorPositionX, (int)OutShuttleMotorX.EPosition.Load);
+                SetEcmDataMotor(ecmParameterOrNull, CConfig.EEquipmentEcmList.OUT_SHUTTLE_UNLOAD_X_POS, motorPositionX, (int)OutShuttleMotorX.EPosition.Unload);
             }
             // InRobot
             {

@@ -7,9 +7,10 @@
     {
         IN_SHUTTLE = 0,
         IN_ROBOT,
-        INSP_STAGE,
+        INSP_STAGE,    
         OUT_ROBOT,
         OUT_FLIP,
+        OUT_SHUTTLE,
         JAVAS_INSPECTION
     }
 }

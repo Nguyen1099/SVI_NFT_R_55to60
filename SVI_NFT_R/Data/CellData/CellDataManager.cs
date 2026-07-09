@@ -28,6 +28,7 @@ namespace SVI_NFT_R
             { EProcess.InspStage, new List<ECellData> { ECellData.InspStageP1, ECellData.InspStageP2 } },
             { EProcess.OutRobot, new List<ECellData> { ECellData.OutRobotP1, ECellData.OutRobotP2 } },
             { EProcess.OutFlip, new List<ECellData> { ECellData.OutFlipP1, ECellData.OutFlipP2 } },
+            { EProcess.OutShuttle, new List<ECellData> { ECellData.OutShuttleP1, ECellData.OutShuttleP2 } },
         };
         private static readonly Dictionary<ECellData, ECellPlacement> mCellPlacementMapping = new Dictionary<ECellData, ECellPlacement>
         {
@@ -41,6 +42,8 @@ namespace SVI_NFT_R
             { ECellData.OutRobotP2, ECellPlacement.Left | ECellPlacement.P2 },
             { ECellData.OutFlipP1, ECellPlacement.Right | ECellPlacement.P1 },
             { ECellData.OutFlipP2, ECellPlacement.Left | ECellPlacement.P2 },
+            { ECellData.OutShuttleP1, ECellPlacement.Right | ECellPlacement.P1 },
+            { ECellData.OutShuttleP2, ECellPlacement.Left | ECellPlacement.P2 },
         };
         private static readonly Dictionary<EProcess, CDefine.ELogType> mProcessLogMapping = new Dictionary<EProcess, CDefine.ELogType>
         {
@@ -49,6 +52,7 @@ namespace SVI_NFT_R
             { EProcess.InspStage, CDefine.ELogType.LOG_PROCESS_03_INSP_STAGE},
             { EProcess.OutRobot, CDefine.ELogType.LOG_PROCESS_04_OUT_ROBOT},
             { EProcess.OutFlip, CDefine.ELogType.LOG_PROCESS_05_OUT_FLIP},
+            { EProcess.OutShuttle, CDefine.ELogType.LOG_PROCESS_06_OUT_SHUTTLE},
         };
         //////////////////////////////////////////////////////////////////////////
 

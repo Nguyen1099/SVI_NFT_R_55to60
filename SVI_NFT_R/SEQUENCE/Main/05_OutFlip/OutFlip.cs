@@ -17,12 +17,12 @@ namespace SVI_NFT_R
     public partial class OutFlip : CProcessAbstract, IUnitNode
     {
         public IReadOnlyList<CellDataHandler> CellContainer { get; private set; }
-        private Thread mThreadOutConveyor;
+        //private Thread mThreadOutConveyor;
         public OutFlipPicker[] Pickers { get; private set; }
         public OutFlipSensor Sensor { get; private set; }
         public OutFlipMotorR[] MotorRs { get; private set; }
         public OutFlipMotorZ MotorZ { get; private set; }
-        public OutFlipMotorX MotorConveyorX { get; private set; }
+        //public OutFlipMotorX MotorConveyorX { get; private set; }
         public Utils.SyncToken SyncTact { get; private set; } = new Utils.SyncToken();
         public bool CanInput { get; private set; } = true;
         public bool IsUnloadOutFlipToOutConveyor { get { return mbUnloadOutFlipToOutConveyor; } }
@@ -33,7 +33,7 @@ namespace SVI_NFT_R
             && MotorRs.All(item => item.GetCommand() == 0)
             && MotorZ.GetCommand() == 0
             && Sensor.GetCommand() == 0
-            && MotorConveyorX.GetCommand() == 0
+            //&& MotorConveyorX.GetCommand() == 0
             && IsRunningSequence == false
             && mDialogNotificationOrNull == null
             );
@@ -42,7 +42,7 @@ namespace SVI_NFT_R
             IsEmpty == false
             && IsWaitUnloadPosition == true
             && m_objDocument.m_objProcessMain.m_objProcessMotion.OutRobot.Nachi.IsUnloadInterlock() == false
-            && MotorConveyorX.IsArrivalUnloadPosition() == false
+            //&& MotorConveyorX.IsArrivalUnloadPosition() == false
             );
         public bool IsWaitUnloadPosition => MotorZ.GetStatus() == OutFlipMotorZ.EStatus.UpPosition
                 && MotorRs.All(motor => motor.GetStatus() == OutFlipMotorR.EStatus.UnloadPosition);
@@ -96,11 +96,11 @@ namespace SVI_NFT_R
                 }
 
                 // 모터 객체 생성
-                MotorConveyorX = new OutFlipMotorX();
-                if (MotorConveyorX.Initialize(m_objDocument, mDefine.MotorPosition) == false)
-                {
-                    break;
-                }
+                //MotorConveyorX = new OutFlipMotorX();
+                //if (MotorConveyorX.Initialize(m_objDocument, mDefine.MotorPosition) == false)
+                //{
+                //    break;
+                //}
 
                 // 피커 객체 생성
                 Pickers = new OutFlipPicker[mDefine.PickerPositions.Length];
@@ -145,8 +145,8 @@ namespace SVI_NFT_R
                 mThreadProcess.Start();
 
                 // 아웃 컨베이어 쓰레드 생성
-                mThreadOutConveyor = new Thread(ThreadOutConveyorProcess);
-                mThreadOutConveyor.Start();
+                //mThreadOutConveyor = new Thread(ThreadOutConveyorProcess);
+                //mThreadOutConveyor.Start();
 
                 // 초기화 쓰레드 생성
                 mThreadInitialize = new Thread(ThreadInitializeProcess);
@@ -172,7 +172,7 @@ namespace SVI_NFT_R
             mThreadBatch.Join();
             mThreadRestart.Join();
             mThreadInitialize.Join();
-            mThreadOutConveyor.Join();
+          //  mThreadOutConveyor.Join();
             mThreadProcess.Join();
 
             mOneCycleUnlock.Dispose();
@@ -188,7 +188,7 @@ namespace SVI_NFT_R
             {
                 item.DeInitialize();
             }
-            MotorConveyorX.DeInitialize();
+            //MotorConveyorX.DeInitialize();
         }
 
         public void SetCellOutputDelayStartForFdc()
@@ -393,20 +393,20 @@ namespace SVI_NFT_R
             {
                 MccLogManager.OutFlip.OUT_WAIT_TIME.BatchWriteEndExist();
                 MccLogManager.OutFlip.COMPONENT_OUT.BatchWriteStartExist();
-                MccLogManager.OutConveyor.IN_WAIT_TIME.BatchWriteEnd();
-                for (int i = 0; i < CellContainer.Count; i++)
-                {
-                    if (CellContainer[i].IsCellExist() == true)
-                    {
-                        MccLogManager.OutConveyor.COMPONENT_IN[i].WriteStart();
-                    }
-                }
+                //MccLogManager.OutConveyor.IN_WAIT_TIME.BatchWriteEnd();
+                //for (int i = 0; i < CellContainer.Count; i++)
+                //{
+                //    if (CellContainer[i].IsCellExist() == true)
+                //    {
+                //        MccLogManager.OutConveyor.COMPONENT_IN[i].WriteStart();
+                //    }
+                //}
                 // 컨베이어 정지 및 ZERO POSITION SETTING
-                MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.PositionZeroSet);
-                if (MotorConveyorX.WaitForEndProcess() == false)
-                {
-                    return false;
-                }
+                //MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.PositionZeroSet);
+                //if (MotorConveyorX.WaitForEndProcess() == false)
+                //{
+                //    return false;
+                //}
                 // 모터 다운 위치 이동
                 using (MccLogManager.OutFlip.PUT_MOVE_ULD_POS.CreateMccLogProvider(bShouldWriteExistCell: true))
                 {
@@ -456,13 +456,13 @@ namespace SVI_NFT_R
                         m_objDocument.m_objProcessMain.m_objProcessMotion.TrackOut.WaitForEndProcess(1000);
                     }
                     MccLogManager.OutFlip.COMPONENT_OUT.BatchWriteEndExist();
-                    for (int i = 0; i < CellContainer.Count; i++)
-                    {
-                        if (CellContainer[i].IsCellExist() == true)
-                        {
-                            MccLogManager.OutConveyor.COMPONENT_IN[i].WriteEnd();
-                        }
-                    }
+                    //for (int i = 0; i < CellContainer.Count; i++)
+                    //{
+                    //    if (CellContainer[i].IsCellExist() == true)
+                    //    {
+                    //        MccLogManager.OutConveyor.COMPONENT_IN[i].WriteEnd();
+                    //    }
+                    //}
                     foreach (var cellDataHandler in CellContainer.GetExistCellList())
                     {
                         // 셀 데이터 삭제 (MCC 정합성을 위해 내부 정보는 삭제하지 않고 플래그만 변경함. 다음 셀이 들어오면 덮어쓰기됨.)
@@ -470,14 +470,14 @@ namespace SVI_NFT_R
                         cellDataHandler.IsChanged = true;
                     }
                 }
-                if (mConveyorCellExist.Any(x => x) == true)
-                {
-                    MccLogManager.OutConveyor.OUT_WAIT_TIME.BatchWriteStart();
-                }
-                else
-                {
-                    MccLogManager.OutConveyor.IN_WAIT_TIME.BatchWriteStart();
-                }
+                //if (mConveyorCellExist.Any(x => x) == true)
+                //{
+                //    MccLogManager.OutConveyor.OUT_WAIT_TIME.BatchWriteStart();
+                //}
+                //else
+                //{
+                //    MccLogManager.OutConveyor.IN_WAIT_TIME.BatchWriteStart();
+                //}
                 // 모터 업 위치 이동
                 mbUnloadOutFlipToOutConveyor = false;
             }
@@ -485,20 +485,20 @@ namespace SVI_NFT_R
             return true;
         }
 
-        private void DoProcessOutConveyorStop()
-        {
-            MotorConveyorX.SetConveyorStop();
-        }
+        //private void DoProcessOutConveyorStop()
+        //{
+        //    MotorConveyorX.SetConveyorStop();
+        //}
 
-        private void DoProcessOutConveyorRun()
-        {
-            MotorConveyorX.SetConveyorUnloadMoveStart();
-            // ! 시뮬레이션 모드에서 MCC 로그가 꼬이는 문제가 있어서 딜레이 추가
-            if (m_objDocument.m_objConfig.GetSystemParameter().eSimulationMode == CDefine.ESimulationMode.SIMULATION_MODE_ON)
-            {
-                Thread.Sleep(500);
-            }
-        }
+        //private void DoProcessOutConveyorRun()
+        //{
+        //    MotorConveyorX.SetConveyorUnloadMoveStart();
+        //    // ! 시뮬레이션 모드에서 MCC 로그가 꼬이는 문제가 있어서 딜레이 추가
+        //    if (m_objDocument.m_objConfig.GetSystemParameter().eSimulationMode == CDefine.ESimulationMode.SIMULATION_MODE_ON)
+        //    {
+        //        Thread.Sleep(500);
+        //    }
+        //}
 
         private bool DoProcessInitialize()
         {
@@ -525,11 +525,11 @@ namespace SVI_NFT_R
                 return false;
             }
 
-            MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.Home);
-            if (false == MotorConveyorX.WaitForEndProcess())
-            {
-                return false;
-            }
+            //MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.Home);
+            //if (false == MotorConveyorX.WaitForEndProcess())
+            //{
+            //    return false;
+            //}
 
             IsOutConveyorAutoMode = true;
 
@@ -561,14 +561,14 @@ namespace SVI_NFT_R
                 return false;
             }
 
-            if (MotorConveyorX.IsNeedOrigin == true)
-            {
-                MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.Home);
-                if (false == MotorConveyorX.WaitForEndProcess())
-                {
-                    return false;
-                }
-            }
+            //if (MotorConveyorX.IsNeedOrigin == true)
+            //{
+            //    MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.Home);
+            //    if (false == MotorConveyorX.WaitForEndProcess())
+            //    {
+            //        return false;
+            //    }
+            //}
 
             // 모터 인터락 대기 상태 변경
             MotorZ.SetCommand(OutFlipMotorZ.ECommand.WaitInterlock);
@@ -721,82 +721,82 @@ namespace SVI_NFT_R
             }
         }
 
-        private void ThreadOutConveyorProcess()
-        {
-            /*
-             * 내부 배출 컨베이어 제어
-             */
-            while (false == mbThreadExit)
-            {
-                // 컨베이어 정지
-                if (true == IsOutConveyor(EOutConveyorSequence.Stop))
-                {
-                    if (mConveyorRun == true)
-                    {
-                        mConveyorRun = false;
-                        MccLogManager.OutConveyor.CV_RUN.BatchWriteEnd();
-                        if (mConveyorCellExist[1] == true
-                            && MotorConveyorX.IsArrivalUnloadPosition() == true
-                            )
-                        {
-                            mConveyorCellExist[1] = false;
-                            Task.Run(async () =>
-                            {
-                                using (var logScope = MccLogManager.OutConveyor.COMPONENT_OUT[1].CreateMccLogProvider())
-                                {
-                                    await Task.Delay(100);
-                                }
-                            });
-                        }
-                        if (mConveyorCellExist.Any(x => x) == true)
-                        {
-                            MccLogManager.OutConveyor.OUT_WAIT_TIME.BatchWriteStart();
-                        }
-                        else
-                        {
-                            MccLogManager.OutConveyor.IN_WAIT_TIME.BatchWriteStart();
-                        }
-                    }
-                    DoProcessOutConveyorStop();
-                }
-                // 컨베이어 언로드 위치 절대 이동 시작
-                if (true == IsOutConveyor(EOutConveyorSequence.Run))
-                {
-                    if (mConveyorRun == false)
-                    {
-                        mConveyorRun = true;
-                        MccLogManager.OutConveyor.CV_RUN.BatchWriteStart();
-                        if (mConveyorCellExist.Any(x => x) == true)
-                        {
-                            MccLogManager.OutConveyor.OUT_WAIT_TIME.BatchWriteEnd();
-                        }
-                        else
-                        {
-                            MccLogManager.OutConveyor.IN_WAIT_TIME.BatchWriteEnd();
-                        }
-                    }
-                    DoProcessOutConveyorRun();
-                }
-                // MCC Component In/Out
-                if (true == IsOutConveyor(EOutConveyorSequence.Mcc))
-                {
-                    if (mConveyorCellExist[0] == true
-                        && MotorConveyorX.IsHalfwayToUnloadPosition() == true
-                        )
-                    {
-                        mConveyorCellExist[0] = false;
-                        Task.Run(async () =>
-                        {
-                            using (var logScope = MccLogManager.OutConveyor.COMPONENT_OUT[0].CreateMccLogProvider())
-                            {
-                                await Task.Delay(100);
-                            }
-                        });
-                    }
-                }
-                Thread.Sleep(WAIT_FOR_END_PROCESS_PERIOD_TIME);
-            }
-        }
+        //private void ThreadOutConveyorProcess()
+        //{
+        //    /*
+        //     * 내부 배출 컨베이어 제어
+        //     */
+        //    while (false == mbThreadExit)
+        //    {
+        //        // 컨베이어 정지
+        //        if (true == IsOutConveyor(EOutConveyorSequence.Stop))
+        //        {
+        //            if (mConveyorRun == true)
+        //            {
+        //                mConveyorRun = false;
+        //                MccLogManager.OutConveyor.CV_RUN.BatchWriteEnd();
+        //                if (mConveyorCellExist[1] == true
+        //                   // && MotorConveyorX.IsArrivalUnloadPosition() == true
+        //                    )
+        //                {
+        //                    mConveyorCellExist[1] = false;
+        //                    Task.Run(async () =>
+        //                    {
+        //                        using (var logScope = MccLogManager.OutConveyor.COMPONENT_OUT[1].CreateMccLogProvider())
+        //                        {
+        //                            await Task.Delay(100);
+        //                        }
+        //                    });
+        //                }
+        //                if (mConveyorCellExist.Any(x => x) == true)
+        //                {
+        //                    MccLogManager.OutConveyor.OUT_WAIT_TIME.BatchWriteStart();
+        //                }
+        //                else
+        //                {
+        //                    MccLogManager.OutConveyor.IN_WAIT_TIME.BatchWriteStart();
+        //                }
+        //            }
+        //            //DoProcessOutConveyorStop();
+        //        }
+        //        // 컨베이어 언로드 위치 절대 이동 시작
+        //        if (true == IsOutConveyor(EOutConveyorSequence.Run))
+        //        {
+        //            if (mConveyorRun == false)
+        //            {
+        //                mConveyorRun = true;
+        //                MccLogManager.OutConveyor.CV_RUN.BatchWriteStart();
+        //                if (mConveyorCellExist.Any(x => x) == true)
+        //                {
+        //                    MccLogManager.OutConveyor.OUT_WAIT_TIME.BatchWriteEnd();
+        //                }
+        //                else
+        //                {
+        //                    MccLogManager.OutConveyor.IN_WAIT_TIME.BatchWriteEnd();
+        //                }
+        //            }
+        //            //DoProcessOutConveyorRun();
+        //        }
+        //        // MCC Component In/Out
+        //        if (true == IsOutConveyor(EOutConveyorSequence.Mcc))
+        //        {
+        //            if (mConveyorCellExist[0] == true
+        //                //&& MotorConveyorX.IsHalfwayToUnloadPosition() == true
+        //                )
+        //            {
+        //                mConveyorCellExist[0] = false;
+        //                Task.Run(async () =>
+        //                {
+        //                    using (var logScope = MccLogManager.OutConveyor.COMPONENT_OUT[0].CreateMccLogProvider())
+        //                    {
+        //                        await Task.Delay(100);
+        //                    }
+        //                });
+        //            }
+        //        }
+        //        Thread.Sleep(WAIT_FOR_END_PROCESS_PERIOD_TIME);
+        //    }
+        //}
 
         private void ThreadInitializeProcess()
         {

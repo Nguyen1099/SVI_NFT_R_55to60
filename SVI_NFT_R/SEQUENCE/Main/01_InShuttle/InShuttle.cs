@@ -721,7 +721,7 @@ namespace SVI_NFT_R
 
                     // MFQ 투입 버튼 누름 감시
                     bool bMfqInsertButtonPressed = default(bool);
-                    m_objIO.HLGetDigitalBit(CDeviceIODefine.EDigitalInput.X_X050_RESERVED, ref bMfqInsertButtonPressed);
+                    m_objIO.HLGetDigitalBit(CDeviceIODefine.EDigitalInput.X_X054_RESERVED, ref bMfqInsertButtonPressed);
                     if (true == bMfqInsertButtonPressed)
                     {
                         if (Pickers.All(i => i.IsCellDetectSensor != true))

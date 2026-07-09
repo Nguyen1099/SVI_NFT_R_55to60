@@ -1,3 +1,5 @@
 ﻿ID,ByteIndex,BitIndex,HandlingDataTypeString,HandlingDataSize,ArrayLength,DecimalPoint,Label,Description,Comment
 UpperToSelf,2032,,EqToEq.UpperToSelf.Bits,,,,,,시작 비트 주소는 0x3F80
 SelfToUpper,2080,,EqToEq.SelfToUpper.Bits,,,,,,시작 비트 주소는 0x4100
+SelfToLower,1680,,EqToEq.SelfToLower.Bits,,,,,,시작 비트 주소는 0x3480
+LowerToSelf,1760,,EqToEq.LowerToSelf.Bits,,,,,,시작 비트 주소는 0x3700

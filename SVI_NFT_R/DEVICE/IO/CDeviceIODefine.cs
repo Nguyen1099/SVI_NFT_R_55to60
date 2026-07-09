@@ -35,7 +35,7 @@
             X_OUT_ROBOT_P2_CELL_DETECT_SENSOR, // X01C
             X_INSP_STAGE_P1_CELL_DETECT_SENSOR, // X01D
             X_INSP_STAGE_P2_CELL_DETECT_SENSOR, // X01E
-            X_OUT_CONVEYOR_CELL_OVERLAP_SENSOR, // X01F
+            X_X01F_RESERVED, // X01F
             X_MAGNET_CONTACT_ON, // X020
             X_ELECTRONIC_BOX_OVER_TEMP_ALARM, // X021
             X_PC_RACK_OVER_TEMP_ALARM, // X022
@@ -84,10 +84,10 @@
             X_LOWER_INTERACTIVE_2_RCV_COMPLETE, // X04D
             X_LOWER_INTERACTIVE_3_ARM_LEFT_DETECT, // X04E
             X_LOWER_SUB_EMO_ARM_RIGHT_DETECT, // X04F
-            X_X050_RESERVED, // X050
-            X_X051_RESERVED, // X051
-            X_X052_RESERVED, // X052
-            X_X053_RESERVED, // X053
+            X_OUT_SHUTTLE_P1_VACUUM_PRESSURE_SENSOR, // X050
+            X_OUT_SHUTTLE_P2_VACUUM_PRESSURE_SENSOR, // X051
+            X_OUT_SHUTTLE_P1_CELL_DETECT_SENSOR, // X052
+            X_OUT_SHUTTLE_P2_CELL_DETECT_SENSOR, // X053
             X_X054_RESERVED, // X054
             X_X055_RESERVED, // X055
             X_X056_RESERVED, // X056
@@ -119,7 +119,23 @@
             X_AD_OUT_ROTATE_P1_2_VACUUM_PRESSURE, // CH13
             X_AD_OUT_ROTATE_P2_1_VACUUM_PRESSURE, // CH14
             X_AD_OUT_ROTATE_P2_2_VACUUM_PRESSURE, // CH15
-            X_AD_CH16_RESERVED, // CH16
+            X_AD_OUT_SHUTTLE_P1_VACUUM_PRESSURE, // CH16
+            X_AD_OUT_SHUTTLE_P2_VACUUM_PRESSURE, // CH17
+            X_AD_CH18_RESERVED, // CH18
+            X_AD_CH19_RESERVED, // CH19
+            X_AD_CH20_RESERVED, // CH20
+            X_AD_CH21_RESERVED, // CH21
+            X_AD_CH22_RESERVED, // CH22
+            X_AD_CH23_RESERVED, // CH23
+            X_AD_CH24_RESERVED, // CH24
+            X_AD_CH25_RESERVED, // CH25
+            X_AD_CH26_RESERVED, // CH26
+            X_AD_CH27_RESERVED, // CH27
+            X_AD_CH28_RESERVED, // CH28
+            X_AD_CH29_RESERVED, // CH29
+            X_AD_CH30_RESERVED, // CH30
+            X_AD_CH31_RESERVED, // CH31
+            X_AD_CH32_RESERVED, // CH32
         }
 
         public enum EDigitalOutput
@@ -184,10 +200,10 @@
             Y_OUT_ROBOT_P1_CYLINDER_TURN, // Y139
             Y_OUT_ROBOT_P2_CYLINDER_RETURN, // Y13A
             Y_OUT_ROBOT_P2_CYLINDER_TURN, // Y13B
-            Y_Y13C_RESERVED, // Y13C
-            Y_Y13D_RESERVED, // Y13D
-            Y_Y13E_RESERVED, // Y13E
-            Y_Y13F_RESERVED, // Y13F
+            Y_OUT_SHUTTLE_P1_VACUUM, // Y13C
+            Y_OUT_SHUTTLE_P1_BLOW, // Y13D
+            Y_OUT_SHUTTLE_P2_VACUUM, // Y13E
+            Y_OUT_SHUTTLE_P2_BLOW, // Y13F
             Y_UPPER_ALIVE, // Y140
             Y_UPPER_EMERGENCY, // Y141
             Y_UPPER_NET_READY, // Y142

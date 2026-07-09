@@ -2,6 +2,7 @@
 {
     public enum EEqToEqUiGroup : int
     {
-        Load
+        Load,
+        Unload
     }
 }

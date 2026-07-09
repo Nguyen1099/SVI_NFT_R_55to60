@@ -200,6 +200,9 @@ namespace SVI_NFT_R
                         case CDefine.EFormViewTeach.FORM_VIEW_TEACH_OUT_FLIP:
                             m_stForm[(int)eForm] = new structureForm(new CFormTeachOutFlip(m_objDocument) as CFormInterface);
                             break;
+                        case CDefine.EFormViewTeach.FORM_VIEW_TEACH_OUT_SHUTTLE:
+                            m_stForm[(int)eForm] = new structureForm(new CFormTeachOutShuttle(m_objDocument) as CFormInterface);
+                            break;
                         case CDefine.EFormViewTeach.FORM_VIEW_TEACH_CYLINDER:
                             m_stForm[(int)eForm] = new structureForm(new CFormTeachCylinder(m_objDocument) as CFormInterface);
                             break;
@@ -257,6 +260,7 @@ namespace SVI_NFT_R
                 SetButtonChangeLanguage(m_btnMenu[(int)CDefine.EFormViewTeach.FORM_VIEW_TEACH_INSP_STAGE]);
                 SetButtonChangeLanguage(m_btnMenu[(int)CDefine.EFormViewTeach.FORM_VIEW_TEACH_OUT_ROBOT]);
                 SetButtonChangeLanguage(m_btnMenu[(int)CDefine.EFormViewTeach.FORM_VIEW_TEACH_OUT_FLIP]);
+                SetButtonChangeLanguage(m_btnMenu[(int)CDefine.EFormViewTeach.FORM_VIEW_TEACH_OUT_SHUTTLE]);
                 SetButtonChangeLanguage(m_btnMenu[(int)CDefine.EFormViewTeach.FORM_VIEW_TEACH_CYLINDER]);
                 SetButtonChangeLanguage(m_btnMenu[(int)CDefine.EFormViewTeach.FORM_VIEW_TEACH_VACUUM]);
 

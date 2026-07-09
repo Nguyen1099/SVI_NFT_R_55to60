@@ -15,5 +15,7 @@
         OutRobotP2,
         OutFlipP1,
         OutFlipP2,
+        OutShuttleP1,
+        OutShuttleP2,
     }
 }

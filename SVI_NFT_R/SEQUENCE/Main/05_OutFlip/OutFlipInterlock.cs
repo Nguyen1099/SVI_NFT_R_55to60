@@ -142,7 +142,7 @@ namespace SVI_NFT_R
                     }
                     break;
 
-                case nameof(CProcessMotion.EMotor.OUT_CONVEYOR_X2):
+                case nameof(CProcessMotion.EMotor.OUT_SHUTTLE_X2):
                     {
                         if (bIsZSafetyPosition == false)
                         {
@@ -268,7 +268,7 @@ namespace SVI_NFT_R
                     }
                     break;
 
-                case nameof(CProcessMotion.EMotor.OUT_CONVEYOR_X2):
+                case nameof(CProcessMotion.EMotor.OUT_SHUTTLE_X2):
                     {
                         if (bIsZSafetyPosition == false)
                         {
@@ -338,7 +338,7 @@ namespace SVI_NFT_R
                     }
                     break;
 
-                case nameof(CProcessMotion.EMotor.OUT_CONVEYOR_X2):
+                case nameof(CProcessMotion.EMotor.OUT_SHUTTLE_X2):
                 default:
                     break;
             }

@@ -12,6 +12,7 @@
             /// </summary>
             NOT_REGISTED_ALARM = 0,
 
+
             //////////////////////////////////////////////////////////////////////////
             // LOAD_EQ_TO_EQ
             //////////////////////////////////////////////////////////////////////////
@@ -519,40 +520,68 @@
             /// </summary>
             SE_OUT_FLIP_P2_SENSOR_OVERLAP = 13115,
             //////////////////////////////////////////////////////////////////////////
-            // OUT_CONVEYOR
+            // OUT_SHUTTLE
             //////////////////////////////////////////////////////////////////////////
             /// <summary>
-            /// OUT컨베이어 X2축이 홈 동작 진행에 실패 했습니다
+            /// OUT셔틀 X1축이 홈 동작 진행에 실패 했습니다
             /// </summary>
-            MO_UNLOADER_CONVEYOR_X2_HOME_MOTION = 13500,
+            MO_OUT_SHUTTLE_X1_HOME_MOTION = 13500,
             /// <summary>
-            /// OUT컨베이어 X2축 포지션 초기화 동작에 실패 했습니다
+            /// OUT셔틀 X1축 로드 위치 이동에 실패 했습니다 
             /// </summary>
-            MO_UNLOADER_CONVEYOR_X2_POSITION_RESET = 13501,
+            MO_OUT_SHUTTLE_X1_LOAD_MOVE = 13501,
             /// <summary>
-            /// OUT컨베이어 X2축이 언로드 위치 이동에 실패 했습니다 (하류설비 위치)
+            /// OUT셔틀 X1축 언로드 위치 이동에 실패 했습니다 
             /// </summary>
-            MO_UNLOADER_CONVEYOR_X2_UNLOAD_MOVE = 13502,
+            MO_OUT_SHUTTLE_X1_UNLOAD_MOVE = 13502,
             /// <summary>
-            /// OUT컨베이어 센서에 셀을 감지했습니다.
+            /// OUT셔틀 P1 진공 흡착에 실패 했습니다
             /// </summary>
-            SE_UNLOADER_CONVEYOR_N_CELL_EXIST_CHECK = 13503,
+            VC_OUT_SHUTTLE_P1_VACUUM = 13600,
             /// <summary>
-            /// OUT컨베이어 배출 센서에 자재 쌓임을 감지했습니다.
+            /// OUT셔틀 P1 진공 파기에 실패 했습니다
             /// </summary>
-            SE_UNLOADER_CONVEYOR_N_OUTPUT_BLOCKED_CHECK = 13504,
+            VC_OUT_SHUTTLE_P1_BLOW = 13601,
             /// <summary>
-            /// OUT컨베이어 P1 센서에 셀이 감지되지 않았습니다.
+            /// OUT셔틀 P1 셀 확인에 실패 했습니다 (진공)
             /// </summary>
-            SE_UNLOADER_CONVEYOR_P1_CELL_NOT_EXIST_CHECK = 13505,
+            SE_OUT_SHUTTLE_P1_VACUUM_CHECK = 13602,
             /// <summary>
-            /// OUT컨베이어 P2 센서에 셀이 감지되지 않았습니다.
+            /// OUT셔틀 P1 셀 확인에 실패 했습니다 (센서)
             /// </summary>
-            SE_UNLOADER_CONVEYOR_P2_CELL_NOT_EXIST_CHECK = 13506,
+            SE_OUT_SHUTTLE_P1_SENSOR_CHECK = 13603,
             /// <summary>
-            /// OUT컨베이어 P1 P2 센서에 셀이 감지되지 않았습니다.
+            /// OUT셔틀 P1 셀 겹침 확인되었습니다 (진공)
             /// </summary>
-            SE_UNLOADER_CONVEYOR_ALL_CELL_NOT_EXIST_CHECK = 13507,
+            SE_OUT_SHUTTLE_P1_VACUUM_OVERLAP = 13604,
+            /// <summary>
+            /// OUT셔틀 P1 셀 겹침 확인되었습니다 (센서)
+            /// </summary>
+            SE_OUT_SHUTTLE_P1_SENSOR_OVERLAP = 13605,
+            /// <summary>
+            /// OUT셔틀 P2 진공 흡착에 실패 했습니다
+            /// </summary>
+            VC_OUT_SHUTTLE_P2_VACUUM = 13610,
+            /// <summary>
+            /// OUT셔틀 P2 진공 파기에 실패 했습니다
+            /// </summary>
+            VC_OUT_SHUTTLE_P2_BLOW = 13612,
+            /// <summary>
+            /// OUT셔틀 P2 셀 확인에 실패 했습니다 (진공)
+            /// </summary>
+            SE_OUT_SHUTTLE_P2_VACUUM_CHECK = 13614,
+            /// <summary>
+            /// OUT셔틀 P2 셀 확인에 실패 했습니다 (센서)
+            /// </summary>
+            SE_OUT_SHUTTLE_P2_SENSOR_CHECK = 13616,
+            /// <summary>
+            /// OUT셔틀 P2 셀 겹침 확인되었습니다 (진공)
+            /// </summary>
+            SE_OUT_SHUTTLE_P2_VACUUM_OVERLAP = 13618,
+            /// <summary>
+            /// OUT셔틀 P2 셀 겹침 확인되었습니다 (센서)
+            /// </summary>
+            SE_OUT_SHUTTLE_P2_SENSOR_OVERLAP = 13620,
             //////////////////////////////////////////////////////////////////////////
             // UNLOAD_EQ_TO_EQ
             //////////////////////////////////////////////////////////////////////////

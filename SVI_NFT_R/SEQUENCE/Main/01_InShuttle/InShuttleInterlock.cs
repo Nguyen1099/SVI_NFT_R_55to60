@@ -24,7 +24,7 @@ namespace SVI_NFT_R
 
             do
             {
-                m_objAlarmStructure.strAlarmObject = typeof(InShuttleInterlock).Name;
+                m_objAlarmStructure.strAlarmObject = typeof(OutShuttleInterlock).Name;
                 m_objAlarmStructure.eAlarmLevel = CDefine.EAlarmType.ALARM_INTERLOCK;
 
                 bReturn = true;

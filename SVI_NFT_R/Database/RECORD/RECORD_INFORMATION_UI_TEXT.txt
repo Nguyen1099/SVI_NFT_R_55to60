@@ -732,324 +732,345 @@
 730	,	BtnTeachMenu[2]	,	CFormTeach	,	검사스테이지	,	INSPECTION-STAGE	,	INSPECTION-STAGE	,	INSPECTION-STAGE
 731	,	BtnTeachMenu[3]	,	CFormTeach	,	OUT로봇	,	OUT-ROBOT	,	OUT-ROBOT	,	OUT-ROBOT
 732	,	BtnTeachMenu[4]	,	CFormTeach	,	OUT플립	,	OUT-FLIP	,	OUT-FLIP	,	OUT-FLIP
-733	,	BtnTeachMenu[5]	,	CFormTeach	,	실린더	,	CYLINDER	,	CYLINDER	,	CYLINDER
-734	,	BtnTeachMenu[6]	,	CFormTeach	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-735	,	BtnTitleCylinderList	,	CFormTeachCylinder	,	실린더 목록	,	CYLINDER LIST	,	CYLINDER LIST	,	CYLINDER LIST
-736	,	BtnTitleCylinderDelayTime	,	CFormTeachCylinder	,	실린더 지연 시간	,	CYLINDER DELAY TIME	,	CYLINDER DELAY TIME	,	CYLINDER DELAY TIME
-737	,	BtnTitleFirstDelayTime	,	CFormTeachCylinder	,	FIRST 이동 지연 시간 (ms)	,	FIRST DELAY TIME (ms)	,	FIRST DELAY TIME (ms)	,	FIRST DELAY TIME (ms)
-738	,	BtnTitleSecondDelayTime	,	CFormTeachCylinder	,	SECOND 이동 지연 시간 (ms)	,	SECOND DELAY TIME (ms)	,	SECOND DELAY TIME (ms)	,	SECOND DELAY TIME (ms)
-739	,	BtnCylinderRepeatMove	,	CFormTeachCylinder	,	실린더 반복 이동	,	CYLINDER REPEAT MOVE	,	CYLINDER REPEAT MOVE	,	Di chuyển lặp lại Cylinder
-740	,	BtnFirstMove	,	CFormTeachCylinder	,	FIRST 이동	,	FIRST MOVE	,	FIRST MOVE	,	di chuyển lần đầu tiên (ms)
-741	,	BtnSecondMove	,	CFormTeachCylinder	,	SECOND 이동	,	SECOND MOVE	,	SECOND MOVE	,	di chuyển lần thứ hai (ms)
-742	,	BtnTitleCycleMoveTime	,	CFormTeachCylinder	,	반복 지연 시간 (ms)	,	CYCLE MOVE TIME (ms)	,	CYCLE MOVE TIME (ms)	,	Thời gian chậm lặp lại (ms)
-743	,	BtnTitleRepeatCount	,	CFormTeachCylinder	,	반복 개수	,	REPEAT COUNT	,	REPEAT COUNT	,	Số lần lặp lại
-744	,	BtnTitleFirstMoveTime	,	CFormTeachCylinder	,	FIRST 이동 시간 (ms)	,	FIRST MOVE TIME (ms)	,	FIRST MOVE TIME (ms)	,	di chuyển lần đầu tiên (ms)
-745	,	BtnTitleSecondMoveTime	,	CFormTeachCylinder	,	SECOND 이동 시간 (ms)	,	SECOND MOVE TIME (ms)	,	SECOND MOVE TIME (ms)	,	di chuyển lần thứ hai (ms)
-746	,	BtnRepeatMove	,	CFormTeachCylinder	,	반복 이동	,	REPEAT MOVE	,	REPEAT MOVE	,	Di chuyển lặp lại  
-747	,	BtnRepeatStop	,	CFormTeachCylinder	,	반복 정지	,	REPEAT STOP	,	REPEAT STOP	,	Dừng lặp lại 
-748	,	BtnGridViewClear	,	CFormTeachCylinder	,	클리어	,	CLEAR	,	CLEAR	,	CLEAR
-749	,	BtnSave	,	CFormTeachCylinder	,	저장	,	SAVE	,	SAVE	,	SAVE
-750	,	mResourceTitleDelayTimeUp	,	CFormTeachCylinder	,	상승 동작 딜레이 (ms)	,	UP MOVE DELAY (ms)	,	UP MOVE DELAY (ms)	,	UP MOVE DELAY (ms)
-751	,	mResourceTitleDelayTimeDown	,	CFormTeachCylinder	,	하강 동작 딜레이 (ms)	,	DOWN MOVE DELAY (ms)	,	DOWN MOVE DELAY (ms)	,	DOWN MOVE DELAY (ms)
-752	,	mResourceTitleMoveTimeUp	,	CFormTeachCylinder	,	상승 동작 시간 (ms)	,	UP MOVE ELAPSED (ms)	,	UP MOVE ELAPSED (ms)	,	UP MOVE ELAPSED (ms)
-753	,	mResourceTitleMoveTimeDown	,	CFormTeachCylinder	,	하강 동작 시간 (ms)	,	DOWN MOVE ELAPSED (ms)	,	DOWN MOVE ELAPSED (ms)	,	DOWN MOVE ELAPSED (ms)
-754	,	mResourceMoveUp	,	CFormTeachCylinder	,	상승 동작	,	UP MOVE	,	UP MOVE	,	UP MOVE
-755	,	mResourceMoveDown	,	CFormTeachCylinder	,	하강 동작	,	DOWN MOVE	,	DOWN MOVE	,	DOWN MOVE
-756	,	mResourceTitleDelayTimeLeft	,	CFormTeachCylinder	,	왼쪽 동작 딜레이 (ms)	,	LEFT MOVE DELAY (ms)	,	LEFT MOVE DELAY (ms)	,	LEFT MOVE DELAY (ms)
-757	,	mResourceTitleDelayTimeRight	,	CFormTeachCylinder	,	오른쪽 동작 딜레이 (ms)	,	RIGHT MOVE DELAY (ms)	,	RIGHT MOVE DELAY (ms)	,	RIGHT MOVE DELAY (ms)
-758	,	mResourceTitleMoveTimeLeft	,	CFormTeachCylinder	,	왼쪽 동작 시간 (ms)	,	LEFT MOVE ELAPSED (ms)	,	LEFT MOVE ELAPSED (ms)	,	LEFT MOVE ELAPSED (ms)
-759	,	mResourceTitleMoveTimeRight	,	CFormTeachCylinder	,	오른쪽 동작 시간 (ms)	,	RIGHT MOVE ELAPSED (ms)	,	RIGHT MOVE ELAPSED (ms)	,	RIGHT MOVE ELAPSED (ms)
-760	,	mResourceMoveLeft	,	CFormTeachCylinder	,	왼쪽 동작	,	LEFT MOVE	,	LEFT MOVE	,	LEFT MOVE
-761	,	mResourceMoveRight	,	CFormTeachCylinder	,	오른쪽 동작	,	RIGHT MOVE	,	RIGHT MOVE	,	RIGHT MOVE
-762	,	mResourceTitleDelayTimeForward	,	CFormTeachCylinder	,	전진 동작 딜레이 (ms)	,	FORWARD MOVE DELAY (ms)	,	FORWARD MOVE DELAY (ms)	,	FORWARD MOVE DELAY (ms)
-763	,	mResourceTitleDelayTimeBackward	,	CFormTeachCylinder	,	후진 동작 딜레이 (ms)	,	BACKWARD MOVE DELAY (ms)	,	BACKWARD MOVE DELAY (ms)	,	BACKWARD MOVE DELAY (ms)
-764	,	mResourceTitleMoveTimeForward	,	CFormTeachCylinder	,	전진 동작 시간 (ms)	,	FORWARD MOVE ELAPSED (ms)	,	FORWARD MOVE ELAPSED (ms)	,	FORWARD MOVE ELAPSED (ms)
-765	,	mResourceTitleMoveTimeBackward	,	CFormTeachCylinder	,	후진 동작 시간 (ms)	,	BACKWARD MOVE ELAPSED (ms)	,	BACKWARD MOVE ELAPSED (ms)	,	BACKWARD MOVE ELAPSED (ms)
-766	,	mResourceMoveForward	,	CFormTeachCylinder	,	전진 동작	,	FORWARD MOVE	,	FORWARD MOVE	,	FORWARD MOVE
-767	,	mResourceMoveBackward	,	CFormTeachCylinder	,	후진 동작	,	BACKWARD MOVE	,	BACKWARD MOVE	,	BACKWARD MOVE
-768	,	mResourceTitleDelayTimeCw	,	CFormTeachCylinder	,	CW 동작 딜레이 (ms)	,	CW MOVE DELAY (ms)	,	CW MOVE DELAY (ms)	,	CW MOVE DELAY (ms)
-769	,	mResourceTitleDelayTimeCcw	,	CFormTeachCylinder	,	CCW 동작 딜레이 (ms)	,	CCW MOVE DELAY (ms)	,	CCW MOVE DELAY (ms)	,	CCW MOVE DELAY (ms)
-770	,	mResourceTitleMoveTimeCw	,	CFormTeachCylinder	,	CW 동작 시간 (ms)	,	CW MOVE ELAPSED (ms)	,	CW MOVE ELAPSED (ms)	,	CW MOVE ELAPSED (ms)
-771	,	mResourceTitleMoveTimeCcw	,	CFormTeachCylinder	,	CCW 동작 시간 (ms)	,	CCW MOVE ELAPSED (ms)	,	CCW MOVE ELAPSED (ms)	,	CCW MOVE ELAPSED (ms)
-772	,	mResourceMoveCw	,	CFormTeachCylinder	,	CW 동작	,	CW MOVE	,	CW MOVE	,	CW MOVE
-773	,	mResourceMoveCcw	,	CFormTeachCylinder	,	CCW 동작	,	CCW MOVE	,	CCW MOVE	,	CCW MOVE
-774	,	mResourceTitleDelayTimeReturn	,	CFormTeachCylinder	,	복귀 동작 딜레이 (ms)	,	RETURN MOVE DELAY (ms)	,	RETURN MOVE DELAY (ms)	,	RETURN MOVE DELAY (ms)
-775	,	mResourceTitleDelayTimeTurn	,	CFormTeachCylinder	,	회전 동작 딜레이 (ms)	,	TURN MOVE DELAY (ms)	,	TURN MOVE DELAY (ms)	,	TURN MOVE DELAY (ms)
-776	,	mResourceTitleMoveTimeReturn	,	CFormTeachCylinder	,	복귀 동작 시간 (ms)	,	RETURN MOVE ELAPSED (ms)	,	RETURN MOVE ELAPSED (ms)	,	RETURN MOVE ELAPSED (ms)
-777	,	mResourceTitleMoveTimeTurn	,	CFormTeachCylinder	,	회전 동작 시간 (ms)	,	TURN MOVE ELAPSED (ms)	,	TURN MOVE ELAPSED (ms)	,	TURN MOVE ELAPSED (ms)
-778	,	mResourceMoveReturn	,	CFormTeachCylinder	,	복귀 동작	,	RETURN MOVE	,	RETURN MOVE	,	RETURN MOVE
-779	,	mResourceMoveTurn	,	CFormTeachCylinder	,	회전 동작	,	TURN MOVE	,	TURN MOVE	,	TURN MOVE
-780	,	BtnTitleVacuumList	,	CFormTeachVacuum	,	진공 목록	,	VACUUM LIST	,	VACUUM LIST	,	VACUUM LIST
-781	,	BtnTitleVacuumDelayTime	,	CFormTeachVacuum	,	진공 동작 대기 시간	,	VACUUM DELAY TIME	,	VACUUM DELAY TIME	,	VACUUM DELAY TIME
-782	,	BtnTitleVacuumTimeout	,	CFormTeachVacuum	,	진공 타임아웃	,	VACUUM TIMEOUT	,	VACUUM TIMEOUT	,	VACUUM TIMEOUT
-783	,	BtnTitleVacuumOffDelayTime	,	CFormTeachVacuum	,	파기 후 안정화 시간	,	BLOW AFTER DEALY TIME	,	BLOW AFTER DEALY TIME	,	BLOW AFTER DEALY TIME
-784	,	BtnVacuum	,	CFormTeachVacuum	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-785	,	BtnBlow	,	CFormTeachVacuum	,	파기	,	BLOW	,	BLOW	,	BLOW
-786	,	BtnTitleVacuumInput	,	CFormTeachVacuum	,	진공 입력	,	VACUUM INPUT	,	VACUUM INPUT	,	VACUUM INPUT
-787	,	BtnTitleVacuumAnalogInput	,	CFormTeachVacuum	,	진공 아날로그 입력	,	VACUUM ANALOG INPUT	,	VACUUM ANALOG INPUT	,	VACUUM ANALOG INPUT
-788	,	BtnTitleVacuumOutput	,	CFormTeachVacuum	,	진공 출력	,	VACUUM OUTPUT	,	VACUUM OUTPUT	,	VACUUM OUTPUT
-789	,	BtnTitleBlowOutput	,	CFormTeachVacuum	,	파기 출력	,	BLOW OUTPUT	,	BLOW OUTPUT	,	BLOW OUTPUT
-790	,	BtnOutputLock	,	CFormTeachVacuum	,	출력 잠금	,	OUTPUT LOCK	,	OUTPUT LOCK	,	OUTPUT LOCK
-791	,	BtnSave	,	CFormTeachVacuum	,	저장	,	SAVE	,	SAVE	,	SAVE
-792	,	BtnTitleAxisName	,	CFormTeachData	,	축 이름	,	AXIS NAME	,	AXIS NAME	,	AXIS NAME
-793	,	BtnServo	,	CFormTeachData	,	서보	,	SERVO	,	SERVO	,	SERVO
-794	,	BtnTitleCurrentPosition	,	CFormTeachData	,	현재 위치	,	CURRENT POSITION	,	CURRENT POSITION	,	CURRENT POSITION
-795	,	BtnHome	,	CFormTeachData	,	원점 복귀	,	ORIGIN	,	ORIGIN	,	ORIGIN
-796	,	BtnAlarm	,	CFormTeachData	,	알람	,	ALARM	,	ALARM	,	ALARM
-797	,	BtnInposition	,	CFormTeachData	,	인포지션	,	INPOSITION	,	INPOSITION	,	INPOSITION
-798	,	BtnPositionMove	,	CFormTeachData	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	POSITION MOVE
-799	,	BtnTitleJog	,	CFormTeachData	,	조그	,	JOG	,	JOG	,	JOG
-800	,	BtnFastJogMode	,	CFormTeachData	,	빠른 조그	,	FAST JOG	,	FAST JOG	,	FAST JOG
-801	,	BtnSlowJogMode	,	CFormTeachData	,	느린 조그	,	SLOW JOG	,	SLOW JOG	,	SLOW JOG
-802	,	BtnJogMovePlus	,	CFormTeachData	,	조그 이동 ( + )	,	JOG MOVE ( + )	,	JOG MOVE ( + )	,	JOG MOVE ( + )
-803	,	BtnJogMoveMinus	,	CFormTeachData	,	조그 이동 ( - )	,	JOG MOVE ( - )	,	JOG MOVE ( - )	,	JOG MOVE ( - )
-804	,	BtnTitleRelativeMoveValue	,	CFormTeachData	,	상대 이동값	,	RELATIVE VALUE	,	RELATIVE VALUE	,	RELATIVE VALUE
-805	,	BtnRelativeMovePlus	,	CFormTeachData	,	상대 이동 ( + )	,	RELATIVE MOVE ( + )	,	RELATIVE MOVE ( + )	,	RELATIVE MOVE ( + )
-806	,	BtnRelativeMoveMinus	,	CFormTeachData	,	상대 이동 ( - )	,	RELATIVE MOVE ( - )	,	RELATIVE MOVE ( - )	,	RELATIVE MOVE ( - )
-807	,	BtnStop	,	CFormTeachData	,	정지	,	STOP	,	STOP	,	STOP
-808	,	BtnMinusLimit	,	CFormTeachData	,	리미트 ( - )	,	LIMIT ( - )	,	LIMIT ( - )	,	LIMIT ( - )
-809	,	BtnHomeSensor	,	CFormTeachData	,	홈 센서	,	HOME SENSOR	,	HOME SENSOR	,	HOME SENSOR
-810	,	BtnPlusLimit	,	CFormTeachData	,	리미트 ( + )	,	LIMIT ( + )	,	LIMIT ( + )	,	LIMIT ( + )
-811	,	BtnTargetPositionMove	,	CFormTeachData	,	절대 위치 이동	,	TARGET POSITION MOVE	,	TARGET POSITION MOVE	,	TARGET POSITION MOVE
-812	,	lblTitleServoLoadRatio	,	CFormTeachData	,	서보 부하율	,	SERVO LOAD RATIO	,	SERVO LOAD RATIO	,	SERVO LOAD RATIO
-813	,	lblTitleCurrentVelocity	,	CFormTeachData	,	현재 동작 속도	,	CURRENT MOVE VELOCITY	,	CURRENT MOVE VELOCITY	,	CURRENT MOVE VELOCITY
-814	,	BtnPositionJog	,	CFormTeachData	,	위치 이동 (조그)	,	POSITION MOVE (JOG)	,	POSITION MOVE (JOG)	,	POSITION MOVE (JOG)
-815	,	BtnSave	,	CFormTeachData	,	저장	,	SAVE	,	SAVE	,	SAVE
-816	,	BtnTitle	,	CFormTeachInShuttle	,	IN셔틀	,	IN-SHUTTLE	,	IN-SHUTTLE	,	IN-SHUTTLE
-817	,	BtnMotorStageX	,	CFormTeachInShuttle	,	스테이지 X1	,	STAGE X1	,	STAGE X1	,	STAGE X1
-818	,	BtnTitlePosition	,	CFormTeachInShuttle	,	위치	,	POSITION	,	POSITION	,	Vị trí 
-819	,	BtnPrevPosition	,	CFormTeachInShuttle	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
-820	,	BtnNextPosition	,	CFormTeachInShuttle	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
-821	,	BtnTitleBatchMove	,	CFormTeachInShuttle	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
-822	,	BtnPrevBatch	,	CFormTeachInShuttle	,	이전	,	NEXT	,	NEXT	,	NEXT
-823	,	BtnNextBatch	,	CFormTeachInShuttle	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
-824	,	BtnBatchCmdScanProcess	,	CFormTeachInShuttle	,	스캔 공정 (간이 광학계)	,	SCAN PROCESS (SUB-OPTICS)	,	SCAN PROCESS (SUB-OPTICS)	,	SCAN PROCESS (SUB-OPTICS)
-825	,	BtnBatchCmdAlignProcess	,	CFormTeachInShuttle	,	얼라인 공정	,	ALIGN PROCESS	,	ALIGN PROCESS	,	ALIGN PROCESS
-826	,	BtnBatchCmdMoveLoadPosition	,	CFormTeachInShuttle	,	투입 위치 이동 (상류설비)	,	MOVE LOAD POSITION (UPPER-EQUIPMENT)	,	MOVE LOAD POSITION (UPPER-EQUIPMENT)	,	MOVE LOAD POSITION (UPPER-EQUIPMENT)
-827	,	BtnBatchCmdMoveScanStartWaitPosition	,	CFormTeachInShuttle	,	스캔 시작 대기 위치 이동	,	MOVE SCAN START WAIT POSITION	,	MOVE SCAN START WAIT POSITION	,	MOVE SCAN START WAIT POSITION
-828	,	BtnBatchCmdMoveScanTriggerStartPosition	,	CFormTeachInShuttle	,	스캔 트리거 시작 위치 이동	,	MOVE SCAN TRIGGER START POSITION	,	MOVE SCAN TRIGGER START POSITION	,	MOVE SCAN TRIGGER START POSITION
-829	,	BtnBatchCmdMoveScanTriggerEndPosition	,	CFormTeachInShuttle	,	스캔 트리거 종료 위치 이동	,	MOVE SCAN TRIGGER END POSITION	,	MOVE SCAN TRIGGER END POSITION	,	MOVE SCAN TRIGGER END POSITION
-830	,	BtnBatchCmdMoveAlignPosition	,	CFormTeachInShuttle	,	얼라인 위치 이동	,	MOVE ALIGN POSITION	,	MOVE ALIGN POSITION	,	MOVE ALIGN POSITION
-831	,	BtnBatchCmdMoveUnloadPosition	,	CFormTeachInShuttle	,	배출 위치 이동 (IN로봇)	,	MOVE UNLOAD POSITION (IN-ROBOT)	,	MOVE UNLOAD POSITION (IN-ROBOT)	,	MOVE UNLOAD POSITION (IN-ROBOT)
-832	,	BtnTitleActuator	,	CFormTeachInShuttle	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
-833	,	UcTeachVacuum1_DeviceName	,	CFormTeachInShuttle	,	P1	,	P1	,	P1	,	P1
-834	,	UcTeachVacuum1_Vacuum	,	CFormTeachInShuttle	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-835	,	UcTeachVacuum1_Blow	,	CFormTeachInShuttle	,	파기	,	BLOW	,	BLOW	,	BLOW
-836	,	UcTeachVacuum1_Sensor	,	CFormTeachInShuttle	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-837	,	UcTeachVacuum2_DeviceName	,	CFormTeachInShuttle	,	P2	,	P2	,	P2	,	P2
-838	,	UcTeachVacuum2_Vacuum	,	CFormTeachInShuttle	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-839	,	UcTeachVacuum2_Blow	,	CFormTeachInShuttle	,	파기	,	BLOW	,	BLOW	,	BLOW
-840	,	UcTeachVacuum2_Sensor	,	CFormTeachInShuttle	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-841	,	BtnUseBlowAutoOff	,	CFormTeachInShuttle	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
-842	,	LblTitleAlignData	,	CFormTeachInShuttle	,	[IN셔틀] 얼라인 결과 데이터	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA
-843	,	BtnTitle	,	CFormTeachInRobot	,	IN로봇	,	IN-ROBOT	,	IN-ROBOT	,	IN-ROBOT
-844	,	BtnTitleBatchMove	,	CFormTeachInRobot	,	일괄 동작	,	BATCH MOVE	,	BATCH MOVE	,	BATCH MOVE
-845	,	BtnMotorNachiP1	,	CFormTeachInRobot	,	[P1] 로드 (IN셔틀)	,	[P1] LOAD (IN-SHUTTLE)	,	[P1] LOAD (IN-SHUTTLE)	,	[P1] LOAD (IN-SHUTTLE)
-846	,	BtnMotorNachiP3	,	CFormTeachInRobot	,	[P3] MCR	,	[P3] MCR	,	[P3] MCR	,	[P3] MCR
-847	,	BtnMotorNachiP4	,	CFormTeachInRobot	,	[P4] 언로드 (검사스테이지)	,	[P4] UNLOAD (INSPECTION-STAGE)	,	[P4] UNLOAD (INSPECTION-STAGE)	,	[P4] UNLOAD (INSPECTION-STAGE)
-848	,	BtnTitlePosition	,	CFormTeachInRobot	,	위치	,	POSITION	,	POSITION	,	POSITION
-849	,	BtnBatchCmdLoadGet	,	CFormTeachInRobot	,	[GET] 로드 공정 (IN셔틀)	,	[GET] LOAD PROCESS (IN-SHUTTLE)	,	[GET] LOAD PROCESS (IN-SHUTTLE)	,	[GET] LOAD PROCESS (IN-SHUTTLE)
-850	,	BtnBatchCmdLoadPut	,	CFormTeachInRobot	,	[PUT] 로드 공정 (IN셔틀)	,	[PUT] LOAD PROCESS (IN-SHUTTLE)	,	[PUT] LOAD PROCESS (IN-SHUTTLE)	,	[PUT] LOAD PROCESS (IN-SHUTTLE)
-851	,	BtnBatchCmdAlignZeroSend	,	CFormTeachInRobot	,	얼라인 데이터 리셋 전송	,	ALIGN ZERO DATA SEND	,	ALIGN ZERO DATA SEND	,	ALIGN ZERO DATA SEND
-852	,	BtnBatchCmdAlignSend	,	CFormTeachInRobot	,	얼라인 데이터 전송	,	ALIGN DATA SEND	,	ALIGN DATA SEND	,	ALIGN DATA SEND
-853	,	BtnBatchCmdAlign_Verification_Process	,	CFormTeachInRobot	,	[얼라인 검증] 얼라인 ▶ 투입/배출 ▶ 얼라인  (보정값 반영)	,	[ALIGN VERIFICATION] Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN VERIFICATION] Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN VERIFICATION] Align ▶ Pick/Place ▶ Align (Apply Offset)
-854	,	BtnBatchCmdRobot_Verification_Process	,	CFormTeachInRobot	,	[로봇 검증] 얼라인 ▶ 투입/배출 ▶ 얼라인 (보정값 미반영)	,	[ROBOT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)
-855	,	BtnBatchCmdAlign_Verification_Process2	,	CFormTeachInRobot	,	[얼라인 반복 검증] 투입/배출(Offset) ▶ 얼라인 ▶ 투입/배출 ▶ 얼라인  (보정값 반영)	,	[ALIGN REPEAT VERIFICATION] Pick/Place(Offset) ▶ Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN REPEAT VERIFICATION] Pick/Place(Offset) ▶ Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN REPEAT VERIFICATION] Pick/Place(Offset) ▶ Align ▶ Pick/Place ▶ Align (Apply Offset)
-856	,	BtnBatchCmdRobot_Verification_Process2	,	CFormTeachInRobot	,	[로봇 반복 검증] 얼라인 ▶ 투입/배출 ▶ 얼라인 (보정값 미반영)	,	[ROBOT REPEAT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT REPEAT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT REPEAT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)
-857	,	BtnBatchCmdAlignCalibration	,	CFormTeachInRobot	,	얼라인 캘리브레이션	,	ALIGN CALIBRATION	,	ALIGN CALIBRATION	,	ALIGN CALIBRATION
-858	,	BtnBatchCmdMcrPut	,	CFormTeachInRobot	,	[PUT] MCR 공정	,	[PUT] MCR PROCESS	,	[PUT] MCR PROCESS	,	[PUT] MCR PROCESS
-859	,	BtnBatchCmdUnloadGet	,	CFormTeachInRobot	,	[GET] 언로드 공정 (검사스테이지)	,	[GET] UNLOAD PROCESS (INSPECTION-STAGE)	,	[GET] UNLOAD PROCESS (INSPECTION-STAGE)	,	[GET] UNLOAD PROCESS (INSPECTION-STAGE)
-860	,	BtnBatchCmdUnloadPut	,	CFormTeachInRobot	,	[PUT] 언로드 공정 (검사스테이지)	,	[PUT] UNLOAD PROCESS (INSPECTION-STAGE)	,	[PUT] UNLOAD PROCESS (INSPECTION-STAGE)	,	[PUT] UNLOAD PROCESS (INSPECTION-STAGE)
-861	,	LblTitleAlignData	,	CFormTeachInRobot	,	[IN셔틀] 얼라인 결과 데이터	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA
-862	,	LblTitleOffsetData	,	CFormTeachInRobot	,	[IN로봇] 적용 오프셋 데이터	,	[IN-ROBOT] APPLY OFFSET DATA	,	[IN-ROBOT] APPLY OFFSET DATA	,	[IN-ROBOT] APPLY OFFSET DATA
-863	,	LblTitleMcrData	,	CFormTeachInRobot	,	MCR 데이터	,	MCR DATA	,	MCR DATA	,	MCR DATA
-864	,	BtnTitleActuator	,	CFormTeachInRobot	,	동작	,	ACTUATOR	,	ACTUATOR	,	ACTUATOR
-865	,	UcTeachVacuum1_DeviceName	,	CFormTeachInRobot	,	P1	,	P1	,	P1	,	P1
-866	,	UcTeachVacuum1_Vacuum	,	CFormTeachInRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-867	,	UcTeachVacuum1_Blow	,	CFormTeachInRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
-868	,	UcTeachVacuum1_Sensor	,	CFormTeachInRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-869	,	UcTeachVacuum2_DeviceName	,	CFormTeachInRobot	,	P2	,	P2	,	P2	,	P2
-870	,	UcTeachVacuum2_Vacuum	,	CFormTeachInRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-871	,	UcTeachVacuum2_Blow	,	CFormTeachInRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
-872	,	UcTeachVacuum2_Sensor	,	CFormTeachInRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-873	,	UcTeachCylinder1_DeviceName	,	CFormTeachInRobot	,	P1 실린더	,	P1 CYLINDER	,	P1 CYLINDER	,	P1 CYLINDER
-874	,	UcTeachCylinder1_Action1	,	CFormTeachInRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
-875	,	UcTeachCylinder1_Action2	,	CFormTeachInRobot	,	회전	,	TURN	,	TURN	,	TURN
-876	,	UcTeachCylinder2_DeviceName	,	CFormTeachInRobot	,	P2 실린더	,	P2 CYLINDER	,	P2 CYLINDER	,	P2 CYLINDER
-877	,	UcTeachCylinder2_Action1	,	CFormTeachInRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
-878	,	UcTeachCylinder2_Action2	,	CFormTeachInRobot	,	회전	,	TURN	,	TURN	,	TURN
-879	,	BtnUseBlowAutoOff	,	CFormTeachInRobot	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
-880	,	BtnTitleOperationStatus	,	CFormTeachInRobot	,	동작 상태	,	OPERATION STATUS	,	OPERATION STATUS	,	OPERATION STATUS
-881	,	BtnTeachMode	,	CFormTeachInRobot	,	티치 모드	,	TEACH MODE	,	TEACH MODE	,	TEACH MODE
-882	,	BtnPlayBackMode	,	CFormTeachInRobot	,	오토 모드	,	AUTO MODE	,	AUTO MODE	,	AUTO MODE
-883	,	BtnRunningU1	,	CFormTeachInRobot	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1
-884	,	BtnUnderStopping	,	CFormTeachInRobot	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP
-885	,	BtnServoReady	,	CFormTeachInRobot	,	서보	,	SERVO	,	SERVO	,	SERVO
-886	,	BtnHomePosition	,	CFormTeachInRobot	,	홈	,	HOME	,	HOME	,	HOME
-887	,	BtnAlarm	,	CFormTeachInRobot	,	알람	,	ALARM	,	ALARM	,	ALARM
-888	,	BtnInposition	,	CFormTeachInRobot	,	인포지션	,	INPOSITION	,	INPOSITION	,	INPOSITION
-889	,	BtnBatteryWarning	,	CFormTeachInRobot	,	배터리 경고	,	BATTERY WARNING	,	BATTERY WARNING	,	BATTERY WARNING
-890	,	BtnTitleAction	,	CFormTeachInRobot	,	동작	,	OPERATION	,	OPERATION	,	OPERATION
-891	,	BtnStop	,	CFormTeachInRobot	,	정지	,	STOP	,	STOP	,	STOP
-892	,	BtnPause	,	CFormTeachInRobot	,	일시 정지	,	PAUSE	,	PAUSE	,	PAUSE
-893	,	BtnManualMode	,	CFormTeachInRobot	,	매뉴얼 모드	,	MANUAL MODE	,	MANUAL MODE	,	MANUAL MODE
-894	,	BtnMotorInitialize	,	CFormTeachInRobot	,	로봇 초기화	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE
-895	,	BtnPositionMove	,	CFormTeachInRobot	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	POSITION MOVE
-896	,	BtnSave	,	CFormTeachInRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
-897	,	BtnPrevPosition	,	CFormTeachInRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
-898	,	BtnNextPosition	,	CFormTeachInRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
-899	,	BtnPrevBatch	,	CFormTeachInRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
-900	,	BtnNextBatch	,	CFormTeachInRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
-901	,	LblTitleJcmMode	,	CFormTeachInRobot	,	JCM 모드 메뉴	,	JCM MODE MENU	,	JCM MODE MENU	,	JCM MODE MENU
-902	,	BtnSubTitleJcmModeCheckTeaching	,	CFormTeachInRobot	,	티칭 확인 위치 선택	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING
-903	,	BtnSubTitleJcmModeOffset	,	CFormTeachInRobot	,	오프셋 설정	,	SET OFFSET	,	SET OFFSET	,	SET OFFSET
-904	,	BtnJcmCmdT1	,	CFormTeachInRobot	,	「T1」	,	「T1」	,	「T1」	,	「T1」
-905	,	BtnJcmCmdT2	,	CFormTeachInRobot	,	「T2」	,	「T2」	,	「T2」	,	「T2」
-906	,	BtnJcmCmdT3	,	CFormTeachInRobot	,	「T3」	,	「T3」	,	「T3」	,	「T3」
-907	,	BtnJcmCmdT4	,	CFormTeachInRobot	,	「T4」	,	「T4」	,	「T4」	,	「T4」
-908	,	BtnJcmCmdT12	,	CFormTeachInRobot	,	「T1_T2」: 동시	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce
-909	,	BtnJcmCmdT34	,	CFormTeachInRobot	,	「T3_T4」: 동시	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce
-910	,	BtnJcmCmdCrossing_T1_S2	,	CFormTeachInRobot	,	「T1 + S2」: 교차	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing
-911	,	BtnJcmCmdCrossing_T2_S1	,	CFormTeachInRobot	,	「T2 + S1」: 교차	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing
-912	,	BtnJcmCmdCrossing_T3_S4	,	CFormTeachInRobot	,	「T3 + S4」: 교차	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing
-913	,	BtnJcmCmdCrossing_T4_S3	,	CFormTeachInRobot	,	「T4 + S3」: 교차	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing
-914	,	BtnJcmCmdCrossing_T12_S34	,	CFormTeachInRobot	,	「T1_T2 + S3_S4」: 동시 && 교차	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing
-915	,	BtnJcmCmdCrossing_T34_S12	,	CFormTeachInRobot	,	「T3_T4 + S1_S2」: 동시 && 교차	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing
-916	,	BtnJcmModeSave	,	CFormTeachInRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
-917	,	BtnJcmModeNoSave	,	CFormTeachInRobot	,	취소	,	CANCEL	,	CANCEL	,	CANCEL
-918	,	BtnJcmMode	,	CFormTeachInRobot	,	JCM 모드	,	JCM MODE	,	JCM MODE	,	JCM MODE
-919	,	BtnPrevJcm	,	CFormTeachInRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
-920	,	BtnNextJcm	,	CFormTeachInRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
-921	,	BtnTitle	,	CFormTeachInspStage	,	검사스테이지	,	INSPECTION-STAGE	,	INSPECTION-STAGE	,	INSPECTION-STAGE
-922	,	BtnMotorStageX	,	CFormTeachInspStage	,	스테이지 Y	,	STAGE Y	,	STAGE Y	,	STAGE Y
-923	,	BtnTitlePosition	,	CFormTeachInspStage	,	위치	,	POSITION	,	POSITION	,	Vị trí 
-924	,	BtnPrevPosition	,	CFormTeachInspStage	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
-925	,	BtnNextPosition	,	CFormTeachInspStage	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
-926	,	BtnTitleBatchMove	,	CFormTeachInspStage	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
-927	,	BtnPrevBatch	,	CFormTeachInspStage	,	이전	,	NEXT	,	NEXT	,	NEXT
-928	,	BtnNextBatch	,	CFormTeachInspStage	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
-929	,	BtnBatchCmdGrabProcess	,	CFormTeachInspStage	,	그랩 공정	,	GRAB PROCESS	,	GRAB PROCESS	,	GRAB PROCESS
-930	,	BtnBatchCmdMoveLoadPosition	,	CFormTeachInspStage	,	투입 위치 이동 (IN로봇)	,	MOVE LOAD POSITION (IN-ROBOT)	,	MOVE LOAD POSITION (IN-ROBOT)	,	MOVE LOAD POSITION (IN-ROBOT)
-931	,	BtnBatchCmdMoveGrabP1Position	,	CFormTeachInspStage	,	P1 그랩 위치 이동	,	MOVE P1 GRAB POSITION	,	MOVE P1 GRAB POSITION	,	MOVE P1 GRAB POSITION
-932	,	BtnBatchCmdMoveGrabP2Position	,	CFormTeachInspStage	,	P2 그랩 위치 이동	,	MOVE P2 GRAB POSITION	,	MOVE P2 GRAB POSITION	,	MOVE P2 GRAB POSITION
-933	,	BtnBatchCmdMoveUnloadPosition	,	CFormTeachInspStage	,	배출 위치 이동 (OUT로봇)	,	MOVE UNLOAD POSITION (OUT-ROBOT)	,	MOVE UNLOAD POSITION (OUT-ROBOT)	,	MOVE UNLOAD POSITION (OUT-ROBOT)
-934	,	BtnTitleActuator	,	CFormTeachInspStage	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
-935	,	UcTeachVacuum1_DeviceName	,	CFormTeachInspStage	,	P1	,	P1	,	P1	,	P1
-936	,	UcTeachVacuum1_Vacuum	,	CFormTeachInspStage	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-937	,	UcTeachVacuum1_Blow	,	CFormTeachInspStage	,	파기	,	BLOW	,	BLOW	,	BLOW
-938	,	UcTeachVacuum1_Sensor	,	CFormTeachInspStage	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-939	,	UcTeachVacuum2_DeviceName	,	CFormTeachInspStage	,	P2	,	P2	,	P2	,	P2
-940	,	UcTeachVacuum2_Vacuum	,	CFormTeachInspStage	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-941	,	UcTeachVacuum2_Blow	,	CFormTeachInspStage	,	파기	,	BLOW	,	BLOW	,	BLOW
-942	,	UcTeachVacuum2_Sensor	,	CFormTeachInspStage	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-943	,	BtnUseBlowAutoOff	,	CFormTeachInspStage	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
-944	,	BtnTitle	,	CFormTeachOutRobot	,	OUT로봇	,	OUT-ROBOT	,	OUT-ROBOT	,	OUT-ROBOT
-945	,	BtnTitleBatchMove	,	CFormTeachOutRobot	,	일괄 동작	,	BATCH MOVE	,	BATCH MOVE	,	BATCH MOVE
-946	,	BtnMotorNachiP1	,	CFormTeachOutRobot	,	[P1] 로드 (검사스테이지)	,	[P1] LOAD (INSPECTION-STAGE)	,	[P1] LOAD (INSPECTION-STAGE)	,	[P1] LOAD (INSPECTION-STAGE)
-947	,	BtnMotorNachiP4	,	CFormTeachOutRobot	,	[P4] 언로드 (아웃플립)	,	[P4] UNLOAD (OUT-FLIP)	,	[P4] UNLOAD (OUT-FLIP)	,	[P4] UNLOAD (OUT-FLIP)
-948	,	BtnTitlePosition	,	CFormTeachOutRobot	,	위치	,	POSITION	,	POSITION	,	POSITION
-949	,	BtnBatchCmdLoadGet	,	CFormTeachOutRobot	,	[GET] 로드 공정 (검사스테이지)	,	[GET] LOAD PROCESS (INSPECTION-STAGE)	,	[GET] LOAD PROCESS (INSPECTION-STAGE)	,	[GET] LOAD PROCESS (INSPECTION-STAGE)
-950	,	BtnBatchCmdLoadPut	,	CFormTeachOutRobot	,	[PUT] 로드 공정 (검사스테이지)	,	[PUT] LOAD PROCESS (INSPECTION-STAGE)	,	[PUT] LOAD PROCESS (INSPECTION-STAGE)	,	[PUT] LOAD PROCESS (INSPECTION-STAGE)
-951	,	BtnBatchCmdUnloadGet	,	CFormTeachOutRobot	,	[GET] 언로드 공정 (아웃플립)	,	[GET] UNLOAD PROCESS (OUT-FLIP)	,	[GET] UNLOAD PROCESS (OUT-FLIP)	,	[GET] UNLOAD PROCESS (OUT-FLIP)
-952	,	BtnBatchCmdUnloadPut	,	CFormTeachOutRobot	,	[PUT] 언로드 공정 (아웃플립)	,	[PUT] UNLOAD PROCESS (OUT-FLIP)	,	[PUT] UNLOAD PROCESS (OUT-FLIP)	,	[PUT] UNLOAD PROCESS (OUT-FLIP)
-953	,	BtnTitleActuator	,	CFormTeachOutRobot	,	동작	,	ACTUATOR	,	ACTUATOR	,	ACTUATOR
-954	,	UcTeachVacuum1_DeviceName	,	CFormTeachOutRobot	,	P1	,	P1	,	P1	,	P1
-955	,	UcTeachVacuum1_Vacuum	,	CFormTeachOutRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-956	,	UcTeachVacuum1_Blow	,	CFormTeachOutRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
-957	,	UcTeachVacuum1_Sensor	,	CFormTeachOutRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-958	,	UcTeachVacuum2_DeviceName	,	CFormTeachOutRobot	,	P2	,	P2	,	P2	,	P2
-959	,	UcTeachVacuum2_Vacuum	,	CFormTeachOutRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-960	,	UcTeachVacuum2_Blow	,	CFormTeachOutRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
-961	,	UcTeachVacuum2_Sensor	,	CFormTeachOutRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-962	,	UcTeachCylinder1_DeviceName	,	CFormTeachOutRobot	,	P1 실린더	,	P1 CYLINDER	,	P1 CYLINDER	,	P1 CYLINDER
-963	,	UcTeachCylinder1_Action1	,	CFormTeachOutRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
-964	,	UcTeachCylinder1_Action2	,	CFormTeachOutRobot	,	회전	,	TURN	,	TURN	,	TURN
-965	,	UcTeachCylinder2_DeviceName	,	CFormTeachOutRobot	,	P2 실린더	,	P2 CYLINDER	,	P2 CYLINDER	,	P2 CYLINDER
-966	,	UcTeachCylinder2_Action1	,	CFormTeachOutRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
-967	,	UcTeachCylinder2_Action2	,	CFormTeachOutRobot	,	회전	,	TURN	,	TURN	,	TURN
-968	,	BtnUseBlowAutoOff	,	CFormTeachOutRobot	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
-969	,	BtnTitleOperationStatus	,	CFormTeachOutRobot	,	동작 상태	,	OPERATION STATUS	,	OPERATION STATUS	,	OPERATION STATUS
-970	,	BtnTeachMode	,	CFormTeachOutRobot	,	티치 모드	,	TEACH MODE	,	TEACH MODE	,	TEACH MODE
-971	,	BtnPlayBackMode	,	CFormTeachOutRobot	,	오토 모드	,	AUTO MODE	,	AUTO MODE	,	AUTO MODE
-972	,	BtnRunningU1	,	CFormTeachOutRobot	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1
-973	,	BtnUnderStopping	,	CFormTeachOutRobot	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP
-974	,	BtnServoReady	,	CFormTeachOutRobot	,	서보	,	SERVO	,	SERVO	,	SERVO
-975	,	BtnHomePosition	,	CFormTeachOutRobot	,	홈	,	HOME	,	HOME	,	HOME
-976	,	BtnAlarm	,	CFormTeachOutRobot	,	알람	,	ALARM	,	ALARM	,	ALARM
-977	,	BtnInposition	,	CFormTeachOutRobot	,	인포지션	,	INPOSITION	,	INPOSITION	,	INPOSITION
-978	,	BtnBatteryWarning	,	CFormTeachOutRobot	,	배터리 경고	,	BATTERY WARNING	,	BATTERY WARNING	,	BATTERY WARNING
-979	,	BtnTitleAction	,	CFormTeachOutRobot	,	동작	,	OPERATION	,	OPERATION	,	OPERATION
-980	,	BtnStop	,	CFormTeachOutRobot	,	정지	,	STOP	,	STOP	,	STOP
-981	,	BtnPause	,	CFormTeachOutRobot	,	일시 정지	,	PAUSE	,	PAUSE	,	PAUSE
-982	,	BtnManualMode	,	CFormTeachOutRobot	,	매뉴얼 모드	,	MANUAL MODE	,	MANUAL MODE	,	MANUAL MODE
-983	,	BtnMotorInitialize	,	CFormTeachOutRobot	,	로봇 초기화	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE
-984	,	BtnPositionMove	,	CFormTeachOutRobot	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	POSITION MOVE
-985	,	BtnSave	,	CFormTeachOutRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
-986	,	BtnPrevPosition	,	CFormTeachOutRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
-987	,	BtnNextPosition	,	CFormTeachOutRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
-988	,	BtnPrevBatch	,	CFormTeachOutRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
-989	,	BtnNextBatch	,	CFormTeachOutRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
-990	,	LblTitleJcmMode	,	CFormTeachOutRobot	,	JCM 모드 메뉴	,	JCM MODE MENU	,	JCM MODE MENU	,	JCM MODE MENU
-991	,	BtnSubTitleJcmModeCheckTeaching	,	CFormTeachOutRobot	,	티칭 확인 위치 선택	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING
-992	,	BtnSubTitleJcmModeOffset	,	CFormTeachOutRobot	,	오프셋 설정	,	SET OFFSET	,	SET OFFSET	,	SET OFFSET
-993	,	BtnJcmCmdT1	,	CFormTeachOutRobot	,	「T1」	,	「T1」	,	「T1」	,	「T1」
-994	,	BtnJcmCmdT2	,	CFormTeachOutRobot	,	「T2」	,	「T2」	,	「T2」	,	「T2」
-995	,	BtnJcmCmdT3	,	CFormTeachOutRobot	,	「T3」	,	「T3」	,	「T3」	,	「T3」
-996	,	BtnJcmCmdT4	,	CFormTeachOutRobot	,	「T4」	,	「T4」	,	「T4」	,	「T4」
-997	,	BtnJcmCmdT12	,	CFormTeachOutRobot	,	「T1_T2」: 동시	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce
-998	,	BtnJcmCmdT34	,	CFormTeachOutRobot	,	「T3_T4」: 동시	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce
-999	,	BtnJcmCmdCrossing_T1_S2	,	CFormTeachOutRobot	,	「T1 + S2」: 교차	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing
-1000	,	BtnJcmCmdCrossing_T2_S1	,	CFormTeachOutRobot	,	「T2 + S1」: 교차	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing
-1001	,	BtnJcmCmdCrossing_T3_S4	,	CFormTeachOutRobot	,	「T3 + S4」: 교차	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing
-1002	,	BtnJcmCmdCrossing_T4_S3	,	CFormTeachOutRobot	,	「T4 + S3」: 교차	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing
-1003	,	BtnJcmCmdCrossing_T12_S34	,	CFormTeachOutRobot	,	「T1_T2 + S3_S4」: 동시 && 교차	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing
-1004	,	BtnJcmCmdCrossing_T34_S12	,	CFormTeachOutRobot	,	「T3_T4 + S1_S2」: 동시 && 교차	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing
-1005	,	BtnJcmModeSave	,	CFormTeachOutRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
-1006	,	BtnJcmModeNoSave	,	CFormTeachOutRobot	,	취소	,	CANCEL	,	CANCEL	,	CANCEL
-1007	,	BtnJcmMode	,	CFormTeachOutRobot	,	JCM 모드	,	JCM MODE	,	JCM MODE	,	JCM MODE
-1008	,	BtnPrevJcm	,	CFormTeachOutRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
-1009	,	BtnNextJcm	,	CFormTeachOutRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
-1010	,	BtnTitle	,	CFormTeachOutFlip	,	OUT플립	,	OUT-FLIP	,	OUT-FLIP	,	OUT-FLIP
-1011	,	BtnMotorConveyorX	,	CFormTeachOutFlip	,	컨베이어 X2	,	CONVEYOR X2	,	CONVEYOR X2	,	CONVEYOR X2
-1012	,	BtnMotorFlipZ	,	CFormTeachOutFlip	,	플립 Z	,	FLIP Z	,	FLIP Z	,	FLIP Z
-1013	,	BtnMotorFlipR1	,	CFormTeachOutFlip	,	플립 R1 (P1)	,	FLIP R1 (P1)	,	FLIP R1 (P1)	,	FLIP R1 (P1)
-1014	,	BtnMotorFlipR2	,	CFormTeachOutFlip	,	플립 R2 (P2)	,	FLIP R2 (P2)	,	FLIP R2 (P2)	,	FLIP R2 (P2)
-1015	,	BtnTitlePosition	,	CFormTeachOutFlip	,	위치	,	POSITION	,	POSITION	,	Vị trí 
-1016	,	BtnPrevPosition	,	CFormTeachOutFlip	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
-1017	,	BtnNextPosition	,	CFormTeachOutFlip	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
-1018	,	BtnTitleBatchMove	,	CFormTeachOutFlip	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
-1019	,	BtnPrevBatch	,	CFormTeachOutFlip	,	이전	,	NEXT	,	NEXT	,	NEXT
-1020	,	BtnNextBatch	,	CFormTeachOutFlip	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
-1021	,	BtnBatchCmdSetZero	,	CFormTeachOutFlip	,	컨베이어 포지션 리셋	,	CONVEYOR POSITION RESET	,	CONVEYOR POSITION RESET	,	CONVEYOR POSITION RESET
-1022	,	BtnBatchCmdLoadWait	,	CFormTeachOutFlip	,	투입 위치 이동 (OUT로봇)	,	MOVE LOAD POSITION (OUT-ROBOT)	,	MOVE LOAD POSITION (OUT-ROBOT)	,	MOVE LOAD POSITION (OUT-ROBOT)
-1023	,	BtnBatchCmdUnload	,	CFormTeachOutFlip	,	자재 배출 (OUT컨베이어)	,	[PUT] UNLOAD PROCESS (OUT-CONVEYOR)	,	[PUT] UNLOAD PROCESS (OUT-CONVEYOR)	,	[PUT] UNLOAD PROCESS (OUT-CONVEYOR)
-1024	,	BtnTitleActuator	,	CFormTeachOutFlip	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
-1025	,	UcTeachVacuum1_DeviceName	,	CFormTeachOutFlip	,	회전 P1	,	P1_1_T	,	P1_1_T	,	P1_1_T
-1026	,	UcTeachVacuum1_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-1027	,	UcTeachVacuum1_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
-1028	,	UcTeachVacuum1_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-1029	,	UcTeachVacuum2_DeviceName	,	CFormTeachOutFlip	,	복귀 P1	,	P1_2_R	,	P1_2_R	,	P1_2_R
-1030	,	UcTeachVacuum2_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-1031	,	UcTeachVacuum2_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
-1032	,	UcTeachVacuum2_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-1033	,	UcTeachVacuum3_DeviceName	,	CFormTeachOutFlip	,	회전 P2	,	P2_1_T	,	P2_1_T	,	P2_1_T
-1034	,	UcTeachVacuum3_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-1035	,	UcTeachVacuum3_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
-1036	,	UcTeachVacuum3_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-1037	,	UcTeachVacuum4_DeviceName	,	CFormTeachOutFlip	,	복귀 P2	,	P2_2_R	,	P2_2_R	,	P2_2_R
-1038	,	UcTeachVacuum4_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
-1039	,	UcTeachVacuum4_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
-1040	,	UcTeachVacuum4_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
-1041	,	BtnUseBlowAutoOff	,	CFormTeachOutFlip	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
-1042	,	BtnOutConveyorAutoMode	,	CFormTeachOutFlip	,	OUT컨베이어 자동 모드	,	OUT CONVEYOR AUTO MODE	,	OUT CONVEYOR AUTO MODE	,	OUT CONVEYOR AUTO MODE
-1043	,	BtnOutConveyorManualMode	,	CFormTeachOutFlip	,	OUT컨베이어 수동 모드	,	OUT CONVEYOR MANUAL MODE	,	OUT CONVEYOR MANUAL MODE	,	OUT CONVEYOR MANUAL MODE
-1044	,	BtnOutConveyorSensor1	,	CFormTeachOutFlip	,	자재 감지 센서 P1	,	CELL DETECT SENSOR P1	,	CELL DETECT SENSOR P1	,	CELL DETECT SENSOR P1
-1045	,	BtnOutConveyorSensor2	,	CFormTeachOutFlip	,	자재 감지 센서 P2	,	CELL DETECT SENSOR P2	,	CELL DETECT SENSOR P2	,	CELL DETECT SENSOR P2
-1046	,	BtnOutConveyorBlockedSensor	,	CFormTeachOutFlip	,	막힘 센서	,	BLOCKED SENSOR	,	BLOCKED SENSOR	,	BLOCKED SENSOR
-1047	,	BtnUserBase	,	CFormTitle	,	사용자	,	USER	,	USER	,	USER
-1048	,	BtnCimBase	,	CFormTitle	,	CIM	,	CIM	,	CIM	,	CIM
-1049	,	BtnConnectBase	,	CFormTitle	,	연결	,	CONNECT	,	CONNECT	,	CONNECT
-1050	,	BtnStateBase	,	CFormTitle	,	상태	,	STATE	,	STATE	,	STATE
-1051	,	BtnTitleVersionInfo	,	CFormTitle	,	버전 정보	,	VERSION INFORMATION	,	VERSION INFORMATION	,	Thông tin VERSION 
-1052	,	mResourceTitleRepeatMove	,	SubBatchMotorRepeatMove	,	반복 이동	,	Repeat Move	,	Repeat Move	,	Repeat Move
-1053	,	mResourceTitleRepeatProgress	,	SubBatchMotorRepeatMove	,	진행	,	Progress	,	Progress	,	Progress
+733	,	BtnTeachMenu[5]	,	CFormTeach	,	OUT셔틀	,	OUT-SHUTTLE	,	OUT-SHUTTLE	,	OUT-SHUTTLE
+734	,	BtnTeachMenu[6]	,	CFormTeach	,	실린더	,	CYLINDER	,	CYLINDER	,	CYLINDER
+735	,	BtnTeachMenu[7]	,	CFormTeach	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+736	,	BtnTitleCylinderList	,	CFormTeachCylinder	,	실린더 목록	,	CYLINDER LIST	,	CYLINDER LIST	,	CYLINDER LIST
+737	,	BtnTitleCylinderDelayTime	,	CFormTeachCylinder	,	실린더 지연 시간	,	CYLINDER DELAY TIME	,	CYLINDER DELAY TIME	,	CYLINDER DELAY TIME
+738	,	BtnTitleFirstDelayTime	,	CFormTeachCylinder	,	FIRST 이동 지연 시간 (ms)	,	FIRST DELAY TIME (ms)	,	FIRST DELAY TIME (ms)	,	FIRST DELAY TIME (ms)
+739	,	BtnTitleSecondDelayTime	,	CFormTeachCylinder	,	SECOND 이동 지연 시간 (ms)	,	SECOND DELAY TIME (ms)	,	SECOND DELAY TIME (ms)	,	SECOND DELAY TIME (ms)
+740	,	BtnCylinderRepeatMove	,	CFormTeachCylinder	,	실린더 반복 이동	,	CYLINDER REPEAT MOVE	,	CYLINDER REPEAT MOVE	,	Di chuyển lặp lại Cylinder
+741	,	BtnFirstMove	,	CFormTeachCylinder	,	FIRST 이동	,	FIRST MOVE	,	FIRST MOVE	,	di chuyển lần đầu tiên (ms)
+742	,	BtnSecondMove	,	CFormTeachCylinder	,	SECOND 이동	,	SECOND MOVE	,	SECOND MOVE	,	di chuyển lần thứ hai (ms)
+743	,	BtnTitleCycleMoveTime	,	CFormTeachCylinder	,	반복 지연 시간 (ms)	,	CYCLE MOVE TIME (ms)	,	CYCLE MOVE TIME (ms)	,	Thời gian chậm lặp lại (ms)
+744	,	BtnTitleRepeatCount	,	CFormTeachCylinder	,	반복 개수	,	REPEAT COUNT	,	REPEAT COUNT	,	Số lần lặp lại
+745	,	BtnTitleFirstMoveTime	,	CFormTeachCylinder	,	FIRST 이동 시간 (ms)	,	FIRST MOVE TIME (ms)	,	FIRST MOVE TIME (ms)	,	di chuyển lần đầu tiên (ms)
+746	,	BtnTitleSecondMoveTime	,	CFormTeachCylinder	,	SECOND 이동 시간 (ms)	,	SECOND MOVE TIME (ms)	,	SECOND MOVE TIME (ms)	,	di chuyển lần thứ hai (ms)
+747	,	BtnRepeatMove	,	CFormTeachCylinder	,	반복 이동	,	REPEAT MOVE	,	REPEAT MOVE	,	Di chuyển lặp lại  
+748	,	BtnRepeatStop	,	CFormTeachCylinder	,	반복 정지	,	REPEAT STOP	,	REPEAT STOP	,	Dừng lặp lại 
+749	,	BtnGridViewClear	,	CFormTeachCylinder	,	클리어	,	CLEAR	,	CLEAR	,	CLEAR
+750	,	BtnSave	,	CFormTeachCylinder	,	저장	,	SAVE	,	SAVE	,	SAVE
+751	,	mResourceTitleDelayTimeUp	,	CFormTeachCylinder	,	상승 동작 딜레이 (ms)	,	UP MOVE DELAY (ms)	,	UP MOVE DELAY (ms)	,	UP MOVE DELAY (ms)
+752	,	mResourceTitleDelayTimeDown	,	CFormTeachCylinder	,	하강 동작 딜레이 (ms)	,	DOWN MOVE DELAY (ms)	,	DOWN MOVE DELAY (ms)	,	DOWN MOVE DELAY (ms)
+753	,	mResourceTitleMoveTimeUp	,	CFormTeachCylinder	,	상승 동작 시간 (ms)	,	UP MOVE ELAPSED (ms)	,	UP MOVE ELAPSED (ms)	,	UP MOVE ELAPSED (ms)
+754	,	mResourceTitleMoveTimeDown	,	CFormTeachCylinder	,	하강 동작 시간 (ms)	,	DOWN MOVE ELAPSED (ms)	,	DOWN MOVE ELAPSED (ms)	,	DOWN MOVE ELAPSED (ms)
+755	,	mResourceMoveUp	,	CFormTeachCylinder	,	상승 동작	,	UP MOVE	,	UP MOVE	,	UP MOVE
+756	,	mResourceMoveDown	,	CFormTeachCylinder	,	하강 동작	,	DOWN MOVE	,	DOWN MOVE	,	DOWN MOVE
+757	,	mResourceTitleDelayTimeLeft	,	CFormTeachCylinder	,	왼쪽 동작 딜레이 (ms)	,	LEFT MOVE DELAY (ms)	,	LEFT MOVE DELAY (ms)	,	LEFT MOVE DELAY (ms)
+758	,	mResourceTitleDelayTimeRight	,	CFormTeachCylinder	,	오른쪽 동작 딜레이 (ms)	,	RIGHT MOVE DELAY (ms)	,	RIGHT MOVE DELAY (ms)	,	RIGHT MOVE DELAY (ms)
+759	,	mResourceTitleMoveTimeLeft	,	CFormTeachCylinder	,	왼쪽 동작 시간 (ms)	,	LEFT MOVE ELAPSED (ms)	,	LEFT MOVE ELAPSED (ms)	,	LEFT MOVE ELAPSED (ms)
+760	,	mResourceTitleMoveTimeRight	,	CFormTeachCylinder	,	오른쪽 동작 시간 (ms)	,	RIGHT MOVE ELAPSED (ms)	,	RIGHT MOVE ELAPSED (ms)	,	RIGHT MOVE ELAPSED (ms)
+761	,	mResourceMoveLeft	,	CFormTeachCylinder	,	왼쪽 동작	,	LEFT MOVE	,	LEFT MOVE	,	LEFT MOVE
+762	,	mResourceMoveRight	,	CFormTeachCylinder	,	오른쪽 동작	,	RIGHT MOVE	,	RIGHT MOVE	,	RIGHT MOVE
+763	,	mResourceTitleDelayTimeForward	,	CFormTeachCylinder	,	전진 동작 딜레이 (ms)	,	FORWARD MOVE DELAY (ms)	,	FORWARD MOVE DELAY (ms)	,	FORWARD MOVE DELAY (ms)
+764	,	mResourceTitleDelayTimeBackward	,	CFormTeachCylinder	,	후진 동작 딜레이 (ms)	,	BACKWARD MOVE DELAY (ms)	,	BACKWARD MOVE DELAY (ms)	,	BACKWARD MOVE DELAY (ms)
+765	,	mResourceTitleMoveTimeForward	,	CFormTeachCylinder	,	전진 동작 시간 (ms)	,	FORWARD MOVE ELAPSED (ms)	,	FORWARD MOVE ELAPSED (ms)	,	FORWARD MOVE ELAPSED (ms)
+766	,	mResourceTitleMoveTimeBackward	,	CFormTeachCylinder	,	후진 동작 시간 (ms)	,	BACKWARD MOVE ELAPSED (ms)	,	BACKWARD MOVE ELAPSED (ms)	,	BACKWARD MOVE ELAPSED (ms)
+767	,	mResourceMoveForward	,	CFormTeachCylinder	,	전진 동작	,	FORWARD MOVE	,	FORWARD MOVE	,	FORWARD MOVE
+768	,	mResourceMoveBackward	,	CFormTeachCylinder	,	후진 동작	,	BACKWARD MOVE	,	BACKWARD MOVE	,	BACKWARD MOVE
+769	,	mResourceTitleDelayTimeCw	,	CFormTeachCylinder	,	CW 동작 딜레이 (ms)	,	CW MOVE DELAY (ms)	,	CW MOVE DELAY (ms)	,	CW MOVE DELAY (ms)
+770	,	mResourceTitleDelayTimeCcw	,	CFormTeachCylinder	,	CCW 동작 딜레이 (ms)	,	CCW MOVE DELAY (ms)	,	CCW MOVE DELAY (ms)	,	CCW MOVE DELAY (ms)
+771	,	mResourceTitleMoveTimeCw	,	CFormTeachCylinder	,	CW 동작 시간 (ms)	,	CW MOVE ELAPSED (ms)	,	CW MOVE ELAPSED (ms)	,	CW MOVE ELAPSED (ms)
+772	,	mResourceTitleMoveTimeCcw	,	CFormTeachCylinder	,	CCW 동작 시간 (ms)	,	CCW MOVE ELAPSED (ms)	,	CCW MOVE ELAPSED (ms)	,	CCW MOVE ELAPSED (ms)
+773	,	mResourceMoveCw	,	CFormTeachCylinder	,	CW 동작	,	CW MOVE	,	CW MOVE	,	CW MOVE
+774	,	mResourceMoveCcw	,	CFormTeachCylinder	,	CCW 동작	,	CCW MOVE	,	CCW MOVE	,	CCW MOVE
+775	,	mResourceTitleDelayTimeReturn	,	CFormTeachCylinder	,	복귀 동작 딜레이 (ms)	,	RETURN MOVE DELAY (ms)	,	RETURN MOVE DELAY (ms)	,	RETURN MOVE DELAY (ms)
+776	,	mResourceTitleDelayTimeTurn	,	CFormTeachCylinder	,	회전 동작 딜레이 (ms)	,	TURN MOVE DELAY (ms)	,	TURN MOVE DELAY (ms)	,	TURN MOVE DELAY (ms)
+777	,	mResourceTitleMoveTimeReturn	,	CFormTeachCylinder	,	복귀 동작 시간 (ms)	,	RETURN MOVE ELAPSED (ms)	,	RETURN MOVE ELAPSED (ms)	,	RETURN MOVE ELAPSED (ms)
+778	,	mResourceTitleMoveTimeTurn	,	CFormTeachCylinder	,	회전 동작 시간 (ms)	,	TURN MOVE ELAPSED (ms)	,	TURN MOVE ELAPSED (ms)	,	TURN MOVE ELAPSED (ms)
+779	,	mResourceMoveReturn	,	CFormTeachCylinder	,	복귀 동작	,	RETURN MOVE	,	RETURN MOVE	,	RETURN MOVE
+780	,	mResourceMoveTurn	,	CFormTeachCylinder	,	회전 동작	,	TURN MOVE	,	TURN MOVE	,	TURN MOVE
+781	,	BtnTitleVacuumList	,	CFormTeachVacuum	,	진공 목록	,	VACUUM LIST	,	VACUUM LIST	,	VACUUM LIST
+782	,	BtnTitleVacuumDelayTime	,	CFormTeachVacuum	,	진공 동작 대기 시간	,	VACUUM DELAY TIME	,	VACUUM DELAY TIME	,	VACUUM DELAY TIME
+783	,	BtnTitleVacuumTimeout	,	CFormTeachVacuum	,	진공 타임아웃	,	VACUUM TIMEOUT	,	VACUUM TIMEOUT	,	VACUUM TIMEOUT
+784	,	BtnTitleVacuumOffDelayTime	,	CFormTeachVacuum	,	파기 후 안정화 시간	,	BLOW AFTER DEALY TIME	,	BLOW AFTER DEALY TIME	,	BLOW AFTER DEALY TIME
+785	,	BtnVacuum	,	CFormTeachVacuum	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+786	,	BtnBlow	,	CFormTeachVacuum	,	파기	,	BLOW	,	BLOW	,	BLOW
+787	,	BtnTitleVacuumInput	,	CFormTeachVacuum	,	진공 입력	,	VACUUM INPUT	,	VACUUM INPUT	,	VACUUM INPUT
+788	,	BtnTitleVacuumAnalogInput	,	CFormTeachVacuum	,	진공 아날로그 입력	,	VACUUM ANALOG INPUT	,	VACUUM ANALOG INPUT	,	VACUUM ANALOG INPUT
+789	,	BtnTitleVacuumOutput	,	CFormTeachVacuum	,	진공 출력	,	VACUUM OUTPUT	,	VACUUM OUTPUT	,	VACUUM OUTPUT
+790	,	BtnTitleBlowOutput	,	CFormTeachVacuum	,	파기 출력	,	BLOW OUTPUT	,	BLOW OUTPUT	,	BLOW OUTPUT
+791	,	BtnOutputLock	,	CFormTeachVacuum	,	출력 잠금	,	OUTPUT LOCK	,	OUTPUT LOCK	,	OUTPUT LOCK
+792	,	BtnSave	,	CFormTeachVacuum	,	저장	,	SAVE	,	SAVE	,	SAVE
+793	,	BtnTitleAxisName	,	CFormTeachData	,	축 이름	,	AXIS NAME	,	AXIS NAME	,	AXIS NAME
+794	,	BtnServo	,	CFormTeachData	,	서보	,	SERVO	,	SERVO	,	SERVO
+795	,	BtnTitleCurrentPosition	,	CFormTeachData	,	현재 위치	,	CURRENT POSITION	,	CURRENT POSITION	,	CURRENT POSITION
+796	,	BtnHome	,	CFormTeachData	,	원점 복귀	,	ORIGIN	,	ORIGIN	,	ORIGIN
+797	,	BtnAlarm	,	CFormTeachData	,	알람	,	ALARM	,	ALARM	,	ALARM
+798	,	BtnInposition	,	CFormTeachData	,	인포지션	,	INPOSITION	,	INPOSITION	,	INPOSITION
+799	,	BtnPositionMove	,	CFormTeachData	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	POSITION MOVE
+800	,	BtnTitleJog	,	CFormTeachData	,	조그	,	JOG	,	JOG	,	JOG
+801	,	BtnFastJogMode	,	CFormTeachData	,	빠른 조그	,	FAST JOG	,	FAST JOG	,	FAST JOG
+802	,	BtnSlowJogMode	,	CFormTeachData	,	느린 조그	,	SLOW JOG	,	SLOW JOG	,	SLOW JOG
+803	,	BtnJogMovePlus	,	CFormTeachData	,	조그 이동 ( + )	,	JOG MOVE ( + )	,	JOG MOVE ( + )	,	JOG MOVE ( + )
+804	,	BtnJogMoveMinus	,	CFormTeachData	,	조그 이동 ( - )	,	JOG MOVE ( - )	,	JOG MOVE ( - )	,	JOG MOVE ( - )
+805	,	BtnTitleRelativeMoveValue	,	CFormTeachData	,	상대 이동값	,	RELATIVE VALUE	,	RELATIVE VALUE	,	RELATIVE VALUE
+806	,	BtnRelativeMovePlus	,	CFormTeachData	,	상대 이동 ( + )	,	RELATIVE MOVE ( + )	,	RELATIVE MOVE ( + )	,	RELATIVE MOVE ( + )
+807	,	BtnRelativeMoveMinus	,	CFormTeachData	,	상대 이동 ( - )	,	RELATIVE MOVE ( - )	,	RELATIVE MOVE ( - )	,	RELATIVE MOVE ( - )
+808	,	BtnStop	,	CFormTeachData	,	정지	,	STOP	,	STOP	,	STOP
+809	,	BtnMinusLimit	,	CFormTeachData	,	리미트 ( - )	,	LIMIT ( - )	,	LIMIT ( - )	,	LIMIT ( - )
+810	,	BtnHomeSensor	,	CFormTeachData	,	홈 센서	,	HOME SENSOR	,	HOME SENSOR	,	HOME SENSOR
+811	,	BtnPlusLimit	,	CFormTeachData	,	리미트 ( + )	,	LIMIT ( + )	,	LIMIT ( + )	,	LIMIT ( + )
+812	,	BtnTargetPositionMove	,	CFormTeachData	,	절대 위치 이동	,	TARGET POSITION MOVE	,	TARGET POSITION MOVE	,	TARGET POSITION MOVE
+813	,	lblTitleServoLoadRatio	,	CFormTeachData	,	서보 부하율	,	SERVO LOAD RATIO	,	SERVO LOAD RATIO	,	SERVO LOAD RATIO
+814	,	lblTitleCurrentVelocity	,	CFormTeachData	,	현재 동작 속도	,	CURRENT MOVE VELOCITY	,	CURRENT MOVE VELOCITY	,	CURRENT MOVE VELOCITY
+815	,	BtnPositionJog	,	CFormTeachData	,	위치 이동 (조그)	,	POSITION MOVE (JOG)	,	POSITION MOVE (JOG)	,	POSITION MOVE (JOG)
+816	,	BtnSave	,	CFormTeachData	,	저장	,	SAVE	,	SAVE	,	SAVE
+817	,	BtnTitle	,	CFormTeachInShuttle	,	IN셔틀	,	IN-SHUTTLE	,	IN-SHUTTLE	,	IN-SHUTTLE
+818	,	BtnMotorStageX	,	CFormTeachInShuttle	,	스테이지 X1	,	STAGE X1	,	STAGE X1	,	STAGE X1
+819	,	BtnTitlePosition	,	CFormTeachInShuttle	,	위치	,	POSITION	,	POSITION	,	Vị trí 
+820	,	BtnPrevPosition	,	CFormTeachInShuttle	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+821	,	BtnNextPosition	,	CFormTeachInShuttle	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+822	,	BtnTitleBatchMove	,	CFormTeachInShuttle	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
+823	,	BtnPrevBatch	,	CFormTeachInShuttle	,	이전	,	NEXT	,	NEXT	,	NEXT
+824	,	BtnNextBatch	,	CFormTeachInShuttle	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+825	,	BtnBatchCmdScanProcess	,	CFormTeachInShuttle	,	스캔 공정 (간이 광학계)	,	SCAN PROCESS (SUB-OPTICS)	,	SCAN PROCESS (SUB-OPTICS)	,	SCAN PROCESS (SUB-OPTICS)
+826	,	BtnBatchCmdAlignProcess	,	CFormTeachInShuttle	,	얼라인 공정	,	ALIGN PROCESS	,	ALIGN PROCESS	,	ALIGN PROCESS
+827	,	BtnBatchCmdMoveLoadPosition	,	CFormTeachInShuttle	,	투입 위치 이동 (상류설비)	,	MOVE LOAD POSITION (UPPER-EQUIPMENT)	,	MOVE LOAD POSITION (UPPER-EQUIPMENT)	,	MOVE LOAD POSITION (UPPER-EQUIPMENT)
+828	,	BtnBatchCmdMoveScanStartWaitPosition	,	CFormTeachInShuttle	,	스캔 시작 대기 위치 이동	,	MOVE SCAN START WAIT POSITION	,	MOVE SCAN START WAIT POSITION	,	MOVE SCAN START WAIT POSITION
+829	,	BtnBatchCmdMoveScanTriggerStartPosition	,	CFormTeachInShuttle	,	스캔 트리거 시작 위치 이동	,	MOVE SCAN TRIGGER START POSITION	,	MOVE SCAN TRIGGER START POSITION	,	MOVE SCAN TRIGGER START POSITION
+830	,	BtnBatchCmdMoveScanTriggerEndPosition	,	CFormTeachInShuttle	,	스캔 트리거 종료 위치 이동	,	MOVE SCAN TRIGGER END POSITION	,	MOVE SCAN TRIGGER END POSITION	,	MOVE SCAN TRIGGER END POSITION
+831	,	BtnBatchCmdMoveAlignPosition	,	CFormTeachInShuttle	,	얼라인 위치 이동	,	MOVE ALIGN POSITION	,	MOVE ALIGN POSITION	,	MOVE ALIGN POSITION
+832	,	BtnBatchCmdMoveUnloadPosition	,	CFormTeachInShuttle	,	배출 위치 이동 (IN로봇)	,	MOVE UNLOAD POSITION (IN-ROBOT)	,	MOVE UNLOAD POSITION (IN-ROBOT)	,	MOVE UNLOAD POSITION (IN-ROBOT)
+833	,	BtnTitleActuator	,	CFormTeachInShuttle	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
+834	,	UcTeachVacuum1_DeviceName	,	CFormTeachInShuttle	,	P1	,	P1	,	P1	,	P1
+835	,	UcTeachVacuum1_Vacuum	,	CFormTeachInShuttle	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+836	,	UcTeachVacuum1_Blow	,	CFormTeachInShuttle	,	파기	,	BLOW	,	BLOW	,	BLOW
+837	,	UcTeachVacuum1_Sensor	,	CFormTeachInShuttle	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+838	,	UcTeachVacuum2_DeviceName	,	CFormTeachInShuttle	,	P2	,	P2	,	P2	,	P2
+839	,	UcTeachVacuum2_Vacuum	,	CFormTeachInShuttle	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+840	,	UcTeachVacuum2_Blow	,	CFormTeachInShuttle	,	파기	,	BLOW	,	BLOW	,	BLOW
+841	,	UcTeachVacuum2_Sensor	,	CFormTeachInShuttle	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+842	,	BtnUseBlowAutoOff	,	CFormTeachInShuttle	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+843	,	LblTitleAlignData	,	CFormTeachInShuttle	,	[IN셔틀] 얼라인 결과 데이터	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA
+844	,	BtnTitle	,	CFormTeachInRobot	,	IN로봇	,	IN-ROBOT	,	IN-ROBOT	,	IN-ROBOT
+845	,	BtnTitleBatchMove	,	CFormTeachInRobot	,	일괄 동작	,	BATCH MOVE	,	BATCH MOVE	,	BATCH MOVE
+846	,	BtnMotorNachiP1	,	CFormTeachInRobot	,	[P1] 로드 (IN셔틀)	,	[P1] LOAD (IN-SHUTTLE)	,	[P1] LOAD (IN-SHUTTLE)	,	[P1] LOAD (IN-SHUTTLE)
+847	,	BtnMotorNachiP3	,	CFormTeachInRobot	,	[P3] MCR	,	[P3] MCR	,	[P3] MCR	,	[P3] MCR
+848	,	BtnMotorNachiP4	,	CFormTeachInRobot	,	[P4] 언로드 (검사스테이지)	,	[P4] UNLOAD (INSPECTION-STAGE)	,	[P4] UNLOAD (INSPECTION-STAGE)	,	[P4] UNLOAD (INSPECTION-STAGE)
+849	,	BtnTitlePosition	,	CFormTeachInRobot	,	위치	,	POSITION	,	POSITION	,	POSITION
+850	,	BtnBatchCmdLoadGet	,	CFormTeachInRobot	,	[GET] 로드 공정 (IN셔틀)	,	[GET] LOAD PROCESS (IN-SHUTTLE)	,	[GET] LOAD PROCESS (IN-SHUTTLE)	,	[GET] LOAD PROCESS (IN-SHUTTLE)
+851	,	BtnBatchCmdLoadPut	,	CFormTeachInRobot	,	[PUT] 로드 공정 (IN셔틀)	,	[PUT] LOAD PROCESS (IN-SHUTTLE)	,	[PUT] LOAD PROCESS (IN-SHUTTLE)	,	[PUT] LOAD PROCESS (IN-SHUTTLE)
+852	,	BtnBatchCmdAlignZeroSend	,	CFormTeachInRobot	,	얼라인 데이터 리셋 전송	,	ALIGN ZERO DATA SEND	,	ALIGN ZERO DATA SEND	,	ALIGN ZERO DATA SEND
+853	,	BtnBatchCmdAlignSend	,	CFormTeachInRobot	,	얼라인 데이터 전송	,	ALIGN DATA SEND	,	ALIGN DATA SEND	,	ALIGN DATA SEND
+854	,	BtnBatchCmdAlign_Verification_Process	,	CFormTeachInRobot	,	[얼라인 검증] 얼라인 ▶ 투입/배출 ▶ 얼라인  (보정값 반영)	,	[ALIGN VERIFICATION] Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN VERIFICATION] Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN VERIFICATION] Align ▶ Pick/Place ▶ Align (Apply Offset)
+855	,	BtnBatchCmdRobot_Verification_Process	,	CFormTeachInRobot	,	[로봇 검증] 얼라인 ▶ 투입/배출 ▶ 얼라인 (보정값 미반영)	,	[ROBOT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)
+856	,	BtnBatchCmdAlign_Verification_Process2	,	CFormTeachInRobot	,	[얼라인 반복 검증] 투입/배출(Offset) ▶ 얼라인 ▶ 투입/배출 ▶ 얼라인  (보정값 반영)	,	[ALIGN REPEAT VERIFICATION] Pick/Place(Offset) ▶ Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN REPEAT VERIFICATION] Pick/Place(Offset) ▶ Align ▶ Pick/Place ▶ Align (Apply Offset)	,	[ALIGN REPEAT VERIFICATION] Pick/Place(Offset) ▶ Align ▶ Pick/Place ▶ Align (Apply Offset)
+857	,	BtnBatchCmdRobot_Verification_Process2	,	CFormTeachInRobot	,	[로봇 반복 검증] 얼라인 ▶ 투입/배출 ▶ 얼라인 (보정값 미반영)	,	[ROBOT REPEAT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT REPEAT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)	,	[ROBOT REPEAT VERIFICATION] Align ▶ Pick/Place ▶ Align (Zero Offset)
+858	,	BtnBatchCmdAlignCalibration	,	CFormTeachInRobot	,	얼라인 캘리브레이션	,	ALIGN CALIBRATION	,	ALIGN CALIBRATION	,	ALIGN CALIBRATION
+859	,	BtnBatchCmdMcrPut	,	CFormTeachInRobot	,	[PUT] MCR 공정	,	[PUT] MCR PROCESS	,	[PUT] MCR PROCESS	,	[PUT] MCR PROCESS
+860	,	BtnBatchCmdUnloadGet	,	CFormTeachInRobot	,	[GET] 언로드 공정 (검사스테이지)	,	[GET] UNLOAD PROCESS (INSPECTION-STAGE)	,	[GET] UNLOAD PROCESS (INSPECTION-STAGE)	,	[GET] UNLOAD PROCESS (INSPECTION-STAGE)
+861	,	BtnBatchCmdUnloadPut	,	CFormTeachInRobot	,	[PUT] 언로드 공정 (검사스테이지)	,	[PUT] UNLOAD PROCESS (INSPECTION-STAGE)	,	[PUT] UNLOAD PROCESS (INSPECTION-STAGE)	,	[PUT] UNLOAD PROCESS (INSPECTION-STAGE)
+862	,	LblTitleAlignData	,	CFormTeachInRobot	,	[IN셔틀] 얼라인 결과 데이터	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA	,	[IN-SHUTTLE] ALIGN RESULT DATA
+863	,	LblTitleOffsetData	,	CFormTeachInRobot	,	[IN로봇] 적용 오프셋 데이터	,	[IN-ROBOT] APPLY OFFSET DATA	,	[IN-ROBOT] APPLY OFFSET DATA	,	[IN-ROBOT] APPLY OFFSET DATA
+864	,	LblTitleMcrData	,	CFormTeachInRobot	,	MCR 데이터	,	MCR DATA	,	MCR DATA	,	MCR DATA
+865	,	BtnTitleActuator	,	CFormTeachInRobot	,	동작	,	ACTUATOR	,	ACTUATOR	,	ACTUATOR
+866	,	UcTeachVacuum1_DeviceName	,	CFormTeachInRobot	,	P1	,	P1	,	P1	,	P1
+867	,	UcTeachVacuum1_Vacuum	,	CFormTeachInRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+868	,	UcTeachVacuum1_Blow	,	CFormTeachInRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
+869	,	UcTeachVacuum1_Sensor	,	CFormTeachInRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+870	,	UcTeachVacuum2_DeviceName	,	CFormTeachInRobot	,	P2	,	P2	,	P2	,	P2
+871	,	UcTeachVacuum2_Vacuum	,	CFormTeachInRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+872	,	UcTeachVacuum2_Blow	,	CFormTeachInRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
+873	,	UcTeachVacuum2_Sensor	,	CFormTeachInRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+874	,	UcTeachCylinder1_DeviceName	,	CFormTeachInRobot	,	P1 실린더	,	P1 CYLINDER	,	P1 CYLINDER	,	P1 CYLINDER
+875	,	UcTeachCylinder1_Action1	,	CFormTeachInRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
+876	,	UcTeachCylinder1_Action2	,	CFormTeachInRobot	,	회전	,	TURN	,	TURN	,	TURN
+877	,	UcTeachCylinder2_DeviceName	,	CFormTeachInRobot	,	P2 실린더	,	P2 CYLINDER	,	P2 CYLINDER	,	P2 CYLINDER
+878	,	UcTeachCylinder2_Action1	,	CFormTeachInRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
+879	,	UcTeachCylinder2_Action2	,	CFormTeachInRobot	,	회전	,	TURN	,	TURN	,	TURN
+880	,	BtnUseBlowAutoOff	,	CFormTeachInRobot	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+881	,	BtnTitleOperationStatus	,	CFormTeachInRobot	,	동작 상태	,	OPERATION STATUS	,	OPERATION STATUS	,	OPERATION STATUS
+882	,	BtnTeachMode	,	CFormTeachInRobot	,	티치 모드	,	TEACH MODE	,	TEACH MODE	,	TEACH MODE
+883	,	BtnPlayBackMode	,	CFormTeachInRobot	,	오토 모드	,	AUTO MODE	,	AUTO MODE	,	AUTO MODE
+884	,	BtnRunningU1	,	CFormTeachInRobot	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1
+885	,	BtnUnderStopping	,	CFormTeachInRobot	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP
+886	,	BtnServoReady	,	CFormTeachInRobot	,	서보	,	SERVO	,	SERVO	,	SERVO
+887	,	BtnHomePosition	,	CFormTeachInRobot	,	홈	,	HOME	,	HOME	,	HOME
+888	,	BtnAlarm	,	CFormTeachInRobot	,	알람	,	ALARM	,	ALARM	,	ALARM
+889	,	BtnInposition	,	CFormTeachInRobot	,	인포지션	,	INPOSITION	,	INPOSITION	,	INPOSITION
+890	,	BtnBatteryWarning	,	CFormTeachInRobot	,	배터리 경고	,	BATTERY WARNING	,	BATTERY WARNING	,	BATTERY WARNING
+891	,	BtnTitleAction	,	CFormTeachInRobot	,	동작	,	OPERATION	,	OPERATION	,	OPERATION
+892	,	BtnStop	,	CFormTeachInRobot	,	정지	,	STOP	,	STOP	,	STOP
+893	,	BtnPause	,	CFormTeachInRobot	,	일시 정지	,	PAUSE	,	PAUSE	,	PAUSE
+894	,	BtnManualMode	,	CFormTeachInRobot	,	매뉴얼 모드	,	MANUAL MODE	,	MANUAL MODE	,	MANUAL MODE
+895	,	BtnMotorInitialize	,	CFormTeachInRobot	,	로봇 초기화	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE
+896	,	BtnPositionMove	,	CFormTeachInRobot	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	POSITION MOVE
+897	,	BtnSave	,	CFormTeachInRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
+898	,	BtnPrevPosition	,	CFormTeachInRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+899	,	BtnNextPosition	,	CFormTeachInRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+900	,	BtnPrevBatch	,	CFormTeachInRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+901	,	BtnNextBatch	,	CFormTeachInRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+902	,	LblTitleJcmMode	,	CFormTeachInRobot	,	JCM 모드 메뉴	,	JCM MODE MENU	,	JCM MODE MENU	,	JCM MODE MENU
+903	,	BtnSubTitleJcmModeCheckTeaching	,	CFormTeachInRobot	,	티칭 확인 위치 선택	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING
+904	,	BtnSubTitleJcmModeOffset	,	CFormTeachInRobot	,	오프셋 설정	,	SET OFFSET	,	SET OFFSET	,	SET OFFSET
+905	,	BtnJcmCmdT1	,	CFormTeachInRobot	,	「T1」	,	「T1」	,	「T1」	,	「T1」
+906	,	BtnJcmCmdT2	,	CFormTeachInRobot	,	「T2」	,	「T2」	,	「T2」	,	「T2」
+907	,	BtnJcmCmdT3	,	CFormTeachInRobot	,	「T3」	,	「T3」	,	「T3」	,	「T3」
+908	,	BtnJcmCmdT4	,	CFormTeachInRobot	,	「T4」	,	「T4」	,	「T4」	,	「T4」
+909	,	BtnJcmCmdT12	,	CFormTeachInRobot	,	「T1_T2」: 동시	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce
+910	,	BtnJcmCmdT34	,	CFormTeachInRobot	,	「T3_T4」: 동시	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce
+911	,	BtnJcmCmdCrossing_T1_S2	,	CFormTeachInRobot	,	「T1 + S2」: 교차	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing
+912	,	BtnJcmCmdCrossing_T2_S1	,	CFormTeachInRobot	,	「T2 + S1」: 교차	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing
+913	,	BtnJcmCmdCrossing_T3_S4	,	CFormTeachInRobot	,	「T3 + S4」: 교차	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing
+914	,	BtnJcmCmdCrossing_T4_S3	,	CFormTeachInRobot	,	「T4 + S3」: 교차	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing
+915	,	BtnJcmCmdCrossing_T12_S34	,	CFormTeachInRobot	,	「T1_T2 + S3_S4」: 동시 && 교차	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing
+916	,	BtnJcmCmdCrossing_T34_S12	,	CFormTeachInRobot	,	「T3_T4 + S1_S2」: 동시 && 교차	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing
+917	,	BtnJcmModeSave	,	CFormTeachInRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
+918	,	BtnJcmModeNoSave	,	CFormTeachInRobot	,	취소	,	CANCEL	,	CANCEL	,	CANCEL
+919	,	BtnJcmMode	,	CFormTeachInRobot	,	JCM 모드	,	JCM MODE	,	JCM MODE	,	JCM MODE
+920	,	BtnPrevJcm	,	CFormTeachInRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+921	,	BtnNextJcm	,	CFormTeachInRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+922	,	BtnTitle	,	CFormTeachInspStage	,	검사스테이지	,	INSPECTION-STAGE	,	INSPECTION-STAGE	,	INSPECTION-STAGE
+923	,	BtnMotorStageX	,	CFormTeachInspStage	,	스테이지 Y	,	STAGE Y	,	STAGE Y	,	STAGE Y
+924	,	BtnTitlePosition	,	CFormTeachInspStage	,	위치	,	POSITION	,	POSITION	,	Vị trí 
+925	,	BtnPrevPosition	,	CFormTeachInspStage	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+926	,	BtnNextPosition	,	CFormTeachInspStage	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+927	,	BtnTitleBatchMove	,	CFormTeachInspStage	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
+928	,	BtnPrevBatch	,	CFormTeachInspStage	,	이전	,	NEXT	,	NEXT	,	NEXT
+929	,	BtnNextBatch	,	CFormTeachInspStage	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+930	,	BtnBatchCmdGrabProcess	,	CFormTeachInspStage	,	그랩 공정	,	GRAB PROCESS	,	GRAB PROCESS	,	GRAB PROCESS
+931	,	BtnBatchCmdMoveLoadPosition	,	CFormTeachInspStage	,	투입 위치 이동 (IN로봇)	,	MOVE LOAD POSITION (IN-ROBOT)	,	MOVE LOAD POSITION (IN-ROBOT)	,	MOVE LOAD POSITION (IN-ROBOT)
+932	,	BtnBatchCmdMoveGrabP1Position	,	CFormTeachInspStage	,	P1 그랩 위치 이동	,	MOVE P1 GRAB POSITION	,	MOVE P1 GRAB POSITION	,	MOVE P1 GRAB POSITION
+933	,	BtnBatchCmdMoveGrabP2Position	,	CFormTeachInspStage	,	P2 그랩 위치 이동	,	MOVE P2 GRAB POSITION	,	MOVE P2 GRAB POSITION	,	MOVE P2 GRAB POSITION
+934	,	BtnBatchCmdMoveUnloadPosition	,	CFormTeachInspStage	,	배출 위치 이동 (OUT로봇)	,	MOVE UNLOAD POSITION (OUT-ROBOT)	,	MOVE UNLOAD POSITION (OUT-ROBOT)	,	MOVE UNLOAD POSITION (OUT-ROBOT)
+935	,	BtnTitleActuator	,	CFormTeachInspStage	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
+936	,	UcTeachVacuum1_DeviceName	,	CFormTeachInspStage	,	P1	,	P1	,	P1	,	P1
+937	,	UcTeachVacuum1_Vacuum	,	CFormTeachInspStage	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+938	,	UcTeachVacuum1_Blow	,	CFormTeachInspStage	,	파기	,	BLOW	,	BLOW	,	BLOW
+939	,	UcTeachVacuum1_Sensor	,	CFormTeachInspStage	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+940	,	UcTeachVacuum2_DeviceName	,	CFormTeachInspStage	,	P2	,	P2	,	P2	,	P2
+941	,	UcTeachVacuum2_Vacuum	,	CFormTeachInspStage	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+942	,	UcTeachVacuum2_Blow	,	CFormTeachInspStage	,	파기	,	BLOW	,	BLOW	,	BLOW
+943	,	UcTeachVacuum2_Sensor	,	CFormTeachInspStage	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+944	,	BtnUseBlowAutoOff	,	CFormTeachInspStage	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+945	,	BtnTitle	,	CFormTeachOutRobot	,	OUT로봇	,	OUT-ROBOT	,	OUT-ROBOT	,	OUT-ROBOT
+946	,	BtnTitleBatchMove	,	CFormTeachOutRobot	,	일괄 동작	,	BATCH MOVE	,	BATCH MOVE	,	BATCH MOVE
+947	,	BtnMotorNachiP1	,	CFormTeachOutRobot	,	[P1] 로드 (검사스테이지)	,	[P1] LOAD (INSPECTION-STAGE)	,	[P1] LOAD (INSPECTION-STAGE)	,	[P1] LOAD (INSPECTION-STAGE)
+948	,	BtnMotorNachiP4	,	CFormTeachOutRobot	,	[P4] 언로드 (아웃플립)	,	[P4] UNLOAD (OUT-FLIP)	,	[P4] UNLOAD (OUT-FLIP)	,	[P4] UNLOAD (OUT-FLIP)
+949	,	BtnTitlePosition	,	CFormTeachOutRobot	,	위치	,	POSITION	,	POSITION	,	POSITION
+950	,	BtnBatchCmdLoadGet	,	CFormTeachOutRobot	,	[GET] 로드 공정 (검사스테이지)	,	[GET] LOAD PROCESS (INSPECTION-STAGE)	,	[GET] LOAD PROCESS (INSPECTION-STAGE)	,	[GET] LOAD PROCESS (INSPECTION-STAGE)
+951	,	BtnBatchCmdLoadPut	,	CFormTeachOutRobot	,	[PUT] 로드 공정 (검사스테이지)	,	[PUT] LOAD PROCESS (INSPECTION-STAGE)	,	[PUT] LOAD PROCESS (INSPECTION-STAGE)	,	[PUT] LOAD PROCESS (INSPECTION-STAGE)
+952	,	BtnBatchCmdUnloadGet	,	CFormTeachOutRobot	,	[GET] 언로드 공정 (아웃플립)	,	[GET] UNLOAD PROCESS (OUT-FLIP)	,	[GET] UNLOAD PROCESS (OUT-FLIP)	,	[GET] UNLOAD PROCESS (OUT-FLIP)
+953	,	BtnBatchCmdUnloadPut	,	CFormTeachOutRobot	,	[PUT] 언로드 공정 (아웃플립)	,	[PUT] UNLOAD PROCESS (OUT-FLIP)	,	[PUT] UNLOAD PROCESS (OUT-FLIP)	,	[PUT] UNLOAD PROCESS (OUT-FLIP)
+954	,	BtnTitleActuator	,	CFormTeachOutRobot	,	동작	,	ACTUATOR	,	ACTUATOR	,	ACTUATOR
+955	,	UcTeachVacuum1_DeviceName	,	CFormTeachOutRobot	,	P1	,	P1	,	P1	,	P1
+956	,	UcTeachVacuum1_Vacuum	,	CFormTeachOutRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+957	,	UcTeachVacuum1_Blow	,	CFormTeachOutRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
+958	,	UcTeachVacuum1_Sensor	,	CFormTeachOutRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+959	,	UcTeachVacuum2_DeviceName	,	CFormTeachOutRobot	,	P2	,	P2	,	P2	,	P2
+960	,	UcTeachVacuum2_Vacuum	,	CFormTeachOutRobot	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+961	,	UcTeachVacuum2_Blow	,	CFormTeachOutRobot	,	파기	,	BLOW	,	BLOW	,	BLOW
+962	,	UcTeachVacuum2_Sensor	,	CFormTeachOutRobot	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+963	,	UcTeachCylinder1_DeviceName	,	CFormTeachOutRobot	,	P1 실린더	,	P1 CYLINDER	,	P1 CYLINDER	,	P1 CYLINDER
+964	,	UcTeachCylinder1_Action1	,	CFormTeachOutRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
+965	,	UcTeachCylinder1_Action2	,	CFormTeachOutRobot	,	회전	,	TURN	,	TURN	,	TURN
+966	,	UcTeachCylinder2_DeviceName	,	CFormTeachOutRobot	,	P2 실린더	,	P2 CYLINDER	,	P2 CYLINDER	,	P2 CYLINDER
+967	,	UcTeachCylinder2_Action1	,	CFormTeachOutRobot	,	복귀	,	RETURN	,	RETURN	,	RETURN
+968	,	UcTeachCylinder2_Action2	,	CFormTeachOutRobot	,	회전	,	TURN	,	TURN	,	TURN
+969	,	BtnUseBlowAutoOff	,	CFormTeachOutRobot	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+970	,	BtnTitleOperationStatus	,	CFormTeachOutRobot	,	동작 상태	,	OPERATION STATUS	,	OPERATION STATUS	,	OPERATION STATUS
+971	,	BtnTeachMode	,	CFormTeachOutRobot	,	티치 모드	,	TEACH MODE	,	TEACH MODE	,	TEACH MODE
+972	,	BtnPlayBackMode	,	CFormTeachOutRobot	,	오토 모드	,	AUTO MODE	,	AUTO MODE	,	AUTO MODE
+973	,	BtnRunningU1	,	CFormTeachOutRobot	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1	,	RUNNING U1
+974	,	BtnUnderStopping	,	CFormTeachOutRobot	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP	,	UNDER STOP
+975	,	BtnServoReady	,	CFormTeachOutRobot	,	서보	,	SERVO	,	SERVO	,	SERVO
+976	,	BtnHomePosition	,	CFormTeachOutRobot	,	홈	,	HOME	,	HOME	,	HOME
+977	,	BtnAlarm	,	CFormTeachOutRobot	,	알람	,	ALARM	,	ALARM	,	ALARM
+978	,	BtnInposition	,	CFormTeachOutRobot	,	인포지션	,	INPOSITION	,	INPOSITION	,	INPOSITION
+979	,	BtnBatteryWarning	,	CFormTeachOutRobot	,	배터리 경고	,	BATTERY WARNING	,	BATTERY WARNING	,	BATTERY WARNING
+980	,	BtnTitleAction	,	CFormTeachOutRobot	,	동작	,	OPERATION	,	OPERATION	,	OPERATION
+981	,	BtnStop	,	CFormTeachOutRobot	,	정지	,	STOP	,	STOP	,	STOP
+982	,	BtnPause	,	CFormTeachOutRobot	,	일시 정지	,	PAUSE	,	PAUSE	,	PAUSE
+983	,	BtnManualMode	,	CFormTeachOutRobot	,	매뉴얼 모드	,	MANUAL MODE	,	MANUAL MODE	,	MANUAL MODE
+984	,	BtnMotorInitialize	,	CFormTeachOutRobot	,	로봇 초기화	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE	,	ROBOT INITIALIZE
+985	,	BtnPositionMove	,	CFormTeachOutRobot	,	위치 이동	,	POSITION MOVE	,	POSITION MOVE	,	POSITION MOVE
+986	,	BtnSave	,	CFormTeachOutRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
+987	,	BtnPrevPosition	,	CFormTeachOutRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+988	,	BtnNextPosition	,	CFormTeachOutRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+989	,	BtnPrevBatch	,	CFormTeachOutRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+990	,	BtnNextBatch	,	CFormTeachOutRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+991	,	LblTitleJcmMode	,	CFormTeachOutRobot	,	JCM 모드 메뉴	,	JCM MODE MENU	,	JCM MODE MENU	,	JCM MODE MENU
+992	,	BtnSubTitleJcmModeCheckTeaching	,	CFormTeachOutRobot	,	티칭 확인 위치 선택	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING	,	SELECT CHECK TEACHING
+993	,	BtnSubTitleJcmModeOffset	,	CFormTeachOutRobot	,	오프셋 설정	,	SET OFFSET	,	SET OFFSET	,	SET OFFSET
+994	,	BtnJcmCmdT1	,	CFormTeachOutRobot	,	「T1」	,	「T1」	,	「T1」	,	「T1」
+995	,	BtnJcmCmdT2	,	CFormTeachOutRobot	,	「T2」	,	「T2」	,	「T2」	,	「T2」
+996	,	BtnJcmCmdT3	,	CFormTeachOutRobot	,	「T3」	,	「T3」	,	「T3」	,	「T3」
+997	,	BtnJcmCmdT4	,	CFormTeachOutRobot	,	「T4」	,	「T4」	,	「T4」	,	「T4」
+998	,	BtnJcmCmdT12	,	CFormTeachOutRobot	,	「T1_T2」: 동시	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce	,	「T1_T2」: AtOnce
+999	,	BtnJcmCmdT34	,	CFormTeachOutRobot	,	「T3_T4」: 동시	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce	,	「T3_T4」: AtOnce
+1000	,	BtnJcmCmdCrossing_T1_S2	,	CFormTeachOutRobot	,	「T1 + S2」: 교차	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing	,	「T1 + S2」: Crossing
+1001	,	BtnJcmCmdCrossing_T2_S1	,	CFormTeachOutRobot	,	「T2 + S1」: 교차	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing	,	「T2 + S1」: Crossing
+1002	,	BtnJcmCmdCrossing_T3_S4	,	CFormTeachOutRobot	,	「T3 + S4」: 교차	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing	,	「T3 + S4」: Crossing
+1003	,	BtnJcmCmdCrossing_T4_S3	,	CFormTeachOutRobot	,	「T4 + S3」: 교차	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing	,	「T4 + S3」: Crossing
+1004	,	BtnJcmCmdCrossing_T12_S34	,	CFormTeachOutRobot	,	「T1_T2 + S3_S4」: 동시 && 교차	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing	,	「T1_T2 + S3_S4」: AtOnce && Crossing
+1005	,	BtnJcmCmdCrossing_T34_S12	,	CFormTeachOutRobot	,	「T3_T4 + S1_S2」: 동시 && 교차	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing	,	「T3_T4 + S1_S2」: AtOnce && Crossing
+1006	,	BtnJcmModeSave	,	CFormTeachOutRobot	,	저장	,	SAVE	,	SAVE	,	SAVE
+1007	,	BtnJcmModeNoSave	,	CFormTeachOutRobot	,	취소	,	CANCEL	,	CANCEL	,	CANCEL
+1008	,	BtnJcmMode	,	CFormTeachOutRobot	,	JCM 모드	,	JCM MODE	,	JCM MODE	,	JCM MODE
+1009	,	BtnPrevJcm	,	CFormTeachOutRobot	,	이전	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+1010	,	BtnNextJcm	,	CFormTeachOutRobot	,	다음	,	NEXT	,	NEXT	,	NEXT
+1011	,	BtnTitle	,	CFormTeachOutFlip	,	OUT플립	,	OUT-FLIP	,	OUT-FLIP	,	OUT-FLIP
+1012	,	BtnMotorConveyorX	,	CFormTeachOutFlip	,	컨베이어 X2	,	CONVEYOR X2	,	CONVEYOR X2	,	CONVEYOR X2
+1013	,	BtnMotorFlipZ	,	CFormTeachOutFlip	,	플립 Z	,	FLIP Z	,	FLIP Z	,	FLIP Z
+1014	,	BtnMotorFlipR1	,	CFormTeachOutFlip	,	플립 R1 (P1)	,	FLIP R1 (P1)	,	FLIP R1 (P1)	,	FLIP R1 (P1)
+1015	,	BtnMotorFlipR2	,	CFormTeachOutFlip	,	플립 R2 (P2)	,	FLIP R2 (P2)	,	FLIP R2 (P2)	,	FLIP R2 (P2)
+1016	,	BtnTitlePosition	,	CFormTeachOutFlip	,	위치	,	POSITION	,	POSITION	,	Vị trí 
+1017	,	BtnPrevPosition	,	CFormTeachOutFlip	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+1018	,	BtnNextPosition	,	CFormTeachOutFlip	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+1019	,	BtnTitleBatchMove	,	CFormTeachOutFlip	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
+1020	,	BtnPrevBatch	,	CFormTeachOutFlip	,	이전	,	NEXT	,	NEXT	,	NEXT
+1021	,	BtnNextBatch	,	CFormTeachOutFlip	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+1022	,	BtnBatchCmdSetZero	,	CFormTeachOutFlip	,	컨베이어 포지션 리셋	,	CONVEYOR POSITION RESET	,	CONVEYOR POSITION RESET	,	CONVEYOR POSITION RESET
+1023	,	BtnBatchCmdLoadWait	,	CFormTeachOutFlip	,	투입 위치 이동 (OUT로봇)	,	MOVE LOAD POSITION (OUT-ROBOT)	,	MOVE LOAD POSITION (OUT-ROBOT)	,	MOVE LOAD POSITION (OUT-ROBOT)
+1024	,	BtnBatchCmdUnload	,	CFormTeachOutFlip	,	자재 배출 (OUT컨베이어)	,	[PUT] UNLOAD PROCESS (OUT-CONVEYOR)	,	[PUT] UNLOAD PROCESS (OUT-CONVEYOR)	,	[PUT] UNLOAD PROCESS (OUT-CONVEYOR)
+1025	,	BtnTitleActuator	,	CFormTeachOutFlip	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
+1026	,	UcTeachVacuum1_DeviceName	,	CFormTeachOutFlip	,	회전 P1	,	P1_1_T	,	P1_1_T	,	P1_1_T
+1027	,	UcTeachVacuum1_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1028	,	UcTeachVacuum1_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
+1029	,	UcTeachVacuum1_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1030	,	UcTeachVacuum2_DeviceName	,	CFormTeachOutFlip	,	복귀 P1	,	P1_2_R	,	P1_2_R	,	P1_2_R
+1031	,	UcTeachVacuum2_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1032	,	UcTeachVacuum2_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
+1033	,	UcTeachVacuum2_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1034	,	UcTeachVacuum3_DeviceName	,	CFormTeachOutFlip	,	회전 P2	,	P2_1_T	,	P2_1_T	,	P2_1_T
+1035	,	UcTeachVacuum3_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1036	,	UcTeachVacuum3_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
+1037	,	UcTeachVacuum3_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1038	,	UcTeachVacuum4_DeviceName	,	CFormTeachOutFlip	,	복귀 P2	,	P2_2_R	,	P2_2_R	,	P2_2_R
+1039	,	UcTeachVacuum4_Vacuum	,	CFormTeachOutFlip	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1040	,	UcTeachVacuum4_Blow	,	CFormTeachOutFlip	,	파기	,	BLOW	,	BLOW	,	BLOW
+1041	,	UcTeachVacuum4_Sensor	,	CFormTeachOutFlip	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1042	,	BtnUseBlowAutoOff	,	CFormTeachOutFlip	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+1043	,	BtnOutConveyorAutoMode	,	CFormTeachOutFlip	,	OUT컨베이어 자동 모드	,	OUT CONVEYOR AUTO MODE	,	OUT CONVEYOR AUTO MODE	,	OUT CONVEYOR AUTO MODE
+1044	,	BtnOutConveyorManualMode	,	CFormTeachOutFlip	,	OUT컨베이어 수동 모드	,	OUT CONVEYOR MANUAL MODE	,	OUT CONVEYOR MANUAL MODE	,	OUT CONVEYOR MANUAL MODE
+1045	,	BtnOutConveyorSensor1	,	CFormTeachOutFlip	,	자재 감지 센서 P1	,	CELL DETECT SENSOR P1	,	CELL DETECT SENSOR P1	,	CELL DETECT SENSOR P1
+1046	,	BtnOutConveyorSensor2	,	CFormTeachOutFlip	,	자재 감지 센서 P2	,	CELL DETECT SENSOR P2	,	CELL DETECT SENSOR P2	,	CELL DETECT SENSOR P2
+1047	,	BtnOutConveyorBlockedSensor	,	CFormTeachOutFlip	,	막힘 센서	,	BLOCKED SENSOR	,	BLOCKED SENSOR	,	BLOCKED SENSOR
+1048	,	BtnTitle	,	CFormTeachOutShuttle	,	OUT셔틀	,	OUT-SHUTTLE	,	OUT-SHUTTLE	,	OUT-SHUTTLE
+1049	,	BtnMotorStageX	,	CFormTeachOutShuttle	,	스테이지 X1	,	STAGE X1	,	STAGE X1	,	STAGE X1
+1050	,	BtnTitlePosition	,	CFormTeachOutShuttle	,	위치	,	POSITION	,	POSITION	,	Vị trí 
+1051	,	BtnPrevPosition	,	CFormTeachOutShuttle	,	이전	,	PREVIOUS	,	PREVIOUS	,	Trước ( PREVIOUS )
+1052	,	BtnNextPosition	,	CFormTeachOutShuttle	,	다음	,	NEXT	,	NEXT	,	Tiếp theo ( NEXT )
+1053	,	BtnTitleBatchMove	,	CFormTeachOutShuttle	,	일괄 이동	,	BATCH MOVE	,	BATCH MOVE	,	Vận hành đồng loạt 
+1054	,	BtnPrevBatch	,	CFormTeachOutShuttle	,	이전	,	NEXT	,	NEXT	,	NEXT
+1055	,	BtnNextBatch	,	CFormTeachOutShuttle	,	다음	,	PREVIOUS	,	PREVIOUS	,	PREVIOUS
+1056	,	BtnBatchCmdMoveLoadPosition	,	CFormTeachOutShuttle	,	MOVE LOAD POSITION (OUT-FLIP)	,	MOVE LOAD POSITION (OUT-FLIP)	,	MOVE LOAD POSITION (OUT-FLIP)	,	MOVE LOAD POSITION (OUT-FLIP)
+1057	,	BtnBatchCmdMoveUnloadPosition	,	CFormTeachOutShuttle	,	MOVE UNLOAD POSITION (LOWER-EQUIPMENT)	,	MOVE UNLOAD POSITION (LOWER-EQUIPMENT)	,	MOVE UNLOAD POSITION (LOWER-EQUIPMENT)	,	MOVE UNLOAD POSITION (LOWER-EQUIPMENT)
+1058	,	BtnTitleActuator	,	CFormTeachOutShuttle	,	동작	,	ACTUATOR	,	ACTUATOR	,	Vận hành
+1059	,	UcTeachVacuum1_DeviceName	,	CFormTeachOutShuttle	,	P1	,	P1	,	P1	,	P1
+1060	,	UcTeachVacuum1_Vacuum	,	CFormTeachOutShuttle	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1061	,	UcTeachVacuum1_Blow	,	CFormTeachOutShuttle	,	파기	,	BLOW	,	BLOW	,	BLOW
+1062	,	UcTeachVacuum1_Sensor	,	CFormTeachOutShuttle	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1063	,	UcTeachVacuum2_DeviceName	,	CFormTeachOutShuttle	,	P2	,	P2	,	P2	,	P2
+1064	,	UcTeachVacuum2_Vacuum	,	CFormTeachOutShuttle	,	진공	,	VACUUM	,	VACUUM	,	VACUUM
+1065	,	UcTeachVacuum2_Blow	,	CFormTeachOutShuttle	,	파기	,	BLOW	,	BLOW	,	BLOW
+1066	,	UcTeachVacuum2_Sensor	,	CFormTeachOutShuttle	,	센서	,	SENSOR	,	SENSOR	,	SENSOR
+1067	,	BtnUseBlowAutoOff	,	CFormTeachOutShuttle	,	파기 자동 끄기 사용	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF	,	USE BLOW AUTO OFF
+1068	,	BtnUserBase	,	CFormTitle	,	사용자	,	USER	,	USER	,	USER
+1069	,	BtnCimBase	,	CFormTitle	,	CIM	,	CIM	,	CIM	,	CIM
+1070	,	BtnConnectBase	,	CFormTitle	,	연결	,	CONNECT	,	CONNECT	,	CONNECT
+1071	,	BtnStateBase	,	CFormTitle	,	상태	,	STATE	,	STATE	,	STATE
+1072	,	BtnTitleVersionInfo	,	CFormTitle	,	버전 정보	,	VERSION INFORMATION	,	VERSION INFORMATION	,	Thông tin VERSION 
+1073	,	mResourceTitleRepeatMove	,	SubBatchMotorRepeatMove	,	반복 이동	,	Repeat Move	,	Repeat Move	,	Repeat Move
+1074	,	mResourceTitleRepeatProgress	,	SubBatchMotorRepeatMove	,	진행	,	Progress	,	Progress	,	Progress

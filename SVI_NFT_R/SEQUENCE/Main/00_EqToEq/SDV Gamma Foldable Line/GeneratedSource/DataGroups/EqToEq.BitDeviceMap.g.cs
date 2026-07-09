@@ -18,9 +18,13 @@ namespace EqToEq
     {
         public EqToEq.UpperToSelf.Bits UpperToSelf => mUpperToSelf;
         public EqToEq.SelfToUpper.Bits SelfToUpper => mSelfToUpper;
+        public EqToEq.SelfToLower.Bits SelfToLower => mSelfToLower;
+        public EqToEq.LowerToSelf.Bits LowerToSelf => mLowerToSelf;
         public System.Collections.Generic.IReadOnlyDictionary<string, ENC.IO.Common.IReadOnlyHandlingDataSet> Informations => mHandlingData;
         private EqToEq.UpperToSelf.Bits mUpperToSelf;
         private EqToEq.SelfToUpper.Bits mSelfToUpper;
+        private EqToEq.SelfToLower.Bits mSelfToLower;
+        private EqToEq.LowerToSelf.Bits mLowerToSelf;
         private System.Collections.Generic.IReadOnlyDictionary<string, ENC.IO.Common.IReadOnlyHandlingDataSet> mHandlingData;
 
         public BitDeviceMap AssignMap(ENC.IO.Common.IHandlingDataCreator ctor, System.Collections.Generic.List<ENC.IO.Common.ErrorSet> errorsAndWarnings, int startIndex = 0)
@@ -28,6 +32,8 @@ namespace EqToEq
             mHandlingData = DataMappingAssignManager.GetDataOrNullFromType(typeof(BitDeviceMap));
             mUpperToSelf = new EqToEq.UpperToSelf.Bits().AssignMap(ctor, errorsAndWarnings, startIndex + mHandlingData[nameof(UpperToSelf)].ByteIndex);
             mSelfToUpper = new EqToEq.SelfToUpper.Bits().AssignMap(ctor, errorsAndWarnings, startIndex + mHandlingData[nameof(SelfToUpper)].ByteIndex);
+            mSelfToLower = new EqToEq.SelfToLower.Bits().AssignMap(ctor, errorsAndWarnings, startIndex + mHandlingData[nameof(SelfToLower)].ByteIndex);
+            mLowerToSelf = new EqToEq.LowerToSelf.Bits().AssignMap(ctor, errorsAndWarnings, startIndex + mHandlingData[nameof(LowerToSelf)].ByteIndex);
             if (DataMappingAssignManager.GetBlockSize(typeof(BitDeviceMap)) > ctor.FirstIndex + startIndex + ctor.Size)
             {
                 errorsAndWarnings.Add(ENC.IO.Common.ErrorSet.CreateError($"타입({typeof(BitDeviceMap).FullName})의 크기가 할당하려는 디바이스({ctor.Name})의 범위를 초과했습니다."));
@@ -39,6 +45,8 @@ namespace EqToEq
         {
             UpperToSelf.BatchRead(readDataSet.UpperToSelf);
             SelfToUpper.BatchRead(readDataSet.SelfToUpper);
+            SelfToLower.BatchRead(readDataSet.SelfToLower);
+            LowerToSelf.BatchRead(readDataSet.LowerToSelf);
             return readDataSet;
         }
 
@@ -46,6 +54,8 @@ namespace EqToEq
         {
             UpperToSelf.BatchWrite(writeDataSet.UpperToSelf);
             SelfToUpper.BatchWrite(writeDataSet.SelfToUpper);
+            SelfToLower.BatchWrite(writeDataSet.SelfToLower);
+            LowerToSelf.BatchWrite(writeDataSet.LowerToSelf);
             return true;
         }
     }

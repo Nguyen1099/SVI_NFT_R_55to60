@@ -143,6 +143,7 @@ namespace SVI_NFT_R
             FORM_VIEW_TEACH_INSP_STAGE,
             FORM_VIEW_TEACH_OUT_ROBOT,
             FORM_VIEW_TEACH_OUT_FLIP,
+            FORM_VIEW_TEACH_OUT_SHUTTLE,
             FORM_VIEW_TEACH_CYLINDER,
             FORM_VIEW_TEACH_VACUUM,
             FORM_VIEW_TEACH_FINAL
@@ -659,6 +660,7 @@ namespace SVI_NFT_R
             LOG_PROCESS_03_INSP_STAGE,
             LOG_PROCESS_04_OUT_ROBOT,
             LOG_PROCESS_05_OUT_FLIP,
+            LOG_PROCESS_06_OUT_SHUTTLE,
             LOG_PROCESS_INTERFACE_UNLOAD,
             LOG_BUTTON_OPERATION,
             LOG_TEACH_DATA,
@@ -677,11 +679,13 @@ namespace SVI_NFT_R
             //////////////////////////////////////////////////////////////////////////
             // CSV Log
             LOG_SIGNAL_INTERFACE_LOAD,
+            LOG_SIGNAL_INTERFACE_UNLOAD,
             LOG_CYCLE_TACT_01_IN_SHUTTLE,
             LOG_CYCLE_TACT_02_IN_ROBOT,
             LOG_CYCLE_TACT_03_INSP_STAGE,
             LOG_CYCLE_TACT_04_OUT_ROBOT,
             LOG_CYCLE_TACT_05_OUT_FLIP,
+            LOG_CYCLE_TACT_06_OUT_SHUTTLE,
             LOG_CYCLE_TACT_90_JAVAS_INSPECTION,
             LOG_TACT_TIME,
             LOG_COMM_ERROR_TEMPERATURE,
@@ -954,23 +958,79 @@ namespace SVI_NFT_R
             // Raw Data
             CYCLE_START_TIME,
             CYCLE_END_TIME,
+
             WAIT_LOADING_START_TIME,
             WAIT_LOADING_END_TIME,
             MOVE_LOADING_START_TIME,
             MOVE_LOADING_END_TIME,
+
             WAIT_UNLOAD_READY_START_TIME,
             WAIT_UNLOAD_READY_END_TIME,
             MOVE_UNLOAD_READY_START_TIME,
             MOVE_UNLOAD_READY_END_TIME,
+
             WAIT_UNLOADING_START_TIME,
             WAIT_UNLOADING_END_TIME,
             MOVE_UNLOADING_START_TIME,
             MOVE_UNLOADING_END_TIME,
+
             WAIT_RETURN_START_TIME,
             WAIT_RETURN_END_TIME,
             MOVE_RETURN_START_TIME,
             MOVE_RETURN_END_TIME,
         }
+
+        public enum ECycleTactOutShuttle
+        {
+            //////////////////////////////////////////////////////////////////////////
+            // Tact Time
+            INNER_ID_P1 = 0,
+            INNER_ID_P2,
+            CELL_ID_P1,
+            CELL_ID_P2,
+            PURE_CYCLE_TACT,
+            CYCLE_TACT_TIME,
+            USER_STOP_TIME,
+
+            WAIT_LOADING,
+            MOVE_LOADING,
+
+            WAIT_UNLOAD_READY,
+            MOVE_UNLOAD_READY,
+
+            WAIT_UNLOADING,
+            MOVE_UNLOADING,
+
+            WAIT_LOAD,
+            MOVE_LOAD,
+
+            RAWDATA,
+            //////////////////////////////////////////////////////////////////////////
+            // Raw Data
+            CYCLE_START_TIME,
+            CYCLE_END_TIME,
+
+            WAIT_LOADING_START_TIME,
+            WAIT_LOADING_END_TIME,
+            MOVE_LOADING_START_TIME,
+            MOVE_LOADING_END_TIME,
+
+            WAIT_UNLOAD_READY_START_TIME,
+            WAIT_UNLOAD_READY_END_TIME,
+            MOVE_UNLOAD_READY_START_TIME,
+            MOVE_UNLOAD_READY_END_TIME,
+
+            WAIT_UNLOADING_START_TIME,
+            WAIT_UNLOADING_END_TIME,
+            MOVE_UNLOADING_START_TIME,
+            MOVE_UNLOADING_END_TIME,
+
+            WAIT_LOAD_START_TIME,
+            WAIT_LOAD_END_TIME,
+            MOVE_LOAD_START_TIME,
+            MOVE_LOAD_END_TIME,
+        }
+
 
         public enum ECycleTactJavasInspection
         {

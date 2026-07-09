@@ -10,5 +10,6 @@
         InspStage,
         OutRobot,
         OutFlip,
+        OutShuttle,
     }
 }

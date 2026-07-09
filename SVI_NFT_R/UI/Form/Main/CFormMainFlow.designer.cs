@@ -48,14 +48,26 @@
             this.UcCellInspStageP1 = new SVI_NFT_R.UI.UserControls.UcCell();
             this.LblTitleInspStage = new System.Windows.Forms.Label();
             this.PnlDisplayArea = new System.Windows.Forms.Panel();
+            this.BtnUnLoadPending = new UiAsset.SpeedButton();
+            this.BtnUnLoadHandshaking = new UiAsset.SpeedButton();
+            this.UcHandshakeSignalUnLoadItem1 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.UcHandshakeSignalUnLoadItem2 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.UcHandshakeSignalUnLoadItem3 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.UcHandshakeSignalUnLoadItem4 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.UcHandshakeSignalUnLoadItem5 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.UcHandshakeSignalUnLoadItem6 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.UcHandshakeSignalUnLoadItem7 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.UcHandshakeSignalUnLoadItem8 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.UcHandshakeSignalUnLoadSafetyItem1 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.BtnTitleUnLoadSafety = new UiAsset.SpeedButton();
+            this.UcHandshakeSignalUnLoadSafetyItem2 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
+            this.UcHandshakeSignalUnLoadSafetyItem3 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
             this.BtnMfqInputBase = new UiAsset.SpeedButton();
             this.BtnTitleUnloadHandshake = new UiAsset.SpeedButton();
             this.BtnTitleLoadSafety = new UiAsset.SpeedButton();
             this.BtnTitleLoadHandshake = new UiAsset.SpeedButton();
             this.BtnLoadPending = new UiAsset.SpeedButton();
             this.BtnLoadHandshaking = new UiAsset.SpeedButton();
-            this.PnlUnloadHandshakeBitArea = new System.Windows.Forms.FlowLayoutPanel();
-            this.UcHandshakeSignalUnloadItem1 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
             this.PnlLoadSafetyBitArea = new System.Windows.Forms.FlowLayoutPanel();
             this.UcHandshakeSignalLoadSafetyItem1 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
             this.UcHandshakeSignalLoadSafetyItem2 = new SVI_NFT_R.UI.UserControls.UcHandshakeSignalItem();
@@ -91,23 +103,16 @@
             this.BtnTitleRunMode = new UiAsset.SpeedButton();
             this.BtnEquipmentBase = new UiAsset.SpeedButton();
             this.PnlEquipmentImage = new UiAsset.DoubleBufferPanel();
-            this.PnlOutConveyorBoundary = new System.Windows.Forms.Panel();
-            this.PnlBaseOutConveyor = new System.Windows.Forms.Panel();
-            this.BtnSensorBlockedDetect = new UiAsset.SpeedButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BtnSensorDetectP1 = new UiAsset.SpeedButton();
-            this.BtnSensorDetectP2 = new UiAsset.SpeedButton();
-            this.PnlInspStageBoundary = new System.Windows.Forms.Panel();
             this.PnlBaseOutFlip = new System.Windows.Forms.Panel();
             this.UcCellOutFlipP1 = new SVI_NFT_R.UI.UserControls.UcCellIndicator();
             this.UcCellOutFlipP2 = new SVI_NFT_R.UI.UserControls.UcCellIndicator();
             this.LblTitleOutFlip = new System.Windows.Forms.Label();
+            this.PnlInspStageBoundary = new System.Windows.Forms.Panel();
             this.BtnCellOut = new UiAsset.ImageButton();
             this.PnlInShuttleBoundary = new System.Windows.Forms.Panel();
+            this.PnlOutShuttleBoundary = new System.Windows.Forms.Panel();
             this.PnlOutRobotBoundary = new System.Windows.Forms.Panel();
             this.PnlInRobotBoundary = new System.Windows.Forms.Panel();
-            this.BtnCellOutConveyorP1 = new UiAsset.SpeedButton();
-            this.BtnCellOutConveyorP2 = new UiAsset.SpeedButton();
             this.PnlBaseOutRobot90 = new System.Windows.Forms.Panel();
             this.UcCellOutRobot90P2 = new SVI_NFT_R.UI.UserControls.UcCell();
             this.UcCellOutRobot90P1 = new SVI_NFT_R.UI.UserControls.UcCell();
@@ -116,20 +121,23 @@
             this.UcCellInRobot90P2 = new SVI_NFT_R.UI.UserControls.UcCell();
             this.UcCellInRobot90P1 = new SVI_NFT_R.UI.UserControls.UcCell();
             this.LblTitleInRobot90 = new System.Windows.Forms.Label();
+            this.PnlBaseOutShuttle = new System.Windows.Forms.Panel();
+            this.UcCellOutShuttleP2 = new SVI_NFT_R.UI.UserControls.UcCell();
+            this.UcCellOutShuttleP1 = new SVI_NFT_R.UI.UserControls.UcCell();
+            this.label1 = new System.Windows.Forms.Label();
             this.PnlBaseInRobot.SuspendLayout();
             this.PnlBaseOutRobot.SuspendLayout();
             this.PnlBaseInShuttle.SuspendLayout();
             this.PnlBaseInspStage.SuspendLayout();
             this.PnlDisplayArea.SuspendLayout();
-            this.PnlUnloadHandshakeBitArea.SuspendLayout();
             this.PnlLoadSafetyBitArea.SuspendLayout();
             this.PnlLoadHandshakeBitArea.SuspendLayout();
             this.pnlDescriptionBase.SuspendLayout();
             this.PnlEquipmentImage.SuspendLayout();
-            this.PnlBaseOutConveyor.SuspendLayout();
             this.PnlBaseOutFlip.SuspendLayout();
             this.PnlBaseOutRobot90.SuspendLayout();
             this.PnlBaseInRobot90.SuspendLayout();
+            this.PnlBaseOutShuttle.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer
@@ -139,7 +147,7 @@
             // LblVisionCellID
             // 
             this.LblVisionCellID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LblVisionCellID.Font = new System.Drawing.Font("맑은 고딕", 6F);
+            this.LblVisionCellID.Font = new System.Drawing.Font("Malgun Gothic", 6F);
             this.LblVisionCellID.Location = new System.Drawing.Point(54, 1);
             this.LblVisionCellID.Name = "LblVisionCellID";
             this.LblVisionCellID.Size = new System.Drawing.Size(133, 25);
@@ -208,7 +216,7 @@
             // 
             this.LblTitleInRobot.AutoSize = true;
             this.LblTitleInRobot.BackColor = System.Drawing.Color.Transparent;
-            this.LblTitleInRobot.Font = new System.Drawing.Font("맑은 고딕", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LblTitleInRobot.Font = new System.Drawing.Font("Malgun Gothic", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblTitleInRobot.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LblTitleInRobot.Location = new System.Drawing.Point(2, 3);
             this.LblTitleInRobot.Name = "LblTitleInRobot";
@@ -277,7 +285,7 @@
             // 
             this.LblTitleOutRobot.AutoSize = true;
             this.LblTitleOutRobot.BackColor = System.Drawing.Color.Transparent;
-            this.LblTitleOutRobot.Font = new System.Drawing.Font("맑은 고딕", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LblTitleOutRobot.Font = new System.Drawing.Font("Malgun Gothic", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblTitleOutRobot.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LblTitleOutRobot.Location = new System.Drawing.Point(2, 3);
             this.LblTitleOutRobot.Name = "LblTitleOutRobot";
@@ -346,7 +354,7 @@
             // 
             this.LblTitleInShuttle.AutoSize = true;
             this.LblTitleInShuttle.BackColor = System.Drawing.Color.Transparent;
-            this.LblTitleInShuttle.Font = new System.Drawing.Font("맑은 고딕", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LblTitleInShuttle.Font = new System.Drawing.Font("Malgun Gothic", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblTitleInShuttle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LblTitleInShuttle.Location = new System.Drawing.Point(2, 3);
             this.LblTitleInShuttle.Name = "LblTitleInShuttle";
@@ -415,7 +423,7 @@
             // 
             this.LblTitleInspStage.AutoSize = true;
             this.LblTitleInspStage.BackColor = System.Drawing.Color.Transparent;
-            this.LblTitleInspStage.Font = new System.Drawing.Font("맑은 고딕", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LblTitleInspStage.Font = new System.Drawing.Font("Malgun Gothic", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblTitleInspStage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LblTitleInspStage.Location = new System.Drawing.Point(2, 3);
             this.LblTitleInspStage.Name = "LblTitleInspStage";
@@ -426,13 +434,26 @@
             // PnlDisplayArea
             // 
             this.PnlDisplayArea.BackColor = System.Drawing.Color.White;
+            this.PnlDisplayArea.Controls.Add(this.BtnUnLoadPending);
+            this.PnlDisplayArea.Controls.Add(this.BtnUnLoadHandshaking);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadItem1);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadItem2);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadItem3);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadItem4);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadItem5);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadItem6);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadItem7);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadItem8);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadSafetyItem1);
+            this.PnlDisplayArea.Controls.Add(this.BtnTitleUnLoadSafety);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadSafetyItem2);
+            this.PnlDisplayArea.Controls.Add(this.UcHandshakeSignalUnLoadSafetyItem3);
             this.PnlDisplayArea.Controls.Add(this.BtnMfqInputBase);
             this.PnlDisplayArea.Controls.Add(this.BtnTitleUnloadHandshake);
             this.PnlDisplayArea.Controls.Add(this.BtnTitleLoadSafety);
             this.PnlDisplayArea.Controls.Add(this.BtnTitleLoadHandshake);
             this.PnlDisplayArea.Controls.Add(this.BtnLoadPending);
             this.PnlDisplayArea.Controls.Add(this.BtnLoadHandshaking);
-            this.PnlDisplayArea.Controls.Add(this.PnlUnloadHandshakeBitArea);
             this.PnlDisplayArea.Controls.Add(this.PnlLoadSafetyBitArea);
             this.PnlDisplayArea.Controls.Add(this.PnlLoadHandshakeBitArea);
             this.PnlDisplayArea.Controls.Add(this.pnlDescriptionBase);
@@ -456,12 +477,175 @@
             this.PnlDisplayArea.Size = new System.Drawing.Size(1276, 745);
             this.PnlDisplayArea.TabIndex = 312;
             // 
+            // BtnUnLoadPending
+            // 
+            this.BtnUnLoadPending.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnUnLoadPending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUnLoadPending.Font = new System.Drawing.Font("Malgun Gothic", 6F);
+            this.BtnUnLoadPending.Location = new System.Drawing.Point(1044, 674);
+            this.BtnUnLoadPending.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.BtnUnLoadPending.Name = "BtnUnLoadPending";
+            this.BtnUnLoadPending.Size = new System.Drawing.Size(220, 27);
+            this.BtnUnLoadPending.TabIndex = 374;
+            this.BtnUnLoadPending.TabStop = false;
+            this.BtnUnLoadPending.Text = "LOAD I/F PENDING";
+            this.BtnUnLoadPending.UseVisualStyleBackColor = true;
+            // 
+            // BtnUnLoadHandshaking
+            // 
+            this.BtnUnLoadHandshaking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnUnLoadHandshaking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUnLoadHandshaking.Font = new System.Drawing.Font("Malgun Gothic", 6F);
+            this.BtnUnLoadHandshaking.Location = new System.Drawing.Point(1044, 702);
+            this.BtnUnLoadHandshaking.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.BtnUnLoadHandshaking.Name = "BtnUnLoadHandshaking";
+            this.BtnUnLoadHandshaking.Size = new System.Drawing.Size(220, 27);
+            this.BtnUnLoadHandshaking.TabIndex = 373;
+            this.BtnUnLoadHandshaking.TabStop = false;
+            this.BtnUnLoadHandshaking.Text = "LOAD I/F HANDSHAKING";
+            this.BtnUnLoadHandshaking.UseVisualStyleBackColor = true;
+            // 
+            // UcHandshakeSignalUnLoadItem1
+            // 
+            this.UcHandshakeSignalUnLoadItem1.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadItem1.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadItem1.Location = new System.Drawing.Point(1044, 467);
+            this.UcHandshakeSignalUnLoadItem1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadItem1.Name = "UcHandshakeSignalUnLoadItem1";
+            this.UcHandshakeSignalUnLoadItem1.Size = new System.Drawing.Size(220, 25);
+            this.UcHandshakeSignalUnLoadItem1.TabIndex = 365;
+            this.UcHandshakeSignalUnLoadItem1.Title = "HEARTBEAT";
+            // 
+            // UcHandshakeSignalUnLoadItem2
+            // 
+            this.UcHandshakeSignalUnLoadItem2.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadItem2.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadItem2.Location = new System.Drawing.Point(1044, 492);
+            this.UcHandshakeSignalUnLoadItem2.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadItem2.Name = "UcHandshakeSignalUnLoadItem2";
+            this.UcHandshakeSignalUnLoadItem2.Size = new System.Drawing.Size(220, 24);
+            this.UcHandshakeSignalUnLoadItem2.TabIndex = 366;
+            this.UcHandshakeSignalUnLoadItem2.Title = "ABLE";
+            // 
+            // UcHandshakeSignalUnLoadItem3
+            // 
+            this.UcHandshakeSignalUnLoadItem3.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadItem3.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadItem3.Location = new System.Drawing.Point(1044, 516);
+            this.UcHandshakeSignalUnLoadItem3.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadItem3.Name = "UcHandshakeSignalUnLoadItem3";
+            this.UcHandshakeSignalUnLoadItem3.Size = new System.Drawing.Size(220, 24);
+            this.UcHandshakeSignalUnLoadItem3.TabIndex = 367;
+            this.UcHandshakeSignalUnLoadItem3.Title = "START";
+            // 
+            // UcHandshakeSignalUnLoadItem4
+            // 
+            this.UcHandshakeSignalUnLoadItem4.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadItem4.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadItem4.Location = new System.Drawing.Point(1044, 540);
+            this.UcHandshakeSignalUnLoadItem4.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadItem4.Name = "UcHandshakeSignalUnLoadItem4";
+            this.UcHandshakeSignalUnLoadItem4.Size = new System.Drawing.Size(220, 24);
+            this.UcHandshakeSignalUnLoadItem4.TabIndex = 368;
+            this.UcHandshakeSignalUnLoadItem4.Title = "COMPLETE";
+            // 
+            // UcHandshakeSignalUnLoadItem5
+            // 
+            this.UcHandshakeSignalUnLoadItem5.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadItem5.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadItem5.Location = new System.Drawing.Point(1044, 564);
+            this.UcHandshakeSignalUnLoadItem5.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadItem5.Name = "UcHandshakeSignalUnLoadItem5";
+            this.UcHandshakeSignalUnLoadItem5.Size = new System.Drawing.Size(220, 24);
+            this.UcHandshakeSignalUnLoadItem5.TabIndex = 369;
+            this.UcHandshakeSignalUnLoadItem5.Title = "VACUUM JIG1 REQ / ACK";
+            // 
+            // UcHandshakeSignalUnLoadItem6
+            // 
+            this.UcHandshakeSignalUnLoadItem6.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadItem6.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadItem6.Location = new System.Drawing.Point(1044, 588);
+            this.UcHandshakeSignalUnLoadItem6.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadItem6.Name = "UcHandshakeSignalUnLoadItem6";
+            this.UcHandshakeSignalUnLoadItem6.Size = new System.Drawing.Size(220, 24);
+            this.UcHandshakeSignalUnLoadItem6.TabIndex = 370;
+            this.UcHandshakeSignalUnLoadItem6.Title = "VACUUM JIG2 REQ / ACK";
+            // 
+            // UcHandshakeSignalUnLoadItem7
+            // 
+            this.UcHandshakeSignalUnLoadItem7.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadItem7.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadItem7.Location = new System.Drawing.Point(1044, 612);
+            this.UcHandshakeSignalUnLoadItem7.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadItem7.Name = "UcHandshakeSignalUnLoadItem7";
+            this.UcHandshakeSignalUnLoadItem7.Size = new System.Drawing.Size(220, 24);
+            this.UcHandshakeSignalUnLoadItem7.TabIndex = 371;
+            this.UcHandshakeSignalUnLoadItem7.Title = "JIG1 EXIST / SELECT";
+            // 
+            // UcHandshakeSignalUnLoadItem8
+            // 
+            this.UcHandshakeSignalUnLoadItem8.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadItem8.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadItem8.Location = new System.Drawing.Point(1044, 636);
+            this.UcHandshakeSignalUnLoadItem8.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadItem8.Name = "UcHandshakeSignalUnLoadItem8";
+            this.UcHandshakeSignalUnLoadItem8.Size = new System.Drawing.Size(220, 24);
+            this.UcHandshakeSignalUnLoadItem8.TabIndex = 372;
+            this.UcHandshakeSignalUnLoadItem8.Title = "JIG2 EXIST / SELECT";
+            // 
+            // UcHandshakeSignalUnLoadSafetyItem1
+            // 
+            this.UcHandshakeSignalUnLoadSafetyItem1.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadSafetyItem1.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadSafetyItem1.Location = new System.Drawing.Point(1044, 362);
+            this.UcHandshakeSignalUnLoadSafetyItem1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadSafetyItem1.Name = "UcHandshakeSignalUnLoadSafetyItem1";
+            this.UcHandshakeSignalUnLoadSafetyItem1.Size = new System.Drawing.Size(220, 25);
+            this.UcHandshakeSignalUnLoadSafetyItem1.TabIndex = 361;
+            this.UcHandshakeSignalUnLoadSafetyItem1.Title = "EMS SAFE";
+            // 
+            // BtnTitleUnLoadSafety
+            // 
+            this.BtnTitleUnLoadSafety.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnTitleUnLoadSafety.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnTitleUnLoadSafety.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnTitleUnLoadSafety.Location = new System.Drawing.Point(1044, 334);
+            this.BtnTitleUnLoadSafety.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.BtnTitleUnLoadSafety.Name = "BtnTitleUnLoadSafety";
+            this.BtnTitleUnLoadSafety.Size = new System.Drawing.Size(220, 27);
+            this.BtnTitleUnLoadSafety.TabIndex = 360;
+            this.BtnTitleUnLoadSafety.TabStop = false;
+            this.BtnTitleUnLoadSafety.Text = "LOAD I/F SAFETY SIGNAL";
+            this.BtnTitleUnLoadSafety.UseVisualStyleBackColor = true;
+            // 
+            // UcHandshakeSignalUnLoadSafetyItem2
+            // 
+            this.UcHandshakeSignalUnLoadSafetyItem2.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadSafetyItem2.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadSafetyItem2.Location = new System.Drawing.Point(1044, 387);
+            this.UcHandshakeSignalUnLoadSafetyItem2.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadSafetyItem2.Name = "UcHandshakeSignalUnLoadSafetyItem2";
+            this.UcHandshakeSignalUnLoadSafetyItem2.Size = new System.Drawing.Size(220, 24);
+            this.UcHandshakeSignalUnLoadSafetyItem2.TabIndex = 362;
+            this.UcHandshakeSignalUnLoadSafetyItem2.Title = "DOOR CLOSE";
+            // 
+            // UcHandshakeSignalUnLoadSafetyItem3
+            // 
+            this.UcHandshakeSignalUnLoadSafetyItem3.BackColor = System.Drawing.Color.Transparent;
+            this.UcHandshakeSignalUnLoadSafetyItem3.IndicatorThicknessRatio = 0.1F;
+            this.UcHandshakeSignalUnLoadSafetyItem3.Location = new System.Drawing.Point(1044, 411);
+            this.UcHandshakeSignalUnLoadSafetyItem3.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.UcHandshakeSignalUnLoadSafetyItem3.Name = "UcHandshakeSignalUnLoadSafetyItem3";
+            this.UcHandshakeSignalUnLoadSafetyItem3.Size = new System.Drawing.Size(220, 24);
+            this.UcHandshakeSignalUnLoadSafetyItem3.TabIndex = 363;
+            this.UcHandshakeSignalUnLoadSafetyItem3.Title = "INTERLOCK SAFE";
+            // 
             // BtnMfqInputBase
             // 
             this.BtnMfqInputBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnMfqInputBase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMfqInputBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMfqInputBase.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.BtnMfqInputBase.Font = new System.Drawing.Font("Malgun Gothic", 9F);
             this.BtnMfqInputBase.Location = new System.Drawing.Point(12, 292);
             this.BtnMfqInputBase.Name = "BtnMfqInputBase";
             this.BtnMfqInputBase.Size = new System.Drawing.Size(220, 27);
@@ -475,7 +659,7 @@
             // 
             this.BtnTitleUnloadHandshake.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnTitleUnloadHandshake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnTitleUnloadHandshake.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnTitleUnloadHandshake.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnTitleUnloadHandshake.Location = new System.Drawing.Point(1044, 438);
             this.BtnTitleUnloadHandshake.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.BtnTitleUnloadHandshake.Name = "BtnTitleUnloadHandshake";
@@ -489,7 +673,7 @@
             // 
             this.BtnTitleLoadSafety.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnTitleLoadSafety.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnTitleLoadSafety.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnTitleLoadSafety.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnTitleLoadSafety.Location = new System.Drawing.Point(12, 328);
             this.BtnTitleLoadSafety.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.BtnTitleLoadSafety.Name = "BtnTitleLoadSafety";
@@ -503,7 +687,7 @@
             // 
             this.BtnTitleLoadHandshake.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnTitleLoadHandshake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnTitleLoadHandshake.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnTitleLoadHandshake.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnTitleLoadHandshake.Location = new System.Drawing.Point(12, 438);
             this.BtnTitleLoadHandshake.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.BtnTitleLoadHandshake.Name = "BtnTitleLoadHandshake";
@@ -517,7 +701,7 @@
             // 
             this.BtnLoadPending.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnLoadPending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLoadPending.Font = new System.Drawing.Font("맑은 고딕", 6F);
+            this.BtnLoadPending.Font = new System.Drawing.Font("Malgun Gothic", 6F);
             this.BtnLoadPending.Location = new System.Drawing.Point(12, 674);
             this.BtnLoadPending.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.BtnLoadPending.Name = "BtnLoadPending";
@@ -531,7 +715,7 @@
             // 
             this.BtnLoadHandshaking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnLoadHandshaking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLoadHandshaking.Font = new System.Drawing.Font("맑은 고딕", 6F);
+            this.BtnLoadHandshaking.Font = new System.Drawing.Font("Malgun Gothic", 6F);
             this.BtnLoadHandshaking.Location = new System.Drawing.Point(12, 702);
             this.BtnLoadHandshaking.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.BtnLoadHandshaking.Name = "BtnLoadHandshaking";
@@ -541,34 +725,13 @@
             this.BtnLoadHandshaking.Text = "LOAD I/F HANDSHAKING";
             this.BtnLoadHandshaking.UseVisualStyleBackColor = true;
             // 
-            // PnlUnloadHandshakeBitArea
-            // 
-            this.PnlUnloadHandshakeBitArea.Controls.Add(this.UcHandshakeSignalUnloadItem1);
-            this.PnlUnloadHandshakeBitArea.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.PnlUnloadHandshakeBitArea.Font = new System.Drawing.Font("맑은 고딕", 6F);
-            this.PnlUnloadHandshakeBitArea.Location = new System.Drawing.Point(1044, 468);
-            this.PnlUnloadHandshakeBitArea.Name = "PnlUnloadHandshakeBitArea";
-            this.PnlUnloadHandshakeBitArea.Size = new System.Drawing.Size(220, 28);
-            this.PnlUnloadHandshakeBitArea.TabIndex = 355;
-            // 
-            // UcHandshakeSignalUnloadItem1
-            // 
-            this.UcHandshakeSignalUnloadItem1.BackColor = System.Drawing.Color.Transparent;
-            this.UcHandshakeSignalUnloadItem1.IndicatorThicknessRatio = 0.1F;
-            this.UcHandshakeSignalUnloadItem1.Location = new System.Drawing.Point(0, 0);
-            this.UcHandshakeSignalUnloadItem1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.UcHandshakeSignalUnloadItem1.Name = "UcHandshakeSignalUnloadItem1";
-            this.UcHandshakeSignalUnloadItem1.Size = new System.Drawing.Size(220, 25);
-            this.UcHandshakeSignalUnloadItem1.TabIndex = 357;
-            this.UcHandshakeSignalUnloadItem1.Title = "CONVEYOR RUN";
-            // 
             // PnlLoadSafetyBitArea
             // 
             this.PnlLoadSafetyBitArea.Controls.Add(this.UcHandshakeSignalLoadSafetyItem1);
             this.PnlLoadSafetyBitArea.Controls.Add(this.UcHandshakeSignalLoadSafetyItem2);
             this.PnlLoadSafetyBitArea.Controls.Add(this.UcHandshakeSignalLoadSafetyItem3);
             this.PnlLoadSafetyBitArea.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.PnlLoadSafetyBitArea.Font = new System.Drawing.Font("맑은 고딕", 6F);
+            this.PnlLoadSafetyBitArea.Font = new System.Drawing.Font("Malgun Gothic", 6F);
             this.PnlLoadSafetyBitArea.Location = new System.Drawing.Point(12, 358);
             this.PnlLoadSafetyBitArea.Name = "PnlLoadSafetyBitArea";
             this.PnlLoadSafetyBitArea.Size = new System.Drawing.Size(220, 77);
@@ -618,7 +781,7 @@
             this.PnlLoadHandshakeBitArea.Controls.Add(this.UcHandshakeSignalLoadItem7);
             this.PnlLoadHandshakeBitArea.Controls.Add(this.UcHandshakeSignalLoadItem8);
             this.PnlLoadHandshakeBitArea.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.PnlLoadHandshakeBitArea.Font = new System.Drawing.Font("맑은 고딕", 6F);
+            this.PnlLoadHandshakeBitArea.Font = new System.Drawing.Font("Malgun Gothic", 6F);
             this.PnlLoadHandshakeBitArea.Location = new System.Drawing.Point(12, 468);
             this.PnlLoadHandshakeBitArea.Name = "PnlLoadHandshakeBitArea";
             this.PnlLoadHandshakeBitArea.Size = new System.Drawing.Size(220, 197);
@@ -993,7 +1156,7 @@
             this.BtnEquipmentBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnEquipmentBase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEquipmentBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEquipmentBase.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnEquipmentBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnEquipmentBase.ForeColor = System.Drawing.Color.Black;
             this.BtnEquipmentBase.Location = new System.Drawing.Point(12, 12);
             this.BtnEquipmentBase.Name = "BtnEquipmentBase";
@@ -1009,92 +1172,17 @@
             this.PnlEquipmentImage.BackColor = System.Drawing.Color.White;
             this.PnlEquipmentImage.BackgroundImage = global::SVI_NFT_R.Properties.Resources.TOP_VIEW_FLOW;
             this.PnlEquipmentImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PnlEquipmentImage.Controls.Add(this.PnlOutConveyorBoundary);
-            this.PnlEquipmentImage.Controls.Add(this.PnlBaseOutConveyor);
-            this.PnlEquipmentImage.Controls.Add(this.PnlInspStageBoundary);
             this.PnlEquipmentImage.Controls.Add(this.PnlBaseOutFlip);
+            this.PnlEquipmentImage.Controls.Add(this.PnlInspStageBoundary);
             this.PnlEquipmentImage.Controls.Add(this.BtnCellOut);
             this.PnlEquipmentImage.Controls.Add(this.PnlInShuttleBoundary);
+            this.PnlEquipmentImage.Controls.Add(this.PnlOutShuttleBoundary);
             this.PnlEquipmentImage.Controls.Add(this.PnlOutRobotBoundary);
             this.PnlEquipmentImage.Controls.Add(this.PnlInRobotBoundary);
-            this.PnlEquipmentImage.Location = new System.Drawing.Point(220, 52);
+            this.PnlEquipmentImage.Location = new System.Drawing.Point(176, 58);
             this.PnlEquipmentImage.Name = "PnlEquipmentImage";
-            this.PnlEquipmentImage.Size = new System.Drawing.Size(846, 663);
+            this.PnlEquipmentImage.Size = new System.Drawing.Size(865, 663);
             this.PnlEquipmentImage.TabIndex = 311;
-            // 
-            // PnlOutConveyorBoundary
-            // 
-            this.PnlOutConveyorBoundary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
-            this.PnlOutConveyorBoundary.Location = new System.Drawing.Point(652, 332);
-            this.PnlOutConveyorBoundary.Name = "PnlOutConveyorBoundary";
-            this.PnlOutConveyorBoundary.Size = new System.Drawing.Size(235, 24);
-            this.PnlOutConveyorBoundary.TabIndex = 342;
-            // 
-            // PnlBaseOutConveyor
-            // 
-            this.PnlBaseOutConveyor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(215)))), ((int)(((byte)(194)))));
-            this.PnlBaseOutConveyor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PnlBaseOutConveyor.Controls.Add(this.BtnSensorBlockedDetect);
-            this.PnlBaseOutConveyor.Controls.Add(this.label1);
-            this.PnlBaseOutConveyor.Controls.Add(this.BtnSensorDetectP1);
-            this.PnlBaseOutConveyor.Controls.Add(this.BtnSensorDetectP2);
-            this.PnlBaseOutConveyor.Location = new System.Drawing.Point(630, 301);
-            this.PnlBaseOutConveyor.Name = "PnlBaseOutConveyor";
-            this.PnlBaseOutConveyor.Size = new System.Drawing.Size(144, 83);
-            this.PnlBaseOutConveyor.TabIndex = 343;
-            // 
-            // BtnSensorBlockedDetect
-            // 
-            this.BtnSensorBlockedDetect.BackColor = System.Drawing.Color.White;
-            this.BtnSensorBlockedDetect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSensorBlockedDetect.Location = new System.Drawing.Point(133, 23);
-            this.BtnSensorBlockedDetect.Name = "BtnSensorBlockedDetect";
-            this.BtnSensorBlockedDetect.Size = new System.Drawing.Size(5, 40);
-            this.BtnSensorBlockedDetect.TabIndex = 347;
-            this.BtnSensorBlockedDetect.TabStop = false;
-            this.BtnSensorBlockedDetect.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(2, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 12);
-            this.label1.TabIndex = 298;
-            this.label1.Text = "OutConveyor";
-            // 
-            // BtnSensorDetectP1
-            // 
-            this.BtnSensorDetectP1.BackColor = System.Drawing.Color.White;
-            this.BtnSensorDetectP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSensorDetectP1.Location = new System.Drawing.Point(90, 66);
-            this.BtnSensorDetectP1.Name = "BtnSensorDetectP1";
-            this.BtnSensorDetectP1.Size = new System.Drawing.Size(32, 7);
-            this.BtnSensorDetectP1.TabIndex = 346;
-            this.BtnSensorDetectP1.TabStop = false;
-            this.BtnSensorDetectP1.UseVisualStyleBackColor = false;
-            // 
-            // BtnSensorDetectP2
-            // 
-            this.BtnSensorDetectP2.BackColor = System.Drawing.Color.White;
-            this.BtnSensorDetectP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSensorDetectP2.Location = new System.Drawing.Point(25, 66);
-            this.BtnSensorDetectP2.Name = "BtnSensorDetectP2";
-            this.BtnSensorDetectP2.Size = new System.Drawing.Size(32, 7);
-            this.BtnSensorDetectP2.TabIndex = 344;
-            this.BtnSensorDetectP2.TabStop = false;
-            this.BtnSensorDetectP2.UseVisualStyleBackColor = false;
-            // 
-            // PnlInspStageBoundary
-            // 
-            this.PnlInspStageBoundary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
-            this.PnlInspStageBoundary.Location = new System.Drawing.Point(479, 310);
-            this.PnlInspStageBoundary.Name = "PnlInspStageBoundary";
-            this.PnlInspStageBoundary.Size = new System.Drawing.Size(70, 314);
-            this.PnlInspStageBoundary.TabIndex = 311;
             // 
             // PnlBaseOutFlip
             // 
@@ -1103,7 +1191,7 @@
             this.PnlBaseOutFlip.Controls.Add(this.UcCellOutFlipP1);
             this.PnlBaseOutFlip.Controls.Add(this.UcCellOutFlipP2);
             this.PnlBaseOutFlip.Controls.Add(this.LblTitleOutFlip);
-            this.PnlBaseOutFlip.Location = new System.Drawing.Point(631, 221);
+            this.PnlBaseOutFlip.Location = new System.Drawing.Point(621, 261);
             this.PnlBaseOutFlip.Name = "PnlBaseOutFlip";
             this.PnlBaseOutFlip.Size = new System.Drawing.Size(138, 75);
             this.PnlBaseOutFlip.TabIndex = 342;
@@ -1155,13 +1243,21 @@
             // 
             this.LblTitleOutFlip.AutoSize = true;
             this.LblTitleOutFlip.BackColor = System.Drawing.Color.Transparent;
-            this.LblTitleOutFlip.Font = new System.Drawing.Font("맑은 고딕", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LblTitleOutFlip.Font = new System.Drawing.Font("Malgun Gothic", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblTitleOutFlip.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LblTitleOutFlip.Location = new System.Drawing.Point(2, 3);
             this.LblTitleOutFlip.Name = "LblTitleOutFlip";
             this.LblTitleOutFlip.Size = new System.Drawing.Size(33, 12);
             this.LblTitleOutFlip.TabIndex = 298;
             this.LblTitleOutFlip.Text = "OutFlip";
+            // 
+            // PnlInspStageBoundary
+            // 
+            this.PnlInspStageBoundary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.PnlInspStageBoundary.Location = new System.Drawing.Point(479, 310);
+            this.PnlInspStageBoundary.Name = "PnlInspStageBoundary";
+            this.PnlInspStageBoundary.Size = new System.Drawing.Size(70, 314);
+            this.PnlInspStageBoundary.TabIndex = 311;
             // 
             // BtnCellOut
             // 
@@ -1170,7 +1266,7 @@
             this.BtnCellOut.ButtonText = "CELL OUT (a.k.a SCRAP)";
             this.BtnCellOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCellOut.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BtnCellOut.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnCellOut.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnCellOut.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.BtnCellOut.Location = new System.Drawing.Point(319, 14);
             this.BtnCellOut.Name = "BtnCellOut";
@@ -1189,6 +1285,14 @@
             this.PnlInShuttleBoundary.Size = new System.Drawing.Size(335, 67);
             this.PnlInShuttleBoundary.TabIndex = 310;
             // 
+            // PnlOutShuttleBoundary
+            // 
+            this.PnlOutShuttleBoundary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.PnlOutShuttleBoundary.Location = new System.Drawing.Point(610, 352);
+            this.PnlOutShuttleBoundary.Name = "PnlOutShuttleBoundary";
+            this.PnlOutShuttleBoundary.Size = new System.Drawing.Size(236, 73);
+            this.PnlOutShuttleBoundary.TabIndex = 342;
+            // 
             // PnlOutRobotBoundary
             // 
             this.PnlOutRobotBoundary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
@@ -1204,28 +1308,6 @@
             this.PnlInRobotBoundary.Name = "PnlInRobotBoundary";
             this.PnlInRobotBoundary.Size = new System.Drawing.Size(377, 518);
             this.PnlInRobotBoundary.TabIndex = 311;
-            // 
-            // BtnCellOutConveyorP1
-            // 
-            this.BtnCellOutConveyorP1.BackColor = System.Drawing.Color.Black;
-            this.BtnCellOutConveyorP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCellOutConveyorP1.Location = new System.Drawing.Point(1395, 403);
-            this.BtnCellOutConveyorP1.Name = "BtnCellOutConveyorP1";
-            this.BtnCellOutConveyorP1.Size = new System.Drawing.Size(40, 24);
-            this.BtnCellOutConveyorP1.TabIndex = 343;
-            this.BtnCellOutConveyorP1.TabStop = false;
-            this.BtnCellOutConveyorP1.UseVisualStyleBackColor = false;
-            // 
-            // BtnCellOutConveyorP2
-            // 
-            this.BtnCellOutConveyorP2.BackColor = System.Drawing.Color.Black;
-            this.BtnCellOutConveyorP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCellOutConveyorP2.Location = new System.Drawing.Point(1330, 403);
-            this.BtnCellOutConveyorP2.Name = "BtnCellOutConveyorP2";
-            this.BtnCellOutConveyorP2.Size = new System.Drawing.Size(40, 24);
-            this.BtnCellOutConveyorP2.TabIndex = 0;
-            this.BtnCellOutConveyorP2.TabStop = false;
-            this.BtnCellOutConveyorP2.UseVisualStyleBackColor = false;
             // 
             // PnlBaseOutRobot90
             // 
@@ -1288,7 +1370,7 @@
             // 
             this.LblTitleOutRobot90.AutoSize = true;
             this.LblTitleOutRobot90.BackColor = System.Drawing.Color.Transparent;
-            this.LblTitleOutRobot90.Font = new System.Drawing.Font("맑은 고딕", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LblTitleOutRobot90.Font = new System.Drawing.Font("Malgun Gothic", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblTitleOutRobot90.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LblTitleOutRobot90.Location = new System.Drawing.Point(2, 3);
             this.LblTitleOutRobot90.Name = "LblTitleOutRobot90";
@@ -1357,7 +1439,7 @@
             // 
             this.LblTitleInRobot90.AutoSize = true;
             this.LblTitleInRobot90.BackColor = System.Drawing.Color.Transparent;
-            this.LblTitleInRobot90.Font = new System.Drawing.Font("맑은 고딕", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LblTitleInRobot90.Font = new System.Drawing.Font("Malgun Gothic", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblTitleInRobot90.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LblTitleInRobot90.Location = new System.Drawing.Point(2, 3);
             this.LblTitleInRobot90.Name = "LblTitleInRobot90";
@@ -1365,15 +1447,81 @@
             this.LblTitleInRobot90.TabIndex = 298;
             this.LblTitleInRobot90.Text = "InRobot";
             // 
+            // PnlBaseOutShuttle
+            // 
+            this.PnlBaseOutShuttle.BackColor = System.Drawing.Color.GhostWhite;
+            this.PnlBaseOutShuttle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlBaseOutShuttle.Controls.Add(this.UcCellOutShuttleP2);
+            this.PnlBaseOutShuttle.Controls.Add(this.UcCellOutShuttleP1);
+            this.PnlBaseOutShuttle.Controls.Add(this.label1);
+            this.PnlBaseOutShuttle.Location = new System.Drawing.Point(1315, 429);
+            this.PnlBaseOutShuttle.Name = "PnlBaseOutShuttle";
+            this.PnlBaseOutShuttle.Size = new System.Drawing.Size(134, 67);
+            this.PnlBaseOutShuttle.TabIndex = 343;
+            // 
+            // UcCellOutShuttleP2
+            // 
+            this.UcCellOutShuttleP2.BackColor = System.Drawing.Color.Transparent;
+            this.UcCellOutShuttleP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.UcCellOutShuttleP2.IndicatorGap = 1;
+            this.UcCellOutShuttleP2.IndicatorThickness = 8;
+            this.UcCellOutShuttleP2.IsSensorOn = true;
+            this.UcCellOutShuttleP2.Location = new System.Drawing.Point(4, 20);
+            this.UcCellOutShuttleP2.LogicalHeight = 38;
+            this.UcCellOutShuttleP2.LogicalWidth = 60;
+            this.UcCellOutShuttleP2.Margin = new System.Windows.Forms.Padding(4);
+            this.UcCellOutShuttleP2.Name = "UcCellOutShuttleP2";
+            this.UcCellOutShuttleP2.SensorImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.UcCellOutShuttleP2.SensorImageMargin = new System.Windows.Forms.Padding(1);
+            this.UcCellOutShuttleP2.SensorImageSize = new System.Drawing.Size(16, 16);
+            this.UcCellOutShuttleP2.SensorOffImage = null;
+            this.UcCellOutShuttleP2.SensorOnImage = null;
+            this.UcCellOutShuttleP2.Size = new System.Drawing.Size(60, 38);
+            this.UcCellOutShuttleP2.TabIndex = 314;
+            this.UcCellOutShuttleP2.Title = "2";
+            this.UcCellOutShuttleP2.UseLogicalSizing = false;
+            // 
+            // UcCellOutShuttleP1
+            // 
+            this.UcCellOutShuttleP1.BackColor = System.Drawing.Color.Transparent;
+            this.UcCellOutShuttleP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.UcCellOutShuttleP1.IndicatorGap = 1;
+            this.UcCellOutShuttleP1.IndicatorThickness = 8;
+            this.UcCellOutShuttleP1.IsSensorOn = true;
+            this.UcCellOutShuttleP1.Location = new System.Drawing.Point(69, 20);
+            this.UcCellOutShuttleP1.LogicalHeight = 38;
+            this.UcCellOutShuttleP1.LogicalWidth = 60;
+            this.UcCellOutShuttleP1.Margin = new System.Windows.Forms.Padding(4);
+            this.UcCellOutShuttleP1.Name = "UcCellOutShuttleP1";
+            this.UcCellOutShuttleP1.SensorImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.UcCellOutShuttleP1.SensorImageMargin = new System.Windows.Forms.Padding(1);
+            this.UcCellOutShuttleP1.SensorImageSize = new System.Drawing.Size(16, 16);
+            this.UcCellOutShuttleP1.SensorOffImage = null;
+            this.UcCellOutShuttleP1.SensorOnImage = null;
+            this.UcCellOutShuttleP1.Size = new System.Drawing.Size(60, 38);
+            this.UcCellOutShuttleP1.TabIndex = 313;
+            this.UcCellOutShuttleP1.UseLogicalSizing = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(2, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 12);
+            this.label1.TabIndex = 298;
+            this.label1.Text = "OutShuttle";
+            // 
             // CFormMainFlow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1900, 733);
-            this.Controls.Add(this.BtnCellOutConveyorP1);
+            this.Controls.Add(this.PnlBaseOutShuttle);
             this.Controls.Add(this.PnlBaseInShuttle);
-            this.Controls.Add(this.BtnCellOutConveyorP2);
             this.Controls.Add(this.PnlBaseInspStage);
             this.Controls.Add(this.PnlBaseInRobot90);
             this.Controls.Add(this.PnlBaseInRobot);
@@ -1397,20 +1545,19 @@
             this.PnlBaseInspStage.ResumeLayout(false);
             this.PnlBaseInspStage.PerformLayout();
             this.PnlDisplayArea.ResumeLayout(false);
-            this.PnlUnloadHandshakeBitArea.ResumeLayout(false);
             this.PnlLoadSafetyBitArea.ResumeLayout(false);
             this.PnlLoadHandshakeBitArea.ResumeLayout(false);
             this.pnlDescriptionBase.ResumeLayout(false);
             this.pnlDescriptionBase.PerformLayout();
             this.PnlEquipmentImage.ResumeLayout(false);
-            this.PnlBaseOutConveyor.ResumeLayout(false);
-            this.PnlBaseOutConveyor.PerformLayout();
             this.PnlBaseOutFlip.ResumeLayout(false);
             this.PnlBaseOutFlip.PerformLayout();
             this.PnlBaseOutRobot90.ResumeLayout(false);
             this.PnlBaseOutRobot90.PerformLayout();
             this.PnlBaseInRobot90.ResumeLayout(false);
             this.PnlBaseInRobot90.PerformLayout();
+            this.PnlBaseOutShuttle.ResumeLayout(false);
+            this.PnlBaseOutShuttle.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1468,8 +1615,6 @@
         private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalLoadItem4;
         private UiAsset.SpeedButton BtnTitleUnloadHandshake;
         private UiAsset.SpeedButton BtnTitleLoadSafety;
-        private System.Windows.Forms.FlowLayoutPanel PnlUnloadHandshakeBitArea;
-        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnloadItem1;
         private System.Windows.Forms.FlowLayoutPanel PnlLoadSafetyBitArea;
         private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalLoadSafetyItem1;
         private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalLoadSafetyItem2;
@@ -1482,14 +1627,7 @@
         private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalLoadItem8;
         private System.Windows.Forms.Panel PnlBaseOutFlip;
         private System.Windows.Forms.Label LblTitleOutFlip;
-        private System.Windows.Forms.Panel PnlBaseOutConveyor;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel PnlOutConveyorBoundary;
-        private UiAsset.SpeedButton BtnCellOutConveyorP2;
-        private UiAsset.SpeedButton BtnCellOutConveyorP1;
-        private UiAsset.SpeedButton BtnSensorBlockedDetect;
-        private UiAsset.SpeedButton BtnSensorDetectP1;
-        private UiAsset.SpeedButton BtnSensorDetectP2;
+        private System.Windows.Forms.Panel PnlOutShuttleBoundary;
         private UI.UserControls.UcCellIndicator UcCellOutFlipP1;
         private UI.UserControls.UcCellIndicator UcCellOutFlipP2;
         private UI.UserControls.UcCell UcCellOutRobotP2;
@@ -1503,5 +1641,23 @@
         private UI.UserControls.UcCell UcCellInRobot90P2;
         private UI.UserControls.UcCell UcCellInRobot90P1;
         private System.Windows.Forms.Label LblTitleInRobot90;
+        private System.Windows.Forms.Panel PnlBaseOutShuttle;
+        private UI.UserControls.UcCell UcCellOutShuttleP2;
+        private UI.UserControls.UcCell UcCellOutShuttleP1;
+        private System.Windows.Forms.Label label1;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadSafetyItem1;
+        private UiAsset.SpeedButton BtnTitleUnLoadSafety;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadSafetyItem2;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadSafetyItem3;
+        private UiAsset.SpeedButton BtnUnLoadPending;
+        private UiAsset.SpeedButton BtnUnLoadHandshaking;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadItem1;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadItem2;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadItem3;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadItem4;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadItem5;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadItem6;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadItem7;
+        private UI.UserControls.UcHandshakeSignalItem UcHandshakeSignalUnLoadItem8;
     }
 }

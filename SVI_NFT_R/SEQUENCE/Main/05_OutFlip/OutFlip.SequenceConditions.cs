@@ -142,10 +142,10 @@ namespace SVI_NFT_R
             {
                 return false;
             }
-            if (MotorConveyorX.CanMovingGroupByEhsPolicy() == false)
-            {
-                return false;
-            }
+            //if (MotorConveyorX.CanMovingGroupByEhsPolicy() == false)
+            //{
+            //    return false;
+            //}
             if (IsOtherEquipmentPendingTimeout() == true)
             {
                 mNotificationMessage = CAlarmDefine.EMessageList.LOWER_EQUIPMENT_INTERFACE_PENDING_PARAM1;
@@ -212,10 +212,10 @@ namespace SVI_NFT_R
                 return false;
             }
             // 아웃 컨베이어가 언로드 위치가 아니다
-            if (MotorConveyorX.IsArrivalUnloadPosition() == false)
-            {
-                return false;
-            }
+            //if (MotorConveyorX.IsArrivalUnloadPosition() == false)
+            //{
+            //    return false;
+            //}
             if (CanMoving() == false)
             {
                 return false;
@@ -225,10 +225,10 @@ namespace SVI_NFT_R
 
         private bool CanMoving()
         {
-            if (MotorConveyorX.CanMovingGroupByEhsPolicy() == false)
-            {
-                return false;
-            }
+            //if (MotorConveyorX.CanMovingGroupByEhsPolicy() == false)
+            //{
+            //    return false;
+            //}
             return true;
         }
 
@@ -240,23 +240,23 @@ namespace SVI_NFT_R
                 return false;
             }
             // 외부 컨베이어가 동작중이다
-            if (IsExternalConveyorRun == true)
-            {
-                // 언로드 위치에 도착하지 못했다
-                if (MotorConveyorX.IsArrivalUnloadPosition() == false)
-                {
-                    return false;
-                }
-            }
+            //if (IsExternalConveyorRun == true)
+            //{
+            //    // 언로드 위치에 도착하지 못했다
+            //    if (MotorConveyorX.IsArrivalUnloadPosition() == false)
+            //    {
+            //        return false;
+            //    }
+            //}
             // 컨베이어가 동작중이 아니다
-            if (MotorConveyorX.IsRunning() == false)
-            {
-                // ! MCC 로그 동기를 맞추기 위해 외부 요인에 의해서 정지된 경우가 아니라도 한 번은 실행되어야함
-                if (mConveyorRun == false)
-                {
-                    return false;
-                }
-            }
+            //if (MotorConveyorX.IsRunning() == false)
+            //{
+            //    // ! MCC 로그 동기를 맞추기 위해 외부 요인에 의해서 정지된 경우가 아니라도 한 번은 실행되어야함
+            //    if (mConveyorRun == false)
+            //    {
+            //        return false;
+            //    }
+            //}
             return true;
         }
 
@@ -273,19 +273,19 @@ namespace SVI_NFT_R
                 return false;
             }
             // 언로드 위치에 도착했다
-            if (MotorConveyorX.IsArrivalUnloadPosition() == true)
-            {
-                return false;
-            }
-            // 컨베이어가 동작중이다
-            if (MotorConveyorX.IsRunning() == true)
-            {
-                // ! MCC 로그 동기를 맞추기 위해 외부 요인에 의해서 시작된 경우가 아니라도 한 번은 실행되어야함
-                if (mConveyorRun == true)
-                {
-                    return false;
-                }
-            }
+            //if (MotorConveyorX.IsArrivalUnloadPosition() == true)
+            //{
+            //    return false;
+            //}
+            //// 컨베이어가 동작중이다
+            //if (MotorConveyorX.IsRunning() == true)
+            //{
+            //    // ! MCC 로그 동기를 맞추기 위해 외부 요인에 의해서 시작된 경우가 아니라도 한 번은 실행되어야함
+            //    if (mConveyorRun == true)
+            //    {
+            //        return false;
+            //    }
+            //}
             // 외부 컨베이어가 동작중이 아니다
             if (IsExternalConveyorRun == false)
             {

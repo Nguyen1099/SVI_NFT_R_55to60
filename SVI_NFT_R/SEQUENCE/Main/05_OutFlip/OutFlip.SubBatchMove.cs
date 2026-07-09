@@ -18,22 +18,22 @@ namespace SVI_NFT_R
         }
         public EBatch BatchCommand { get; set; }
 
-        public bool DoManualSetZero()
-        {
-            // 인터락 체크
-            if (MotorConveyorX.m_objInterlock.CheckMotionClassInterlock(MotorConveyorX.MotorIndex.ToString(), (int)OutFlipMotorX.ECommand.PositionZeroSet) == false)
-            {
-                return false;
-            }
-            // Set Zero
-            MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.PositionZeroSet);
-            if (false == MotorConveyorX.WaitForEndProcess())
-            {
-                return false;
-            }
+        //public bool DoManualSetZero()
+        //{
+        //    // 인터락 체크
+        //    if (MotorConveyorX.m_objInterlock.CheckMotionClassInterlock(MotorConveyorX.MotorIndex.ToString(), (int)OutFlipMotorX.ECommand.PositionZeroSet) == false)
+        //    {
+        //        return false;
+        //    }
+        //    // Set Zero
+        //    MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.PositionZeroSet);
+        //    if (false == MotorConveyorX.WaitForEndProcess())
+        //    {
+        //        return false;
+        //    }
 
-            return true;
-        }
+        //    return true;
+        //}
 
         public bool DoManualLoadWait()
         {
@@ -85,11 +85,11 @@ namespace SVI_NFT_R
                     return false;
                 }
                 // Set Zero
-                MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.PositionZeroSet);
-                if (false == MotorConveyorX.WaitForEndProcess())
-                {
-                    return false;
-                }
+                //MotorConveyorX.SetCommand(OutFlipMotorX.ECommand.PositionZeroSet);
+                //if (false == MotorConveyorX.WaitForEndProcess())
+                //{
+                //    return false;
+                //}
             }
             finally
             {
@@ -136,9 +136,9 @@ namespace SVI_NFT_R
                     case EBatch.None:
                         continue;
 
-                    case EBatch.SetZero:
-                        DoManualSetZero();
-                        break;
+                    //case EBatch.SetZero:
+                    //    DoManualSetZero();
+                    //    break;
 
                     case EBatch.LoadWait:
                         DoManualLoadWait();

@@ -475,6 +475,7 @@
     <Compile Include="Data\KeepData.cs" />
     <Compile Include="Data\Mcc\Log\LogItems\ActionLog\05_OutFlipMccLogItems.cs" />
     <Compile Include="Data\Mcc\Log\LogItems\ActionLog\06_OutConveyorMccLogItems.cs" />
+    <Compile Include="Data\Mcc\Log\LogItems\ActionLog\06_OutShuttleMccLogItems.cs" />
     <Compile Include="Data\Mcc\Log\MccLogManager.cs" />
     <Compile Include="Data\Mcc\Log\Extention\MccLogExtention.cs" />
     <Compile Include="Data\Mcc\Log\Extention\MccLogProvider.cs" />
@@ -717,12 +718,15 @@
     <Compile Include="SEQUENCE\Common\UnitManager.cs" />
     <Compile Include="SEQUENCE\Common\UnitManager.UnitGroupOption.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\EVacuumCommand.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\IActiveVacuumRequest.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\ICheckPending.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\IPassiveVacuumAction.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\IProcessManagerUnloadInterface.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\ReceiveVacuumEventArgs.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\Address.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\AddressOptionSet.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\Define\LoadInterface.Define.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\Define\UnloadInterface.Define.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\LoadInterface.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\LoadInterfaceSignalController.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\EEqToEqUiGroup.cs" />
@@ -731,6 +735,8 @@
     <Compile Include="SEQUENCE\Main\00_EqToEq\EqToEqUiOneBitSet.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\EqToEqUiOneDataSet.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\IProcessManagerLoadInterface.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\UnloadInterface.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\UnloadInterfaceSignalController.cs" />
     <Compile Include="SEQUENCE\Main\01_InShuttle\Define\InShuttle.Define.cs" />
     <Compile Include="SEQUENCE\Main\01_InShuttle\Define\InShuttleAlignVision.Define.cs" />
     <Compile Include="SEQUENCE\Main\01_InShuttle\Define\InShuttleInspect.Define.cs" />
@@ -803,6 +809,14 @@
     <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlipMotorZ.cs" />
     <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlipPicker.cs" />
     <Compile Include="SEQUENCE\Main\05_OutFlip\OutFlipSensor.cs" />
+    <Compile Include="SEQUENCE\Main\06_OutShuttle\Define\OutShuttleMotorX.Define.cs" />
+    <Compile Include="SEQUENCE\Main\06_OutShuttle\Define\OutShuttlePicker.Define.cs" />
+    <Compile Include="SEQUENCE\Main\06_OutShuttle\Define\OutShuttle.Define.cs" />
+    <Compile Include="SEQUENCE\Main\06_OutShuttle\OutShuttle.cs" />
+    <Compile Include="SEQUENCE\Main\06_OutShuttle\OutShuttleInterlock.cs" />
+    <Compile Include="SEQUENCE\Main\06_OutShuttle\OutShuttlePicker.cs" />
+    <Compile Include="SEQUENCE\Main\06_OutShuttle\OutShuttleMotorX.cs" />
+    <Compile Include="SEQUENCE\Main\06_OutShuttle\OutShuttle.SequenceConditions.cs" />
     <Compile Include="UI\Dialog\CDialogAlarmPosition.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -969,17 +983,23 @@
     <Compile Include="UI\Form\Teach\CFormTeachInRobot.designer.cs">
       <DependentUpon>CFormTeachInRobot.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Form\Teach\CFormTeachOutFlip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Form\Teach\CFormTeachOutFlip.designer.cs">
-      <DependentUpon>CFormTeachOutFlip.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Form\Teach\CFormTeachInShuttle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Form\Teach\CFormTeachInShuttle.designer.cs">
       <DependentUpon>CFormTeachInShuttle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachOutShuttle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachOutShuttle.designer.cs">
+      <DependentUpon>CFormTeachOutShuttle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachOutFlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form\Teach\CFormTeachOutFlip.designer.cs">
+      <DependentUpon>CFormTeachOutFlip.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Form\Teach\CFormTeachInspStage.cs">
       <SubType>Form</SubType>
@@ -1590,11 +1610,14 @@
     <EmbeddedResource Include="UI\Form\Teach\CFormTeachInRobot.resx">
       <DependentUpon>CFormTeachInRobot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Form\Teach\CFormTeachOutFlip.resx">
-      <DependentUpon>CFormTeachOutFlip.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Form\Teach\CFormTeachInShuttle.resx">
       <DependentUpon>CFormTeachInShuttle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachOutShuttle.resx">
+      <DependentUpon>CFormTeachOutShuttle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form\Teach\CFormTeachOutFlip.resx">
+      <DependentUpon>CFormTeachOutFlip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form\Teach\CFormTeachInspStage.resx">
       <DependentUpon>CFormTeachInspStage.cs</DependentUpon>
@@ -1680,6 +1703,15 @@
     <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq\MonitorIO.Words.xlsx" />
     <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataGroups\EqToEq\EqToEq.BitDeviceMap.xlsx" />
     <None Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataGroups\EqToEq\EqToEq.WordDeviceMap.xlsx" />
+    <Compile Include="SEQUENCE\Main\06_OutShuttle\OutShuttle.SubBatchMove.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.LowerToSelf.BitsSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.LowerToSelf.Bits.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.LowerToSelf.WordsSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.LowerToSelf.Words.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToLower.BitsSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToLower.Bits.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToLower.WordsSet.g.cs" />
+    <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToLower.Words.g.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToUpper.BitsSet.g.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToUpper.Bits.g.cs" />
     <Compile Include="SEQUENCE\Main\00_EqToEq\SDV Gamma Foldable Line\GeneratedSource\DataBlocks\EqToEq.SelfToUpper.WordsSet.g.cs" />

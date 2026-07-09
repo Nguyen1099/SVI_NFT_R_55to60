@@ -1097,6 +1097,13 @@ namespace SVI_NFT_R
                     m_objProcessMotion.LoadInterface.UpdateTickHeartbeatSignals();
                 }
             }
+            else
+            {
+                if (true == m_objProcessMotion.UnloadInterface.IsInitialized)
+                {
+                    m_objProcessMotion.UnloadInterface.UpdateTickHeartbeatSignals();
+                }
+            }
         }
 
         /// <summary>
@@ -1115,7 +1122,11 @@ namespace SVI_NFT_R
             }
             else
             {
-                m_objDocument.m_eRearState[0] = CCIMDefine.ERearEquipmentState.REAR_STATE_UP;
+                //m_objDocument.m_eRearState[0] = CCIMDefine.ERearEquipmentState.REAR_STATE_UP;
+                if (true == m_objProcessMotion.UnloadInterface.IsInitialized)
+                {
+                    m_objDocument.m_eRearState[0] = true == m_objProcessMotion.UnloadInterface.IsLowerHeartBeat ? CCIMDefine.ERearEquipmentState.REAR_STATE_UP : CCIMDefine.ERearEquipmentState.REAR_STATE_DOWN;
+                }
             }
         }
 
@@ -1161,6 +1172,8 @@ namespace SVI_NFT_R
             // 투입부 INTERLOCK 상태 업데이트
             bool bLoadInterlock = false;
 
+            bool bUnloadInterlock = false;
+
             // 업데이트
             {
                 m_objProcessMotion.LoadInterface.SetEmergency(bEmergency);
@@ -1172,6 +1185,17 @@ namespace SVI_NFT_R
                 m_objProcessMotion.LoadInterface.SetHeavyAlarm(bHeavyAlarm);
                 m_objProcessMotion.LoadInterface.SetLightAlarm(bLightAlarm);
                 m_objProcessMotion.LoadInterface.SetInitialStatus(bInitialStatus);
+
+                m_objProcessMotion.UnloadInterface.SetEmergency(bEmergency);
+                m_objProcessMotion.UnloadInterface.SetPause(bPause);
+                m_objProcessMotion.UnloadInterface.SetDoorOpen(bDoorOpen);
+                m_objProcessMotion.UnloadInterface.SetAbnormal(bAbnormal);
+                m_objProcessMotion.UnloadInterface.SetInterlock(0, bUnloadInterlock);
+                m_objProcessMotion.UnloadInterface.SetMcStatus(bMcStatus);
+                m_objProcessMotion.UnloadInterface.SetHeavyAlarm(bHeavyAlarm);
+                m_objProcessMotion.UnloadInterface.SetLightAlarm(bLightAlarm);
+                m_objProcessMotion.UnloadInterface.SetInitialStatus(bInitialStatus);
+
             }
         }
 

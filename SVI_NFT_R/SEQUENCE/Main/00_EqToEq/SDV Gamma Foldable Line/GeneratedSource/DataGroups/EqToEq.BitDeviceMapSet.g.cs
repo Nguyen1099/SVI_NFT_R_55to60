@@ -18,12 +18,16 @@ namespace EqToEq
     {
         public EqToEq.UpperToSelf.BitsSet UpperToSelf { get; set; }
         public EqToEq.SelfToUpper.BitsSet SelfToUpper { get; set; }
+        public EqToEq.SelfToLower.BitsSet SelfToLower { get; set; }
+        public EqToEq.LowerToSelf.BitsSet LowerToSelf { get; set; }
 
         public BitDeviceMapSet()
         {
             var handlingData = DataMappingAssignManager.GetDataOrNullFromType(typeof(BitDeviceMap));
             UpperToSelf = new EqToEq.UpperToSelf.BitsSet();
             SelfToUpper = new EqToEq.SelfToUpper.BitsSet();
+            SelfToLower = new EqToEq.SelfToLower.BitsSet();
+            LowerToSelf = new EqToEq.LowerToSelf.BitsSet();
         }
     }
 }

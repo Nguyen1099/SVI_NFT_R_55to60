@@ -31,6 +31,8 @@ namespace SVI_NFT_R
             OUT_FLIP_VACUUM_P1_2,
             OUT_FLIP_VACUUM_P2_1,
             OUT_FLIP_VACUUM_P2_2,
+            OUT_SHUTTLE_VACUUM_P1,
+            OUT_SHUTTLE_VACUUM_P2,
         }
 
         public enum ECylinder
@@ -48,7 +50,7 @@ namespace SVI_NFT_R
             OUT_FLIP_R1,
             OUT_FLIP_R2,
             OUT_FLIP_Z,
-            OUT_CONVEYOR_X2,
+            OUT_SHUTTLE_X2,
             IN_SHUTTLE_X1_TRIGGER_MODULE,
         }
 
@@ -63,7 +65,10 @@ namespace SVI_NFT_R
         public InspStage InspStage { get; private set; }
         public OutRobot OutRobot { get; private set; }
         public OutFlip OutFlip { get; private set; }
+        public OutShuttle OutShuttle { get; private set; }
         public IProcessManagerLoadInterface LoadInterface { get; private set; }
+
+        public IProcessManagerUnloadInterface UnloadInterface { get; private set; }
         public TrackOut TrackOut { get; private set; }
         public Dictionary<EMotor, CProcessInterlock> MotorInterlocks { get; private set; } = new Dictionary<EMotor, CProcessInterlock>(Enum.GetNames(typeof(EMotor)).Length);
         public Dictionary<EMotor, CDeviceMotor> m_objMotor { get; private set; }
@@ -86,8 +91,10 @@ namespace SVI_NFT_R
         private const int MOTOR_INDEX_OUT_FLIP_R2 = 3;
         private const int BOARD_INDEX_OUT_FLIP_Z = 0;
         private const int MOTOR_INDEX_OUT_FLIP_Z = 4;
-        private const int BOARD_INDEX_OUT_CONVEYOR_X2 = 0;
-        private const int MOTOR_INDEX_OUT_CONVEYOR_X2 = 5;
+        //private const int BOARD_INDEX_OUT_CONVEYOR_X2 = 0;
+        //private const int MOTOR_INDEX_OUT_CONVEYOR_X2 = 5;
+        private const int BOARD_INDEX_OUT_SHUTTLE_X2 = 0;
+        private const int MOTOR_INDEX_OUT_SHUTTLE_X2 = 5;
         private const int BOARD_INDEX_IN_SHUTTLE_X1_TRIGGER_MODULE = 0;
         private const int MOTOR_INDEX_IN_SHUTTLE_X1_TRIGGER_MODULE = 6;
         #endregion
@@ -134,14 +141,18 @@ namespace SVI_NFT_R
                 InspStage = new InspStage();
                 OutRobot = new OutRobot();
                 OutFlip = new OutFlip();
+                OutShuttle = new OutShuttle();
                 LoadInterface = new LoadInterface();
+                UnloadInterface = new UnloadInterface();
                 TrackOut = new TrackOut();
                 if (false == InShuttle.Initialize(m_objDocument)
                     || false == InRobot.Initialize(m_objDocument)
                     || false == InspStage.Initialize(m_objDocument)
                     || false == OutRobot.Initialize(m_objDocument)
                     || false == OutFlip.Initialize(m_objDocument)
+                    || false == OutShuttle.Initialize(m_objDocument)
                     || false == LoadInterface.Initialize(m_objDocument, 0)
+                    || false == UnloadInterface.Initialize(m_objDocument, 0)
                     || false == TrackInManager.Initialize(m_objDocument)
                     || false == TrackOut.Initialize(m_objDocument)
                     || false == UnitManager.Initialize(m_objDocument)
@@ -179,11 +190,13 @@ namespace SVI_NFT_R
             TrackOut.DeInitialize();
             TrackInManager.DeInitialize();
             LoadInterface.DeInitialize();
+            UnloadInterface.DeInitialize();
             OutRobot.DeInitialize();
             OutFlip.DeInitialize();
             InspStage.DeInitialize();
             InRobot.DeInitialize();
             InShuttle.DeInitialize();
+            OutShuttle.DeInitialize();
 
             foreach (var motor in m_objMotor)
             {
@@ -244,6 +257,7 @@ namespace SVI_NFT_R
                 }
                 // 인터페이스 신호를 초기화 한다
                 LoadInterface.DryRunSignalClear();
+                UnloadInterface.DryRunSignalClear();
                 bReturn = true;
             } while (false);
 
@@ -317,7 +331,8 @@ namespace SVI_NFT_R
                 new { ProcessIndex = EProcess.OutFlip, IsAvaliable = new Func<bool>(() => IsMotorAvaliable(m_objMotor[EMotor.OUT_FLIP_R1])) },
                 new { ProcessIndex = EProcess.OutFlip, IsAvaliable = new Func<bool>(() => IsMotorAvaliable(m_objMotor[EMotor.OUT_FLIP_R2])) },
                 new { ProcessIndex = EProcess.OutFlip, IsAvaliable = new Func<bool>(() => IsMotorAvaliable(m_objMotor[EMotor.OUT_FLIP_Z])) },
-                new { ProcessIndex = EProcess.OutFlip, IsAvaliable = new Func<bool>(() => IsMotorAvaliable(m_objMotor[EMotor.OUT_CONVEYOR_X2])) },
+                new { ProcessIndex = EProcess.OutShuttle, IsAvaliable = new Func<bool>(() => IsMotorAvaliable(m_objMotor[EMotor.OUT_SHUTTLE_X2])) },
+               // new { ProcessIndex = EProcess.OutFlip, IsAvaliable = new Func<bool>(() => IsMotorAvaliable(m_objMotor[EMotor.OUT_CONVEYOR_X2])) },
             };
 
             foreach (var item in checkItems)
@@ -372,11 +387,11 @@ namespace SVI_NFT_R
                 {
                     continue;
                 }
-                if (motor == m_objMotor[EMotor.OUT_CONVEYOR_X2])
-                {
-                    // 컨베이어 모터는 제외한다.
-                    continue;
-                }
+                //if (motor == m_objMotor[EMotor.OUT_CONVEYOR_X2])
+                //{
+                //    // 컨베이어 모터는 제외한다.
+                //    continue;
+                //}
                 // 이동중인 모터가 하나라도 있으면 true
                 return true;
             }
@@ -413,6 +428,7 @@ namespace SVI_NFT_R
                     && 0 == InspStage.BatchCommand
                     && 0 == OutRobot.BatchCommand
                     && 0 == OutFlip.BatchCommand
+                    && 0 == OutShuttle.BatchCommand
                     && mMotorRepeatMove == null
                     )
                 {
@@ -444,7 +460,8 @@ namespace SVI_NFT_R
                 new { Process = (CProcessAbstract)InRobot, AlarmCode = EProcess.InRobot.ToString() },
                 new { Process = (CProcessAbstract)InspStage, AlarmCode = EProcess.InspStage.ToString() },
                 new { Process = (CProcessAbstract)OutRobot, AlarmCode = EProcess.OutRobot.ToString() },
-                new { Process = (CProcessAbstract)OutFlip, AlarmCode = EProcess.OutFlip.ToString() }
+                new { Process = (CProcessAbstract)OutFlip, AlarmCode = EProcess.OutFlip.ToString() },
+                new { Process = (CProcessAbstract)OutShuttle, AlarmCode = EProcess.OutShuttle.ToString() }
             };
             foreach (var item in allProcesses)
             {
@@ -475,7 +492,8 @@ namespace SVI_NFT_R
                 new { Process = (CProcessAbstract)InRobot },
                 new { Process = (CProcessAbstract)InspStage },
                 new { Process = (CProcessAbstract)OutRobot },
-                new { Process = (CProcessAbstract)OutFlip }
+                new { Process = (CProcessAbstract)OutFlip } ,
+                new { Process = (CProcessAbstract)OutShuttle }
             };
             foreach (var item in allProcesses)
             {
@@ -501,6 +519,15 @@ namespace SVI_NFT_R
                 if (
                     LoadInterface.IsInitialized == true
                     && LoadInterface.IsHandShaking == true
+                    )
+                {
+                    break;
+                }
+
+                // UNLOAD INTERFACE
+                if (
+                    UnloadInterface.IsInitialized == true
+                    && UnloadInterface.IsHandShaking == true
                     )
                 {
                     break;
@@ -532,6 +559,12 @@ namespace SVI_NFT_R
 
                 // OUT FLIP
                 if (OutFlip.IsIdle == false)
+                {
+                    break;
+                }
+
+                // OUT SHUTTLE
+                if (OutShuttle.IsIdle == false)
                 {
                     break;
                 }
@@ -658,7 +691,8 @@ namespace SVI_NFT_R
                                 case EMotor.OUT_FLIP_R1:
                                 case EMotor.OUT_FLIP_R2:
                                 case EMotor.OUT_FLIP_Z:
-                                case EMotor.OUT_CONVEYOR_X2:
+                                //case EMotor.OUT_CONVEYOR_X2:
+                                case EMotor.OUT_SHUTTLE_X2:
                                 case EMotor.IN_SHUTTLE_X1_TRIGGER_MODULE:
                                     objMotor = new CDeviceMotor(new CDeviceMotorAjin());
                                     break;
@@ -727,9 +761,13 @@ namespace SVI_NFT_R
                     objInitialize.iAxisNo = MOTOR_INDEX_OUT_FLIP_Z;
                     break;
 
-                case EMotor.OUT_CONVEYOR_X2:
-                    objInitialize.iBoardNo = BOARD_INDEX_OUT_CONVEYOR_X2;
-                    objInitialize.iAxisNo = MOTOR_INDEX_OUT_CONVEYOR_X2;
+                //case EMotor.OUT_CONVEYOR_X2:
+                //    objInitialize.iBoardNo = BOARD_INDEX_OUT_CONVEYOR_X2;
+                //    objInitialize.iAxisNo = MOTOR_INDEX_OUT_CONVEYOR_X2;
+                //    break;
+                case EMotor.OUT_SHUTTLE_X2:
+                    objInitialize.iBoardNo = BOARD_INDEX_OUT_SHUTTLE_X2;
+                    objInitialize.iAxisNo = MOTOR_INDEX_OUT_SHUTTLE_X2;
                     break;
 
                 case EMotor.IN_SHUTTLE_X1_TRIGGER_MODULE:
@@ -884,6 +922,22 @@ namespace SVI_NFT_R
                     objVacuumInitialize.strVacuumBlowOutputIO[(int)CVacuumAbstract.EVacuumOffOutputIO.OFF_OUTPUT_IO_1] = CDeviceIODefine.EDigitalOutput.Y_OUT_ROTATE_P2_2_BLOW.ToString();
                     objVacuumInitialize.strVacuumInputIO[(int)CVacuumAbstract.EVacuumInputIO.INPUT_IO_1] = CDeviceIODefine.EDigitalInput.X_OUT_ROTATE_P2_2_VACUUM_PRESSURE_SENSOR.ToString();
                     objVacuumInitialize.strVacuumAnalogInputIO[(int)CVacuumAbstract.EVacuumInputIO.INPUT_IO_1] = CDeviceIODefine.EAnalogInput.X_AD_OUT_ROTATE_P2_2_VACUUM_PRESSURE.ToString();
+                    objVacuumInitialize.eVacuumSolenoidType = CVacuumAbstract.EVacuumSolenoidType.SINGLE_SOLENOID;
+                    break;
+
+                case EVacuum.OUT_SHUTTLE_VACUUM_P1:
+                    objVacuumInitialize.strVacuumOnOutputIO[(int)CVacuumAbstract.EVacuumOnOutputIO.ON_OUTPUT_IO_1] = CDeviceIODefine.EDigitalOutput.Y_OUT_SHUTTLE_P1_VACUUM.ToString();
+                    objVacuumInitialize.strVacuumBlowOutputIO[(int)CVacuumAbstract.EVacuumOffOutputIO.OFF_OUTPUT_IO_1] = CDeviceIODefine.EDigitalOutput.Y_OUT_SHUTTLE_P1_BLOW.ToString();
+                    objVacuumInitialize.strVacuumInputIO[(int)CVacuumAbstract.EVacuumInputIO.INPUT_IO_1] = CDeviceIODefine.EDigitalInput.X_OUT_SHUTTLE_P1_VACUUM_PRESSURE_SENSOR.ToString();
+                    objVacuumInitialize.strVacuumAnalogInputIO[(int)CVacuumAbstract.EVacuumInputIO.INPUT_IO_1] = CDeviceIODefine.EAnalogInput.X_AD_OUT_SHUTTLE_P1_VACUUM_PRESSURE.ToString();
+                    objVacuumInitialize.eVacuumSolenoidType = CVacuumAbstract.EVacuumSolenoidType.SINGLE_SOLENOID;
+                    break;
+
+                case EVacuum.OUT_SHUTTLE_VACUUM_P2:
+                    objVacuumInitialize.strVacuumOnOutputIO[(int)CVacuumAbstract.EVacuumOnOutputIO.ON_OUTPUT_IO_1] = CDeviceIODefine.EDigitalOutput.Y_OUT_SHUTTLE_P2_VACUUM.ToString();
+                    objVacuumInitialize.strVacuumBlowOutputIO[(int)CVacuumAbstract.EVacuumOffOutputIO.OFF_OUTPUT_IO_1] = CDeviceIODefine.EDigitalOutput.Y_OUT_SHUTTLE_P2_BLOW.ToString();
+                    objVacuumInitialize.strVacuumInputIO[(int)CVacuumAbstract.EVacuumInputIO.INPUT_IO_1] = CDeviceIODefine.EDigitalInput.X_OUT_SHUTTLE_P2_VACUUM_PRESSURE_SENSOR.ToString();
+                    objVacuumInitialize.strVacuumAnalogInputIO[(int)CVacuumAbstract.EVacuumInputIO.INPUT_IO_1] = CDeviceIODefine.EAnalogInput.X_AD_OUT_SHUTTLE_P2_VACUUM_PRESSURE.ToString();
                     objVacuumInitialize.eVacuumSolenoidType = CVacuumAbstract.EVacuumSolenoidType.SINGLE_SOLENOID;
                     break;
 
@@ -1125,6 +1179,7 @@ namespace SVI_NFT_R
                 InspStage,
                 OutRobot,
                 OutFlip,
+                OutShuttle
             };
             foreach (var manager in allManagers)
             {
@@ -1147,6 +1202,7 @@ namespace SVI_NFT_R
             initializeTasks.Add(InitializeProcessAsync(InShuttle, Resource.Get(EProcess.InShuttle).ToString()));
             initializeTasks.Add(InitializeProcessAsync(InspStage, Resource.Get(EProcess.InspStage).ToString()));
             initializeTasks.Add(InitializeProcessAsync(OutFlip, Resource.Get(EProcess.OutFlip).ToString()));
+            initializeTasks.Add(InitializeProcessAsync(OutShuttle, Resource.Get(EProcess.OutShuttle).ToString()));
             Task.WaitAll(initializeTasks.ToArray());
             foreach (var task in initializeTasks)
             {
@@ -1220,6 +1276,7 @@ namespace SVI_NFT_R
             restartTasks.Add(RestartProcessAsync(InShuttle));
             restartTasks.Add(RestartProcessAsync(InspStage));
             restartTasks.Add(RestartProcessAsync(OutFlip));
+            restartTasks.Add(RestartProcessAsync(OutShuttle));
             Task.WaitAll(restartTasks.ToArray());
             foreach (var task in restartTasks)
             {

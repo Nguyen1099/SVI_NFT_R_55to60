@@ -1,4 +1,6 @@
 ﻿ID,ByteIndex,BitIndex,HandlingDataTypeString,HandlingDataSize,ArrayLength,DecimalPoint,Label,Description,Comment
 UpperToSelf,123160,,EqToEq.UpperToSelf.Words,,,,,,시작 워드 주소는 0xF08C
 SelfToUpper,133120,,EqToEq.SelfToUpper.Words,,,,,,시작 워드 주소는 0x10400
+SelfToLower,102680,,EqToEq.SelfToLower.Words,,,,,,시작 워드 주소는 0xC88C
+LowerToSelf,112640,,EqToEq.LowerToSelf.Words,,,,,,시작 워드 주소는 0xDC00
 SelfToMonitorIO,137454,,MonitorIO.Words,,,,,,시작 워드 주소는 0x10C77

@@ -208,6 +208,8 @@ namespace SVI_NFT_R
             UcCellOutRobot90P2.BtnCellData.Tag = new CellDataDisplayInformation(m_objDocument, ECellData.OutRobotP2, new CVacuum[] { m_objDocument.m_objProcessMain.m_objProcessMotion.m_objVacuum[CProcessMotion.EVacuum.OUT_ROBOT_VACUUM_P2] });
             UcCellOutFlipP1.BtnCellData.Tag = new CellDataDisplayInformation(m_objDocument, ECellData.OutFlipP1, new CVacuum[] { m_objDocument.m_objProcessMain.m_objProcessMotion.m_objVacuum[CProcessMotion.EVacuum.OUT_FLIP_VACUUM_P1_1], m_objDocument.m_objProcessMain.m_objProcessMotion.m_objVacuum[CProcessMotion.EVacuum.OUT_FLIP_VACUUM_P1_2] });
             UcCellOutFlipP2.BtnCellData.Tag = new CellDataDisplayInformation(m_objDocument, ECellData.OutFlipP2, new CVacuum[] { m_objDocument.m_objProcessMain.m_objProcessMotion.m_objVacuum[CProcessMotion.EVacuum.OUT_FLIP_VACUUM_P2_1], m_objDocument.m_objProcessMain.m_objProcessMotion.m_objVacuum[CProcessMotion.EVacuum.OUT_FLIP_VACUUM_P2_2] });
+            UcCellOutShuttleP1.BtnCellData.Tag = new CellDataDisplayInformation(m_objDocument, ECellData.OutShuttleP1, new CVacuum[] { m_objDocument.m_objProcessMain.m_objProcessMotion.m_objVacuum[CProcessMotion.EVacuum.OUT_SHUTTLE_VACUUM_P1] });
+            UcCellOutShuttleP2.BtnCellData.Tag = new CellDataDisplayInformation(m_objDocument, ECellData.OutShuttleP2, new CVacuum[] { m_objDocument.m_objProcessMain.m_objProcessMotion.m_objVacuum[CProcessMotion.EVacuum.OUT_SHUTTLE_VACUUM_P2] });
 
             UcCellInShuttleP1.BtnIndicator.Tag = new VacuumDisplayInformation(m_objDocument, CProcessMotion.EVacuum.IN_SHUTTLE_VACUUM_P1, CDeviceIODefine.EDigitalInput.X_IN_SHUTTLE_P1_CELL_DETECT_SENSOR);
             UcCellInShuttleP2.BtnIndicator.Tag = new VacuumDisplayInformation(m_objDocument, CProcessMotion.EVacuum.IN_SHUTTLE_VACUUM_P2, CDeviceIODefine.EDigitalInput.X_IN_SHUTTLE_P2_CELL_DETECT_SENSOR);
@@ -225,6 +227,9 @@ namespace SVI_NFT_R
             UcCellOutFlipP1.BtnIndicatorLeft.Tag = new VacuumDisplayInformation(m_objDocument, CProcessMotion.EVacuum.OUT_FLIP_VACUUM_P1_2);
             UcCellOutFlipP2.BtnIndicatorTop.Tag = new VacuumDisplayInformation(m_objDocument, CProcessMotion.EVacuum.OUT_FLIP_VACUUM_P2_1);
             UcCellOutFlipP2.BtnIndicatorLeft.Tag = new VacuumDisplayInformation(m_objDocument, CProcessMotion.EVacuum.OUT_FLIP_VACUUM_P2_2);
+            UcCellOutShuttleP1.BtnIndicator.Tag = new VacuumDisplayInformation(m_objDocument, CProcessMotion.EVacuum.OUT_SHUTTLE_VACUUM_P1, CDeviceIODefine.EDigitalInput.X_OUT_SHUTTLE_P1_CELL_DETECT_SENSOR);
+            UcCellOutShuttleP2.BtnIndicator.Tag = new VacuumDisplayInformation(m_objDocument, CProcessMotion.EVacuum.OUT_SHUTTLE_VACUUM_P2, CDeviceIODefine.EDigitalInput.X_OUT_SHUTTLE_P2_CELL_DETECT_SENSOR);
+
 
             List<Control> allButtons = Controls.GetChildControlListByType(typeof(SpeedButton));
             mCellDataButtons = allButtons
@@ -282,6 +287,7 @@ namespace SVI_NFT_R
 
         private void InitializePositionInformation()
         {
+            // InShuttle
             var addItem = new DrawComponentGroupPosition(
                 PnlInShuttleBoundary,
                 new Control[] { PnlBaseInShuttle }
@@ -289,6 +295,7 @@ namespace SVI_NFT_R
             addItem.RequestGetRatioPositionX += new Func<double>(() => DrawComponentGroupPosition.GetRatioPositionFromMotorObject(m_objDocument.m_objProcessMain.m_objProcessMotion.InShuttle.MotorStageX.Axis));
             mDrawPositionList.Add(addItem);
 
+            // InRobot
             addItem = new DrawComponentGroupPosition(
                 PnlInRobotBoundary,
                 GetAlignedLocationControlArray(PnlBaseInRobot, PnlBaseInRobot90)
@@ -377,6 +384,7 @@ namespace SVI_NFT_R
             });
             mDrawPositionList.Add(addItem);
 
+            // InspStage
             addItem = new DrawComponentGroupPosition(
                 PnlInspStageBoundary,
                 new Control[] { PnlBaseInspStage }
@@ -385,6 +393,7 @@ namespace SVI_NFT_R
             addItem.VerticalFlip = true;
             mDrawPositionList.Add(addItem);
 
+            // OutRobot
             addItem = new DrawComponentGroupPosition(
                 PnlOutRobotBoundary,
                 GetAlignedLocationControlArray(PnlBaseOutRobot, PnlBaseOutRobot90)
@@ -455,17 +464,13 @@ namespace SVI_NFT_R
             });
             mDrawPositionList.Add(addItem);
 
+            // OutShuttle
             addItem = new DrawComponentGroupPosition(
-                PnlOutConveyorBoundary,
-                 new Control[] { BtnCellOutConveyorP1, BtnCellOutConveyorP2 }
+                PnlOutShuttleBoundary,
+                new Control[] { PnlBaseOutShuttle }
                 );
-            addItem.RequestGetRatioPositionX += new Func<double>(() =>
-            {
-                bool isArrivalUnloadPosition = m_objDocument.m_objProcessMain.m_objProcessMotion.OutFlip.MotorConveyorX.IsArrivalUnloadPosition();
-                SetControlVisible(BtnCellOutConveyorP1, isArrivalUnloadPosition == false);
-                SetControlVisible(BtnCellOutConveyorP2, isArrivalUnloadPosition == false);
-                return DrawComponentGroupPosition.GetRatioPositionFromMotorObject(m_objDocument.m_objProcessMain.m_objProcessMotion.OutFlip.MotorConveyorX.Axis);
-            });
+            addItem.RequestGetRatioPositionX += new Func<double>(() => DrawComponentGroupPosition.GetRatioPositionFromMotorObject(m_objDocument.m_objProcessMain.m_objProcessMotion.OutShuttle.MotorStageX.Axis));
+            addItem.HorizontalFlip = true;
             mDrawPositionList.Add(addItem);
         }
 
@@ -830,8 +835,38 @@ namespace SVI_NFT_R
         /// </summary>
         private void SetEquipmentInterfaceLower()
         {
-            SetButtonBackColor(UcHandshakeSignalUnloadItem1.BtnIndicator1, m_objDocument.m_objProcessMain.m_objProcessMotion.OutFlip.IsExternalConveyorRun ? m_colorOutputOn : m_colorOutputOff);
-            SetButtonBackColor(UcHandshakeSignalUnloadItem1.BtnIndicator2, m_objDocument.GetIOBit(CDeviceIODefine.EDigitalInput.X_LOWER_CONVEYOR_RUN_ABLE) ? m_colorInputOn : m_colorInputOff);
+            var signalControllers = m_objDocument.m_objProcessMain.m_objProcessMotion.UnloadInterface.SignalControllers[0] as UnloadInterfaceSignalController;
+            SetButtonBackColor(UcHandshakeSignalUnLoadSafetyItem1.BtnIndicator1, signalControllers.SelfBits.EmsSafe.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadSafetyItem2.BtnIndicator1, signalControllers.SelfBits.InterlockDoorClosed.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadSafetyItem3.BtnIndicator1, signalControllers.SelfBits.InterlockSafe.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem1.BtnIndicator1, signalControllers.SelfBits.Heartbeat.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem2.BtnIndicator1, signalControllers.SelfBits.SendAble.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem3.BtnIndicator1, signalControllers.SelfBits.SendStart.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem4.BtnIndicator1, signalControllers.SelfBits.SendComplete.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem5.BtnIndicator1, signalControllers.SelfBits.SendVacuumOnP1.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem6.BtnIndicator1, signalControllers.SelfBits.SendVacuumOnP2.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem7.BtnIndicator1, signalControllers.SelfBits.SendCellP1.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem8.BtnIndicator1, signalControllers.SelfBits.SendCellP2.Value ? m_colorInputOn : m_colorInputOff);
+
+            SetButtonBackColor(UcHandshakeSignalUnLoadSafetyItem1.BtnIndicator2, signalControllers.LowerBits.EmsSafe.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadSafetyItem2.BtnIndicator2, signalControllers.LowerBits.InterlockDoorClosed.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadSafetyItem3.BtnIndicator2, signalControllers.LowerBits.InterlockSafe.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem1.BtnIndicator2, signalControllers.LowerBits.Heartbeat.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem2.BtnIndicator2, signalControllers.LowerBits.ReceiveAble.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem3.BtnIndicator2, signalControllers.LowerBits.ReceiveStart.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem4.BtnIndicator2, signalControllers.LowerBits.ReceiveComplete.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem5.BtnIndicator2, signalControllers.LowerBits.ReceiveVacuumOnP1.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem6.BtnIndicator2, signalControllers.LowerBits.ReceiveVacuumOnP2.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem7.BtnIndicator2, signalControllers.LowerBits.ReceiveCellP1.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem8.BtnIndicator2, signalControllers.LowerBits.ReceiveCellP2.Value ? m_colorOutputOn : m_colorOutputOff);
+
+
+            SetButtonBackColor(BtnUnLoadHandshaking, m_objDocument.m_objProcessMain.m_objProcessMotion.UnloadInterface.IsHandShaking ? m_colorOn : m_colorNormal);
+            SetButtonBackColor(BtnUnLoadPending, m_objDocument.m_objProcessMain.m_objProcessMotion.UnloadInterface.IsPending ? m_colorOff : m_colorNormal);
+
+            // chưa sửa
+            //SetButtonBackColor(UcHandshakeSignalUnloadItem1.BtnIndicator1, m_objDocument.m_objProcessMain.m_objProcessMotion.OutFlip.IsExternalConveyorRun ? m_colorOutputOn : m_colorOutputOff);
+            //SetButtonBackColor(UcHandshakeSignalUnloadItem1.BtnIndicator2, m_objDocument.GetIOBit(CDeviceIODefine.EDigitalInput.X_LOWER_CONVEYOR_RUN_ABLE) ? m_colorInputOn : m_colorInputOff);
         }
 
         /// <summary>
@@ -956,10 +991,6 @@ namespace SVI_NFT_R
                 }
             }
 
-            // Sensor
-            SetButtonBackColor(BtnSensorDetectP1, m_objDocument.m_objProcessMain.m_objProcessMotion.OutFlip.Sensor.IsCellDetectSensor1 ? m_colorOn : m_colorNormal);
-            SetButtonBackColor(BtnSensorDetectP2, m_objDocument.m_objProcessMain.m_objProcessMotion.OutFlip.Sensor.IsCellDetectSensor2 ? m_colorOn : m_colorNormal);
-            SetButtonBackColor(BtnSensorBlockedDetect, m_objDocument.m_objProcessMain.m_objProcessMotion.OutFlip.Sensor.IsConveyorBlockedSensor ? m_colorOn : m_colorNormal);
         }
 
         private void ClearDataDeleteFlags()

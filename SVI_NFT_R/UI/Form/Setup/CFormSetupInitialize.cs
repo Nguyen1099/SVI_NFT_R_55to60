@@ -523,7 +523,7 @@ namespace SVI_NFT_R
                 }
                 // 인터페이스 신호 초기화
                 m_objDocument.m_objProcessMain.m_objProcessMotion.LoadInterface.DryRunSignalClear();
-                //m_objDocument.m_objProcessMain.m_objProcessMotion.UnloadInterface.DryRunSignalClear();
+                m_objDocument.m_objProcessMain.m_objProcessMotion.UnloadInterface.DryRunSignalClear();
                 if (m_objDocument.m_objProcessMain.m_objProcessMotion.CheckAllSequenceManagerStateIsIdle() == false)
                 {
                     break;
@@ -562,11 +562,11 @@ namespace SVI_NFT_R
                     m_objDocument.SetMessage(CDefine.EAlarmType.ALARM_INTERLOCK, CAlarmDefine.EMessageList.UNIT_EQUIPMENT_DOOROPEN_SIGNAL_PARAM1, "UPPER");
                     break;
                 }
-                //if (m_objDocument.m_objProcessMain.m_objProcessMotion.UnloadInterface.CheckLowerEqInterfaceDoorOpened() == true)
-                //{
-                //    m_objDocument.SetMessage(CDefine.EAlarmType.ALARM_INTERLOCK, CAlarmDefine.EMessageList.UNIT_EQUIPMENT_DOOROPEN_SIGNAL_PARAM1, "LOWER");
-                //    break;
-                //}
+                if (m_objDocument.m_objProcessMain.m_objProcessMotion.UnloadInterface.CheckLowerEqInterfaceDoorOpened() == true)
+                {
+                    m_objDocument.SetMessage(CDefine.EAlarmType.ALARM_INTERLOCK, CAlarmDefine.EMessageList.UNIT_EQUIPMENT_DOOROPEN_SIGNAL_PARAM1, "LOWER");
+                    break;
+                }
 
                 // 설비 상태 확인
                 if (

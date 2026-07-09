@@ -95,6 +95,7 @@ namespace SVI_NFT_R
         public CCycleTact<CDefine.ECycleTactInspStage> m_tactInspStage = new CCycleTact<CDefine.ECycleTactInspStage>(CDefine.ELogType.LOG_CYCLE_TACT_03_INSP_STAGE);
         public CCycleTact<CDefine.ECycleTactOutRobot> m_tactOutRobot = new CCycleTact<CDefine.ECycleTactOutRobot>(CDefine.ELogType.LOG_CYCLE_TACT_04_OUT_ROBOT);
         public CCycleTact<CDefine.ECycleTactOutFlip> m_TactOutFlip = new CCycleTact<CDefine.ECycleTactOutFlip>(CDefine.ELogType.LOG_CYCLE_TACT_05_OUT_FLIP);
+        public CCycleTact<CDefine.ECycleTactOutShuttle> m_tactOutShuttle = new CCycleTact<CDefine.ECycleTactOutShuttle>(CDefine.ELogType.LOG_CYCLE_TACT_06_OUT_SHUTTLE);
         // m_tactJavasInspection은 로그 초기화시 참조용으로 사용함
         public CCycleTact<CDefine.ECycleTactJavasInspection> m_tactJavasInspection = new CCycleTact<CDefine.ECycleTactJavasInspection>(CDefine.ELogType.LOG_CYCLE_TACT_90_JAVAS_INSPECTION);
         // JavasInspection은 로그는 CellID를 기준으로 로그를 기록하는 방식으로 딕셔너리를 사용함

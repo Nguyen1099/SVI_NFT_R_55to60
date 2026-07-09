@@ -18,7 +18,6 @@ namespace SVI_NFT_R
             FLIP_Z = 0,
             FLIP_R1,
             FLIP_R2,
-            CONVEYOR_X,
             MOTOR_FINAL
         };
 
@@ -194,7 +193,6 @@ namespace SVI_NFT_R
                 m_BtnMotor[(int)EMotor.FLIP_R1] = BtnMotorFlipR1;
                 m_BtnMotor[(int)EMotor.FLIP_R2] = BtnMotorFlipR2;
                 m_BtnMotor[(int)EMotor.FLIP_Z] = BtnMotorFlipZ;
-                m_BtnMotor[(int)EMotor.CONVEYOR_X] = BtnMotorConveyorX;
 
                 // 포지션 이름 버튼 객체 연결
                 m_BtnPositionName[(int)EMotorPositionSet.MOTION_SET_POSITION_1] = BtnTitlePositionName1;
@@ -221,8 +219,8 @@ namespace SVI_NFT_R
                 m_ePageIndex = EPageIndex.PAGE_1;
 
                 // 초기 모터 객체 설정
-                m_objMotor = mOutFlipManager.MotorConveyorX.Axis;
-                mInterlock = mOutFlipManager.MotorConveyorX.m_objInterlock;
+                //m_objMotor = mOutFlipManager.MotorConveyorX.Axis;
+                //mInterlock = mOutFlipManager.MotorConveyorX.m_objInterlock;
 
                 // 저장 폼 생성
                 m_objFormTeachData = new CFormTeachData(m_objDocument, m_objMotor);
@@ -1227,16 +1225,16 @@ namespace SVI_NFT_R
                 m_objMotor = mOutFlipManager.MotorZ.Axis;
                 m_strSelectedMotor = mOutFlipManager.MotorZ.MotorIndex.ToString();
             }
-            else if (m_BtnMotor[(int)EMotor.CONVEYOR_X] == selectedButton)
-            {
-                selectedButtonIndex = (int)EMotor.CONVEYOR_X;
-                PnlContent.Visible = true;
-                isMotorSelected = true;
-                SetBatchMovePage(mBatchMovePageOutFlip);
-                mUnit = CDefine.UNIT_MILLIMETER;
-                m_objMotor = mOutFlipManager.MotorConveyorX.Axis;
-                m_strSelectedMotor = mOutFlipManager.MotorConveyorX.MotorIndex.ToString();
-            }
+            //else if (m_BtnMotor[(int)EMotor.CONVEYOR_X] == selectedButton)
+            //{
+            //    selectedButtonIndex = (int)EMotor.CONVEYOR_X;
+            //    PnlContent.Visible = true;
+            //    isMotorSelected = true;
+            //    SetBatchMovePage(mBatchMovePageOutFlip);
+            //    mUnit = CDefine.UNIT_MILLIMETER;
+            //    m_objMotor = mOutFlipManager.MotorConveyorX.Axis;
+            //    m_strSelectedMotor = mOutFlipManager.MotorConveyorX.MotorIndex.ToString();
+            //}
             foreach (var item in m_BtnMotor)
             {
                 SetButtonBackColor(item, m_colorNormal);

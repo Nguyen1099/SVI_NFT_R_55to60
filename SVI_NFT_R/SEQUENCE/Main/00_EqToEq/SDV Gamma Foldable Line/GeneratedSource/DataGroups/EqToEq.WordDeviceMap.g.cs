@@ -18,10 +18,14 @@ namespace EqToEq
     {
         public EqToEq.UpperToSelf.Words UpperToSelf => mUpperToSelf;
         public EqToEq.SelfToUpper.Words SelfToUpper => mSelfToUpper;
+        public EqToEq.SelfToLower.Words SelfToLower => mSelfToLower;
+        public EqToEq.LowerToSelf.Words LowerToSelf => mLowerToSelf;
         public MonitorIO.Words SelfToMonitorIO => mSelfToMonitorIO;
         public System.Collections.Generic.IReadOnlyDictionary<string, ENC.IO.Common.IReadOnlyHandlingDataSet> Informations => mHandlingData;
         private EqToEq.UpperToSelf.Words mUpperToSelf;
         private EqToEq.SelfToUpper.Words mSelfToUpper;
+        private EqToEq.SelfToLower.Words mSelfToLower;
+        private EqToEq.LowerToSelf.Words mLowerToSelf;
         private MonitorIO.Words mSelfToMonitorIO;
         private System.Collections.Generic.IReadOnlyDictionary<string, ENC.IO.Common.IReadOnlyHandlingDataSet> mHandlingData;
 
@@ -30,6 +34,8 @@ namespace EqToEq
             mHandlingData = DataMappingAssignManager.GetDataOrNullFromType(typeof(WordDeviceMap));
             mUpperToSelf = new EqToEq.UpperToSelf.Words().AssignMap(ctor, errorsAndWarnings, startIndex + mHandlingData[nameof(UpperToSelf)].ByteIndex);
             mSelfToUpper = new EqToEq.SelfToUpper.Words().AssignMap(ctor, errorsAndWarnings, startIndex + mHandlingData[nameof(SelfToUpper)].ByteIndex);
+            mSelfToLower = new EqToEq.SelfToLower.Words().AssignMap(ctor, errorsAndWarnings, startIndex + mHandlingData[nameof(SelfToLower)].ByteIndex);
+            mLowerToSelf = new EqToEq.LowerToSelf.Words().AssignMap(ctor, errorsAndWarnings, startIndex + mHandlingData[nameof(LowerToSelf)].ByteIndex);
             mSelfToMonitorIO = new MonitorIO.Words().AssignMap(ctor, errorsAndWarnings, startIndex + mHandlingData[nameof(SelfToMonitorIO)].ByteIndex);
             if (DataMappingAssignManager.GetBlockSize(typeof(WordDeviceMap)) > ctor.FirstIndex + startIndex + ctor.Size)
             {
@@ -42,6 +48,8 @@ namespace EqToEq
         {
             UpperToSelf.BatchRead(readDataSet.UpperToSelf);
             SelfToUpper.BatchRead(readDataSet.SelfToUpper);
+            SelfToLower.BatchRead(readDataSet.SelfToLower);
+            LowerToSelf.BatchRead(readDataSet.LowerToSelf);
             SelfToMonitorIO.BatchRead(readDataSet.SelfToMonitorIO);
             return readDataSet;
         }
@@ -50,6 +58,8 @@ namespace EqToEq
         {
             UpperToSelf.BatchWrite(writeDataSet.UpperToSelf);
             SelfToUpper.BatchWrite(writeDataSet.SelfToUpper);
+            SelfToLower.BatchWrite(writeDataSet.SelfToLower);
+            LowerToSelf.BatchWrite(writeDataSet.LowerToSelf);
             SelfToMonitorIO.BatchWrite(writeDataSet.SelfToMonitorIO);
             return true;
         }

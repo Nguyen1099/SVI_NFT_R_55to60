@@ -18,6 +18,8 @@ namespace EqToEq
     {
         public EqToEq.UpperToSelf.WordsSet UpperToSelf { get; set; }
         public EqToEq.SelfToUpper.WordsSet SelfToUpper { get; set; }
+        public EqToEq.SelfToLower.WordsSet SelfToLower { get; set; }
+        public EqToEq.LowerToSelf.WordsSet LowerToSelf { get; set; }
         public MonitorIO.WordsSet SelfToMonitorIO { get; set; }
 
         public WordDeviceMapSet()
@@ -25,6 +27,8 @@ namespace EqToEq
             var handlingData = DataMappingAssignManager.GetDataOrNullFromType(typeof(WordDeviceMap));
             UpperToSelf = new EqToEq.UpperToSelf.WordsSet();
             SelfToUpper = new EqToEq.SelfToUpper.WordsSet();
+            SelfToLower = new EqToEq.SelfToLower.WordsSet();
+            LowerToSelf = new EqToEq.LowerToSelf.WordsSet();
             SelfToMonitorIO = new MonitorIO.WordsSet();
         }
     }

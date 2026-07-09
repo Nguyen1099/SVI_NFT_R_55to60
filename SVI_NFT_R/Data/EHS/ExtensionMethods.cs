@@ -40,6 +40,39 @@ namespace SVI_NFT_R.EHS
 #pragma warning restore CS0618 // 형식 또는 멤버는 사용되지 않습니다.
         }
 
+        public static bool CheckLowerEqInterfaceDoorOpened(this IProcessManagerUnloadInterface unloadInterface)
+        {
+            if (ShouldCheckEquipmentInterface() == false)
+            {
+                return false;
+            }
+#pragma warning disable CS0618 // 형식 또는 멤버는 사용되지 않습니다.
+            return unloadInterface.IsLowerDoorOpen;
+#pragma warning restore CS0618 // 형식 또는 멤버는 사용되지 않습니다.
+        }
+
+        public static bool CheckLowerEqInterfaceInterlocked(this IProcessManagerUnloadInterface unloadInterface)
+        {
+            if (ShouldCheckEquipmentInterface() == false)
+            {
+                return false;
+            }
+#pragma warning disable CS0618 // 형식 또는 멤버는 사용되지 않습니다.
+            return unloadInterface.IsLowerInterlock;
+#pragma warning restore CS0618 // 형식 또는 멤버는 사용되지 않습니다.
+        }
+
+        public static bool CheckLowerEqInterfaceOnEMS(this IProcessManagerUnloadInterface unloadInterface)
+        {
+            if (ShouldCheckEquipmentInterface() == false)
+            {
+                return false;
+            }
+#pragma warning disable CS0618 // 형식 또는 멤버는 사용되지 않습니다.
+            return unloadInterface.IsLowerEmergency;
+#pragma warning restore CS0618 // 형식 또는 멤버는 사용되지 않습니다.
+        }
+
         public static void EmergencyStopAll(this CProcessMotion processMotion)
         {
             foreach (var motion in processMotion.AllMotions)
