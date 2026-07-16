@@ -20,8 +20,8 @@ namespace EqToEq.LowerToSelf
         public bool ReceiveAble { get; set; }
         public bool ReceiveStart { get; set; }
         public bool ReceiveComplete { get; set; }
-        public bool ReceiveVacuumOnP1 { get; set; }
-        public bool ReceiveVacuumOnP2 { get; set; }
+        public bool ReceiveVacuumOffP1 { get; set; }
+        public bool ReceiveVacuumOffP2 { get; set; }
         public bool ReceiveCellP1 { get; set; }
         public bool ReceiveCellP2 { get; set; }
         public bool EmsSafe { get; set; }

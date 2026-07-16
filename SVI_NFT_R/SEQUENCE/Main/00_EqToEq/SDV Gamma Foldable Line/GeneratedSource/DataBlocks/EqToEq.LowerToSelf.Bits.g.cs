@@ -20,8 +20,8 @@ namespace EqToEq.LowerToSelf
         public ENC.IO.Common.IHandlingData<bool> ReceiveAble => mReceiveAble;
         public ENC.IO.Common.IHandlingData<bool> ReceiveStart => mReceiveStart;
         public ENC.IO.Common.IHandlingData<bool> ReceiveComplete => mReceiveComplete;
-        public ENC.IO.Common.IHandlingData<bool> ReceiveVacuumOnP1 => mReceiveVacuumOnP1;
-        public ENC.IO.Common.IHandlingData<bool> ReceiveVacuumOnP2 => mReceiveVacuumOnP2;
+        public ENC.IO.Common.IHandlingData<bool> ReceiveVacuumOffP1 => mReceiveVacuumOffP1;
+        public ENC.IO.Common.IHandlingData<bool> ReceiveVacuumOffP2 => mReceiveVacuumOffP2;
         public ENC.IO.Common.IHandlingData<bool> ReceiveCellP1 => mReceiveCellP1;
         public ENC.IO.Common.IHandlingData<bool> ReceiveCellP2 => mReceiveCellP2;
         public ENC.IO.Common.IHandlingData<bool> EmsSafe => mEmsSafe;
@@ -33,8 +33,8 @@ namespace EqToEq.LowerToSelf
         private ENC.IO.Common.IHandlingData<bool> mReceiveAble;
         private ENC.IO.Common.IHandlingData<bool> mReceiveStart;
         private ENC.IO.Common.IHandlingData<bool> mReceiveComplete;
-        private ENC.IO.Common.IHandlingData<bool> mReceiveVacuumOnP1;
-        private ENC.IO.Common.IHandlingData<bool> mReceiveVacuumOnP2;
+        private ENC.IO.Common.IHandlingData<bool> mReceiveVacuumOffP1;
+        private ENC.IO.Common.IHandlingData<bool> mReceiveVacuumOffP2;
         private ENC.IO.Common.IHandlingData<bool> mReceiveCellP1;
         private ENC.IO.Common.IHandlingData<bool> mReceiveCellP2;
         private ENC.IO.Common.IHandlingData<bool> mEmsSafe;
@@ -50,8 +50,8 @@ namespace EqToEq.LowerToSelf
             mReceiveAble = ctor.CreateData<bool>(mHandlingData[nameof(ReceiveAble)], startIndex);
             mReceiveStart = ctor.CreateData<bool>(mHandlingData[nameof(ReceiveStart)], startIndex);
             mReceiveComplete = ctor.CreateData<bool>(mHandlingData[nameof(ReceiveComplete)], startIndex);
-            mReceiveVacuumOnP1 = ctor.CreateData<bool>(mHandlingData[nameof(ReceiveVacuumOnP1)], startIndex);
-            mReceiveVacuumOnP2 = ctor.CreateData<bool>(mHandlingData[nameof(ReceiveVacuumOnP2)], startIndex);
+            mReceiveVacuumOffP1 = ctor.CreateData<bool>(mHandlingData[nameof(ReceiveVacuumOffP1)], startIndex);
+            mReceiveVacuumOffP2 = ctor.CreateData<bool>(mHandlingData[nameof(ReceiveVacuumOffP2)], startIndex);
             mReceiveCellP1 = ctor.CreateData<bool>(mHandlingData[nameof(ReceiveCellP1)], startIndex);
             mReceiveCellP2 = ctor.CreateData<bool>(mHandlingData[nameof(ReceiveCellP2)], startIndex);
             mEmsSafe = ctor.CreateData<bool>(mHandlingData[nameof(EmsSafe)], startIndex);
@@ -71,8 +71,8 @@ namespace EqToEq.LowerToSelf
             readDataSet.ReceiveAble = ReceiveAble.Value;
             readDataSet.ReceiveStart = ReceiveStart.Value;
             readDataSet.ReceiveComplete = ReceiveComplete.Value;
-            readDataSet.ReceiveVacuumOnP1 = ReceiveVacuumOnP1.Value;
-            readDataSet.ReceiveVacuumOnP2 = ReceiveVacuumOnP2.Value;
+            readDataSet.ReceiveVacuumOffP1 = ReceiveVacuumOffP1.Value;
+            readDataSet.ReceiveVacuumOffP2 = ReceiveVacuumOffP2.Value;
             readDataSet.ReceiveCellP1 = ReceiveCellP1.Value;
             readDataSet.ReceiveCellP2 = ReceiveCellP2.Value;
             readDataSet.EmsSafe = EmsSafe.Value;
@@ -88,8 +88,8 @@ namespace EqToEq.LowerToSelf
             ReceiveAble.Value = writeDataSet.ReceiveAble;
             ReceiveStart.Value = writeDataSet.ReceiveStart;
             ReceiveComplete.Value = writeDataSet.ReceiveComplete;
-            ReceiveVacuumOnP1.Value = writeDataSet.ReceiveVacuumOnP1;
-            ReceiveVacuumOnP2.Value = writeDataSet.ReceiveVacuumOnP2;
+            ReceiveVacuumOffP1.Value = writeDataSet.ReceiveVacuumOffP1;
+            ReceiveVacuumOffP2.Value = writeDataSet.ReceiveVacuumOffP2;
             ReceiveCellP1.Value = writeDataSet.ReceiveCellP1;
             ReceiveCellP2.Value = writeDataSet.ReceiveCellP2;
             EmsSafe.Value = writeDataSet.EmsSafe;

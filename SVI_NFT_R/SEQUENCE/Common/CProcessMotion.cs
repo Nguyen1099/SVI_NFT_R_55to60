@@ -91,8 +91,6 @@ namespace SVI_NFT_R
         private const int MOTOR_INDEX_OUT_FLIP_R2 = 3;
         private const int BOARD_INDEX_OUT_FLIP_Z = 0;
         private const int MOTOR_INDEX_OUT_FLIP_Z = 4;
-        //private const int BOARD_INDEX_OUT_CONVEYOR_X2 = 0;
-        //private const int MOTOR_INDEX_OUT_CONVEYOR_X2 = 5;
         private const int BOARD_INDEX_OUT_SHUTTLE_X2 = 0;
         private const int MOTOR_INDEX_OUT_SHUTTLE_X2 = 5;
         private const int BOARD_INDEX_IN_SHUTTLE_X1_TRIGGER_MODULE = 0;
@@ -691,7 +689,6 @@ namespace SVI_NFT_R
                                 case EMotor.OUT_FLIP_R1:
                                 case EMotor.OUT_FLIP_R2:
                                 case EMotor.OUT_FLIP_Z:
-                                //case EMotor.OUT_CONVEYOR_X2:
                                 case EMotor.OUT_SHUTTLE_X2:
                                 case EMotor.IN_SHUTTLE_X1_TRIGGER_MODULE:
                                     objMotor = new CDeviceMotor(new CDeviceMotorAjin());
@@ -761,10 +758,6 @@ namespace SVI_NFT_R
                     objInitialize.iAxisNo = MOTOR_INDEX_OUT_FLIP_Z;
                     break;
 
-                //case EMotor.OUT_CONVEYOR_X2:
-                //    objInitialize.iBoardNo = BOARD_INDEX_OUT_CONVEYOR_X2;
-                //    objInitialize.iAxisNo = MOTOR_INDEX_OUT_CONVEYOR_X2;
-                //    break;
                 case EMotor.OUT_SHUTTLE_X2:
                     objInitialize.iBoardNo = BOARD_INDEX_OUT_SHUTTLE_X2;
                     objInitialize.iAxisNo = MOTOR_INDEX_OUT_SHUTTLE_X2;

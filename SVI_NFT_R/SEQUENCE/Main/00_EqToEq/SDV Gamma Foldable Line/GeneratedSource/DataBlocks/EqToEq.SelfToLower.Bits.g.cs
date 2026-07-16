@@ -20,8 +20,8 @@ namespace EqToEq.SelfToLower
         public ENC.IO.Common.IHandlingData<bool> SendAble => mSendAble;
         public ENC.IO.Common.IHandlingData<bool> SendStart => mSendStart;
         public ENC.IO.Common.IHandlingData<bool> SendComplete => mSendComplete;
-        public ENC.IO.Common.IHandlingData<bool> SendVacuumOnP1 => mSendVacuumOnP1;
-        public ENC.IO.Common.IHandlingData<bool> SendVacuumOnP2 => mSendVacuumOnP2;
+        public ENC.IO.Common.IHandlingData<bool> SendVacuumOffP1 => mSendVacuumOffP1;
+        public ENC.IO.Common.IHandlingData<bool> SendVacuumOffP2 => mSendVacuumOffP2;
         public ENC.IO.Common.IHandlingData<bool> SendCellP1 => mSendCellP1;
         public ENC.IO.Common.IHandlingData<bool> SendCellP2 => mSendCellP2;
         public ENC.IO.Common.IHandlingData<bool> EmsSafe => mEmsSafe;
@@ -33,8 +33,8 @@ namespace EqToEq.SelfToLower
         private ENC.IO.Common.IHandlingData<bool> mSendAble;
         private ENC.IO.Common.IHandlingData<bool> mSendStart;
         private ENC.IO.Common.IHandlingData<bool> mSendComplete;
-        private ENC.IO.Common.IHandlingData<bool> mSendVacuumOnP1;
-        private ENC.IO.Common.IHandlingData<bool> mSendVacuumOnP2;
+        private ENC.IO.Common.IHandlingData<bool> mSendVacuumOffP1;
+        private ENC.IO.Common.IHandlingData<bool> mSendVacuumOffP2;
         private ENC.IO.Common.IHandlingData<bool> mSendCellP1;
         private ENC.IO.Common.IHandlingData<bool> mSendCellP2;
         private ENC.IO.Common.IHandlingData<bool> mEmsSafe;
@@ -50,8 +50,8 @@ namespace EqToEq.SelfToLower
             mSendAble = ctor.CreateData<bool>(mHandlingData[nameof(SendAble)], startIndex);
             mSendStart = ctor.CreateData<bool>(mHandlingData[nameof(SendStart)], startIndex);
             mSendComplete = ctor.CreateData<bool>(mHandlingData[nameof(SendComplete)], startIndex);
-            mSendVacuumOnP1 = ctor.CreateData<bool>(mHandlingData[nameof(SendVacuumOnP1)], startIndex);
-            mSendVacuumOnP2 = ctor.CreateData<bool>(mHandlingData[nameof(SendVacuumOnP2)], startIndex);
+            mSendVacuumOffP1 = ctor.CreateData<bool>(mHandlingData[nameof(SendVacuumOffP1)], startIndex);
+            mSendVacuumOffP2 = ctor.CreateData<bool>(mHandlingData[nameof(SendVacuumOffP2)], startIndex);
             mSendCellP1 = ctor.CreateData<bool>(mHandlingData[nameof(SendCellP1)], startIndex);
             mSendCellP2 = ctor.CreateData<bool>(mHandlingData[nameof(SendCellP2)], startIndex);
             mEmsSafe = ctor.CreateData<bool>(mHandlingData[nameof(EmsSafe)], startIndex);
@@ -71,8 +71,8 @@ namespace EqToEq.SelfToLower
             readDataSet.SendAble = SendAble.Value;
             readDataSet.SendStart = SendStart.Value;
             readDataSet.SendComplete = SendComplete.Value;
-            readDataSet.SendVacuumOnP1 = SendVacuumOnP1.Value;
-            readDataSet.SendVacuumOnP2 = SendVacuumOnP2.Value;
+            readDataSet.SendVacuumOffP1 = SendVacuumOffP1.Value;
+            readDataSet.SendVacuumOffP2 = SendVacuumOffP2.Value;
             readDataSet.SendCellP1 = SendCellP1.Value;
             readDataSet.SendCellP2 = SendCellP2.Value;
             readDataSet.EmsSafe = EmsSafe.Value;
@@ -88,8 +88,8 @@ namespace EqToEq.SelfToLower
             SendAble.Value = writeDataSet.SendAble;
             SendStart.Value = writeDataSet.SendStart;
             SendComplete.Value = writeDataSet.SendComplete;
-            SendVacuumOnP1.Value = writeDataSet.SendVacuumOnP1;
-            SendVacuumOnP2.Value = writeDataSet.SendVacuumOnP2;
+            SendVacuumOffP1.Value = writeDataSet.SendVacuumOffP1;
+            SendVacuumOffP2.Value = writeDataSet.SendVacuumOffP2;
             SendCellP1.Value = writeDataSet.SendCellP1;
             SendCellP2.Value = writeDataSet.SendCellP2;
             EmsSafe.Value = writeDataSet.EmsSafe;

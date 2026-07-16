@@ -20,8 +20,8 @@ namespace EqToEq.SelfToLower
         public bool SendAble { get; set; }
         public bool SendStart { get; set; }
         public bool SendComplete { get; set; }
-        public bool SendVacuumOnP1 { get; set; }
-        public bool SendVacuumOnP2 { get; set; }
+        public bool SendVacuumOffP1 { get; set; }
+        public bool SendVacuumOffP2 { get; set; }
         public bool SendCellP1 { get; set; }
         public bool SendCellP2 { get; set; }
         public bool EmsSafe { get; set; }

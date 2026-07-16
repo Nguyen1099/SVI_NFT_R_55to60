@@ -22,7 +22,7 @@ public static partial class UnitManager
         var motion = document.m_objProcessMain.m_objProcessMotion;
         var unitMapping = new UnitGroupOption[]
         {
-            new UnitGroupOption(EUnit.ST01, motion.InShuttle, motion.InRobot, motion.InspStage, motion.OutRobot, motion.OutFlip),
+            new UnitGroupOption(EUnit.ST01, motion.InShuttle, motion.InRobot, motion.InspStage, motion.OutRobot, motion.OutFlip, motion.OutShuttle),
         };
         bool bFailed = false;
         foreach (var item in unitMapping)

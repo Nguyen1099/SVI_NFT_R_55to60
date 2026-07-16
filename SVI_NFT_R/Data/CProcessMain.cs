@@ -842,6 +842,7 @@ namespace SVI_NFT_R
                         || m_objProcessMotion.InspStage.IsCompleteWriteCycleLog == false
                         || m_objProcessMotion.OutRobot.IsCompleteWriteCycleLog == false
                         || m_objProcessMotion.OutFlip.IsCompleteWriteCycleLog == false
+                        || m_objProcessMotion.OutShuttle.IsCompleteWriteCycleLog == false
                         )
                     {
                         break;

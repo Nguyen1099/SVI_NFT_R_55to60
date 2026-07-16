@@ -456,6 +456,13 @@ namespace SVI_NFT_R
                     case CDatabaseDefine.ESvidList.OUT_FLIP_P2_2_CELL_ID:
                         cellDataIndex = CellData.ECellData.OutFlipP2;
                         break;
+                    case CDatabaseDefine.ESvidList.OUT_SHUTTLE_P1_CELL_ID:
+                        cellDataIndex = CellData.ECellData.OutShuttleP1;
+                        break;
+                    case CDatabaseDefine.ESvidList.OUT_SHUTTLE_P2_CELL_ID:
+                        cellDataIndex = CellData.ECellData.OutShuttleP2;
+                        break;
+
                     // COMMON, LIGHT, UTIL, GMS 영역은 셀이 머무르지 않고 상시 체크해야하는 부분임으로 CELL_ID는 'yyyyMMddHHmmss' 형식으로 넣고, STEP_ID는 '1'로 고정하여 보고함.
                     //case CDatabaseDefine.ESvidList.LIGHT_CELL_ID:
                     case CDatabaseDefine.ESvidList.UTIL_CELL_ID:
@@ -538,6 +545,12 @@ namespace SVI_NFT_R
                         break;
                     case CDatabaseDefine.ESvidList.OUT_FLIP_P2_2_STEP_ID:
                         stepID = GetStepID(cellID, CDatabaseDefine.ESvidList.OUT_FLIP_P2_2_VACUUM_PRESSURE, svidList);
+                        break;
+                    case CDatabaseDefine.ESvidList.OUT_SHUTTLE_P1_STEP_ID:
+                        stepID = GetStepID(cellID, CDatabaseDefine.ESvidList.OUT_SHUTTLE_P1_VACUUM_PRESSURE, svidList);
+                        break;
+                    case CDatabaseDefine.ESvidList.OUT_SHUTTLE_P2_STEP_ID:
+                        stepID = GetStepID(cellID, CDatabaseDefine.ESvidList.OUT_SHUTTLE_P2_VACUUM_PRESSURE, svidList);
                         break;
                     case CDatabaseDefine.ESvidList.IN_SHUTTLE_P1_PRE_ALIGN_STEP_ID:
                         stepID = GetAlignStepID(CellData.ECellData.InShuttleP1, CDefine.EAlign.PreAlign);

@@ -843,8 +843,8 @@ namespace SVI_NFT_R
             SetButtonBackColor(UcHandshakeSignalUnLoadItem2.BtnIndicator1, signalControllers.SelfBits.SendAble.Value ? m_colorInputOn : m_colorInputOff);
             SetButtonBackColor(UcHandshakeSignalUnLoadItem3.BtnIndicator1, signalControllers.SelfBits.SendStart.Value ? m_colorInputOn : m_colorInputOff);
             SetButtonBackColor(UcHandshakeSignalUnLoadItem4.BtnIndicator1, signalControllers.SelfBits.SendComplete.Value ? m_colorInputOn : m_colorInputOff);
-            SetButtonBackColor(UcHandshakeSignalUnLoadItem5.BtnIndicator1, signalControllers.SelfBits.SendVacuumOnP1.Value ? m_colorInputOn : m_colorInputOff);
-            SetButtonBackColor(UcHandshakeSignalUnLoadItem6.BtnIndicator1, signalControllers.SelfBits.SendVacuumOnP2.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem5.BtnIndicator1, signalControllers.SelfBits.SendVacuumOffP1.Value ? m_colorInputOn : m_colorInputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem6.BtnIndicator1, signalControllers.SelfBits.SendVacuumOffP2.Value ? m_colorInputOn : m_colorInputOff);
             SetButtonBackColor(UcHandshakeSignalUnLoadItem7.BtnIndicator1, signalControllers.SelfBits.SendCellP1.Value ? m_colorInputOn : m_colorInputOff);
             SetButtonBackColor(UcHandshakeSignalUnLoadItem8.BtnIndicator1, signalControllers.SelfBits.SendCellP2.Value ? m_colorInputOn : m_colorInputOff);
 
@@ -855,8 +855,8 @@ namespace SVI_NFT_R
             SetButtonBackColor(UcHandshakeSignalUnLoadItem2.BtnIndicator2, signalControllers.LowerBits.ReceiveAble.Value ? m_colorOutputOn : m_colorOutputOff);
             SetButtonBackColor(UcHandshakeSignalUnLoadItem3.BtnIndicator2, signalControllers.LowerBits.ReceiveStart.Value ? m_colorOutputOn : m_colorOutputOff);
             SetButtonBackColor(UcHandshakeSignalUnLoadItem4.BtnIndicator2, signalControllers.LowerBits.ReceiveComplete.Value ? m_colorOutputOn : m_colorOutputOff);
-            SetButtonBackColor(UcHandshakeSignalUnLoadItem5.BtnIndicator2, signalControllers.LowerBits.ReceiveVacuumOnP1.Value ? m_colorOutputOn : m_colorOutputOff);
-            SetButtonBackColor(UcHandshakeSignalUnLoadItem6.BtnIndicator2, signalControllers.LowerBits.ReceiveVacuumOnP2.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem5.BtnIndicator2, signalControllers.LowerBits.ReceiveVacuumOffP1.Value ? m_colorOutputOn : m_colorOutputOff);
+            SetButtonBackColor(UcHandshakeSignalUnLoadItem6.BtnIndicator2, signalControllers.LowerBits.ReceiveVacuumOffP2.Value ? m_colorOutputOn : m_colorOutputOff);
             SetButtonBackColor(UcHandshakeSignalUnLoadItem7.BtnIndicator2, signalControllers.LowerBits.ReceiveCellP1.Value ? m_colorOutputOn : m_colorOutputOff);
             SetButtonBackColor(UcHandshakeSignalUnLoadItem8.BtnIndicator2, signalControllers.LowerBits.ReceiveCellP2.Value ? m_colorOutputOn : m_colorOutputOff);
 

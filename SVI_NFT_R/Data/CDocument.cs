@@ -1698,8 +1698,6 @@ namespace SVI_NFT_R
                 var motorPositionZ = outFlip.MotorZ.Axis.HLGetMotorPosition();
                 SetEcmDataMotor(ecmParameterOrNull, CConfig.EEquipmentEcmList.OUT_FLIP_UP_Z_POS, motorPositionZ, (int)OutFlipMotorZ.EPosition.Up);
                 SetEcmDataMotor(ecmParameterOrNull, CConfig.EEquipmentEcmList.OUT_FLIP_DOWN_Z_POS, motorPositionZ, (int)OutFlipMotorZ.EPosition.Down);
-                //var motorPositionX = outFlip.MotorConveyorX.Axis.HLGetMotorPosition();
-                //SetEcmDataMotor(ecmParameterOrNull, CConfig.EEquipmentEcmList.OUT_CONVEYOR_UNLOAD_X_POS, motorPositionX, (int)OutFlipMotorX.EPosition.Unload);
             }
             // OutShuttle
             {

@@ -44,16 +44,16 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
                 SelfBits.SendAble.Value = false;
                 SelfBits.SendStart.Value = false;
                 SelfBits.SendComplete.Value = false;
-                SelfBits.SendVacuumOnP1.Value = false;
-                SelfBits.SendVacuumOnP2.Value = false;
+                SelfBits.SendVacuumOffP1.Value = false;
+                SelfBits.SendVacuumOffP2.Value = false;
                 SelfBits.SendCellP1.Value = false;
                 SelfBits.SendCellP2.Value = false;
 
                 LowerBits.ReceiveAble.Value = false;
                 LowerBits.ReceiveStart.Value = false;
                 LowerBits.ReceiveComplete.Value = false;
-                LowerBits.ReceiveVacuumOnP1.Value = false;
-                LowerBits.ReceiveVacuumOnP2.Value = false;
+                LowerBits.ReceiveVacuumOffP1.Value = false;
+                LowerBits.ReceiveVacuumOffP2.Value = false;
                 LowerBits.ReceiveCellP1.Value = false;
                 LowerBits.ReceiveCellP2.Value = false;
                 LowerBits.EmsSafe.Value = true;

@@ -259,8 +259,8 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.SendAble), mDefine.Name, () => mDefine.SelfBits.SendAble.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.SendStart), mDefine.Name, () => mDefine.SelfBits.SendStart.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.SendComplete), mDefine.Name, () => mDefine.SelfBits.SendComplete.Value),
-                new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.SendVacuumOnP1), mDefine.Name, () => mDefine.SelfBits.SendVacuumOnP1.Value),
-                new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.SendVacuumOnP2), mDefine.Name, () => mDefine.SelfBits.SendVacuumOnP2.Value),
+                new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.SendVacuumOffP1), mDefine.Name, () => mDefine.SelfBits.SendVacuumOffP1.Value),
+                new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.SendVacuumOffP2), mDefine.Name, () => mDefine.SelfBits.SendVacuumOffP2.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.SendCellP1), mDefine.Name, () => mDefine.SelfBits.SendCellP1.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.SendCellP2), mDefine.Name, () => mDefine.SelfBits.SendCellP2.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.SelfBits.EmsSafe), mDefine.Name, () => mDefine.SelfBits.EmsSafe.Value),
@@ -270,8 +270,8 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.ReceiveAble), mDefine.Name, () => mDefine.LowerBits.ReceiveAble.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.ReceiveStart), mDefine.Name, () => mDefine.LowerBits.ReceiveStart.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.ReceiveComplete), mDefine.Name, () => mDefine.LowerBits.ReceiveComplete.Value),
-                new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.ReceiveVacuumOnP1), mDefine.Name, () => mDefine.LowerBits.ReceiveVacuumOnP1.Value),
-                new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.ReceiveVacuumOnP2), mDefine.Name, () => mDefine.LowerBits.ReceiveVacuumOnP2.Value),
+                new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.ReceiveVacuumOffP1), mDefine.Name, () => mDefine.LowerBits.ReceiveVacuumOffP1.Value),
+                new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.ReceiveVacuumOffP2), mDefine.Name, () => mDefine.LowerBits.ReceiveVacuumOffP2.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.ReceiveCellP1), mDefine.Name, () => mDefine.LowerBits.ReceiveCellP1.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.ReceiveCellP2), mDefine.Name, () => mDefine.LowerBits.ReceiveCellP2.Value),
                 new Utils.DigitalSignalObserverOption($"", nameof(mDefine.LowerBits.EmsSafe), mDefine.Name, () => mDefine.LowerBits.EmsSafe.Value),
@@ -418,41 +418,41 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
             {
                 if (placement.HasFlag(EPosition.P1) && placement.HasFlag(EPosition.P2))
                 {
-                    mDefine.SelfBits.SendVacuumOnP1.Value = true;
-                    mDefine.SelfBits.SendVacuumOnP2.Value = true;
+                    mDefine.SelfBits.SendVacuumOffP1.Value = true;
+                    mDefine.SelfBits.SendVacuumOffP2.Value = true;
                     if (mDocument.GetRunMode() == CDefine.ERunMode.UnlinkDryrun)
                     {
                         Thread.Sleep(SIMULATION_DELAY);
-                        mDefine.LowerBits.ReceiveVacuumOnP1.Value = true;
-                        mDefine.LowerBits.ReceiveVacuumOnP2.Value = true;
+                        mDefine.LowerBits.ReceiveVacuumOffP1.Value = true;
+                        mDefine.LowerBits.ReceiveVacuumOffP2.Value = true;
                     }
-                    if (SpinWait.SpinUntil(() => mDefine.LowerBits.ReceiveVacuumOnP1.Value == true && mDefine.LowerBits.ReceiveVacuumOnP2.Value == true, timeout) == false)
+                    if (SpinWait.SpinUntil(() => mDefine.LowerBits.ReceiveVacuumOffP1.Value == true && mDefine.LowerBits.ReceiveVacuumOffP2.Value == true, timeout) == false)
                     {
                         return false;
                     }
                 }
                 else if (placement.HasFlag(EPosition.P1))
                 {
-                    mDefine.SelfBits.SendVacuumOnP1.Value = true;
+                    mDefine.SelfBits.SendVacuumOffP1.Value = true;
                     if (mDocument.GetRunMode() == CDefine.ERunMode.UnlinkDryrun)
                     {
                         Thread.Sleep(SIMULATION_DELAY);
-                        mDefine.LowerBits.ReceiveVacuumOnP1.Value = true;
+                        mDefine.LowerBits.ReceiveVacuumOffP1.Value = true;
                     }
-                    if (SpinWait.SpinUntil(() => mDefine.LowerBits.ReceiveVacuumOnP1.Value == true, timeout) == false)
+                    if (SpinWait.SpinUntil(() => mDefine.LowerBits.ReceiveVacuumOffP1.Value == true, timeout) == false)
                     {
                         return false;
                     }
                 }
                 else if (placement.HasFlag(EPosition.P2))
                 {
-                    mDefine.SelfBits.SendVacuumOnP2.Value = true;
+                    mDefine.SelfBits.SendVacuumOffP2.Value = true;
                     if (mDocument.GetRunMode() == CDefine.ERunMode.UnlinkDryrun)
                     {
                         Thread.Sleep(SIMULATION_DELAY);
-                        mDefine.LowerBits.ReceiveVacuumOnP2.Value = true;
+                        mDefine.LowerBits.ReceiveVacuumOffP2.Value = true;
                     }
-                    if (SpinWait.SpinUntil(() => mDefine.LowerBits.ReceiveVacuumOnP2.Value == true, timeout) == false)
+                    if (SpinWait.SpinUntil(() => mDefine.LowerBits.ReceiveVacuumOffP2.Value == true, timeout) == false)
                     {
                         return false;
                     }
@@ -529,7 +529,7 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
                 "SelfSendAble",
                 "SelfSendStart",
                 "SelfSendComplete",
-                "SelfSendVacuumOn",
+                "SelfSendVacuumOff",
                 "SelfSendCellP1",
                 "SelfSendCellP2",
                 "SelfEmsSafe",
@@ -540,7 +540,7 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
                 "LowerSendAble",
                 "LowerSendStart",
                 "LowerSendComplete",
-                "LowerSendVacuumOn",
+                "LowerSendVacuumOff",
                 "LowerSendCellP1",
                 "LowerSendCellP2",
                 "LowerEmsSafe",
@@ -559,8 +559,8 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
                 $"{Convert.ToInt32(mDefine.SelfBits.SendAble.Value)}",
                 $"{Convert.ToInt32(mDefine.SelfBits.SendStart.Value)}",
                 $"{Convert.ToInt32(mDefine.SelfBits.SendComplete.Value)}",
-                $"{Convert.ToInt32(mDefine.SelfBits.SendVacuumOnP1.Value)}",
-                $"{Convert.ToInt32(mDefine.SelfBits.SendVacuumOnP2.Value)}",
+                $"{Convert.ToInt32(mDefine.SelfBits.SendVacuumOffP1.Value)}",
+                $"{Convert.ToInt32(mDefine.SelfBits.SendVacuumOffP2.Value)}",
                 $"{Convert.ToInt32(mDefine.SelfBits.SendCellP1.Value)}",
                 $"{Convert.ToInt32(mDefine.SelfBits.SendCellP2.Value)}",
                 $"{Convert.ToInt32(mDefine.SelfBits.EmsSafe.Value)}",
@@ -571,8 +571,8 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
                 $"{Convert.ToInt32(mDefine.LowerBits.ReceiveAble.Value)}",
                 $"{Convert.ToInt32(mDefine.LowerBits.ReceiveStart.Value)}",
                 $"{Convert.ToInt32(mDefine.LowerBits.ReceiveComplete.Value)}",
-                $"{Convert.ToInt32(mDefine.LowerBits.ReceiveVacuumOnP1.Value)}",
-                $"{Convert.ToInt32(mDefine.LowerBits.ReceiveVacuumOnP2.Value)}",
+                $"{Convert.ToInt32(mDefine.LowerBits.ReceiveVacuumOffP1.Value)}",
+                $"{Convert.ToInt32(mDefine.LowerBits.ReceiveVacuumOffP2.Value)}",
                 $"{Convert.ToInt32(mDefine.LowerBits.ReceiveCellP1.Value)}",
                 $"{Convert.ToInt32(mDefine.LowerBits.ReceiveCellP2.Value)}",
                 $"{Convert.ToInt32(mDefine.LowerBits.EmsSafe.Value)}",
@@ -702,8 +702,8 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
             mDefine.SelfBits.SendAble.Value = false;
             mDefine.SelfBits.SendStart.Value = false;
             mDefine.SelfBits.SendComplete.Value = false;
-            mDefine.SelfBits.SendVacuumOnP1.Value = false;
-            mDefine.SelfBits.SendVacuumOnP2.Value = false;
+            mDefine.SelfBits.SendVacuumOffP1.Value = false;
+            mDefine.SelfBits.SendVacuumOffP2.Value = false;
             mDefine.SelfBits.SendCellP1.Value = false;
             mDefine.SelfBits.SendCellP2.Value = false;
 
@@ -713,8 +713,8 @@ namespace SVI_NFT_R.EqToEq.SdvGammaFoldableLine
                 mDefine.LowerBits.ReceiveAble.Value = false;
                 mDefine.LowerBits.ReceiveStart.Value = false;
                 mDefine.LowerBits.ReceiveComplete.Value = false;
-                mDefine.LowerBits.ReceiveVacuumOnP1.Value = false;
-                mDefine.LowerBits.ReceiveVacuumOnP2.Value = false;
+                mDefine.LowerBits.ReceiveVacuumOffP1.Value = false;
+                mDefine.LowerBits.ReceiveVacuumOffP2.Value = false;
                 mDefine.LowerBits.ReceiveCellP1.Value = false;
                 mDefine.LowerBits.ReceiveCellP2.Value = false;
                 Thread.Sleep(SIMULATION_DELAY);
